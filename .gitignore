@@ -47,8 +47,14 @@ venv.bak/
 Thumbs.db
 
 # Build / generated outputs
-outputs/*
-!outputs/.gitkeep
+# Track CSVs (transparency: every prediction goes into version control).
+# Ignore SDF/SMI bundles, model checkpoints, and intermediate artifacts.
+outputs/*.sdf
+outputs/*.smi
+outputs/structures/
+outputs/reinvent_run/
+outputs/*.ckpt
+outputs/*.pt
 
 # Caches
 data/compounds/.smiles_cache.json
