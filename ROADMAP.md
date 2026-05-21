@@ -11,15 +11,35 @@ A living document. Things at the top of each section are higher priority.
 - ✅ Covalent-warhead SMARTS detection + KEAP1 pharmacophore filter.
 - ✅ ADMET QSAR (hERG / AMES / BBB), AUC 0.89–0.91.
 - ✅ Multi-objective ranking → rescue / maintenance / remission top-10s.
-- ✅ Standardized experiment report format (5 published).
+- ✅ Standardized experiment report format (6 published).
 - ✅ Audience-segmented onboarding docs.
+- ✅ A2A agent card + canonical contact info.
+- ✅ **Known-Actives Recovery benchmark — 100% recovery@20** (EXP-006).
+- ✅ Auto-generated hypothesis tables with timestamp + commit-hash provenance.
+- ✅ Streamlit public viewer + Hugging Face Spaces deployment recipe.
 
-## Next (v0.x+1, immediate)
+## Next (v0.x+1) — credibility & accessibility first
 
-- Real Vina/smina KEAP1 docking on PDB 4L7B / 5FNQ / 6T7V for top-50.
+These five are the next 2–4 weeks of high-leverage work (per the
+"100x vision" framing — credibility, accessibility, polish):
+
+1. **Negative-control benchmark** — 20 compounds with no plausible MCAS
+   mechanism; report precision@N to show the ranking doesn't just love
+   anything druglike.
+2. **Expand recovery benchmark to 50+ actives** via ChEMBL bioassay pull
+   (`β-hexosaminidase release`, `mast cell degranulation`, `LAD2`).
+3. **Sensitivity analysis on composite weights** — sweep all 6 weights
+   ±50%, report ranking stability.
+4. **Deploy the Streamlit viewer to Hugging Face Spaces** so non-coders
+   have a permanent public link.
+5. **Real Vina/smina KEAP1 docking** on PDB 4L7B for the top-50 ranked
+   remission candidates; replace the ligand-similarity score in
+   `outputs/docking_KEAP1.csv` with physics for that one target.
+
+## Then (v0.x+2)
+
 - ChEMBL bioassay pull → train a true mast-cell-degranulation predictor.
 - Polypharmacology bonus + selectivity penalty in `rank_hypotheses.py`.
-- Sensitivity analysis on composite weights.
 - DeepChem GraphConv QSAR for AUC delta vs. RandomForest.
 - REINVENT 4 on Colab GPU — actual RL run seeded on top-10.
 - Enamine REAL Space availability check for top generated analogs.

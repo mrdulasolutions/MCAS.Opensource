@@ -1,16 +1,33 @@
 # OpenMCAS
 
-**An open, hypothesis-generation engine for MCAS / MCAD rescue, maintenance, and remission compounds.**
+**Open, reproducible hypothesis generation for MCAS / MCAD compounds — ranked transparently for rescue, maintenance, and remission.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Validate SMILES](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/validate.yml/badge.svg)](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/validate.yml)
-[![Experiments](https://img.shields.io/badge/experiments-5-blue)](experiments/)
+[![Experiments](https://img.shields.io/badge/experiments-6-blue)](experiments/)
 [![Compounds](https://img.shields.io/badge/compounds-54-green)](data/compounds/MCAS_Compound_Library_v1.csv)
 [![Generated analogs](https://img.shields.io/badge/SFN--class%20analogs-113-purple)](outputs/reinvent_generated.csv)
+[![Recovery@20](https://img.shields.io/badge/known--actives%20recovery%40_20-100%25-brightgreen)](experiments/EXP-006-known-actives-recovery.md)
+[![A2A Agent Card](https://img.shields.io/badge/A2A-agent_card-orange)](AGENT_CARD.md)
 
 > ⚠️ **Not medical advice.** Computational hypotheses + in silico predictions
 > only. Not a substitute for clinical care. Do not self-treat.
 > See [docs/disclaimers.md](docs/disclaimers.md).
+
+## What this is, in one paragraph
+
+A laptop-runnable, MIT-licensed pipeline that takes pharma drugs, herbs,
+supplements, and AI-generated novel analogs, scores them against MCAS-relevant
+targets (KEAP1 / MRGPRX2 / KIT / FcεRI / HRH1–4 / CYSLTR1 / BTK / GLP1R),
+filters by covalent-warhead chemistry + predicted ADMET safety, and produces
+a transparent **composite ranking** across rescue / maintenance / remission
+categories. Held-out audit: **100% of 21 known clinical mast-cell drugs are
+recovered into the top-20 of their expected category** without ever being
+shown to the pipeline ([EXP-006](experiments/EXP-006-known-actives-recovery.md)).
+
+## Try it in your browser (no clone, no install)
+
+🌐 **Live viewer:** [open the Streamlit app](docs/deploying-the-viewer.md) — browse all ranked candidates, filter by mechanism / evidence / warhead, drill into ADMET predictions per compound. Deploys to Hugging Face Spaces in ~2 minutes.
 
 ---
 
@@ -48,7 +65,7 @@ falsify, or extend it. No paywalls, no IP capture, no pharma gatekeeping.
 
 ## Live results
 
-These tables are auto-refreshed every time the ranking script runs.
+> 🤖 **Auto-generated artifacts.** The tables below — and the Top-10 tables in `hypotheses/{rescue,maintenance,remission}.md` — are produced by `scripts/rank_hypotheses.py` from the current library + generated analogs + target scores + warhead scores + ADMET QSAR. Each Top-10 carries a provenance line with timestamp + commit hash. **Re-running the script overwrites them.** Composite formula: [EXP-005](experiments/EXP-005-multi-objective-ranking.md). Audit: [EXP-006](experiments/EXP-006-known-actives-recovery.md).
 
 ### 🔴 Rescue top 5
 | # | Compound | Class | Composite |
@@ -115,8 +132,19 @@ Each script is documented as a [standardized experiment report](experiments/):
 | [EXP-003](experiments/EXP-003-covalent-warhead-scoring.md) | Covalent-warhead SMARTS + KEAP1 pharmacophore | 13 reactive-group patterns |
 | [EXP-004](experiments/EXP-004-admet-qsar.md) | ADMET QSAR | RandomForest on PyTDC tasks (hERG / AMES / BBB) — AUC 0.89–0.91 |
 | [EXP-005](experiments/EXP-005-multi-objective-ranking.md) | Multi-objective ranking | Composite of evidence + target + warhead + safety + drug-likeness |
+| [EXP-006](experiments/EXP-006-known-actives-recovery.md) | Known Actives Recovery benchmark | Blind scoring of 21 held-out clinical drugs — **100% recovery@20** |
 
 ---
+
+## Just browse the results (no install)
+
+🌐 **Web viewer:** [app.py](app.py) is a Streamlit front-end to every ranked CSV in the repo. Deploy to a free Hugging Face Space in ~2 minutes — see [docs/deploying-the-viewer.md](docs/deploying-the-viewer.md).
+
+Or locally:
+```bash
+pip install -r requirements-app.txt
+streamlit run app.py
+```
 
 ## Reproduce the whole thing in 3 minutes
 
@@ -133,6 +161,7 @@ python scripts/score_warheads.py
 python scripts/score_against_targets.py
 python scripts/run_qsar.py
 python scripts/rank_hypotheses.py
+python scripts/benchmark_known_actives.py    # optional — held-out recovery audit
 ```
 
 The `hypotheses/*.md` files will be re-populated with the latest top-10
@@ -190,6 +219,17 @@ proposal). The canonical machine-readable manifest is at
 and [`/a2a.json`](a2a.json) at root).
 
 ---
+
+## Limitations (read before citing)
+
+- **Author-chosen weights.** The composite formula in [EXP-005](experiments/EXP-005-multi-objective-ranking.md) was set by hand, not learned. Sensitivity analysis is on the [roadmap](ROADMAP.md).
+- **Ligand-based screening, not docking.** The `score_*` files contain Tanimoto similarities to curated reference ligands per target — a defensible early-triage signal, but not a substitute for physics-based pose prediction. Real Vina / DiffDock against KEAP1 Kelch (PDB 4L7B) is queued.
+- **QSAR is RandomForest on Morgan FPs.** Strong baseline (validation AUC 0.89–0.91 on PyTDC) but graph neural nets like ChemProp typically add 1–3 AUC points. PR welcome.
+- **No metabolism / interaction modeling.** CYP / GST / UGT effects (the actual major liability for sulforaphane) are an open feature gap.
+- **Reference-set self-similarity.** Known anchors get Tanimoto = 1.0 against themselves; the ranking script accounts for this but it still caps recovery@5/@10 in some categories ([EXP-006 §7](experiments/EXP-006-known-actives-recovery.md)).
+- **21-compound recovery benchmark is small.** Expansion to 50+ via ChEMBL bioassay pull is in the [roadmap](ROADMAP.md).
+- **No human validation.** Every headline result is a *hypothesis*. Wet-lab validation campaigns are how this becomes evidence — see [audiences/for-academia.md](audiences/for-academia.md).
+- **Negative-control set missing.** We have a positive-control benchmark; we have not yet shown that compounds with no plausible MCAS mechanism rank low. That's the next benchmark.
 
 ## Why this exists
 

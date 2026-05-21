@@ -1,0 +1,6 @@
+# Minimal deps for the Streamlit public viewer.
+# Use this on Hugging Face Spaces / Streamlit Community Cloud.
+
+streamlit>=1.32
+pandas>=2.0
+numpy>=1.24

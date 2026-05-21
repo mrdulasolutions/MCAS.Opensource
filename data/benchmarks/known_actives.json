@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "description": "Held-out benchmark: clinically established mast-cell stabilizers, MCAS-relevant drugs, and well-supported allergic-disease compounds that are NOT in data/compounds/seeds.json AND NOT in the reference ligand sets in scripts/score_against_targets.py. The benchmark asks: when the full pipeline scores these blind, do they land in the top of the appropriate category ranking?",
+  "purpose": "Credibility check on the composite ranking. A pipeline that can't recover known actives in their natural category is broken — regardless of how good the headline result looks.",
+  "expected_category_definitions": {
+    "rescue": "Approved or commonly-used acute mast-cell stabilizers / H1 / H2 antagonists not in our reference set.",
+    "maintenance": "Daily-use stabilizers, immunomodulators, anti-inflammatory naturals not in our reference set.",
+    "remission": "Disease-modifying agents (TKIs, JAK/BTK inhibitors, calcineurin, covalent Nrf2 activators) not in our reference set."
+  },
+  "evaluation_metric": "recovery@N: fraction of known actives that rank in the top N of their expected category's ranked CSV.",
+  "actives": [
+    {
+      "name": "Azelastine",
+      "pubchem_cid": 2267,
+      "expected_category": "rescue",
+      "evidence": "H1 antagonist + documented mast cell stabilizer; approved as intranasal/ophthalmic anti-allergic.",
+      "source_refs": ["Bernstein 2007"]
+    },
+    {
+      "name": "Olopatadine",
+      "pubchem_cid": 5281071,
+      "expected_category": "rescue",
+      "evidence": "Dual H1 antagonist + mast cell stabilizer; topical ophthalmic/nasal anti-allergic.",
+      "source_refs": ["Sharif 1996"]
+    },
+    {
+      "name": "Nedocromil",
+      "pubchem_cid": 5117,
+      "expected_category": "rescue",
+      "evidence": "Cromone class; mast cell stabilizer (asthma + allergic conjunctivitis).",
+      "source_refs": ["Schwartz 1995"]
+    },
+    {
+      "name": "Pemirolast",
+      "pubchem_cid": 51063,
+      "expected_category": "rescue",
+      "evidence": "Mast cell stabilizer; ophthalmic anti-allergic.",
+      "source_refs": ["Yanni 1993"]
+    },
+    {
+      "name": "Tranilast",
+      "pubchem_cid": 5512,
+      "expected_category": "maintenance",
+      "evidence": "Anti-allergic + anti-fibrotic mast cell stabilizer; used in atopic dermatitis + keloid scars; cited in MCAS literature.",
+      "source_refs": ["Suzawa 1992"]
+    },
+    {
+      "name": "Lodoxamide",
+      "pubchem_cid": 44564,
+      "expected_category": "rescue",
+      "evidence": "Cromone class; ophthalmic mast cell stabilizer for vernal keratoconjunctivitis.",
+      "source_refs": ["Caldwell 1992"]
+    },
+    {
+      "name": "Amlexanox",
+      "pubchem_cid": 2161,
+      "expected_category": "maintenance",
+      "evidence": "Cromone-like anti-allergic; topical for aphthous ulcers + asthma adjunct; IKK-epsilon inhibitor.",
+      "source_refs": ["Reilly 2013"]
+    },
+    {
+      "name": "Levocetirizine",
+      "pubchem_cid": 1549000,
+      "expected_category": "rescue",
+      "evidence": "Active R-enantiomer of cetirizine; H1 antagonist.",
+      "source_refs": ["Walsh 2006"]
+    },
+    {
+      "name": "Bilastine",
+      "pubchem_cid": 185460,
+      "expected_category": "rescue",
+      "evidence": "Newer-generation H1 antagonist; minimal CNS penetration.",
+      "source_refs": ["Lucero 2012"]
+    },
+    {
+      "name": "Ebastine",
+      "pubchem_cid": 3191,
+      "expected_category": "rescue",
+      "evidence": "Long-acting H1 antagonist.",
+      "source_refs": ["Hurst 1999"]
+    },
+    {
+      "name": "Mizolastine",
+      "pubchem_cid": 65555,
+      "expected_category": "rescue",
+      "evidence": "H1 antagonist + LOX inhibition.",
+      "source_refs": ["Levrier 1991"]
+    },
+    {
+      "name": "Doxepin",
+      "pubchem_cid": 667477,
+      "expected_category": "rescue",
+      "evidence": "Tricyclic with extremely potent H1 + H2 antagonism; used for refractory urticaria.",
+      "source_refs": ["Goldsobel 1986"]
+    },
+    {
+      "name": "Cinnarizine",
+      "pubchem_cid": 1547484,
+      "expected_category": "rescue",
+      "evidence": "H1 antagonist + Ca channel blocker; antiallergic + antivertigo.",
+      "source_refs": ["Towse 1973"]
+    },
+    {
+      "name": "Tofacitinib",
+      "pubchem_cid": 9926791,
+      "expected_category": "remission",
+      "evidence": "JAK1/3 inhibitor; downstream of FcεRI; emerging interest in MCAS-adjacent autoimmunity.",
+      "source_refs": ["Schwartz 2018"]
+    },
+    {
+      "name": "Acalabrutinib",
+      "pubchem_cid": 71226662,
+      "expected_category": "remission",
+      "evidence": "Selective BTK inhibitor; downstream of FcεRI signaling in mast cells.",
+      "source_refs": ["Byrd 2016"]
+    },
+    {
+      "name": "Tacrolimus",
+      "pubchem_cid": 445643,
+      "expected_category": "maintenance",
+      "evidence": "Calcineurin inhibitor; suppresses mast cell mediator release.",
+      "source_refs": ["de Paulis 1991"]
+    },
+    {
+      "name": "Pimecrolimus",
+      "pubchem_cid": 6509979,
+      "expected_category": "maintenance",
+      "evidence": "Topical calcineurin inhibitor; suppresses mast cell + T cell activation.",
+      "source_refs": ["Stuetz 2001"]
+    },
+    {
+      "name": "Hydroxychloroquine",
+      "pubchem_cid": 3652,
+      "expected_category": "maintenance",
+      "evidence": "Anti-malarial + immunomodulator; reported in some MCAS regimens.",
+      "source_refs": ["Schrezenmeier 2020"]
+    },
+    {
+      "name": "Glycyrrhizin",
+      "pubchem_cid": 14982,
+      "expected_category": "maintenance",
+      "evidence": "Licorice triterpene saponin; anti-allergic + anti-inflammatory.",
+      "source_refs": ["Asl 2008"]
+    },
+    {
+      "name": "Hydroxytyrosol",
+      "pubchem_cid": 82755,
+      "expected_category": "maintenance",
+      "evidence": "Olive polyphenol; Nrf2 activator; anti-inflammatory.",
+      "source_refs": ["Robles-Almazan 2018"]
+    },
+    {
+      "name": "Cysteamine",
+      "pubchem_cid": 6058,
+      "expected_category": "remission",
+      "evidence": "Aminothiol antioxidant; Nrf2-axis modulator; covalent through thiol-disulfide exchange.",
+      "source_refs": ["Besouw 2013"]
+    }
+  ]
+}
