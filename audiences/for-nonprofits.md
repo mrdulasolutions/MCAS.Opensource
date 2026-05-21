@@ -10,6 +10,12 @@ research. We built it. We need partners to operate, validate, and scale it.
 > ⚠️ This repo does not provide medical advice. See
 > [docs/disclaimers.md](../docs/disclaimers.md).
 
+## Who you'd be partnering with
+
+**MR Dula Medical** (a DBA of **MR Dula Enterprise, LLC**), Raleigh, NC, USA.
+We are an independent, MIT-licensed open-research project. Not affiliated
+with pharma, not VC-backed, not currently a 501(c)(3) (see below).
+
 ## What we are (and aren't)
 
 We **are**:

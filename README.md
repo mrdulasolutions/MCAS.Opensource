@@ -174,7 +174,20 @@ Or in [Claude Code](https://claude.ai/code), use one of the bundled skills:
 
 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) ·
 [SECURITY.md](SECURITY.md) ·
-[ROADMAP.md](ROADMAP.md)
+[ROADMAP.md](ROADMAP.md) ·
+[CONTACT.md](CONTACT.md) ·
+[AGENT_CARD.md](AGENT_CARD.md)
+
+### Agent2Agent (A2A) protocol
+
+This project publishes an [A2A agent card](AGENT_CARD.md) describing its
+10 skills (library search, compound add, trigger report, ligand-based
+screening, warhead scoring, ADMET QSAR, SFN-class analog generation,
+multi-objective ranking, experiment-report scaffolding, hypothesis
+proposal). The canonical machine-readable manifest is at
+[`.well-known/agent-card.json`](.well-known/agent-card.json) (also at
+[`/.well-known/agent.json`](/.well-known/agent.json) for legacy clients
+and [`/a2a.json`](a2a.json) at root).
 
 ---
 
@@ -184,6 +197,12 @@ MCAS / MCAD patients deserve better than symptom-by-symptom management.
 We're publishing every hypothesis and prediction openly so that no finding
 can be locked behind a patent. If a wet-lab validates a compound here,
 the world gets it. If a wet-lab refutes one, the world gets that too.
+
+## Who's behind it
+
+**MR Dula Medical** (a DBA of **MR Dula Enterprise, LLC**), Raleigh, NC, USA.
+Independent open-research project. Not affiliated with pharma, not VC-backed,
+not currently a 501(c)(3). See [CONTACT.md](CONTACT.md) for all contact routes.
 
 ## Cite
 

@@ -5,6 +5,9 @@ status: published
 hypothesis_category: methodology
 run_date: 2026-05-21
 authors:
+  - name: MR Dula Medical
+    role: provider
+    affiliation: "DBA of MR Dula Enterprise, LLC; Raleigh, NC, USA"
   - name: OpenMCAS contributors
     role: maintainer
 license: MIT

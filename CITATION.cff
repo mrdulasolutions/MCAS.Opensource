@@ -3,7 +3,11 @@ title: "MCAS.Opensource"
 message: "If you use this repository or its hypotheses, please cite it."
 type: software
 authors:
-  - name: "MR Dula Solutions and the OpenMCAS contributors"
+  - name: "MR Dula Medical (a DBA of MR Dula Enterprise, LLC)"
+    city: "Raleigh"
+    region: "NC"
+    country: "US"
+  - name: "OpenMCAS contributors"
 repository-code: "https://github.com/mrdulasolutions/MCAS.Opensource"
 url: "https://github.com/mrdulasolutions/MCAS.Opensource"
 license: MIT

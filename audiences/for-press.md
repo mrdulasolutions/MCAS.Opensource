@@ -63,9 +63,11 @@ validation before any compound can be called a treatment for anyone.
 
 ## Contact
 
-- Public discussion: [GitHub issues](https://github.com/mrdulasolutions/MCAS.Opensource/issues).
-- Press inquiry: open an [issue tagged `press`](https://github.com/mrdulasolutions/MCAS.Opensource/issues/new?labels=press)
+- **Responsible entity:** MR Dula Medical (a DBA of MR Dula Enterprise, LLC, Raleigh, NC, USA).
+- **Canonical contact directory:** [CONTACT.md](../CONTACT.md).
+- **Public discussion:** [GitHub issues](https://github.com/mrdulasolutions/MCAS.Opensource/issues).
+- **Press inquiry:** open an [issue tagged `press`](https://github.com/mrdulasolutions/MCAS.Opensource/issues/new?labels=press)
   with your outlet and your deadline; we will respond within 48 hours.
-- For background, the audience-specific docs in [`audiences/`](../audiences/)
+- **Background:** the audience-specific docs in [`audiences/`](../audiences/)
   describe the project's posture toward patients, clinicians, researchers,
   nonprofits, industry, and developers.

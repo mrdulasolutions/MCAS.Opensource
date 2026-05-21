@@ -62,6 +62,9 @@ but the *starting point* stays public.
 
 ## Reach us
 
+The project entity is **MR Dula Medical** (a DBA of **MR Dula Enterprise,
+LLC**), Raleigh, NC, USA. Canonical contact directory: [CONTACT.md](../CONTACT.md).
+
 Open an [issue tagged `industry-engagement`](https://github.com/mrdulasolutions/MCAS.Opensource/issues/new?labels=industry-engagement)
 with the broad strokes. We will publicly post the outline of any
 engagement (parties, scope, deliverables) before signing.

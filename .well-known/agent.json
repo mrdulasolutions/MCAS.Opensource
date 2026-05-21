@@ -1,0 +1,177 @@
+{
+  "$schema": "https://google.github.io/A2A/schemas/agent-card.json",
+  "schemaVersion": "0.2.0",
+  "name": "OpenMCAS Hypothesis Agent",
+  "description": "An open, MIT-licensed hypothesis-generation agent for MCAS / MCAD (Mast Cell Activation Syndrome / Disorder). Curates a compound library across pharma, herbs, supplements, and AI-generated analogs; runs ligand-based virtual screening, covalent-warhead detection, ADMET QSAR, and multi-objective ranking across rescue / maintenance / remission categories. Every prediction is published openly so any researcher can audit, falsify, or extend it.",
+  "version": "0.1.0",
+  "url": "https://github.com/mrdulasolutions/MCAS.Opensource",
+  "documentationUrl": "https://github.com/mrdulasolutions/MCAS.Opensource#readme",
+  "iconUrl": "https://github.com/mrdulasolutions.png",
+  "provider": {
+    "organization": "MR Dula Medical",
+    "legalEntity": "MR Dula Medical, a DBA of MR Dula Enterprise, LLC",
+    "address": {
+      "locality": "Raleigh",
+      "region": "NC",
+      "country": "USA"
+    },
+    "url": "https://github.com/mrdulasolutions",
+    "contact": {
+      "issuesUrl": "https://github.com/mrdulasolutions/MCAS.Opensource/issues",
+      "securityUrl": "https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/SECURITY.md",
+      "codeOfConductUrl": "https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/CODE_OF_CONDUCT.md"
+    }
+  },
+  "license": {
+    "spdxId": "MIT",
+    "url": "https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/LICENSE"
+  },
+  "disclaimers": {
+    "medicalAdvice": "This agent generates research hypotheses only. It does not diagnose, treat, cure, or prevent any condition. It is not a substitute for clinical care. See https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/docs/disclaimers.md.",
+    "selfExperimentation": "Outputs of this agent must not be acted on for self-treatment. Patients should work with a mast-cell specialist."
+  },
+  "status": {
+    "hostedEndpoint": "not_yet_available",
+    "manifestPurpose": "Describes the conceptual A2A agent interface. The underlying skills are implemented as scripts in the repository and runnable on a CPU laptop in ~3 minutes. A hosted A2A endpoint is on the project roadmap (see ROADMAP.md)."
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "extensions": {
+      "x-openmcas/repositoryBacked": true,
+      "x-openmcas/runnableLocally": true,
+      "x-openmcas/openLicense": "MIT",
+      "x-openmcas/dataProvenance": "PubChem PUG-REST, AlphaFold DB, PyTDC, hand-curated"
+    }
+  },
+  "authentication": {
+    "schemes": ["public"]
+  },
+  "defaultInputModes": ["text/plain", "application/json"],
+  "defaultOutputModes": ["text/plain", "application/json", "text/csv", "text/markdown"],
+  "skills": [
+    {
+      "id": "library.search",
+      "name": "Search the MCAS compound library",
+      "description": "Search the curated MCAS/MCAD compound library by name, PubChem CID, category (rescue / maintenance / remission), target, mechanism, or evidence level. Returns matched entries with SMILES, mechanism, and evidence.",
+      "tags": ["search", "library", "compounds", "cheminformatics"],
+      "inputModes": ["text/plain", "application/json"],
+      "outputModes": ["application/json", "text/csv"],
+      "examples": [
+        "List all rescue compounds with high evidence",
+        "Find compounds targeting KEAP1",
+        "Get the SMILES for sulforaphane",
+        "Which compounds in the library are mast cell stabilizers?"
+      ]
+    },
+    {
+      "id": "library.add_compound",
+      "name": "Propose a new compound for the library",
+      "description": "Propose a pharma drug, herb, supplement, or biologic for the curated library. Validates the PubChem CID, fetches the canonical SMILES, and opens a GitHub PR to data/compounds/seeds.json with the proposed entry.",
+      "tags": ["contribute", "library", "compounds"],
+      "inputModes": ["text/plain", "application/json"],
+      "outputModes": ["application/json"],
+      "examples": [
+        "Add azelastine to the library as a maintenance H1 antagonist",
+        "Propose adding moringin (CID 73895174) under remission with KEAP1 target"
+      ]
+    },
+    {
+      "id": "triggers.report",
+      "name": "Report an MCAS trigger pattern",
+      "description": "Submit an anonymous trigger pattern (food / smell / physical / stress / infection / toxin / hormonal / medication) for inclusion in the trigger -> pathway -> counter-compound map. No PHI is collected; only the pattern + onset + duration + dominant symptom domain.",
+      "tags": ["contribute", "triggers", "patient-reported", "anonymous"],
+      "inputModes": ["text/plain", "application/json"],
+      "outputModes": ["application/json"],
+      "examples": [
+        "Report that perfumes trigger immediate skin flushing",
+        "Log a trigger pattern for aged cheese and GI symptoms"
+      ]
+    },
+    {
+      "id": "screen.ligand_based",
+      "name": "Ligand-based virtual screening against MCAS targets",
+      "description": "Given one or more SMILES, compute max Tanimoto similarity (Morgan radius 2, 2048 bits) against curated reference ligand sets for 8 MCAS targets: MRGPRX2, KIT, KEAP1, HRH1, HRH2, CYSLTR1, BTK, GLP1R.",
+      "tags": ["screening", "tanimoto", "targets", "in-silico"],
+      "inputModes": ["text/plain", "application/json"],
+      "outputModes": ["application/json", "text/csv"],
+      "examples": [
+        "Score this SMILES against MRGPRX2 and KIT",
+        "Run ligand-based screen for CS(=O)CCCCN=C=S across all targets"
+      ]
+    },
+    {
+      "id": "screen.warhead",
+      "name": "Covalent warhead + KEAP1 pharmacophore scoring",
+      "description": "Apply 13 cysteine-reactive SMARTS patterns (isothiocyanate, Michael acceptor, cyanoenone, acrylamide, vinyl sulfone, epoxide, quinone, etc.) plus a KEAP1 pharmacophore filter (MW, cLogP, heavy atoms). Returns warhead presence + KEAP1 pharmacophore pass + a [0,1] warhead score.",
+      "tags": ["warhead", "covalent", "smarts", "keap1", "in-silico"],
+      "inputModes": ["text/plain", "application/json"],
+      "outputModes": ["application/json", "text/csv"],
+      "examples": [
+        "Does this molecule have a cysteine-reactive warhead?",
+        "Score this SMILES for KEAP1 pharmacophore"
+      ]
+    },
+    {
+      "id": "qsar.predict",
+      "name": "ADMET QSAR prediction (hERG, AMES, BBB)",
+      "description": "Predict cardiac liability (hERG), mutagenicity (AMES), and blood-brain barrier penetration (BBB_Martins) for a SMILES using RandomForest classifiers trained on PyTDC tasks (validation AUC 0.89-0.91).",
+      "tags": ["qsar", "admet", "safety", "in-silico"],
+      "inputModes": ["text/plain", "application/json"],
+      "outputModes": ["application/json"],
+      "examples": [
+        "Predict hERG / AMES / BBB for this SMILES",
+        "Is this molecule predicted to cross the blood-brain barrier?"
+      ]
+    },
+    {
+      "id": "generate.sfn_analogs",
+      "name": "Generate SFN-class candidate analogs",
+      "description": "Enumerate candidate analogs of the sulforaphane class using RDKit BRICS recombination + bioisosteric substitution + warhead grafting onto library scaffolds. Seeds: SFN, iberin, erucin, sulforaphene, allyl-ITC, benzyl-ITC, phenethyl-ITC. Returns ranked SMILES with QED + similarity + Lipinski + composite score.",
+      "tags": ["generative", "sfn", "isothiocyanate", "in-silico"],
+      "inputModes": ["application/json"],
+      "outputModes": ["application/json", "text/csv"],
+      "examples": [
+        "Generate SFN-class analogs from the current library",
+        "Generate phenethyl-isothiocyanate analogs with phenyl tether variants"
+      ]
+    },
+    {
+      "id": "rank.hypotheses",
+      "name": "Multi-objective ranking across rescue / maintenance / remission",
+      "description": "Compute the composite hypothesis-ranking signal: 0.30 evidence + 0.35 weighted target similarity + 0.10 QED (generated only) + 0.10 warhead score + 0.15 safety bonus + small contextual BBB term. Returns ranked CSVs per category and auto-updates the Top-10 tables in hypotheses/*.md.",
+      "tags": ["ranking", "composite", "hypothesis"],
+      "inputModes": ["application/json"],
+      "outputModes": ["application/json", "text/csv", "text/markdown"],
+      "examples": [
+        "Rank the current library + generated analogs for remission",
+        "Show me the top 10 maintenance candidates with their safety profile"
+      ]
+    },
+    {
+      "id": "experiment.create_report",
+      "name": "Create a standardized experiment report",
+      "description": "Scaffold a new experiments/EXP-NNN-*.md report from the standard 11-section template, prefilled with hypothesis, method, inputs, parameters, environment, outputs, interpretation, reproduction, limitations, and next-experiment suggestions. Updates the experiments index.",
+      "tags": ["experiment", "preregistration", "documentation"],
+      "inputModes": ["application/json"],
+      "outputModes": ["text/markdown"],
+      "examples": [
+        "Create an experiment report for a KEAP1 docking run on the top-50",
+        "Scaffold EXP-006 for a ChEMBL mast cell bioassay import"
+      ]
+    },
+    {
+      "id": "hypothesis.propose",
+      "name": "Propose or critique a hypothesis",
+      "description": "Submit a falsifiable hypothesis (rescue / maintenance / remission / injury / trigger / cross-cutting) with falsifiable predictions, linked compounds and triggers, proposed in-silico tests, and proposed wet-lab tests. Opens a GitHub issue using the hypothesis_proposal template.",
+      "tags": ["hypothesis", "contribute", "preregistration"],
+      "inputModes": ["text/plain", "application/json"],
+      "outputModes": ["application/json"],
+      "examples": [
+        "Propose that PEITC + SCFA synergistically restore the gut-mast axis",
+        "Critique the SFN remission hypothesis with a falsifying experiment"
+      ]
+    }
+  ]
+}

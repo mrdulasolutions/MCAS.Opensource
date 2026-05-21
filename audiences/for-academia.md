@@ -92,6 +92,9 @@ contact in the repo profile.
 
 ## Reach us
 
-Open an [issue tagged `academic-collaboration`](https://github.com/mrdulasolutions/MCAS.Opensource/issues/new?labels=academic-collaboration)
+The project entity is **MR Dula Medical** (a DBA of **MR Dula Enterprise,
+LLC**), Raleigh, NC, USA. Canonical contact directory: [CONTACT.md](../CONTACT.md).
+
+To start a collaboration conversation, open an [issue tagged `academic-collaboration`](https://github.com/mrdulasolutions/MCAS.Opensource/issues/new?template=academic_collaboration.md)
 with the broad strokes (your lab, the question you want to ask, what you
 can contribute, what you need from us). We respond within a week.

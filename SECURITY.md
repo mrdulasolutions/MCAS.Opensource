@@ -31,7 +31,9 @@ no production services; this is essentially client-side cheminformatics
 software), **do not open a public issue**. Instead:
 
 - Open a private GitHub Security Advisory: `Security` tab → `Report a vulnerability`.
-- Or email the maintainer (contact in the repo profile).
+- For private channels outside GitHub, see [CONTACT.md](CONTACT.md). The
+  responsible entity is **MR Dula Medical** (DBA of MR Dula Enterprise, LLC,
+  Raleigh, NC, USA).
 
 We will respond within a week. Critical fixes ship same-day where
 possible.
