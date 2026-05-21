@@ -65,6 +65,26 @@ ranked, AI-evaluated hypothesis, with a clear handoff to wet-lab validation.
    middling — we're hunting for hypotheses, not pretending in silico beats real
    data.
 
+## CPU-only path (no GPU, no Colab)
+
+If you don't have access to a GPU or Colab, two helper scripts replace the
+GPU-bound notebooks (03 + 04) end-to-end on a laptop:
+
+```bash
+python scripts/generate_sfn_analogs.py     # local SFN-seeded analog generator (BRICS + bioisostere + warhead-graft)
+python scripts/score_against_targets.py    # ligand-based virtual screening vs. curated reference ligands per target
+python scripts/rank_hypotheses.py          # multi-objective ranking → ranked_<category>.csv + hypothesis-doc updates
+```
+
+The ligand-based screen uses Tanimoto similarity (Morgan fingerprint, radius 2,
+2048 bits) against curated reference ligands per target (e.g. imatinib /
+nilotinib / dasatinib for KIT; bardoxolone / dimethyl fumarate / SFN for
+KEAP1-Nrf2; cetirizine / fexofenadine for HRH1). It's standard pharma early-
+triage when target structures are uncertain — every output row carries a
+`method` column making the methodology explicit. When a GPU + DiffDock pose
+becomes available, the same `outputs/docking_<target>.csv` file is overwritten
+by physics-based scores and notebook 05 keeps working unchanged.
+
 ## Updating the pipeline
 
 Add a compound → edit `seeds.json` → rerun `build_compound_library.py` and

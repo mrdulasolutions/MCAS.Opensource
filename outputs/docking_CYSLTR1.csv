@@ -1,0 +1,122 @@
+name,smiles,category,source,target,score,best_ref,method
+Montelukast,CC(C)(O)c1ccccc1CC[C@@H](SCC1(CC(=O)O)CC1)c1cccc(/C=C/c2ccc3ccc(Cl)cc3n2)c1,maintenance,library,CYSLTR1,0.5109,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Masitinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nc(-c2cccnc2)cs1,remission,library,CYSLTR1,0.2315,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+Fexofenadine,CC(C)(C(=O)O)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1,rescue,library,CYSLTR1,0.2105,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Rosmarinic acid,O=C(/C=C/c1ccc(O)c(O)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,maintenance,library,CYSLTR1,0.191,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Cetirizine,O=C(O)COCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,rescue,library,CYSLTR1,0.1848,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+6-Gingerol,CCCCC[C@H](O)CC(=O)CCc1ccc(O)c(OC)c1,maintenance,library,CYSLTR1,0.1828,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+Aspirin (acetylsalicylic acid),CC(=O)Oc1ccccc1C(=O)O,remission,library,CYSLTR1,0.1818,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Loratadine,CCOC(=O)N1CCC(=C2c3ccc(Cl)cc3CCc3cccnc32)CC1,rescue,library,CYSLTR1,0.1683,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Curcumin,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2)ccc1O,maintenance,library,CYSLTR1,0.1667,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0116,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2cccc(CCS(=O)CCCN=C=S)c2)CC1,candidate,reinvent_generated,CYSLTR1,0.1667,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Hydroxyzine,OCCOCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,rescue,library,CYSLTR1,0.163,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Cromolyn sodium,O=C(O)c1cc(=O)c2cc(OCC(O)COc3cccc4oc(C(=O)O)cc(=O)c34)ccc2o1,rescue,library,CYSLTR1,0.15,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0079,CC(=O)Oc1c(CCS(=O)CCCN=C=S)cccc1C(=O)O,candidate,reinvent_generated,CYSLTR1,0.15,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0080,CC(=O)Oc1cc(CCS(=O)CCCN=C=S)ccc1C(=O)O,candidate,reinvent_generated,CYSLTR1,0.15,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0108,O=S(CCCN=C=S)CCc1cccc(C(c2ccc(Cl)cc2)N2CCN(CCOCCO)CC2)c1,candidate,reinvent_generated,CYSLTR1,0.1478,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0084,CN(C)CCOC(c1ccccc1)c1cccc(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,CYSLTR1,0.1415,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Avapritinib,CC1(C)OB(O)c2cc(CNC(=O)c3ccc(C4=NO[C@](c5cc(Cl)c(F)c(Cl)c5)(C(F)(F)F)C4)n4cccc34)ccc21,remission,library,CYSLTR1,0.1406,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0120,CCOC(=O)N1CCC(=C2c3ncccc3CCc3cc(Cl)cc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,CYSLTR1,0.1405,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0105,O=C(/C=C/c1cc(O)c(O)c(CCS(=O)CCCN=C=S)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,CYSLTR1,0.1391,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0102,CCOC(=O)N1CCC(=C2c3cc(CCS(=O)CCCN=C=S)c(Cl)cc3CCc3cccnc32)CC1,candidate,reinvent_generated,CYSLTR1,0.1382,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0115,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2ccccc2CCS(=O)CCCN=C=S)CC1,candidate,reinvent_generated,CYSLTR1,0.1379,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Luteolin,O=c1cc(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12,maintenance,library,CYSLTR1,0.1364,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+Diphenhydramine,CN(C)CCOC(c1ccccc1)c1ccccc1,rescue,library,CYSLTR1,0.1358,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Quercetin,O=c1c(O)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12,rescue,library,CYSLTR1,0.1348,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0089,CCCCC[C@H](O)CC(=O)CCc1cc(OC)c(O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CYSLTR1,0.1339,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0118,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2cc(OC)c(O)cc2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,CYSLTR1,0.1339,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+Rutin,C[C@@H]1O[C@@H](OC[C@H]2O[C@@H](Oc3c(-c4ccc(O)c(O)c4)oc4cc(O)cc(O)c4c3=O)[C@H](O)[C@@H](O)[C@@H]2O)[C@H](O)[C@H](O)[C@H]1O,maintenance,library,CYSLTR1,0.1327,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0113,O=C(/C=C/c1cc(O)c(O)cc1CCS(=O)CCCN=C=S)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,CYSLTR1,0.1327,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0119,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,CYSLTR1,0.1327,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0081,O=S(CCCN=C=S)CCc1cc(/C=C/c2cc(O)cc(O)c2)ccc1O,candidate,reinvent_generated,CYSLTR1,0.13,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0096,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CYSLTR1,0.1284,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0104,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)cc(=O)c4c3CCS(=O)CCCN=C=S)cccc2o1,candidate,reinvent_generated,CYSLTR1,0.1282,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0092,O=c1c(O)c(-c2ccc(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CYSLTR1,0.1273,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+Apigenin,O=c1cc(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,maintenance,library,CYSLTR1,0.1264,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0110,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)c(CCS(=O)CCCN=C=S)c(=O)c4c3)cccc2o1,candidate,reinvent_generated,CYSLTR1,0.126,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Kaempferol,O=c1c(O)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,maintenance,library,CYSLTR1,0.125,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0090,CCCCC[C@H](O)CC(=O)CCc1cc(CCS(=O)CCCN=C=S)c(O)c(OC)c1,candidate,reinvent_generated,CYSLTR1,0.1217,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+Silibinin,COc1cc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)ccc1O,maintenance,library,CYSLTR1,0.1204,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0087,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CYSLTR1,0.1204,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0109,O=S(CCCN=C=S)CCc1ccccc1C(c1ccc(Cl)cc1)N1CCN(CCOCCO)CC1,candidate,reinvent_generated,CYSLTR1,0.1197,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0111,O=C(O[C@@H]1Cc2c(O)cc(O)c(CCS(=O)CCCN=C=S)c2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,CYSLTR1,0.1197,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0082,O=S(CCCN=C=S)CCc1cc(O)ccc1/C=C/c1cc(O)cc(O)c1,candidate,reinvent_generated,CYSLTR1,0.1176,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Resveratrol,Oc1ccc(/C=C/c2cc(O)cc(O)c2)cc1,maintenance,library,CYSLTR1,0.1169,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Midostaurin,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4,remission,library,CYSLTR1,0.1138,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0114,COc1cc([C@H]2Oc3c(ccc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)c3CCS(=O)CCCN=C=S)O[C@@H]2CO)ccc1O,candidate,reinvent_generated,CYSLTR1,0.1136,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+Baicalein,O=c1cc(-c2ccccc2)oc2cc(O)c(O)c(O)c12,maintenance,library,CYSLTR1,0.1124,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+EGCG,O=C(O[C@@H]1Cc2c(O)cc(O)cc2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,maintenance,library,CYSLTR1,0.1122,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0083,CN(C)CCOC(c1ccccc1)c1ccccc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CYSLTR1,0.1111,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0101,O=C(O[C@@H]1Cc2c(cc(O)c(CCS(=O)CCCN=C=S)c2O)O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,CYSLTR1,0.1102,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0094,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccccc2)oc2cc(O)c(O)c(O)c12,candidate,reinvent_generated,CYSLTR1,0.1091,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0074,CSCc1ccc(N=C=S)cc1,candidate,reinvent_generated,CYSLTR1,0.1084,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Hesperidin,COc1ccc([C@@H]2CC(=O)c3c(O)cc(O[C@@H]4O[C@H](CO[C@@H]5O[C@@H](C)[C@H](O)[C@@H](O)[C@H]5O)[C@@H](O)[C@H](O)[C@H]4O)cc3O2)cc1O,maintenance,library,CYSLTR1,0.1083,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0117,COc1c(O)ccc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CYSLTR1,0.1069,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0071,CS(=O)Cc1ccc(SC#N)cc1,candidate,reinvent_generated,CYSLTR1,0.1059,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Myricitrin,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O,maintenance,library,CYSLTR1,0.1048,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0065,CS(=O)CCc1ccc(SC#N)cc1,candidate,reinvent_generated,CYSLTR1,0.1034,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Naltrexone (low-dose),O=C1CC[C@@]2(O)[C@H]3Cc4ccc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,maintenance,library,CYSLTR1,0.1009,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0100,O=c1c(O)c(-c2cc(O)c(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CYSLTR1,0.0991,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+Docosahexaenoic acid (DHA),CC/C=C\C/C=C\C/C=C\C/C=C\C/C=C\C/C=C\CCC(=O)O,maintenance,library,CYSLTR1,0.0988,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0088,O=c1cc(-c2ccc(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CYSLTR1,0.0982,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0091,O=c1c(O)c(-c2ccc(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CYSLTR1,0.0982,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0093,O=c1cc(-c2ccccc2CCS(=O)CCCN=C=S)oc2cc(O)c(O)c(O)c12,candidate,reinvent_generated,CYSLTR1,0.0982,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+Ranitidine,CN/C(=C\[N+](=O)[O-])NCCSCc1ccc(CN(C)C)o1,rescue,library,CYSLTR1,0.098,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+Eicosapentaenoic acid (EPA),CC/C=C\C/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)O,maintenance,library,CYSLTR1,0.0964,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0059,CS(=O)Cc1ccc(C#N)cc1,candidate,reinvent_generated,CYSLTR1,0.0964,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Butyric acid,CCCC(=O)O,maintenance,library,CYSLTR1,0.0959,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+Ascorbic acid,O=C1O[C@H]([C@@H](O)CO)C(O)=C1O,rescue,library,CYSLTR1,0.0952,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0107,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3CCS(=O)CCCN=C=S)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O,candidate,reinvent_generated,CYSLTR1,0.0945,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0049,CS(=O)CCc1ccc(C#N)cc1,candidate,reinvent_generated,CYSLTR1,0.0941,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0060,CS(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,CYSLTR1,0.093,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0070,CS(=O)(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,CYSLTR1,0.093,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0075,CSCCc1ccc(N=C=S)cc1,candidate,reinvent_generated,CYSLTR1,0.093,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0052,CS(=O)CCc1ccc(N=C=S)cc1,candidate,reinvent_generated,CYSLTR1,0.0909,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0068,CCS(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,CYSLTR1,0.0909,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0069,CS(=O)(=O)CCc1ccc(N=C=S)cc1,candidate,reinvent_generated,CYSLTR1,0.0909,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0095,O=c1cc(-c2cc(O)c(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CYSLTR1,0.0901,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0099,O=c1c(O)c(-c2cc(O)c(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CYSLTR1,0.0901,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0067,CCS(=O)CCc1ccc(N=C=S)cc1,candidate,reinvent_generated,CYSLTR1,0.0889,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0097,CN/C(=C\[N+](=O)[O-])NCCSCc1cc(CCS(=O)CCCN=C=S)c(CN(C)C)o1,candidate,reinvent_generated,CYSLTR1,0.088,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0098,CN/C(=C\[N+](=O)[O-])NCCSCc1oc(CN(C)C)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CYSLTR1,0.088,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+Calcitriol,C=C1/C(=C\C=C2/CCC[C@]3(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]23)C[C@@H](O)C[C@@H]1O,maintenance,library,CYSLTR1,0.0877,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+N-Acetylcysteine (NAC),CC(=O)N[C@@H](CS)C(=O)O,maintenance,library,CYSLTR1,0.0864,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0106,O=C1CC[C@@]2(O)[C@H]3Cc4c(CCS(=O)CCCN=C=S)cc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,CYSLTR1,0.084,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+Famotidine,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)cs1,rescue,library,CYSLTR1,0.0792,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0112,O=C1CC[C@@]2(O)[C@H]3Cc4cc(CCS(=O)CCCN=C=S)c(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,CYSLTR1,0.0758,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0085,CN1CCC(=C2c3cc(CCS(=O)CCCN=C=S)ccc3CC(=O)c3sccc32)CC1,candidate,reinvent_generated,CYSLTR1,0.0744,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0054,CS(=O)CCCSC#N,candidate,reinvent_generated,CYSLTR1,0.0723,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0051,CS(=O)CCCCSC#N,candidate,reinvent_generated,CYSLTR1,0.0714,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Ketotifen,CN1CCC(=C2c3ccccc3CC(=O)c3sccc32)CC1,rescue,library,CYSLTR1,0.0707,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0053,CS(=O)CCCCCSC#N,candidate,reinvent_generated,CYSLTR1,0.0706,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Alpha-lipoic acid,O=C(O)CCCCC1CCSS1,maintenance,library,CYSLTR1,0.0682,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0103,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)c(CCS(=O)CCCN=C=S)s1,candidate,reinvent_generated,CYSLTR1,0.0667,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0086,CN1CCC(=C2c3ccsc3C(=O)Cc3cccc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,CYSLTR1,0.065,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Glucoraphanin,CS(=O)CCCC/C(=N\OS(=O)(=O)O)S[C@@H]1O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O,remission,library,CYSLTR1,0.0648,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Biotin,O=C(O)CCCC[C@@H]1SC[C@@H]2NC(=O)N[C@@H]21,maintenance,library,CYSLTR1,0.0632,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Cholecalciferol (Vitamin D3),C=C1CC[C@H](O)C/C1=C/C=C1\CCC[C@]2(C)[C@@H]([C@H](C)CCCC(C)C)CC[C@@H]12,maintenance,library,CYSLTR1,0.0619,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0050,CS(=O)CCCC#N,candidate,reinvent_generated,CYSLTR1,0.0617,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+Thymoquinone,CC1=CC(=O)C(C(C)C)=CC1=O,maintenance,library,CYSLTR1,0.061,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0045,CS(=O)CCCCC#N,candidate,reinvent_generated,CYSLTR1,0.061,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0046,CS(=O)CCCCCC#N,candidate,reinvent_generated,CYSLTR1,0.0602,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0063,CCS(=O)CCCCC#N,candidate,reinvent_generated,CYSLTR1,0.0595,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0077,CS(=O)(=O)CCCCSC#N,candidate,reinvent_generated,CYSLTR1,0.0588,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0048,CCS(=O)CCCN=C=S,candidate,reinvent_generated,CYSLTR1,0.0581,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0055,CCS(=O)(=O)CCCCN=C=S,candidate,reinvent_generated,CYSLTR1,0.0581,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0044,CCS(=O)CCCCN=C=S,candidate,reinvent_generated,CYSLTR1,0.0575,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0073,CCS(=O)CCCCSC#N,candidate,reinvent_generated,CYSLTR1,0.0575,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0047,CCS(=O)CCCCCN=C=S,candidate,reinvent_generated,CYSLTR1,0.0568,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+Taurine,NCCS(=O)(=O)O,maintenance,library,CYSLTR1,0.0519,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0076,CSCCCCC#N,candidate,reinvent_generated,CYSLTR1,0.0494,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0078,CSCCCCSC#N,candidate,reinvent_generated,CYSLTR1,0.0494,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0072,CS(=O)(=O)CCCCC#N,candidate,reinvent_generated,CYSLTR1,0.0482,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0043,CS(=O)CCCN=C=S,candidate,reinvent_generated,CYSLTR1,0.0471,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0057,CS(=O)(=O)CCCN=C=S,candidate,reinvent_generated,CYSLTR1,0.0471,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+Sulforaphane,CS(=O)CCCCN=C=S,remission,library,CYSLTR1,0.0465,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0056,CS(=O)(=O)CCCCN=C=S,candidate,reinvent_generated,CYSLTR1,0.0465,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0066,CCSCCCCN=C=S,candidate,reinvent_generated,CYSLTR1,0.0465,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0042,CS(=O)CCCCCN=C=S,candidate,reinvent_generated,CYSLTR1,0.046,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0058,CS(=O)(=O)CCCCCN=C=S,candidate,reinvent_generated,CYSLTR1,0.046,Pranlukast (CID 4895),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0062,CSCCCN=C=S,candidate,reinvent_generated,CYSLTR1,0.0357,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0061,CSCCCCN=C=S,candidate,reinvent_generated,CYSLTR1,0.0353,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0064,CSCCCCCN=C=S,candidate,reinvent_generated,CYSLTR1,0.0349,Montelukast (CID 5281040),ligand_based_similarity_tanimoto_morgan2_2048
