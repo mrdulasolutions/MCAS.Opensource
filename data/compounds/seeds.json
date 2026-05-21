@@ -469,8 +469,8 @@
       "pubchem_cid": 5350,
       "category": "remission",
       "subcategory": "Isothiocyanate (broccoli sprout)",
-      "mechanism": "Nrf2 master activator; HO-1 induction; NF-kB / caspase-1 inhibition; epigenetic (DNMT/HDAC) modulation",
-      "target": "Nrf2/KEAP1; epigenetic",
+      "mechanism": "Covalent KEAP1 modifier (Cys-151/273/288 isothiocyanate adduct) -> Nrf2 stabilization + nuclear translocation; HO-1 / NQO1 induction; NF-kB / caspase-1 inhibition; epigenetic (DNMT/HDAC) modulation",
+      "target": "KEAP1 (Q14145); epigenetic",
       "evidence_level": "high",
       "evidence_notes": "Upstream rescue candidate for oxidative + epigenetic 'injury'; suppresses mast cell degranulation in vitro.",
       "source_refs": ["Houghton 2013; Yang 2017"]
@@ -481,7 +481,7 @@
       "category": "remission",
       "subcategory": "Sulforaphane precursor",
       "mechanism": "Converted to sulforaphane by myrosinase; same downstream Nrf2 activation",
-      "target": "Nrf2/KEAP1 (via SFN)",
+      "target": "KEAP1 (via SFN)",
       "evidence_level": "high",
       "evidence_notes": "Bioavailability depends on co-administered myrosinase or gut bacteria.",
       "source_refs": ["Fahey 2015"]
@@ -535,6 +535,72 @@
       "evidence_level": "high",
       "evidence_notes": "FDA-approved for advanced systemic mastocytosis (2021).",
       "source_refs": ["Gotlib 2021"]
+    },
+    {
+      "name": "Iberin",
+      "pubchem_cid": 3032358,
+      "category": "remission",
+      "subcategory": "Natural isothiocyanate (Brassica)",
+      "mechanism": "Covalent KEAP1 modifier (Cys); Nrf2 activator; shorter-chain SFN analog",
+      "target": "KEAP1 (Q14145)",
+      "evidence_level": "medium",
+      "evidence_notes": "Found in cabbage, broccoli. Same warhead as SFN; one CH2 shorter.",
+      "source_refs": ["Vermeulen 2003"]
+    },
+    {
+      "name": "Erucin",
+      "pubchem_cid": 7373,
+      "category": "remission",
+      "subcategory": "Natural isothiocyanate (Brassica)",
+      "mechanism": "Sulfide form of SFN; reduced + bioequivalent in vivo via S-oxidation; covalent KEAP1 modifier",
+      "target": "KEAP1 (Q14145)",
+      "evidence_level": "high",
+      "evidence_notes": "Found in arugula / Eruca sativa. Plasma half-life longer than SFN; interconverts in vivo.",
+      "source_refs": ["Melchini 2010"]
+    },
+    {
+      "name": "Sulforaphene",
+      "pubchem_cid": 6433469,
+      "category": "remission",
+      "subcategory": "Natural isothiocyanate (radish)",
+      "mechanism": "Covalent KEAP1 modifier; unsaturated SFN homolog with potentially stronger Nrf2 activation",
+      "target": "KEAP1 (Q14145)",
+      "evidence_level": "medium",
+      "evidence_notes": "From radish seeds (Raphanus sativus). C2=C3 double bond vs SFN.",
+      "source_refs": ["Pocasap 2020"]
+    },
+    {
+      "name": "Allyl isothiocyanate",
+      "pubchem_cid": 5971,
+      "category": "remission",
+      "subcategory": "Natural isothiocyanate (mustard)",
+      "mechanism": "Covalent KEAP1 modifier; TRPA1 agonist (pungent)",
+      "target": "KEAP1; TRPA1",
+      "evidence_level": "medium",
+      "evidence_notes": "From mustard / horseradish / wasabi. Smaller and more volatile than SFN.",
+      "source_refs": ["Wagner 2004"]
+    },
+    {
+      "name": "Benzyl isothiocyanate",
+      "pubchem_cid": 2346,
+      "category": "remission",
+      "subcategory": "Natural isothiocyanate (papaya / garden cress)",
+      "mechanism": "Covalent KEAP1 modifier; broader cytotoxic profile",
+      "target": "KEAP1 (Q14145)",
+      "evidence_level": "medium",
+      "evidence_notes": "From garden cress, papaya seeds. Aromatic distal anchor; explores another pharmacophore class.",
+      "source_refs": ["Nakamura 2002"]
+    },
+    {
+      "name": "Phenethyl isothiocyanate",
+      "pubchem_cid": 16741,
+      "category": "remission",
+      "subcategory": "Natural isothiocyanate (watercress)",
+      "mechanism": "Covalent KEAP1 modifier; HDAC inhibition; well-studied chemopreventive",
+      "target": "KEAP1; HDAC",
+      "evidence_level": "high",
+      "evidence_notes": "From watercress (Nasturtium officinale). Strong Nrf2 + epigenetic activity.",
+      "source_refs": ["Cheung 2010"]
     },
     {
       "name": "Midostaurin",

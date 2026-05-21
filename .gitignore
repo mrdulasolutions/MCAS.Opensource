@@ -63,6 +63,14 @@ data/compounds/.smiles_cache.json
 .pytest_cache/
 .ruff_cache/
 
+# PyTDC downloads its raw training data to cwd/data/ — keep these out of git;
+# they're rebuildable by anyone via the PyTDC API.
+data/*.tab
+data/*.tsv
+data/*.csv.gz
+data/oracle/
+data/utils/
+
 # Secrets
 *.key
 *.pem

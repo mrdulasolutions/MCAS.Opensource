@@ -55,13 +55,22 @@ TARGET_REFERENCES: dict[str, list[tuple[str, str, str]]] = {
         ("Nilotinib",   "Cc1cn(-c2cc(NC(=O)c3ccc(C)c(Nc4nccc(-c5cccnc5)n4)c3)cc(C(F)(F)F)c2)cn1",         "CID 644241"),
         ("Dasatinib",   "Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1",                       "CID 3062316"),
     ],
-    "NFE2L2": [  # KEAP1-Nrf2 activators (covalent + non-covalent)
-        ("Sulforaphane",       "CS(=O)CCCCN=C=S",                                                              "CID 5350"),
-        ("Curcumin",           "COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2)ccc1O",                            "CID 969516"),
-        ("Resveratrol",        "Oc1ccc(/C=C/c2cc(O)cc(O)c2)cc1",                                               "CID 445154"),
-        ("Dimethyl fumarate",  "COC(=O)/C=C/C(=O)OC",                                                          "CID 637568"),
-        ("Bardoxolone methyl", "COC(=O)C1=CC(=O)[C@@]2(C)C(=O)C(C#N)=C(C(C)(C)CCC3=C4CC(C(C)(C)C5=CC(=O)[C@@]6(C)[C@@H]5CC=C6)CC[C@]34C)CC[C@@H]2C1",  "CID 400769"),
-        ("Oltipraz",           "Cc1nc2cnsnc2c(=S)n1",                                                          "CID 4642"),
+    # KEAP1 — the actual covalent target of SFN; releases Nrf2 from sequestration.
+    # Reference set spans both covalent electrophiles and non-covalent Kelch-PPI inhibitors.
+    "KEAP1": [
+        ("Sulforaphane",        "CS(=O)CCCCN=C=S",                                                              "CID 5350"),
+        ("Iberin",              "CS(=O)CCCN=C=S",                                                               "CID 3032358"),
+        ("Erucin",              "CSCCCCN=C=S",                                                                  "CID 7373"),
+        ("Allyl isothiocyanate","C=CCN=C=S",                                                                    "CID 5971"),
+        ("Phenethyl isothiocyanate","S=C=NCCc1ccccc1",                                                          "CID 16741"),
+        ("Benzyl isothiocyanate","S=C=NCc1ccccc1",                                                              "CID 2346"),
+        ("Curcumin",            "COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2)ccc1O",                            "CID 969516"),
+        ("Resveratrol",         "Oc1ccc(/C=C/c2cc(O)cc(O)c2)cc1",                                               "CID 445154"),
+        ("Dimethyl fumarate",   "COC(=O)/C=C/C(=O)OC",                                                          "CID 637568"),
+        ("Bardoxolone methyl",  "COC(=O)C1=CC(=O)[C@@]2(C)C(=O)C(C#N)=C(C(C)(C)CCC3=C4CC(C(C)(C)C5=CC(=O)[C@@]6(C)[C@@H]5CC=C6)CC[C@]34C)CC[C@@H]2C1",  "CID 400769"),
+        ("Oltipraz",            "Cc1nc2cnsnc2c(=S)n1",                                                          "CID 4642"),
+        ("Omaveloxolone (RTA408)","COC(=O)C1=CC(=O)[C@@]2(C)C(=O)C(C#N)=C(C(=O)NCC(F)(F)F)CC[C@@]23CC[C@@]4(C)[C@@H](CC[C@H]4C13)C(C)(C)C","CID 49787059 (approx)"),
+        ("Dimethyl itaconate",  "COC(=O)CC(=C)C(=O)OC",                                                         "CID 638013"),
     ],
     "HRH1": [
         ("Cetirizine",       "O=C(O)COCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1",            "CID 2678"),

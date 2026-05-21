@@ -27,8 +27,16 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 LIBRARY_CSV = REPO_ROOT / "data" / "compounds" / "MCAS_Compound_Library_v1.csv"
 OUT_PATH = REPO_ROOT / "outputs" / "reinvent_generated.csv"
 
-SEED_SMILES = "CS(=O)CCCCN=C=S"  # Sulforaphane
-SEED_NAME = "Sulforaphane"
+SEEDS = [
+    ("Sulforaphane",            "CS(=O)CCCCN=C=S"),     # CID 5350    — broccoli (4-(methylsulfinyl)butyl ITC)
+    ("Iberin",                  "CS(=O)CCCN=C=S"),       # CID 3032358 — cabbage (3-(methylsulfinyl)propyl ITC)
+    ("Erucin",                  "CSCCCCN=C=S"),          # CID 7373    — arugula (sulfide form of SFN)
+    ("Sulforaphene",            "CS(=O)/C=C/CCN=C=S"),   # CID 6433469 — radish (C2=C3 unsaturated SFN)
+    ("Allyl_isothiocyanate",    "C=CCN=C=S"),            # CID 5971    — mustard / wasabi
+    ("Benzyl_isothiocyanate",   "S=C=NCc1ccccc1"),       # CID 2346    — papaya / garden cress
+    ("Phenethyl_isothiocyanate","S=C=NCCc1ccccc1"),      # CID 16741   — watercress (PEITC)
+]
+SEED_NAMES = {n for n, _ in SEEDS}
 
 
 # Targeted bioisosteric replacements on the SFN scaffold.
@@ -194,25 +202,47 @@ def enumerate_brics(seed_smiles: str, library_smiles: list[str], max_per_pair: i
 
 
 def main() -> int:
-    seed_mol = Chem.MolFromSmiles(SEED_SMILES)
-    assert seed_mol is not None, "Seed SFN SMILES failed to parse"
-
-    # Pull library SMILES (excluding the seed itself)
+    # Pull library SMILES (excluding the seeds themselves)
     library_smiles: list[str] = []
     with LIBRARY_CSV.open() as fh:
         for row in csv.DictReader(fh):
-            if row["name"] == SEED_NAME:
+            if row["name"] in SEED_NAMES:
                 continue
             if row["canonical_smiles"]:
                 library_smiles.append(row["canonical_smiles"])
 
-    candidates: set[str] = set()
-    candidates.add(Chem.MolToSmiles(seed_mol, canonical=True))  # include seed itself for reference
-    candidates.update(enumerate_bioisosteres(SEED_SMILES))
-    candidates.update(enumerate_brics(SEED_SMILES, library_smiles, max_per_pair=4))
-    candidates.update(enumerate_warhead_grafts(library_smiles, max_per_template=2))
+    # Best-of similarity to ANY seed (so erucin-like analogs aren't penalized
+    # just because they're far from SFN-canonical).
+    seed_mols = [(name, Chem.MolFromSmiles(smi)) for name, smi in SEEDS]
+    seed_mols = [(n, m) for n, m in seed_mols if m is not None]
+    if not seed_mols:
+        print("[ERR] no seeds parsed")
+        return 1
 
-    print(f"raw candidates: {len(candidates)}")
+    candidates: set[str] = set()
+    seed_provenance: dict[str, str] = {}  # smi -> primary seed name
+
+    for seed_name, seed_mol in seed_mols:
+        seed_smi = Chem.MolToSmiles(seed_mol, canonical=True)
+        if seed_smi not in candidates:
+            candidates.add(seed_smi)
+            seed_provenance[seed_smi] = seed_name
+        for new_smi in enumerate_bioisosteres(Chem.MolToSmiles(seed_mol)):
+            if new_smi not in candidates:
+                candidates.add(new_smi)
+                seed_provenance[new_smi] = seed_name
+        for new_smi in enumerate_brics(Chem.MolToSmiles(seed_mol), library_smiles, max_per_pair=3):
+            if new_smi not in candidates:
+                candidates.add(new_smi)
+                seed_provenance[new_smi] = seed_name
+
+    # Warhead grafting is seed-independent: graft generic SFN-class tail onto library scaffolds.
+    for new_smi in enumerate_warhead_grafts(library_smiles, max_per_template=2):
+        if new_smi not in candidates:
+            candidates.add(new_smi)
+            seed_provenance[new_smi] = "Sulforaphane"
+
+    print(f"raw candidates: {len(candidates)} across {len(seed_mols)} ITC seeds")
 
     rows = []
     for smi in candidates:
@@ -223,20 +253,28 @@ def main() -> int:
             qed = Descriptors.qed(mol)
         except Exception:
             continue
-        sim = tanimoto(mol, seed_mol)
+        # max similarity to any seed
+        best_sim = 0.0
+        best_seed = ""
+        for name, sm in seed_mols:
+            t = tanimoto(mol, sm)
+            if t > best_sim:
+                best_sim = t
+                best_seed = name
         sa = sa_score(mol)
         lip = lipinski_pass(mol)
-        score = composite(qed, sim, sa, lip)
+        score = composite(qed, best_sim, sa, lip)
         rows.append({
             "smiles": smi,
-            "tanimoto_to_SFN": round(sim, 4),
+            "tanimoto_to_SFN": round(best_sim, 4),     # column kept for back-compat; now = max-to-any-ITC-seed
+            "best_seed_match": best_seed,
             "qed": round(qed, 4),
             "sa_score_proxy": round(sa, 4),
             "lipinski_pass": lip,
             "mw": round(Descriptors.MolWt(mol), 2),
             "logp": round(Descriptors.MolLogP(mol), 2),
             "composite_score": round(score, 4),
-            "seed": SEED_NAME,
+            "seed": seed_provenance.get(smi, "Sulforaphane"),
             "source": "local_brics_bioisostere",
         })
 
@@ -246,6 +284,7 @@ def main() -> int:
     fieldnames = [
         "smiles",
         "tanimoto_to_SFN",
+        "best_seed_match",
         "qed",
         "sa_score_proxy",
         "lipinski_pass",
