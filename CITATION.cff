@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "MCAS.Opensource"
+message: "If you use this repository or its hypotheses, please cite it."
+type: software
+authors:
+  - name: "MR Dula Solutions and the OpenMCAS contributors"
+repository-code: "https://github.com/mrdulasolutions/MCAS.Opensource"
+url: "https://github.com/mrdulasolutions/MCAS.Opensource"
+license: MIT
+keywords:
+  - MCAS
+  - MCAD
+  - mast cell
+  - drug discovery
+  - cheminformatics
+  - open science
+abstract: >
+  An MIT-licensed, end-to-end open-source pipeline for hypothesis generation and
+  in silico testing of MCAS/MCAD rescue, maintenance, and remission compounds across
+  pharma, herbs, and supplements, integrated with AI tooling (PyTDC, DeepChem, REINVENT 4).
