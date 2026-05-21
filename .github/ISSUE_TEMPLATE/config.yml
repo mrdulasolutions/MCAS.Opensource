@@ -1,0 +1,32 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Patient guide
+    url: https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/audiences/for-patients.md
+    about: If you have MCAS/MCAD and want to participate (anonymously), start here.
+  - name: Clinician guide
+    url: https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/audiences/for-clinicians.md
+    about: Treating MCAS patients — how to contribute case observations and review rankings.
+  - name: Researcher guide
+    url: https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/audiences/for-researchers.md
+    about: Methodology, reproduction, citation, validation.
+  - name: Academic collaboration
+    url: https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/audiences/for-academia.md
+    about: PI / lab / post-doc collaboration pathway.
+  - name: Nonprofit / foundation partnership
+    url: https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/audiences/for-nonprofits.md
+    about: Sponsoring validation campaigns, fiscal sponsorship.
+  - name: Industry / pharma engagement
+    url: https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/audiences/for-industry.md
+    about: Pre-competitive validation, make-on-demand synthesis.
+  - name: Developer onramp
+    url: https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/audiences/for-developers.md
+    about: Run the pipeline, claim a good-first-issue.
+  - name: Press / media
+    url: https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/audiences/for-press.md
+    about: Quotable framing + caveats + contact.
+  - name: FAQ
+    url: https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/docs/faq.md
+    about: Common questions across all audiences.
+  - name: Glossary
+    url: https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/docs/glossary.md
+    about: MCAS + cheminformatics + AI jargon decoded.
