@@ -5,12 +5,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Validate SMILES](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/validate.yml/badge.svg)](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/validate.yml)
 [![Sync HF Space](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/sync-hf-space.yml/badge.svg)](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/sync-hf-space.yml)
-[![Experiments](https://img.shields.io/badge/experiments-8-blue)](experiments/)
+[![Experiments](https://img.shields.io/badge/experiments-9-blue)](experiments/)
 [![Compounds](https://img.shields.io/badge/compounds-54-green)](data/compounds/MCAS_Compound_Library_v1.csv)
 [![Generated analogs](https://img.shields.io/badge/SFN--class%20analogs-113-purple)](outputs/reinvent_generated.csv)
 [![Recovery@20](https://img.shields.io/badge/known--actives%20recovery%40_20-100%25-brightgreen)](experiments/EXP-006-known-actives-recovery.md)
 [![Negative precision@10](https://img.shields.io/badge/neg--control%20precision%40_10-100%25-brightgreen)](experiments/EXP-007-negative-control-benchmark.md)
 [![Min Spearman ρ](https://img.shields.io/badge/sensitivity%20min%20%CF%81-0.93-brightgreen)](experiments/EXP-008-sensitivity-analysis.md)
+[![KEAP1 Vina](https://img.shields.io/badge/KEAP1%20Vina-49%2F50%20docked-brightgreen)](experiments/EXP-009-keap1-vina-docking.md)
 [![Live viewer](https://img.shields.io/badge/%F0%9F%A4%97_HF_Spaces-live_viewer-blue)](https://huggingface.co/spaces/MRDula/openmcas-browser)
 [![A2A Agent Card](https://img.shields.io/badge/A2A-agent_card-orange)](AGENT_CARD.md)
 
@@ -27,11 +28,12 @@ filters by covalent-warhead chemistry + predicted ADMET safety, and produces
 a transparent **composite ranking** across rescue / maintenance / remission
 categories.
 
-The ranking has been audited in three independent ways:
+The ranking has been audited in four independent ways:
 
 1. **It finds what it should.** 21 held-out clinical mast-cell drugs blind-scored → **100% recovery@20** ([EXP-006](experiments/EXP-006-known-actives-recovery.md)).
 2. **It rejects what it shouldn't.** 20 unrelated drugs (statins / antihypertensives / anticonvulsants / etc.) blind-scored → **100% precision@10** — all correctly ranked outside every top-10 ([EXP-007](experiments/EXP-007-negative-control-benchmark.md)).
-3. **It doesn't depend on weight-cherry-picking.** ±50% sweep of all six composite weights → **min Spearman ρ = 0.93** vs. baseline, sulforaphane stays #1 in remission across all 12 remission-affecting perturbations ([EXP-008](experiments/EXP-008-sensitivity-analysis.md)).
+3. **It doesn't depend on weight-cherry-picking.** ±50% sweep of all six composite weights → **min Spearman ρ = 0.93** vs. baseline ([EXP-008](experiments/EXP-008-sensitivity-analysis.md)).
+4. **Real physics agrees with the chemistry.** AutoDock Vina docking against KEAP1 Kelch domain (PDB 4L7B) for the top-50 remission candidates → **every top-15 by ligand efficiency carries the isothiocyanate warhead** ([EXP-009](experiments/EXP-009-keap1-vina-docking.md)).
 
 ## Try it in your browser (no clone, no install)
 
@@ -97,14 +99,16 @@ falsify, or extend it. No paywalls, no IP capture, no pharma gatekeeping.
 
 [Full ranking →](hypotheses/maintenance.md#top-ai-ranked-candidates)
 
-### 🟢 Remission top 5
-| # | Compound | Class | Composite |
-|---|---|---|---|
-| 1 | **Sulforaphane** | Natural ITC / KEAP1 covalent / Nrf2 | **0.628** |
-| 2 | Phenethyl-ITC | Natural ITC (watercress) / KEAP1 / HDAC | 0.589 |
-| 3 | Erucin | Natural sulfide ITC (arugula) | 0.490 |
-| 4 | Benzyl-ITC | Natural ITC (papaya / cress) | 0.483 |
-| 5 | Masitinib | KIT TKI | 0.472 |
+### 🟢 Remission top 5 (post-EXP-009)
+| # | Compound | Class | Composite | Vina kcal/mol |
+|---|---|---|---|---|
+| 1 | **Erucin** | Sulfide ITC (arugula) — longer plasma t½ vs SFN | **0.673** | -3.70 |
+| 2 | **Sulforaphane** | Natural ITC / KEAP1 covalent / Nrf2 | 0.669 | -4.04 |
+| 3 | Phenethyl-ITC | Natural ITC (watercress) / KEAP1 / HDAC | 0.636 | -5.20 |
+| 4 | Iberin | Sulfoxide ITC (cabbage / broccoli) | 0.557 | -3.81 |
+| 5 | Benzyl-ITC | Natural ITC (papaya / cress) | 0.533 | -5.13 |
+
+> 🔄 Ranking reshuffled in EXP-009 after fixing three wrong PubChem CIDs in `seeds.json` (Iberin, Erucin, Sulforaphene were silently pointing at unrelated compounds). Erucin narrowly takes #1 on the corrected data — see [EXP-009 §0](experiments/EXP-009-keap1-vina-docking.md) for the disclosure.
 
 [Full ranking →](hypotheses/remission.md#top-ai-ranked-candidates)
 
@@ -143,6 +147,7 @@ Each script is documented as a [standardized experiment report](experiments/):
 | [EXP-006](experiments/EXP-006-known-actives-recovery.md) | Known Actives Recovery benchmark | Blind scoring of 21 held-out clinical drugs — **100% recovery@20** |
 | [EXP-007](experiments/EXP-007-negative-control-benchmark.md) | Negative-control benchmark | 20 unrelated drugs — **100% precision@10**, all correctly rejected |
 | [EXP-008](experiments/EXP-008-sensitivity-analysis.md) | Sensitivity analysis | ±50% per-weight sweep — **min Spearman ρ = 0.93**, SFN #1 stable in 100% of perturbations |
+| [EXP-009](experiments/EXP-009-keap1-vina-docking.md) | KEAP1 Vina docking + data-bug fix | Real AutoDock Vina docking on 4L7B; **every top-15 by ligand efficiency carries the ITC warhead**. Disclosed + fixed three wrong PubChem CIDs |
 
 ---
 

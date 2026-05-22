@@ -1,0 +1,53 @@
+name,smiles,category,source,composite_score,score_KEAP1,has_warhead,warheads,vina_kcal_per_mol,vina_n_poses,vina_status,vina_time_s,heavy_atoms,vina_ligand_efficiency
+Midostaurin,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4,remission,library,0.4516,0.1037,False,,-10.458,5,ok,2.5,43,-0.243
+Masitinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nc(-c2cccnc2)cs1,remission,library,0.472,0.1205,False,,-10.43,5,ok,3.6,36,-0.29
+GEN_0087,O=c1cc(-c2cc(O)c(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,remission,reinvent_generated,0.3829,0.3103,True,isothiocyanate,-9.08,5,ok,3.9,31,-0.293
+GEN_0080,O=c1cc(-c2ccc(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,remission,reinvent_generated,0.3876,0.2787,True,isothiocyanate,-8.731,5,ok,3.5,30,-0.291
+GEN_0084,O=c1c(O)c(-c2ccc(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,remission,reinvent_generated,0.3793,0.2787,True,isothiocyanate,-8.41,5,ok,4.0,31,-0.271
+GEN_0092,O=c1c(O)c(-c2cc(O)c(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,remission,reinvent_generated,0.3879,0.2833,True,isothiocyanate,-8.363,5,ok,4.4,32,-0.261
+GEN_0079,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,remission,reinvent_generated,0.3809,0.2881,True,isothiocyanate,-8.344,5,ok,3.4,30,-0.278
+GEN_0090,O=c1c(O)c(-c2cc(O)c(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,remission,reinvent_generated,0.3798,0.3103,True,isothiocyanate,-8.247,5,ok,4.5,32,-0.258
+GEN_0085,O=c1c(O)c(-c2ccc(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,remission,reinvent_generated,0.3865,0.2742,True,isothiocyanate,-8.128,5,ok,4.0,31,-0.262
+Glucoraphanin,CS(=O)CCCC/C(=N\OS(=O)(=O)O)S[C@@H]1O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O,remission,library,0.4584,0.2241,False,,-7.76,5,ok,3.7,26,-0.298
+GEN_0073,O=S(CCCN=C=S)CCc1cc(/C=C/c2cc(O)cc(O)c2)ccc1O,remission,reinvent_generated,0.3842,0.36,True,isothiocyanate,-7.679,5,ok,3.5,27,-0.284
+GEN_0050,O=S(CCCN=C=S)CCc1cccc(CCN=C=S)c1,remission,reinvent_generated,0.3813,0.5,True,isothiocyanate,-6.747,5,ok,2.0,21,-0.321
+GEN_0034,CS(=O)(=O)CCc1ccc(N=C=S)cc1,remission,reinvent_generated,0.3892,0.3077,True,isothiocyanate,-6.278,5,ok,0.8,15,-0.419
+GEN_0048,CCS(=O)CCc1ccc(N=C=S)cc1,remission,reinvent_generated,0.3908,0.2927,True,isothiocyanate,-6.117,5,ok,0.9,15,-0.408
+GEN_0030,CS(=O)CCc1ccc(N=C=S)cc1,remission,reinvent_generated,0.4094,0.3784,True,isothiocyanate,-5.986,5,ok,0.8,14,-0.428
+GEN_0045,CS(=O)(=O)Cc1ccc(N=C=S)cc1,remission,reinvent_generated,0.3882,0.2703,True,isothiocyanate,-5.923,5,ok,0.7,14,-0.423
+GEN_0046,CS(=O)Cc1ccc(N=C=S)cc1,remission,reinvent_generated,0.3963,0.3243,True,isothiocyanate,-5.854,5,ok,0.7,13,-0.45
+GEN_0052,CCS(=O)Cc1ccc(N=C=S)cc1,remission,reinvent_generated,0.3902,0.2564,True,isothiocyanate,-5.582,5,ok,0.8,14,-0.399
+GEN_0051,CS(=O)CCc1ccc(SC#N)cc1,remission,reinvent_generated,0.4098,0.275,True,thiocyanate,-5.568,5,ok,0.8,14,-0.398
+GEN_0061,CS(=O)Cc1ccc(SC#N)cc1,remission,reinvent_generated,0.3985,0.225,True,thiocyanate,-5.424,5,ok,0.8,13,-0.417
+GEN_0032,CSCCc1ccc(N=C=S)cc1,remission,reinvent_generated,0.3912,0.3611,True,isothiocyanate,-5.303,5,ok,0.8,13,-0.408
+GEN_0049,CSCc1ccc(N=C=S)cc1,remission,reinvent_generated,0.3842,0.2857,True,isothiocyanate,-5.227,5,ok,0.6,12,-0.436
+Phenethyl isothiocyanate,S=C=NCCc1ccccc1,remission,library,0.5888,1.0,True,isothiocyanate,-5.203,5,ok,0.6,11,-0.473
+Benzyl isothiocyanate,S=C=NCc1ccccc1,remission,library,0.483,1.0,True,isothiocyanate,-5.129,5,ok,0.5,10,-0.513
+GEN_0043,CS(=O)(=O)CCCCCN=C=S,remission,reinvent_generated,0.4095,0.4688,True,isothiocyanate,-4.693,5,ok,0.9,12,-0.391
+GEN_0037,CCS(=O)(=O)CCCCN=C=S,remission,reinvent_generated,0.4096,0.4688,True,isothiocyanate,-4.678,5,ok,0.9,12,-0.39
+GEN_0038,CS(=O)(=O)CCCCN=C=S,remission,reinvent_generated,0.4058,0.4839,True,isothiocyanate,-4.564,5,ok,0.8,11,-0.415
+GEN_0060,CS(=O)(=O)CCCCSC#N,remission,reinvent_generated,0.3991,0.2222,True,thiocyanate,-4.552,5,ok,0.8,11,-0.414
+GEN_0019,CCS(=O)CCCCCN=C=S,remission,reinvent_generated,0.4241,0.6333,True,isothiocyanate,-4.44,5,ok,0.9,12,-0.37
+GEN_0008,CS(=O)CCCCCN=C=S,remission,reinvent_generated,0.4564,0.9583,True,isothiocyanate,-4.396,5,ok,0.8,11,-0.4
+GEN_0063,CCS(=O)CCCCSC#N,remission,reinvent_generated,0.3955,0.2632,True,thiocyanate,-4.316,5,ok,0.8,11,-0.392
+GEN_0042,CS(=O)(=O)CCCN=C=S,remission,reinvent_generated,0.4031,0.4667,True,isothiocyanate,-4.257,5,ok,0.6,10,-0.426
+GEN_0031,CS(=O)CCCCCSC#N,remission,reinvent_generated,0.4246,0.4242,True,thiocyanate,-4.221,5,ok,0.8,11,-0.384
+Sulforaphene,CS(=O)/C=C/CCN=C=S,remission,library,0.4483,0.4688,True,isothiocyanate,-4.186,5,ok,0.6,10,-0.419
+GEN_0012,CCS(=O)CCCCN=C=S,remission,reinvent_generated,0.4207,0.6552,True,isothiocyanate,-4.183,5,ok,0.8,11,-0.38
+GEN_0029,CS(=O)CCCCSC#N,remission,reinvent_generated,0.4231,0.4375,True,thiocyanate,-4.104,5,ok,0.7,10,-0.41
+GEN_0016,CCS(=O)CCCN=C=S,remission,reinvent_generated,0.4228,0.6429,True,isothiocyanate,-4.075,5,ok,0.7,10,-0.408
+Sulforaphane,CS(=O)CCCCN=C=S,remission,library,0.6282,1.0,True,isothiocyanate,-4.045,5,ok,0.7,10,-0.404
+GEN_0004,CS(=O)CCCCN=C=S,remission,reinvent_generated,0.4542,1.0,True,isothiocyanate,-4.045,5,ok,0.7,10,-0.404
+GEN_0014,CCSCCCCN=C=S,remission,reinvent_generated,0.4191,0.6296,True,isothiocyanate,-3.968,5,ok,0.8,10,-0.397
+GEN_0036,CS(=O)CCCSC#N,remission,reinvent_generated,0.4244,0.4194,True,thiocyanate,-3.83,5,ok,0.6,9,-0.426
+GEN_0006,CSCCCCCN=C=S,remission,reinvent_generated,0.4549,0.9545,True,isothiocyanate,-3.818,5,ok,0.8,10,-0.382
+Iberin,CS(=O)CCCN=C=S,remission,library,0.5143,1.0,True,isothiocyanate,-3.815,5,ok,0.6,9,-0.424
+GEN_0005,CS(=O)CCCN=C=S,remission,reinvent_generated,0.4592,1.0,True,isothiocyanate,-3.815,5,ok,0.6,9,-0.424
+GEN_0020,CSCCCCSC#N,remission,reinvent_generated,0.4262,0.4444,True,thiocyanate,-3.791,5,ok,0.7,9,-0.421
+Erucin,CSCCCCN=C=S,remission,library,0.6318,1.0,True,isothiocyanate,-3.699,5,ok,0.7,9,-0.411
+GEN_0002,CSCCCCN=C=S,remission,reinvent_generated,0.4566,1.0,True,isothiocyanate,-3.699,5,ok,0.7,9,-0.411
+GEN_0009,CSCCCN=C=S,remission,reinvent_generated,0.4463,0.8636,True,isothiocyanate,-3.442,5,ok,0.6,8,-0.43
+Allyl isothiocyanate,C=CCN=C=S,remission,library,0.4376,1.0,True,isothiocyanate,-3.161,5,ok,0.4,6,-0.527
+Avapritinib,CC1(C)OB(O)c2cc(CNC(=O)c3ccc(C4=NO[C@](c5cc(Cl)c(F)c(Cl)c5)(C(F)(F)F)C4)n4cccc34)ccc21,remission,library,0.4335,0.1385,False,,,,"vina returned 1: 
+
+PDBQT parsing error: Atom type B is not a",,43,

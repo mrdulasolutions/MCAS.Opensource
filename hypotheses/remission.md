@@ -95,22 +95,22 @@ risk.
 
 ## Top AI-ranked candidates
 
-> 🤖 **Auto-generated artifact.** Produced by `scripts/rank_hypotheses.py` on 2026-05-21 23:52 UTC from commit `1b6a811`. Inputs: `data/compounds/MCAS_Compound_Library_v1.csv`, `outputs/reinvent_generated.csv`, `outputs/docking_*.csv`, `outputs/warhead_scores.csv`, `outputs/qsar_predictions.csv`. Composite formula and weights documented in [EXP-005](../experiments/EXP-005-multi-objective-ranking.md). Recovery benchmark: [EXP-006](../experiments/EXP-006-known-actives-recovery.md).
+> 🤖 **Auto-generated artifact.** Produced by `scripts/rank_hypotheses.py` on 2026-05-22 01:17 UTC from commit `5f27a40`. Inputs: `data/compounds/MCAS_Compound_Library_v1.csv`, `outputs/reinvent_generated.csv`, `outputs/docking_*.csv`, `outputs/warhead_scores.csv`, `outputs/qsar_predictions.csv`. Composite formula and weights documented in [EXP-005](../experiments/EXP-005-multi-objective-ranking.md). Recovery benchmark: [EXP-006](../experiments/EXP-006-known-actives-recovery.md).
 
 _Higher composite = better hypothesis. Edit `scripts/rank_hypotheses.py` to change weights or category target mix; the next run will overwrite this table._
 
 | # | Name | Composite | KEAP1 | MRGPRX2 | KIT | HRH1 | Warhead | hERG | AMES | BBB | Source |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | Sulforaphane | 0.628 | 1.00 | 0.04 | 0.05 | 0.07 | yes | 0.23 | 0.55 | 0.92 | library |
-| 2 | Phenethyl isothiocyanate | 0.589 | 1.00 | 0.08 | 0.08 | 0.17 | yes | 0.70 | 0.75 | 0.95 | library |
-| 3 | Erucin | 0.490 | 0.29 | 0.29 | 0.07 | 0.13 | — | 0.28 | 0.24 | 0.69 | library |
-| 4 | Benzyl isothiocyanate | 0.483 | 1.00 | 0.08 | 0.09 | 0.18 | yes | 0.69 | 0.58 | 0.95 | library |
-| 5 | Masitinib | 0.472 | 0.12 | 0.08 | 0.75 | 0.21 | — | 0.82 | 0.46 | 0.73 | library |
-| 6 | GEN_0005 | 0.459 | 1.00 | 0.04 | 0.05 | 0.07 | yes | 0.23 | 0.47 | 0.93 | reinvent_generated |
-| 7 | Glucoraphanin | 0.458 | 0.22 | 0.13 | 0.06 | 0.08 | — | 0.26 | 0.34 | 0.65 | library |
-| 8 | GEN_0002 | 0.457 | 1.00 | 0.03 | 0.03 | 0.05 | yes | 0.27 | 0.41 | 0.92 | reinvent_generated |
-| 9 | GEN_0008 | 0.456 | 0.96 | 0.04 | 0.05 | 0.06 | yes | 0.24 | 0.46 | 0.92 | reinvent_generated |
-| 10 | GEN_0006 | 0.455 | 0.95 | 0.03 | 0.03 | 0.04 | yes | 0.27 | 0.37 | 0.92 | reinvent_generated |
+| 1 | Erucin | 0.673 | 1.00 | 0.03 | 0.03 | 0.05 | yes | 0.27 | 0.41 | 0.92 | library |
+| 2 | Sulforaphane | 0.669 | 1.00 | 0.04 | 0.05 | 0.07 | yes | 0.23 | 0.55 | 0.92 | library |
+| 3 | Phenethyl isothiocyanate | 0.636 | 1.00 | 0.08 | 0.08 | 0.17 | yes | 0.70 | 0.75 | 0.95 | library |
+| 4 | Iberin | 0.557 | 1.00 | 0.04 | 0.05 | 0.07 | yes | 0.23 | 0.47 | 0.93 | library |
+| 5 | Benzyl isothiocyanate | 0.533 | 1.00 | 0.08 | 0.09 | 0.18 | yes | 0.69 | 0.58 | 0.95 | library |
+| 6 | GEN_0005 | 0.502 | 1.00 | 0.04 | 0.05 | 0.07 | yes | 0.23 | 0.47 | 0.93 | reinvent_generated |
+| 7 | Masitinib | 0.501 | 0.12 | 0.08 | 0.75 | 0.21 | — | 0.82 | 0.46 | 0.73 | library |
+| 8 | GEN_0002 | 0.498 | 1.00 | 0.03 | 0.03 | 0.05 | yes | 0.27 | 0.41 | 0.92 | reinvent_generated |
+| 9 | GEN_0008 | 0.496 | 0.96 | 0.04 | 0.05 | 0.06 | yes | 0.24 | 0.46 | 0.92 | reinvent_generated |
+| 10 | GEN_0004 | 0.495 | 1.00 | 0.04 | 0.05 | 0.07 | yes | 0.23 | 0.55 | 0.92 | reinvent_generated |
 
 
 ## Wet-lab validation

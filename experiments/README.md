@@ -31,3 +31,4 @@ Plus what it found and what it didn't.
 | [EXP-006](EXP-006-known-actives-recovery.md) | Known Actives Recovery benchmark — 21 held-out mast-cell drugs | blind scoring of compounds *not* in seeds or reference sets | published | 2026-05-21 |
 | [EXP-007](EXP-007-negative-control-benchmark.md) | Negative-control benchmark — 20 unrelated drugs blind-scored | precision@N for compounds with no plausible MCAS mechanism | published | 2026-05-22 |
 | [EXP-008](EXP-008-sensitivity-analysis.md) | Sensitivity analysis on the six composite weights | ±50% per-weight sweep — Spearman, top-10 Jaccard, top-1 stability | published | 2026-05-22 |
+| [EXP-009](EXP-009-keap1-vina-docking.md) | KEAP1 Kelch-pocket Vina docking + 3-CID data-bug fix | Real AutoDock Vina v1.2.7 docking on PDB 4L7B for top-50; ligand-efficiency normalization; SFN class confirmed | published | 2026-05-22 |

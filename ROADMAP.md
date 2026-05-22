@@ -21,17 +21,16 @@ A living document. Things at the top of each section are higher priority.
 - ✅ **GitHub Actions auto-sync** of the HF Space on every pipeline rerun (sync-hf-space.yml).
 - ✅ **Negative-control benchmark** (EXP-007) — 100% precision@10 across all categories under realistic scoring.
 - ✅ **Sensitivity analysis** (EXP-008) — min Spearman ρ = 0.93 under ±50% weight sweeps; SFN #1 stable in 100% of remission perturbations.
+- ✅ **KEAP1 Vina docking** (EXP-009) — real AutoDock Vina docking on PDB 4L7B Kelch domain for top-50 remission candidates; ligand-efficiency normalization shows all top-15 LE compounds carry the ITC warhead. Also disclosed + fixed three wrong PubChem CIDs (Iberin, Erucin, Sulforaphene) that had been silently propagating through the pipeline.
 
 ## Next (v0.x+1) — credibility & accessibility first
 
 These five are the next 2–4 weeks of high-leverage work (per the
 "100x vision" framing — credibility, accessibility, polish):
 
-1. **Real Vina/smina KEAP1 docking** on PDB 4L7B for the top-50 ranked
-   remission candidates; replace the ligand-similarity score in
-   `outputs/docking_KEAP1.csv` with physics for that one target. Biggest
-   single scientific upgrade available — moves from ligand similarity
-   to structure-based binding.
+1. **Covalent KEAP1 docking** at C151 (BTB domain) — non-covalent
+   Kelch docking is now done (EXP-009), but SFN's actual mechanism is
+   covalent. Needs CovDock / GOLD-Covalent on PDB 4IFL or similar.
 2. **Expand recovery + control sets via ChEMBL bioassay pull** (`β-hexosaminidase release`,
    `mast cell degranulation`, `LAD2`). Targets: 50+ actives, 100+ controls.
 3. **Joint-perturbation Latin-hypercube weight sweep** — 200-point

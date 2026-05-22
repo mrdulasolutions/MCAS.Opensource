@@ -56,6 +56,17 @@ outputs/reinvent_run/
 outputs/*.ckpt
 outputs/*.pt
 
+# Vina docking artifacts — keep the per-ligand CSV results but skip the
+# multi-MB receptor PDB / PDBQT and reference ligand files (they're
+# downloadable from RCSB).
+outputs/keap1_docking/4l7b.pdb
+outputs/keap1_docking/4l7b_clean.pdb
+outputs/keap1_docking/4l7b_1vv.pdb
+outputs/keap1_docking/4l7b_receptor.pdbqt
+
+# Vina + smina + obabel binaries (downloadable from upstream releases)
+.tools/
+
 # Caches
 data/compounds/.smiles_cache.json
 .cache/

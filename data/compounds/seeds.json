@@ -538,7 +538,7 @@
     },
     {
       "name": "Iberin",
-      "pubchem_cid": 3032358,
+      "pubchem_cid": 10455,
       "category": "remission",
       "subcategory": "Natural isothiocyanate (Brassica)",
       "mechanism": "Covalent KEAP1 modifier (Cys); Nrf2 activator; shorter-chain SFN analog",
@@ -549,7 +549,7 @@
     },
     {
       "name": "Erucin",
-      "pubchem_cid": 7373,
+      "pubchem_cid": 78160,
       "category": "remission",
       "subcategory": "Natural isothiocyanate (Brassica)",
       "mechanism": "Sulfide form of SFN; reduced + bioequivalent in vivo via S-oxidation; covalent KEAP1 modifier",
@@ -560,7 +560,7 @@
     },
     {
       "name": "Sulforaphene",
-      "pubchem_cid": 6433469,
+      "pubchem_cid": 6433206,
       "category": "remission",
       "subcategory": "Natural isothiocyanate (radish)",
       "mechanism": "Covalent KEAP1 modifier; unsaturated SFN homolog with potentially stronger Nrf2 activation",

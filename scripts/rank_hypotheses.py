@@ -24,6 +24,7 @@ LIB_CSV = REPO_ROOT / "data" / "compounds" / "MCAS_Compound_Library_v1.csv"
 GEN_CSV = REPO_ROOT / "outputs" / "reinvent_generated.csv"
 WARHEAD_CSV = REPO_ROOT / "outputs" / "warhead_scores.csv"
 QSAR_CSV = REPO_ROOT / "outputs" / "qsar_predictions.csv"
+VINA_CSV = REPO_ROOT / "outputs" / "docking_KEAP1_vina.csv"
 OUT_DIR = REPO_ROOT / "outputs"
 HYP_DIR = REPO_ROOT / "hypotheses"
 
@@ -83,6 +84,35 @@ def load_generated() -> list[dict]:
     return out
 
 
+def load_vina_keap1() -> dict[str, dict]:
+    """Return {smiles: {vina_kcal_per_mol, vina_ligand_efficiency, heavy_atoms}}
+    from outputs/docking_KEAP1_vina.csv. Empty dict if missing.
+
+    Vina ligand efficiency = kcal/mol divided by heavy_atom count — removes
+    Vina's well-documented size bias toward large drug-like compounds.
+    Most negative LE = strongest per-atom binder.
+    """
+    out: dict[str, dict] = {}
+    if not VINA_CSV.exists():
+        return out
+    with VINA_CSV.open() as fh:
+        for row in csv.DictReader(fh):
+            smi = row.get("smiles", "")
+            if not smi:
+                continue
+            try:
+                kcal = float(row.get("vina_kcal_per_mol") or "")
+                le = float(row.get("vina_ligand_efficiency") or "")
+                out[smi] = {
+                    "vina_kcal_per_mol": kcal,
+                    "vina_ligand_efficiency": le,
+                    "heavy_atoms": int(row.get("heavy_atoms") or 0),
+                }
+            except (ValueError, TypeError):
+                continue
+    return out
+
+
 def load_qsar() -> dict[str, dict]:
     """Return {smiles: {hERG_score, AMES_score, BBB_score}} from outputs/qsar_predictions.csv."""
     out: dict[str, dict] = {}
@@ -137,7 +167,7 @@ def load_target_scores() -> dict[str, dict[str, dict]]:
     return by_smiles
 
 
-def composite(record: dict, target_scores: dict, warhead: dict, qsar: dict) -> float:
+def composite(record: dict, target_scores: dict, warhead: dict, qsar: dict, vina: dict | None = None) -> float:
     """Weighted composite per record.
 
     Components:
@@ -180,6 +210,13 @@ def composite(record: dict, target_scores: dict, warhead: dict, qsar: dict) -> f
         keap1_sim = target_scores.get("KEAP1", {}).get("score", 0.0)
         if keap1_sim > 0.4 and not (warhead and warhead.get("has_warhead")):
             s -= 0.08
+        # Vina ligand efficiency contribution (EXP-009).
+        # LE < 0 means favorable binding; -0.5 is a strong per-atom score.
+        # We add a small bonus (≤0.05) capped at LE ≤ -0.5.
+        if vina:
+            le = vina.get("vina_ligand_efficiency", 0.0)
+            if le < 0:
+                s += min(-le, 0.5) * 0.10  # max bonus 0.05 at LE = -0.5
 
     # Safety bonus from QSAR (low hERG / low AMES = good)
     if qsar:
@@ -303,7 +340,8 @@ def main() -> int:
     target_scores = load_target_scores()
     warhead_scores = load_warhead_scores()
     qsar_scores = load_qsar()
-    print(f"library: {len(library)}, generated: {len(generated)}, target-scored: {len(target_scores)}, warhead: {len(warhead_scores)}, qsar: {len(qsar_scores)}")
+    vina_scores = load_vina_keap1()
+    print(f"library: {len(library)}, generated: {len(generated)}, target-scored: {len(target_scores)}, warhead: {len(warhead_scores)}, qsar: {len(qsar_scores)}, vina_keap1: {len(vina_scores)}")
 
     by_category: dict[str, list[dict]] = {"rescue": [], "maintenance": [], "remission": []}
 
@@ -312,6 +350,7 @@ def main() -> int:
         ts = target_scores.get(smi, {})
         wh = warhead_scores.get(smi, {})
         qs = qsar_scores.get(smi, {})
+        vn = vina_scores.get(smi, {})
         for tgt in CATEGORY_TARGETS["rescue"] | CATEGORY_TARGETS["maintenance"] | CATEGORY_TARGETS["remission"]:
             rec[f"score_{tgt}"] = ts.get(tgt, {}).get("score", 0.0)
             rec[f"ref_{tgt}"] = ts.get(tgt, {}).get("best_ref", "")
@@ -321,7 +360,9 @@ def main() -> int:
         rec["hERG_score"] = qs.get("hERG_score", "")
         rec["AMES_score"] = qs.get("AMES_score", "")
         rec["BBB_score"] = qs.get("BBB_score", "")
-        rec["composite_score"] = composite(rec, ts, wh, qs)
+        rec["vina_kcal_per_mol"] = vn.get("vina_kcal_per_mol", "")
+        rec["vina_ligand_efficiency"] = vn.get("vina_ligand_efficiency", "")
+        rec["composite_score"] = composite(rec, ts, wh, qs, vn)
 
         if rec["category"] in by_category:
             by_category[rec["category"]].append(rec)
