@@ -36,3 +36,4 @@ Plus what it found and what it didn't.
 | EXP-011 | ChEMBL bioassay pull + activity predictor (in progress) | Per-target pIC50 predictors trained on ChEMBL activity data | running | 2026-05-22 |
 | [EXP-012](EXP-012-covalent-c151-adduct.md) | Covalent KEAP1-C151 dithiocarbamate adduct energy proxy | MMFF94 reaction-energy proxy for the actual SFN mechanism | published | 2026-05-22 |
 | [EXP-013](EXP-013-rl-generation.md) | Iterative REINVENT-style policy improvement (CPU + Colab paths) | 4-iter generate-and-select; 265 candidates; drug-like aromatic ITCs emerge | published | 2026-05-22 |
+| [EXP-014](EXP-014-chronic-rescue-dependency.md) | Chronic rescue dependency — patient-reported survey on long-term first-gen H1 use | Pre-registered observational survey; analysis pending n ≥ 30 | running | 2026-05-22 |
