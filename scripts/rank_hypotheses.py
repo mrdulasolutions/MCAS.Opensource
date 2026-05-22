@@ -26,6 +26,7 @@ WARHEAD_CSV = REPO_ROOT / "outputs" / "warhead_scores.csv"
 QSAR_CSV = REPO_ROOT / "outputs" / "qsar_predictions.csv"
 VINA_CSV = REPO_ROOT / "outputs" / "docking_KEAP1_vina.csv"
 C151_CSV = REPO_ROOT / "outputs" / "c151_adduct_energies.csv"
+CHEMBL_PRED_CSV = REPO_ROOT / "outputs" / "chembl_predictions.csv"
 OUT_DIR = REPO_ROOT / "outputs"
 HYP_DIR = REPO_ROOT / "hypotheses"
 
@@ -82,6 +83,34 @@ def load_generated() -> list[dict]:
                 "tanimoto_to_SFN": row.get("tanimoto_to_SFN"),
                 "lipinski_pass": row.get("lipinski_pass"),
             })
+    return out
+
+
+def load_chembl_predictions() -> dict[str, dict[str, float]]:
+    """Return {smiles: {target: predicted_pIC50}} from outputs/chembl_predictions.csv (EXP-011).
+
+    Predictions are continuous pIC50 values. Higher = more potent.
+    Range typically 4-9 (10 µM to 1 nM). The composite normalizes to
+    [0, 1] via a logistic centered at pIC50=6 (=1 µM).
+    """
+    out: dict[str, dict[str, float]] = {}
+    if not CHEMBL_PRED_CSV.exists():
+        return out
+    with CHEMBL_PRED_CSV.open() as fh:
+        reader = csv.DictReader(fh)
+        for row in reader:
+            smi = row.get("smiles", "")
+            if not smi:
+                continue
+            preds = {}
+            for col, val in row.items():
+                if col.startswith("chembl_pIC50_") and val:
+                    try:
+                        preds[col.replace("chembl_pIC50_", "")] = float(val)
+                    except ValueError:
+                        continue
+            if preds:
+                out[smi] = preds
     return out
 
 
@@ -192,7 +221,21 @@ def load_target_scores() -> dict[str, dict[str, dict]]:
     return by_smiles
 
 
-def composite(record: dict, target_scores: dict, warhead: dict, qsar: dict, vina: dict | None = None, c151: dict | None = None) -> float:
+def pic50_potency_norm(pic50: float) -> float:
+    """Normalize a pIC50 prediction to [0, 1] via a logistic centered at 6 (1 µM).
+
+    pIC50  4 → 0.12  (10 µM, baseline / not potent)
+    pIC50  5 → 0.27  (1 µM, weak)
+    pIC50  6 → 0.50  (100 nM, modest)
+    pIC50  7 → 0.73  (10 nM, potent)
+    pIC50  8 → 0.88  (1 nM, very potent)
+    pIC50  9 → 0.95
+    """
+    import math
+    return 1.0 / (1.0 + math.exp(-(pic50 - 6.0)))
+
+
+def composite(record: dict, target_scores: dict, warhead: dict, qsar: dict, vina: dict | None = None, c151: dict | None = None, chembl: dict | None = None) -> float:
     """Weighted composite per record.
 
     Components:
@@ -248,6 +291,24 @@ def composite(record: dict, target_scores: dict, warhead: dict, qsar: dict, vina
         # informs the ranking alongside non-covalent Kelch docking.
         if c151:
             s += c151.get("score_c151", 0.0) * 0.05
+
+    # ChEMBL-trained predicted potency bonus (EXP-011).
+    # For each per-category target with a trained predictor, add a small
+    # bonus weighted by potency-normalized pIC50 × that target's category
+    # weight. Cap total ChEMBL contribution at +0.10. This is independent
+    # of the structural similarity signal in `weighted_target_similarity`
+    # (an analog of a known inhibitor scores high on similarity; a
+    # well-validated bioactive scores high on ChEMBL pIC50). Both informative.
+    if chembl:
+        chembl_total = 0.0
+        weight_total = 0.0
+        for tgt, w in weights.items():
+            pic50 = chembl.get(tgt)
+            if pic50 is not None:
+                chembl_total += pic50_potency_norm(pic50) * w
+                weight_total += w
+        if weight_total > 0:
+            s += min((chembl_total / weight_total), 1.0) * 0.10
 
     # Safety bonus from QSAR (low hERG / low AMES = good)
     if qsar:
@@ -373,7 +434,8 @@ def main() -> int:
     qsar_scores = load_qsar()
     vina_scores = load_vina_keap1()
     c151_scores = load_c151_adducts()
-    print(f"library: {len(library)}, generated: {len(generated)}, target-scored: {len(target_scores)}, warhead: {len(warhead_scores)}, qsar: {len(qsar_scores)}, vina_keap1: {len(vina_scores)}, c151_adduct: {len(c151_scores)}")
+    chembl_preds = load_chembl_predictions()
+    print(f"library: {len(library)}, generated: {len(generated)}, target-scored: {len(target_scores)}, warhead: {len(warhead_scores)}, qsar: {len(qsar_scores)}, vina_keap1: {len(vina_scores)}, c151_adduct: {len(c151_scores)}, chembl: {len(chembl_preds)}")
 
     by_category: dict[str, list[dict]] = {"rescue": [], "maintenance": [], "remission": []}
 
@@ -397,7 +459,10 @@ def main() -> int:
         c151 = c151_scores.get(smi, {})
         rec["c151_dE_kcal_per_mol"] = c151.get("dE_kcal_per_mol", "")
         rec["c151_score"] = c151.get("score_c151", "")
-        rec["composite_score"] = composite(rec, ts, wh, qs, vn, c151)
+        cb = chembl_preds.get(smi, {})
+        for tgt_name, val in cb.items():
+            rec[f"chembl_pIC50_{tgt_name}"] = round(val, 3)
+        rec["composite_score"] = composite(rec, ts, wh, qs, vn, c151, cb)
 
         if rec["category"] in by_category:
             by_category[rec["category"]].append(rec)

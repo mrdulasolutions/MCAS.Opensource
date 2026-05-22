@@ -5,7 +5,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Validate SMILES](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/validate.yml/badge.svg)](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/validate.yml)
 [![Sync HF Space](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/sync-hf-space.yml/badge.svg)](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/sync-hf-space.yml)
-[![Experiments](https://img.shields.io/badge/experiments-13-blue)](experiments/)
+[![Experiments](https://img.shields.io/badge/experiments-14-blue)](experiments/)
+[![ChEMBL records](https://img.shields.io/badge/ChEMBL%20records-67k-blue)](experiments/EXP-011-chembl-bioassay-predictor.md)
 [![Compounds](https://img.shields.io/badge/compounds-54-green)](data/compounds/MCAS_Compound_Library_v1.csv)
 [![Generated analogs](https://img.shields.io/badge/SFN--class%20analogs-113-purple)](outputs/reinvent_generated.csv)
 [![Recovery@20](https://img.shields.io/badge/known--actives%20recovery%40_20-100%25-brightgreen)](experiments/EXP-006-known-actives-recovery.md)
@@ -149,7 +150,7 @@ Each script is documented as a [standardized experiment report](experiments/):
 | [EXP-008](experiments/EXP-008-sensitivity-analysis.md) | Sensitivity analysis | ±50% per-weight sweep — **min Spearman ρ = 0.93**, SFN #1 stable in 100% of perturbations |
 | [EXP-009](experiments/EXP-009-keap1-vina-docking.md) | KEAP1 Vina docking + data-bug fix | Real AutoDock Vina docking on 4L7B; **every top-15 by ligand efficiency carries the ITC warhead**. Disclosed + fixed three wrong PubChem CIDs |
 | [EXP-010](experiments/EXP-010-joint-perturbation-lhs.md) | Joint-perturbation Latin-hypercube weight sweep | 200-sample LHS — **Erucin holds remission #1 in 91.5% of samples**; ITC top-5 in remission top-10 in ≥99% of samples |
-| EXP-011 | ChEMBL mast-cell bioassay pull + activity predictor | Real bioactivity data for 11 MCAS targets; per-target pIC50 RandomForest predictors *(running)* |
+| [EXP-011](experiments/EXP-011-chembl-bioassay-predictor.md) | ChEMBL bioassay pull + per-target activity predictors | **67,372 records across 11 MCAS targets**, CV R² 0.52–0.80 (median 0.69); integrated as +0.10 ChEMBL-validated potency bonus |
 | [EXP-012](experiments/EXP-012-covalent-c151-adduct.md) | Covalent KEAP1-C151 dithiocarbamate adduct proxy | MMFF94 reaction-energy proxy for the actual SFN mechanism; every ITC produces favorable adduct (ΔE −32 to −76 kcal/mol) |
 | [EXP-013](experiments/EXP-013-rl-generation.md) | Iterative REINVENT-style generation | 4-iter generate-and-select; **265 candidates**; drug-like aromatic sulfonyl-ITCs emerge in iter 3 (QED 0.59-0.60) |
 

@@ -26,7 +26,7 @@ A living document. Things at the top of each section are higher priority.
 - ✅ **Scheduled refresh** — weekly cron workflows (`refresh-pipeline.yml` + cron on `sync-hf-space.yml`).
 - ✅ **Covalent C151 adduct proxy** (EXP-012) — MMFF94 dithiocarbamate adduct energy for ITC-class compounds; addresses the EXP-009 §7.4 mechanism caveat.
 - ✅ **Iterative RL-style generation** (EXP-013) — CPU substitute + hardened Colab notebook path; 265 candidates over 4 iterations.
-- 🔄 **ChEMBL bioassay pull + predictor** (EXP-011) — in progress, 6/11 targets pulled at time of this commit.
+- ✅ **ChEMBL bioassay pull + predictor** (EXP-011) — 67,372 records across 11 targets; CV R² 0.52–0.80 (median 0.69); integrated as +0.10 ChEMBL-validated potency bonus. **Hydroxyzine jumped to #3 in rescue, Montelukast entered maintenance top-5** on real-bioactivity grounding.
 
 ## Next (v0.x+1) — credibility & accessibility first
 
