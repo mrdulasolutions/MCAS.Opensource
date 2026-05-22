@@ -22,6 +22,11 @@ A living document. Things at the top of each section are higher priority.
 - ✅ **Negative-control benchmark** (EXP-007) — 100% precision@10 across all categories under realistic scoring.
 - ✅ **Sensitivity analysis** (EXP-008) — min Spearman ρ = 0.93 under ±50% weight sweeps; SFN #1 stable in 100% of remission perturbations.
 - ✅ **KEAP1 Vina docking** (EXP-009) — real AutoDock Vina docking on PDB 4L7B Kelch domain for top-50 remission candidates; ligand-efficiency normalization shows all top-15 LE compounds carry the ITC warhead. Also disclosed + fixed three wrong PubChem CIDs (Iberin, Erucin, Sulforaphene) that had been silently propagating through the pipeline.
+- ✅ **Joint-perturbation LHS** (EXP-010) — 200-sample Latin-hypercube sweep of all 6 weights; Erucin holds remission #1 in 91.5% of samples.
+- ✅ **Scheduled refresh** — weekly cron workflows (`refresh-pipeline.yml` + cron on `sync-hf-space.yml`).
+- ✅ **Covalent C151 adduct proxy** (EXP-012) — MMFF94 dithiocarbamate adduct energy for ITC-class compounds; addresses the EXP-009 §7.4 mechanism caveat.
+- ✅ **Iterative RL-style generation** (EXP-013) — CPU substitute + hardened Colab notebook path; 265 candidates over 4 iterations.
+- 🔄 **ChEMBL bioassay pull + predictor** (EXP-011) — in progress, 6/11 targets pulled at time of this commit.
 
 ## Next (v0.x+1) — credibility & accessibility first
 
