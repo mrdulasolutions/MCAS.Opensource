@@ -23,6 +23,10 @@ on:
       - 'data/**'
       - 'outputs/**'
       - '.github/workflows/sync-hf-space.yml'
+  schedule:
+    # Sunday 03:17 UTC — keeps the Space warm and re-syncs in case of drift.
+    # Offset minute to avoid the top-of-hour traffic spike on Actions runners.
+    - cron: "17 3 * * 0"
   workflow_dispatch:
     inputs:
       wait_for_running:

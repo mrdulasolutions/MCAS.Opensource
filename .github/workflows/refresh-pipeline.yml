@@ -1,0 +1,113 @@
+name: Refresh pipeline (weekly)
+
+# Reruns the full lightweight scoring pipeline on a weekly schedule, commits
+# any deltas, and lets the sync-hf-space workflow auto-pick up the changes.
+#
+# Catches: PubChem SMILES drift for known CIDs, PyTDC dataset updates that
+# meaningfully change the QSAR validation, and any code paths that touch
+# external services. Manual workflow_dispatch supported for ad-hoc reruns.
+#
+# This deliberately does NOT rerun KEAP1 Vina docking (EXP-009) — that needs
+# the manually-downloaded Vina binary + receptor prep. Trigger it manually
+# from the dock_keap1.py CLI when needed.
+
+on:
+  schedule:
+    # Sunday 02:00 UTC — completes before the sync-hf-space cron at 03:17.
+    - cron: "0 2 * * 0"
+  workflow_dispatch:
+    inputs:
+      commit_message:
+        description: "Custom commit message (defaults to dated)"
+        required: false
+        type: string
+
+concurrency:
+  group: refresh-pipeline
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+        with:
+          # Use the default GITHUB_TOKEN; we just need write access to commit
+          # the refreshed CSVs.
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install rdkit pandas numpy requests tqdm scikit-learn PyTDC 'setuptools<81'
+
+      - name: Rebuild library (PubChem fetch + RDKit canonicalize)
+        run: python scripts/build_compound_library.py
+
+      - name: Validate SMILES (RDKit + identity-check on ITC anchors)
+        run: python scripts/validate_smiles.py
+
+      - name: Regenerate SFN-class analogs
+        run: python scripts/generate_sfn_analogs.py
+
+      - name: Score warheads
+        run: python scripts/score_warheads.py
+
+      - name: Score against targets
+        run: python scripts/score_against_targets.py
+
+      - name: Train + score QSAR
+        run: python scripts/run_qsar.py
+
+      - name: Re-rank
+        run: python scripts/rank_hypotheses.py
+
+      - name: Re-run known-actives recovery (EXP-006)
+        continue-on-error: true   # don't fail the whole refresh if PubChem hiccups
+        run: python scripts/benchmark_known_actives.py
+
+      - name: Re-run negative-control benchmark (EXP-007)
+        continue-on-error: true
+        run: python scripts/benchmark_negative_controls.py
+
+      - name: Re-run sensitivity analysis (EXP-008)
+        run: python scripts/sensitivity_analysis.py
+
+      - name: Commit refreshed outputs (if any changed)
+        run: |
+          git config user.name  "OpenMCAS refresh-bot"
+          git config user.email "refresh-bot@mrdula.solutions"
+          git add data/compounds/MCAS_Compound_Library_v1.csv outputs/ hypotheses/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            MSG="${{ github.event.inputs.commit_message }}"
+            if [ -z "$MSG" ]; then
+              MSG="chore(refresh): weekly pipeline rerun $(date -u +%Y-%m-%d)"
+            fi
+            git commit -m "$MSG" -m "Automated weekly refresh from .github/workflows/refresh-pipeline.yml" -m "Co-Authored-By: OpenMCAS refresh-bot <refresh-bot@mrdula.solutions>"
+            git push
+            echo "::notice::pushed refreshed outputs — sync-hf-space will auto-trigger"
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Pipeline refresh"
+            echo ""
+            echo "**Run date:** $(date -u +'%Y-%m-%d %H:%M UTC')"
+            echo ""
+            echo "**Triggered by:** \`${{ github.event_name }}\`"
+            echo ""
+            echo "If outputs changed, a commit landed on main and the **Sync Hugging Face Space** workflow will pick it up at the next cron tick or auto-trigger immediately on push."
+          } >> "$GITHUB_STEP_SUMMARY"
