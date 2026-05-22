@@ -25,6 +25,7 @@ GEN_CSV = REPO_ROOT / "outputs" / "reinvent_generated.csv"
 WARHEAD_CSV = REPO_ROOT / "outputs" / "warhead_scores.csv"
 QSAR_CSV = REPO_ROOT / "outputs" / "qsar_predictions.csv"
 VINA_CSV = REPO_ROOT / "outputs" / "docking_KEAP1_vina.csv"
+C151_CSV = REPO_ROOT / "outputs" / "c151_adduct_energies.csv"
 OUT_DIR = REPO_ROOT / "outputs"
 HYP_DIR = REPO_ROOT / "hypotheses"
 
@@ -81,6 +82,30 @@ def load_generated() -> list[dict]:
                 "tanimoto_to_SFN": row.get("tanimoto_to_SFN"),
                 "lipinski_pass": row.get("lipinski_pass"),
             })
+    return out
+
+
+def load_c151_adducts() -> dict[str, dict]:
+    """Return {smiles: {score_c151, dE_kcal_per_mol}}.
+
+    Covalent C151 adduct thermodynamic proxy (EXP-012). Higher score_c151
+    (closer to 1.0) = more favorable adduct formation.
+    """
+    out: dict[str, dict] = {}
+    if not C151_CSV.exists():
+        return out
+    with C151_CSV.open() as fh:
+        for row in csv.DictReader(fh):
+            smi = row.get("smiles", "")
+            if not smi or row.get("status") != "ok":
+                continue
+            try:
+                out[smi] = {
+                    "score_c151": float(row.get("score_c151") or 0.0),
+                    "dE_kcal_per_mol": float(row.get("dE_kcal_per_mol") or 0.0),
+                }
+            except (ValueError, TypeError):
+                continue
     return out
 
 
@@ -167,7 +192,7 @@ def load_target_scores() -> dict[str, dict[str, dict]]:
     return by_smiles
 
 
-def composite(record: dict, target_scores: dict, warhead: dict, qsar: dict, vina: dict | None = None) -> float:
+def composite(record: dict, target_scores: dict, warhead: dict, qsar: dict, vina: dict | None = None, c151: dict | None = None) -> float:
     """Weighted composite per record.
 
     Components:
@@ -217,6 +242,12 @@ def composite(record: dict, target_scores: dict, warhead: dict, qsar: dict, vina
             le = vina.get("vina_ligand_efficiency", 0.0)
             if le < 0:
                 s += min(-le, 0.5) * 0.10  # max bonus 0.05 at LE = -0.5
+        # Covalent C151 adduct thermodynamic proxy (EXP-012).
+        # score_c151 ∈ [0, 1]; only ITC-class compounds get a non-zero score.
+        # We add a small bonus (max +0.05) so the actual covalent mechanism
+        # informs the ranking alongside non-covalent Kelch docking.
+        if c151:
+            s += c151.get("score_c151", 0.0) * 0.05
 
     # Safety bonus from QSAR (low hERG / low AMES = good)
     if qsar:
@@ -341,7 +372,8 @@ def main() -> int:
     warhead_scores = load_warhead_scores()
     qsar_scores = load_qsar()
     vina_scores = load_vina_keap1()
-    print(f"library: {len(library)}, generated: {len(generated)}, target-scored: {len(target_scores)}, warhead: {len(warhead_scores)}, qsar: {len(qsar_scores)}, vina_keap1: {len(vina_scores)}")
+    c151_scores = load_c151_adducts()
+    print(f"library: {len(library)}, generated: {len(generated)}, target-scored: {len(target_scores)}, warhead: {len(warhead_scores)}, qsar: {len(qsar_scores)}, vina_keap1: {len(vina_scores)}, c151_adduct: {len(c151_scores)}")
 
     by_category: dict[str, list[dict]] = {"rescue": [], "maintenance": [], "remission": []}
 
@@ -362,7 +394,10 @@ def main() -> int:
         rec["BBB_score"] = qs.get("BBB_score", "")
         rec["vina_kcal_per_mol"] = vn.get("vina_kcal_per_mol", "")
         rec["vina_ligand_efficiency"] = vn.get("vina_ligand_efficiency", "")
-        rec["composite_score"] = composite(rec, ts, wh, qs, vn)
+        c151 = c151_scores.get(smi, {})
+        rec["c151_dE_kcal_per_mol"] = c151.get("dE_kcal_per_mol", "")
+        rec["c151_score"] = c151.get("score_c151", "")
+        rec["composite_score"] = composite(rec, ts, wh, qs, vn, c151)
 
         if rec["category"] in by_category:
             by_category[rec["category"]].append(rec)
