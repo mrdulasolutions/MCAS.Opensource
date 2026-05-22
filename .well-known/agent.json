@@ -32,7 +32,8 @@
   },
   "status": {
     "hostedEndpoint": "not_yet_available",
-    "manifestPurpose": "Describes the conceptual A2A agent interface. The underlying skills are implemented as scripts in the repository and runnable on a CPU laptop in ~3 minutes. A hosted A2A endpoint is on the project roadmap (see ROADMAP.md)."
+    "browseOnlyViewer": "https://huggingface.co/spaces/MRDula/openmcas-browser",
+    "manifestPurpose": "Describes the conceptual A2A agent interface. The underlying skills are implemented as scripts in the repository and runnable on a CPU laptop in ~3 minutes. A read-only browse interface to current predictions is live as a public Hugging Face Space (browseOnlyViewer above). A hosted A2A endpoint is on the project roadmap (see ROADMAP.md)."
   },
   "capabilities": {
     "streaming": false,

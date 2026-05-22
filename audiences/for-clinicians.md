@@ -10,6 +10,10 @@ could come next. Your input shapes whether it's useful or noise.
 
 > ⚠️ Nothing here is a treatment recommendation. See [docs/disclaimers.md](../docs/disclaimers.md).
 
+## See current rankings without cloning the repo
+
+🌐 [huggingface.co/spaces/MRDula/openmcas-browser](https://huggingface.co/spaces/MRDula/openmcas-browser) — read-only Streamlit viewer with per-compound composite, target similarity, warhead status, and predicted hERG / AMES / BBB. Updates whenever the pipeline reruns.
+
 ## What you'll get from spending 10 minutes here
 
 - A current snapshot of what AI + ligand-based screening + QSAR + warhead

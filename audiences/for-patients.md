@@ -11,6 +11,10 @@ something better than what you've been offered. We do too.
 > maintains a list of mast-cell-knowledgeable clinicians — start there.
 > Full disclaimer in [docs/disclaimers.md](../docs/disclaimers.md).
 
+## See what we have (no install, no clone)
+
+🌐 **Live viewer:** [huggingface.co/spaces/MRDula/openmcas-browser](https://huggingface.co/spaces/MRDula/openmcas-browser) — browse the ranked compound lists for rescue, maintenance, and remission. Read the methodology in the About tab.
+
 ## What we're trying to do, in plain English
 
 MCAS / MCAD means mast cells release their contents (histamine, tryptase,

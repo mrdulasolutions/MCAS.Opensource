@@ -17,6 +17,7 @@ A living document. Things at the top of each section are higher priority.
 - ✅ **Known-Actives Recovery benchmark — 100% recovery@20** (EXP-006).
 - ✅ Auto-generated hypothesis tables with timestamp + commit-hash provenance.
 - ✅ Streamlit public viewer + Hugging Face Spaces deployment recipe.
+- ✅ **Live public viewer deployed:** https://huggingface.co/spaces/MRDula/openmcas-browser
 
 ## Next (v0.x+1) — credibility & accessibility first
 
@@ -30,11 +31,12 @@ These five are the next 2–4 weeks of high-leverage work (per the
    (`β-hexosaminidase release`, `mast cell degranulation`, `LAD2`).
 3. **Sensitivity analysis on composite weights** — sweep all 6 weights
    ±50%, report ranking stability.
-4. **Deploy the Streamlit viewer to Hugging Face Spaces** so non-coders
-   have a permanent public link.
-5. **Real Vina/smina KEAP1 docking** on PDB 4L7B for the top-50 ranked
+4. **Real Vina/smina KEAP1 docking** on PDB 4L7B for the top-50 ranked
    remission candidates; replace the ligand-similarity score in
    `outputs/docking_KEAP1.csv` with physics for that one target.
+5. **Auto-sync the live Space on every pipeline rerun** — add a GitHub
+   Actions workflow that runs the pipeline + pushes the Space with a
+   secret-scoped HF token.
 
 ## Then (v0.x+2)
 

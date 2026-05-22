@@ -24,10 +24,15 @@
 
 ## Status
 
-**This is a manifest, not a hosted service (yet).** All skills described
-below are implemented as scripts in this repository and runnable locally
-on a CPU laptop in about 3 minutes. A hosted A2A endpoint is on the
-[roadmap](ROADMAP.md). Until then, treat the agent card as a contract: any
+**Manifest, not a hosted A2A endpoint (yet).** All skills described below
+are implemented as scripts in this repository and runnable locally on a
+CPU laptop in about 3 minutes. A hosted A2A endpoint is on the
+[roadmap](ROADMAP.md). The browse-only read interface to current
+predictions is already live as a public Hugging Face Space:
+
+🌐 **[huggingface.co/spaces/MRDula/openmcas-browser](https://huggingface.co/spaces/MRDula/openmcas-browser)**
+
+Until the A2A endpoint ships, treat the agent card as a contract: any
 A2A-compliant orchestrator can wire against the skill names and parameters
 described here, and the underlying behavior is what `scripts/` already does.
 

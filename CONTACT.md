@@ -6,6 +6,10 @@
 A DBA of **MR Dula Enterprise, LLC**
 Raleigh, North Carolina, USA
 
+## Live viewer
+
+🌐 **[huggingface.co/spaces/MRDula/openmcas-browser](https://huggingface.co/spaces/MRDula/openmcas-browser)** — the public read-only viewer for current rankings. No clone required.
+
 ## How to reach us
 
 All contact is routed through GitHub so the audit trail is public and

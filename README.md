@@ -8,6 +8,7 @@
 [![Compounds](https://img.shields.io/badge/compounds-54-green)](data/compounds/MCAS_Compound_Library_v1.csv)
 [![Generated analogs](https://img.shields.io/badge/SFN--class%20analogs-113-purple)](outputs/reinvent_generated.csv)
 [![Recovery@20](https://img.shields.io/badge/known--actives%20recovery%40_20-100%25-brightgreen)](experiments/EXP-006-known-actives-recovery.md)
+[![Live viewer](https://img.shields.io/badge/%F0%9F%A4%97_HF_Spaces-live_viewer-blue)](https://huggingface.co/spaces/MRDula/openmcas-browser)
 [![A2A Agent Card](https://img.shields.io/badge/A2A-agent_card-orange)](AGENT_CARD.md)
 
 > ⚠️ **Not medical advice.** Computational hypotheses + in silico predictions
@@ -27,7 +28,7 @@ shown to the pipeline ([EXP-006](experiments/EXP-006-known-actives-recovery.md))
 
 ## Try it in your browser (no clone, no install)
 
-🌐 **Live viewer:** [open the Streamlit app](docs/deploying-the-viewer.md) — browse all ranked candidates, filter by mechanism / evidence / warhead, drill into ADMET predictions per compound. Deploys to Hugging Face Spaces in ~2 minutes.
+🌐 **Live viewer:** **[huggingface.co/spaces/MRDula/openmcas-browser](https://huggingface.co/spaces/MRDula/openmcas-browser)** — public, MIT-licensed, browse all ranked candidates, filter by mechanism / evidence / warhead, inspect ADMET predictions per compound. (Self-host: [docs/deploying-the-viewer.md](docs/deploying-the-viewer.md).)
 
 ---
 
@@ -138,7 +139,7 @@ Each script is documented as a [standardized experiment report](experiments/):
 
 ## Just browse the results (no install)
 
-🌐 **Web viewer:** [app.py](app.py) is a Streamlit front-end to every ranked CSV in the repo. Deploy to a free Hugging Face Space in ~2 minutes — see [docs/deploying-the-viewer.md](docs/deploying-the-viewer.md).
+🌐 **Live Hugging Face Space:** **[huggingface.co/spaces/MRDula/openmcas-browser](https://huggingface.co/spaces/MRDula/openmcas-browser)** — read-only, public, refreshes when the pipeline reruns. Self-host recipe: [docs/deploying-the-viewer.md](docs/deploying-the-viewer.md).
 
 Or locally:
 ```bash
