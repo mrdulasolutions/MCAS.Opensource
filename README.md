@@ -226,6 +226,22 @@ Or in [Claude Code](https://claude.ai/code), use one of the bundled skills:
 [CONTACT.md](CONTACT.md) ·
 [AGENT_CARD.md](AGENT_CARD.md)
 
+### 📖 Wiki
+
+Pharmacology primers, per-compound deep dives, and patient-friendly
+explainers live in the [**OpenMCAS wiki**](https://github.com/mrdulasolutions/MCAS.Opensource/wiki):
+
+- [Route of Administration](https://github.com/mrdulasolutions/MCAS.Opensource/wiki/Route-of-Administration) — why the same compound behaves very differently buccal vs. swallowed
+- [Buccal Rescue Pharmacology](https://github.com/mrdulasolutions/MCAS.Opensource/wiki/Buccal-Rescue-Pharmacology) — what makes a compound fast through the oral mucosa
+- [1st vs 2nd Gen Antihistamines](https://github.com/mrdulasolutions/MCAS.Opensource/wiki/First-vs-Second-Gen-Antihistamines) — the BBB / drowsiness / rescue-onset tradeoff
+- [Diphenhydramine Deep Dive](https://github.com/mrdulasolutions/MCAS.Opensource/wiki/Diphenhydramine-Deep-Dive)
+
+### 📣 Patient-reported response observations
+
+Anonymous reports of what compound + route + dose pattern has worked
+or hasn't worked are tracked via the [response observation issue template](.github/ISSUE_TEMPLATE/response_observation.md).
+No PHI; pattern-level data only. See an [example issue](https://github.com/mrdulasolutions/MCAS.Opensource/issues/1).
+
 ### Agent2Agent (A2A) protocol
 
 This project publishes an [A2A agent card](AGENT_CARD.md) describing its

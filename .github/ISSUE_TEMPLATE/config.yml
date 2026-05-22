@@ -27,6 +27,12 @@ contact_links:
   - name: FAQ
     url: https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/docs/faq.md
     about: Common questions across all audiences.
+  - name: Wiki
+    url: https://github.com/mrdulasolutions/MCAS.Opensource/wiki
+    about: Community knowledge base — pharmacology primers, per-compound deep dives, patient-friendly explainers.
+  - name: Route of administration
+    url: https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/docs/route-of-administration.md
+    about: Why the same compound behaves very differently buccal vs. swallowed. Especially for acute rescue.
   - name: Glossary
     url: https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/docs/glossary.md
     about: MCAS + cheminformatics + AI jargon decoded.

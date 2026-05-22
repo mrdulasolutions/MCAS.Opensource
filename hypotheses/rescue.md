@@ -65,6 +65,43 @@ _Higher composite = better hypothesis. Edit `scripts/rank_hypotheses.py` to chan
 | 10 | Ranitidine | 0.394 | 0.13 | 0.11 | 0.09 | 0.13 | — | 0.51 | 0.12 | 0.21 | library |
 
 
+## Route of administration matters as much as compound choice
+
+For acute rescue specifically, **how** you deliver a compound is often
+as important as **which** compound you pick. The composite ranking
+above does NOT weight route-of-administration, but it's a real
+dimension. From [`docs/route-of-administration.md`](../docs/route-of-administration.md):
+
+| Compound | Best rescue routes | Buccal-friendly chemistry? | Patient-reported onset (buccal/SL) |
+|---|---|---|---|
+| **Diphenhydramine** | oral · buccal · sublingual · IM · IV | ✅ (MW 255, logP 3.3, single amine, BBB 1.00) | ~5-15 min anecdotally |
+| Hydroxyzine | oral · buccal · IM | ✅ (MW 374, logP 2.7, BBB 0.94) | comparable |
+| Doxepin | oral · sublingual | ✅ (MW 279, logP 3.4) | comparable |
+| Ketotifen | oral · buccal (possible) | ✅ (MW 309, logP 3.0) | possible |
+| Cetirizine | oral | borderline (zwitterion) | not the route's strength |
+| **Fexofenadine** | oral only | ❌ (MW 502, P-gp efflux, BBB 0.12) | crushing + buccal use does NOT replicate diphenhydramine onset |
+| Loratadine | oral | ❌ (engineered for slow / sustained) | not expected |
+| Cromolyn sodium | oral GI-local · inhaled · intranasal | ❌ (disodium salt) | local action only |
+
+**Implication:** the composite ranking's top of rescue
+(Fexofenadine / Cetirizine / Diphenhydramine / Hydroxyzine /
+Loratadine) is calibrated for *daily-use safety and efficacy*. For an
+acute 10-minute-rescue use case, the ranking by *route-appropriate
+onset* would lead with **diphenhydramine** + **hydroxyzine** —
+specifically because they have the chemistry to be delivered via
+fast-onset routes (buccal / sublingual / IM).
+
+This is a real and explicit limitation of the composite — and it's
+deliberately not "fixed" by adding a route weight, because the right
+route is patient-specific. Instead, the per-compound
+`route_recommended` field in [`seeds.json`](../data/compounds/seeds.json)
+surfaces the information for a clinician + patient pair to decide.
+
+Anonymous response observations (compound + route + onset patterns
+patients have personally found useful) are tracked via the
+[response-observation issue template](../.github/ISSUE_TEMPLATE/response_observation.md).
+The aggregate data informs future ranking refinements.
+
 ## Wet-lab validation
 
 LAD2 cell β-hexosaminidase release after substance P (MRGPRX2 trigger) or

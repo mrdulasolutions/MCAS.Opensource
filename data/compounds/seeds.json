@@ -37,8 +37,10 @@
       "mechanism": "Selective peripheral H1 receptor antagonist",
       "target": "HRH1",
       "evidence_level": "high",
-      "evidence_notes": "Often used at 2-4x standard dose in MCAS per consensus.",
-      "source_refs": ["Afrin LB et al. 2020"]
+      "evidence_notes": "Often used at 2-4x standard dose in MCAS per consensus. Large (502 Da), zwitterionic, P-glycoprotein substrate — by design peripherally-restricted. Oral only; buccal/sublingual route NOT expected to give fast onset.",
+      "source_refs": ["Afrin LB et al. 2020"],
+      "route_recommended": ["oral"],
+      "route_notes": "Crushing + buccal use would NOT replicate the fast onset of first-gen H1s like diphenhydramine — opposite chemistry. See docs/route-of-administration.md."
     },
     {
       "name": "Hydroxyzine",
@@ -59,8 +61,10 @@
       "mechanism": "H1 antagonist; rescue route for anaphylaxis",
       "target": "HRH1",
       "evidence_level": "high",
-      "evidence_notes": "Acute rescue; sedating.",
-      "source_refs": ["Anaphylaxis guidelines"]
+      "evidence_notes": "Acute rescue; sedating. Small (255 Da), lipophilic (logP 3.3), single tertiary amine — chemistry strongly favors buccal / sublingual / IM rescue with fast onset (5-15 min).",
+      "source_refs": ["Anaphylaxis guidelines"],
+      "route_recommended": ["oral", "buccal", "sublingual", "IM", "IV"],
+      "route_notes": "Patient-reported fast buccal rescue (crushed + held in cheek) is consistent with the physicochemistry. See docs/route-of-administration.md."
     },
     {
       "name": "Famotidine",
@@ -92,8 +96,10 @@
       "mechanism": "Inhibits mast cell degranulation; reduces Ca2+ influx",
       "target": "Mast cell membrane / Ca channels",
       "evidence_level": "high",
-      "evidence_notes": "Oral (Gastrocrom) for GI MCAS; poorly absorbed systemically.",
-      "source_refs": ["Approved MCAS therapy"]
+      "evidence_notes": "Oral (Gastrocrom) for GI MCAS; poorly absorbed systemically. Disodium salt makes it incompatible with buccal absorption.",
+      "source_refs": ["Approved MCAS therapy"],
+      "route_recommended": ["oral (GI-local action)", "inhaled", "intranasal", "ophthalmic"],
+      "route_notes": "Oral cromolyn works *locally* on GI mast cells, not via systemic absorption — that's the design intent. Inhaled / nasal / eye formulations target their respective mucosae."
     },
     {
       "name": "Ketotifen",
@@ -472,8 +478,10 @@
       "mechanism": "Covalent KEAP1 modifier (Cys-151/273/288 isothiocyanate adduct) -> Nrf2 stabilization + nuclear translocation; HO-1 / NQO1 induction; NF-kB / caspase-1 inhibition; epigenetic (DNMT/HDAC) modulation",
       "target": "KEAP1 (Q14145); epigenetic",
       "evidence_level": "high",
-      "evidence_notes": "Upstream rescue candidate for oxidative + epigenetic 'injury'; suppresses mast cell degranulation in vitro.",
-      "source_refs": ["Houghton 2013; Yang 2017"]
+      "evidence_notes": "Upstream rescue candidate for oxidative + epigenetic 'injury'; suppresses mast cell degranulation in vitro. Small (177 Da), modestly lipophilic — absorbs sublingually from chewed broccoli sprouts (myrosinase activation in mouth).",
+      "source_refs": ["Houghton 2013; Yang 2017"],
+      "route_recommended": ["oral", "sublingual"],
+      "route_notes": "Chewed broccoli sprouts is a natural sublingual / oral route — chewing activates myrosinase which converts glucoraphanin to SFN in the mouth before swallow."
     },
     {
       "name": "Glucoraphanin",
