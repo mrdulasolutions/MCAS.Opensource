@@ -64,22 +64,22 @@ hypothesis: **quercetin (broad) + luteolin (BBB-crossing for neuro) + curcumin
 
 ## Top AI-ranked candidates
 
-> 🤖 **Auto-generated artifact.** Produced by `scripts/rank_hypotheses.py` on 2026-05-22 03:26 UTC from commit `df22338`. Inputs: `data/compounds/MCAS_Compound_Library_v1.csv`, `outputs/reinvent_generated.csv`, `outputs/docking_*.csv`, `outputs/warhead_scores.csv`, `outputs/qsar_predictions.csv`. Composite formula and weights documented in [EXP-005](../experiments/EXP-005-multi-objective-ranking.md). Recovery benchmark: [EXP-006](../experiments/EXP-006-known-actives-recovery.md).
+> 🤖 **Auto-generated artifact.** Produced by `scripts/rank_hypotheses.py` on 2026-05-22 20:09 UTC from commit `ab6d3f6`. Inputs: `data/compounds/MCAS_Compound_Library_v1.csv`, `outputs/reinvent_generated.csv`, `outputs/docking_*.csv`, `outputs/warhead_scores.csv`, `outputs/qsar_predictions.csv`. Composite formula and weights documented in [EXP-005](../experiments/EXP-005-multi-objective-ranking.md). Recovery benchmark: [EXP-006](../experiments/EXP-006-known-actives-recovery.md).
 
 _Higher composite = better hypothesis. Edit `scripts/rank_hypotheses.py` to change weights or category target mix; the next run will overwrite this table._
 
 | # | Name | Composite | KEAP1 | MRGPRX2 | KIT | HRH1 | Warhead | hERG | AMES | BBB | Source |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | Curcumin | 0.663 | 1.00 | 0.28 | 0.12 | 0.14 | yes | 0.69 | 0.09 | 0.81 | library |
-| 2 | Rosmarinic acid | 0.593 | 0.37 | 0.23 | 0.12 | 0.14 | yes | 0.53 | 0.41 | 0.60 | library |
-| 3 | Thymoquinone | 0.590 | 0.09 | 0.09 | 0.08 | 0.10 | yes | 0.31 | 0.22 | 0.93 | library |
-| 4 | Montelukast | 0.534 | 0.14 | 0.11 | 0.15 | 0.21 | — | 0.64 | 0.34 | 0.77 | library |
-| 5 | Resveratrol | 0.521 | 1.00 | 1.00 | 0.07 | 0.10 | — | 0.46 | 0.24 | 0.67 | library |
-| 6 | Eicosapentaenoic acid (EPA) | 0.513 | 0.16 | 0.07 | 0.07 | 0.12 | — | 0.24 | 0.16 | 0.91 | library |
-| 7 | Docosahexaenoic acid (DHA) | 0.510 | 0.17 | 0.08 | 0.08 | 0.12 | — | 0.21 | 0.23 | 0.91 | library |
-| 8 | Luteolin | 0.509 | 0.18 | 1.00 | 0.09 | 0.09 | — | 0.35 | 0.70 | 0.54 | library |
-| 9 | Baicalein | 0.498 | 0.16 | 0.54 | 0.13 | 0.13 | — | 0.54 | 0.37 | 0.74 | library |
-| 10 | Cholecalciferol (Vitamin D3) | 0.484 | 0.12 | 0.12 | 0.07 | 0.11 | — | 0.49 | 0.04 | 0.68 | library |
+| 1 | Curcumin | 0.690 | 1.00 | 0.28 | 0.12 | 0.14 | yes | 0.69 | 0.09 | 0.81 | library |
+| 2 | Rosmarinic acid | 0.609 | 0.37 | 0.23 | 0.12 | 0.14 | yes | 0.53 | 0.41 | 0.60 | library |
+| 3 | Thymoquinone | 0.596 | 0.09 | 0.09 | 0.08 | 0.10 | yes | 0.31 | 0.22 | 0.93 | library |
+| 4 | Montelukast | 0.554 | 0.14 | 0.11 | 0.15 | 0.21 | — | 0.64 | 0.34 | 0.77 | library |
+| 5 | Luteolin | 0.545 | 0.18 | 1.00 | 0.09 | 0.09 | — | 0.35 | 0.70 | 0.54 | library |
+| 6 | Resveratrol | 0.526 | 1.00 | 1.00 | 0.07 | 0.10 | — | 0.46 | 0.24 | 0.67 | library |
+| 7 | Eicosapentaenoic acid (EPA) | 0.520 | 0.16 | 0.07 | 0.07 | 0.12 | — | 0.24 | 0.16 | 0.91 | library |
+| 8 | Docosahexaenoic acid (DHA) | 0.517 | 0.17 | 0.08 | 0.08 | 0.12 | — | 0.21 | 0.23 | 0.91 | library |
+| 9 | Cholecalciferol (Vitamin D3) | 0.502 | 0.12 | 0.12 | 0.07 | 0.11 | — | 0.49 | 0.04 | 0.68 | library |
+| 10 | Baicalein | 0.500 | 0.16 | 0.54 | 0.13 | 0.13 | — | 0.54 | 0.37 | 0.74 | library |
 
 
 ## Wet-lab validation

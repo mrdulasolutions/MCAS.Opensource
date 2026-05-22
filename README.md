@@ -5,7 +5,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Validate SMILES](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/validate.yml/badge.svg)](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/validate.yml)
 [![Sync HF Space](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/sync-hf-space.yml/badge.svg)](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/sync-hf-space.yml)
-[![Experiments](https://img.shields.io/badge/experiments-14-blue)](experiments/)
+[![Experiments](https://img.shields.io/badge/experiments-16-blue)](experiments/)
+[![Mast-cell predictor AUC](https://img.shields.io/badge/mast--cell%20predictor%20AUC-0.916-brightgreen)](experiments/EXP-016-mast-cell-predictor.md)
 [![ChEMBL records](https://img.shields.io/badge/ChEMBL%20records-67k-blue)](experiments/EXP-011-chembl-bioassay-predictor.md)
 [![Compounds](https://img.shields.io/badge/compounds-54-green)](data/compounds/MCAS_Compound_Library_v1.csv)
 [![Generated analogs](https://img.shields.io/badge/SFN--class%20analogs-113-purple)](outputs/reinvent_generated.csv)
@@ -151,6 +152,8 @@ Each script is documented as a [standardized experiment report](experiments/):
 | [EXP-009](experiments/EXP-009-keap1-vina-docking.md) | KEAP1 Vina docking + data-bug fix | Real AutoDock Vina docking on 4L7B; **every top-15 by ligand efficiency carries the ITC warhead**. Disclosed + fixed three wrong PubChem CIDs |
 | [EXP-010](experiments/EXP-010-joint-perturbation-lhs.md) | Joint-perturbation Latin-hypercube weight sweep | 200-sample LHS — **Erucin holds remission #1 in 91.5% of samples**; ITC top-5 in remission top-10 in ≥99% of samples |
 | [EXP-011](experiments/EXP-011-chembl-bioassay-predictor.md) | ChEMBL bioassay pull + per-target activity predictors | **67,372 records across 11 MCAS targets**, CV R² 0.52–0.80 (median 0.69); integrated as +0.10 ChEMBL-validated potency bonus |
+| [EXP-015](experiments/EXP-015-audit-retread.md) | Audit retread on post-ChEMBL composite | 3 of 4 audits held or tightened (precision@10 = 100%, min ρ tightened 0.933→0.946); remission recovery regression diagnosed as benchmark-label issue, not composite failure |
+| [EXP-016](experiments/EXP-016-mast-cell-predictor.md) | Mast-cell-specific bioassay predictor (β-hex / LAD2 / HMC-1 / histamine release) | **CV AUC 0.916 ± 0.019** — strongest single model in the repo. Luteolin 0.728, Midostaurin 0.840. +0.05 universal bonus across all categories |
 | [EXP-012](experiments/EXP-012-covalent-c151-adduct.md) | Covalent KEAP1-C151 dithiocarbamate adduct proxy | MMFF94 reaction-energy proxy for the actual SFN mechanism; every ITC produces favorable adduct (ΔE −32 to −76 kcal/mol) |
 | [EXP-013](experiments/EXP-013-rl-generation.md) | Iterative REINVENT-style generation | 4-iter generate-and-select; **265 candidates**; drug-like aromatic sulfonyl-ITCs emerge in iter 3 (QED 0.59-0.60) |
 

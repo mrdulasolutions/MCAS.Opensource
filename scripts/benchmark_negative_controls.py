@@ -101,7 +101,15 @@ def load_qsar_models():
     return models
 
 
-def composite_for_category(target_scores, warhead, qsar, category, evidence_weight=0.0):
+import math as _math
+
+
+def _potency_norm(pic50: float) -> float:
+    return 1.0 / (1.0 + _math.exp(-(pic50 - 6.0)))
+
+
+def composite_for_category(target_scores, warhead, qsar, category, evidence_weight=0.0,
+                            c151_score=0.0, chembl_preds=None):
     """Replicate rank_hypotheses.py composite for an arbitrary category.
 
     `evidence_weight` controls how we treat the negative control:
@@ -131,6 +139,8 @@ def composite_for_category(target_scores, warhead, qsar, category, evidence_weig
         s += wh_score * 0.10
         if target_scores.get("KEAP1", 0) > 0.4 and not warhead.get("has_warhead", False):
             s -= 0.08
+        # C151 covalent adduct bonus (EXP-012)
+        s += c151_score * 0.05
 
     herg = qsar.get("hERG", 0.5)
     ames = qsar.get("AMES", 0.5)
@@ -142,6 +152,19 @@ def composite_for_category(target_scores, warhead, qsar, category, evidence_weig
     elif category == "rescue":
         if target_scores.get("HRH1", 0) < 0.5:
             s -= (bbb - 0.5) * 0.03
+
+    # ChEMBL-trained potency bonus (EXP-011)
+    if chembl_preds:
+        chembl_total = 0.0
+        chembl_weight = 0.0
+        for tgt, w in weights.items():
+            pic50 = chembl_preds.get(tgt)
+            if pic50 is not None:
+                chembl_total += _potency_norm(pic50) * w
+                chembl_weight += w
+        if chembl_weight > 0:
+            s += min(chembl_total / chembl_weight, 1.0) * 0.10
+
     return round(s, 4)
 
 
@@ -179,6 +202,38 @@ def main() -> int:
 
     print("  training QSAR models...")
     qsar_models = load_qsar_models()
+
+    print("  loading C151 + ChEMBL prediction tables...")
+    c151_table = {}
+    c151_path = REPO_ROOT / "outputs" / "c151_adduct_energies.csv"
+    if c151_path.exists():
+        with c151_path.open() as fh:
+            for row in csv.DictReader(fh):
+                smi = row.get("smiles", "")
+                if smi and row.get("status") == "ok":
+                    try:
+                        c151_table[smi] = float(row.get("score_c151") or 0)
+                    except ValueError:
+                        pass
+
+    chembl_table = {}
+    chembl_path = REPO_ROOT / "outputs" / "chembl_predictions.csv"
+    if chembl_path.exists():
+        with chembl_path.open() as fh:
+            for row in csv.DictReader(fh):
+                smi = row.get("smiles", "")
+                if not smi:
+                    continue
+                preds = {}
+                for col, val in row.items():
+                    if col.startswith("chembl_pIC50_") and val:
+                        try:
+                            preds[col.replace("chembl_pIC50_", "")] = float(val)
+                        except ValueError:
+                            pass
+                if preds:
+                    chembl_table[smi] = preds
+    print(f"    c151: {len(c151_table)} entries  chembl: {len(chembl_table)} entries")
 
     ranked_csvs = {c: REPO_ROOT / "outputs" / f"ranked_{c}.csv" for c in ("rescue", "maintenance", "remission")}
 
@@ -225,9 +280,15 @@ def main() -> int:
             row[f"score_{tgt}"] = round(score, 3)
 
         wh_pack = {"warhead_score": warhead_score, "has_warhead": bool(hits)}
+        canon_smi = Chem.MolToSmiles(mol, canonical=True)
+        c151_score = c151_table.get(canon_smi, 0.0)
+        chembl_preds = chembl_table.get(canon_smi, {})
         for cat, ranked_csv in ranked_csvs.items():
             # Production-realistic: no curated evidence for an unknown compound
-            comp = composite_for_category(target_scores, wh_pack, qsar, cat, evidence_weight=0.0)
+            comp = composite_for_category(target_scores, wh_pack, qsar, cat,
+                                          evidence_weight=0.0,
+                                          c151_score=c151_score,
+                                          chembl_preds=chembl_preds)
             rank = rank_against_csv(comp, ranked_csv)
             with ranked_csv.open() as fh:
                 size = sum(1 for _ in csv.DictReader(fh))
@@ -236,7 +297,10 @@ def main() -> int:
             row[f"size_{cat}"] = size
             # Sanity column: what if we had generously credited evidence=high?
             row[f"composite_{cat}_with_high_evidence"] = composite_for_category(
-                target_scores, wh_pack, qsar, cat, evidence_weight=1.0
+                target_scores, wh_pack, qsar, cat,
+                evidence_weight=1.0,
+                c151_score=c151_score,
+                chembl_preds=chembl_preds,
             )
 
         rows.append(row)

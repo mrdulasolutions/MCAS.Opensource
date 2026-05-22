@@ -104,8 +104,61 @@ def featurize_df(smiles_list):
     return X, mask
 
 
-def score_active(active: dict, target_fps: dict, warhead_patts, qsar_models, ranked_csv):
-    """Score a single known active and find its rank in the expected category."""
+def _load_c151():
+    """Load score_c151 keyed by canonical SMILES (EXP-012). Empty dict if file missing."""
+    out = {}
+    p = REPO_ROOT / "outputs" / "c151_adduct_energies.csv"
+    if not p.exists():
+        return out
+    with p.open() as fh:
+        for row in csv.DictReader(fh):
+            smi = row.get("smiles", "")
+            if smi and row.get("status") == "ok":
+                try:
+                    out[smi] = float(row.get("score_c151") or 0)
+                except ValueError:
+                    pass
+    return out
+
+
+def _load_chembl():
+    """Load per-target predicted pIC50 keyed by canonical SMILES (EXP-011)."""
+    import math
+    out = {}
+    p = REPO_ROOT / "outputs" / "chembl_predictions.csv"
+    if not p.exists():
+        return out
+    with p.open() as fh:
+        for row in csv.DictReader(fh):
+            smi = row.get("smiles", "")
+            if not smi:
+                continue
+            preds = {}
+            for col, val in row.items():
+                if col.startswith("chembl_pIC50_") and val:
+                    try:
+                        preds[col.replace("chembl_pIC50_", "")] = float(val)
+                    except ValueError:
+                        pass
+            if preds:
+                out[smi] = preds
+    return out
+
+
+def _potency_norm(pic50: float) -> float:
+    """Logistic centered at pIC50=6 → [0, 1]. Matches rank_hypotheses.pic50_potency_norm."""
+    import math
+    return 1.0 / (1.0 + math.exp(-(pic50 - 6.0)))
+
+
+def score_active(active: dict, target_fps: dict, warhead_patts, qsar_models, ranked_csv,
+                  c151_table=None, chembl_table=None):
+    """Score a single known active and find its rank in the expected category.
+
+    Composite formula mirrors rank_hypotheses.py post-EXP-011 (includes c151 +
+    ChEMBL terms). Reusing the unified composite is what makes the audit
+    apples-to-apples against the live ranked CSVs.
+    """
     cid = active["pubchem_cid"]
     expected = active["expected_category"]
     weights = CATEGORY_TARGETS[expected]
@@ -123,10 +176,7 @@ def score_active(active: dict, target_fps: dict, warhead_patts, qsar_models, ran
 
     # 1. Per-target similarity
     fp = fingerprint(mol)
-    target_scores = {}
-    for tgt, ref_fps in target_fps.items():
-        score, idx = best_similarity(fp, ref_fps)
-        target_scores[tgt] = score
+    target_scores = {tgt: best_similarity(fp, ref_fps)[0] for tgt, ref_fps in target_fps.items()}
 
     # 2. Warhead detection
     hits = warhead_hits(mol, warhead_patts)
@@ -134,16 +184,15 @@ def score_active(active: dict, target_fps: dict, warhead_patts, qsar_models, ran
     ph_pass = keap1_pharmacophore_pass(mol)
     warhead_score = (1.0 if has_warhead else 0.0) * (1.0 if ph_pass else 0.5)
 
-    # 3. QSAR
+    # 3. QSAR (hERG / AMES / BBB)
     fp_arr = fp_array(mol).reshape(1, -1)
     herg = float(qsar_models["hERG"].predict_proba(fp_arr)[0, 1])
     ames = float(qsar_models["AMES"].predict_proba(fp_arr)[0, 1])
     bbb = float(qsar_models["BBB_Martins"].predict_proba(fp_arr)[0, 1])
 
-    # 4. Composite — same formula as rank_hypotheses.py
+    # 4. Composite — mirrors rank_hypotheses.py post-ChEMBL (EXP-011)
     # evidence_level is "known clinical" → treat as "high"
-    evidence_weight = 1.0
-    s = 0.30 * evidence_weight
+    s = 0.30  # evidence × 1.0
 
     dock_total = 0.0
     weight_total = 0.0
@@ -158,6 +207,9 @@ def score_active(active: dict, target_fps: dict, warhead_patts, qsar_models, ran
         s += warhead_score * 0.10
         if target_scores.get("KEAP1", 0) > 0.4 and not has_warhead:
             s -= 0.08
+        # C151 covalent adduct (EXP-012) — only ITC-class compounds have a score
+        if c151_table:
+            s += c151_table.get(canonical_smiles, 0.0) * 0.05
 
     safety = 0.5 * (1 - herg) + 0.5 * (1 - ames)
     s += safety * 0.15
@@ -166,6 +218,20 @@ def score_active(active: dict, target_fps: dict, warhead_patts, qsar_models, ran
     elif expected == "rescue":
         if target_scores.get("HRH1", 0) < 0.5:
             s -= (bbb - 0.5) * 0.03
+
+    # ChEMBL-trained potency bonus (EXP-011)
+    if chembl_table:
+        preds = chembl_table.get(canonical_smiles, {})
+        if preds:
+            chembl_total = 0.0
+            chembl_weight = 0.0
+            for tgt, w in weights.items():
+                pic50 = preds.get(tgt)
+                if pic50 is not None:
+                    chembl_total += _potency_norm(pic50) * w
+                    chembl_weight += w
+            if chembl_weight > 0:
+                s += min(chembl_total / chembl_weight, 1.0) * 0.10
 
     composite_score = round(s, 4)
 
@@ -220,6 +286,11 @@ def main() -> int:
     print("  training QSAR models on PyTDC tasks...")
     qsar_models = load_qsar_models()
 
+    print("  loading C151 + ChEMBL prediction tables...")
+    c151_table = _load_c151()
+    chembl_table = _load_chembl()
+    print(f"    c151: {len(c151_table)} entries  chembl: {len(chembl_table)} entries")
+
     print()
     print("Scoring each known active blind...")
     results = []
@@ -230,7 +301,8 @@ def main() -> int:
     }
     for a in actives:
         ranked_csv = ranked_csvs[a["expected_category"]]
-        r = score_active(a, target_fps, warhead_patts, qsar_models, ranked_csv)
+        r = score_active(a, target_fps, warhead_patts, qsar_models, ranked_csv,
+                          c151_table=c151_table, chembl_table=chembl_table)
         results.append(r)
         rank = r.get("rank_in_expected_category")
         size = r.get("expected_category_size")

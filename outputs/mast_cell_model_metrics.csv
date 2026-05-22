@@ -1,0 +1,6 @@
+metric,value
+n_train_compounds,1101
+n_train_active,553
+n_train_inactive,548
+cv_mean_auc,0.9164
+cv_folds_evaluated,5

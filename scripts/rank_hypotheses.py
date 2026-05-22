@@ -27,6 +27,7 @@ QSAR_CSV = REPO_ROOT / "outputs" / "qsar_predictions.csv"
 VINA_CSV = REPO_ROOT / "outputs" / "docking_KEAP1_vina.csv"
 C151_CSV = REPO_ROOT / "outputs" / "c151_adduct_energies.csv"
 CHEMBL_PRED_CSV = REPO_ROOT / "outputs" / "chembl_predictions.csv"
+MAST_CELL_PRED_CSV = REPO_ROOT / "outputs" / "mast_cell_predictions.csv"
 OUT_DIR = REPO_ROOT / "outputs"
 HYP_DIR = REPO_ROOT / "hypotheses"
 
@@ -83,6 +84,23 @@ def load_generated() -> list[dict]:
                 "tanimoto_to_SFN": row.get("tanimoto_to_SFN"),
                 "lipinski_pass": row.get("lipinski_pass"),
             })
+    return out
+
+
+def load_mast_cell_predictions() -> dict[str, float]:
+    """Return {smiles: mast_cell_stabilizer_prob ∈ [0, 1]} from EXP-016."""
+    out: dict[str, float] = {}
+    if not MAST_CELL_PRED_CSV.exists():
+        return out
+    with MAST_CELL_PRED_CSV.open() as fh:
+        for row in csv.DictReader(fh):
+            smi = row.get("smiles", "")
+            p = row.get("mast_cell_stabilizer_prob", "")
+            if smi and p:
+                try:
+                    out[smi] = float(p)
+                except ValueError:
+                    pass
     return out
 
 
@@ -235,7 +253,7 @@ def pic50_potency_norm(pic50: float) -> float:
     return 1.0 / (1.0 + math.exp(-(pic50 - 6.0)))
 
 
-def composite(record: dict, target_scores: dict, warhead: dict, qsar: dict, vina: dict | None = None, c151: dict | None = None, chembl: dict | None = None) -> float:
+def composite(record: dict, target_scores: dict, warhead: dict, qsar: dict, vina: dict | None = None, c151: dict | None = None, chembl: dict | None = None, mast_cell: float | None = None) -> float:
     """Weighted composite per record.
 
     Components:
@@ -291,6 +309,13 @@ def composite(record: dict, target_scores: dict, warhead: dict, qsar: dict, vina
         # informs the ranking alongside non-covalent Kelch docking.
         if c151:
             s += c151.get("score_c151", 0.0) * 0.05
+
+    # Mast-cell-stabilizer-class predictor (EXP-016).
+    # Universal across all three categories: a compound that the ChEMBL
+    # mast-cell-assay predictor flags as a stabilizer earns a small bonus
+    # regardless of which category it lives in. Cap +0.05.
+    if mast_cell is not None:
+        s += min(max(mast_cell, 0.0), 1.0) * 0.05
 
     # ChEMBL-trained predicted potency bonus (EXP-011).
     # For each per-category target with a trained predictor, add a small
@@ -435,7 +460,8 @@ def main() -> int:
     vina_scores = load_vina_keap1()
     c151_scores = load_c151_adducts()
     chembl_preds = load_chembl_predictions()
-    print(f"library: {len(library)}, generated: {len(generated)}, target-scored: {len(target_scores)}, warhead: {len(warhead_scores)}, qsar: {len(qsar_scores)}, vina_keap1: {len(vina_scores)}, c151_adduct: {len(c151_scores)}, chembl: {len(chembl_preds)}")
+    mast_cell_preds = load_mast_cell_predictions()
+    print(f"library: {len(library)}, generated: {len(generated)}, target-scored: {len(target_scores)}, warhead: {len(warhead_scores)}, qsar: {len(qsar_scores)}, vina_keap1: {len(vina_scores)}, c151_adduct: {len(c151_scores)}, chembl: {len(chembl_preds)}, mast_cell: {len(mast_cell_preds)}")
 
     by_category: dict[str, list[dict]] = {"rescue": [], "maintenance": [], "remission": []}
 
@@ -462,7 +488,9 @@ def main() -> int:
         cb = chembl_preds.get(smi, {})
         for tgt_name, val in cb.items():
             rec[f"chembl_pIC50_{tgt_name}"] = round(val, 3)
-        rec["composite_score"] = composite(rec, ts, wh, qs, vn, c151, cb)
+        mc = mast_cell_preds.get(smi)
+        rec["mast_cell_stabilizer_prob"] = round(mc, 3) if mc is not None else ""
+        rec["composite_score"] = composite(rec, ts, wh, qs, vn, c151, cb, mc)
 
         if rec["category"] in by_category:
             by_category[rec["category"]].append(rec)

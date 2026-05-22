@@ -27,6 +27,8 @@ A living document. Things at the top of each section are higher priority.
 - ✅ **Covalent C151 adduct proxy** (EXP-012) — MMFF94 dithiocarbamate adduct energy for ITC-class compounds; addresses the EXP-009 §7.4 mechanism caveat.
 - ✅ **Iterative RL-style generation** (EXP-013) — CPU substitute + hardened Colab notebook path; 265 candidates over 4 iterations.
 - ✅ **ChEMBL bioassay pull + predictor** (EXP-011) — 67,372 records across 11 targets; CV R² 0.52–0.80 (median 0.69); integrated as +0.10 ChEMBL-validated potency bonus. **Hydroxyzine jumped to #3 in rescue, Montelukast entered maintenance top-5** on real-bioactivity grounding.
+- ✅ **Audit retread on post-ChEMBL composite** (EXP-015) — precision@10 = 100% held, min Spearman ρ tightened 0.933→0.946; remission recovery regression surfaced a benchmark-label issue (JAK/BTK should be relabeled as maintenance, not remission).
+- ✅ **Mast-cell-specific predictor** (EXP-016) — direct stabilizer classifier from ChEMBL β-hex / LAD2 / HMC-1 / histamine release assays. **CV AUC 0.916 ± 0.019 — strongest single model in the repo.** Luteolin 0.728, Midostaurin 0.840. Integrated as +0.05 universal bonus across all three categories. Cetirizine edged Fexofenadine to #1 in rescue; Luteolin entered maintenance top-5.
 
 ## Next (v0.x+1) — credibility & accessibility first
 

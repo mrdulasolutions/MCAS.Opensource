@@ -37,3 +37,5 @@ Plus what it found and what it didn't.
 | [EXP-012](EXP-012-covalent-c151-adduct.md) | Covalent KEAP1-C151 dithiocarbamate adduct energy proxy | MMFF94 reaction-energy proxy for the actual SFN mechanism | published | 2026-05-22 |
 | [EXP-013](EXP-013-rl-generation.md) | Iterative REINVENT-style policy improvement (CPU + Colab paths) | 4-iter generate-and-select; 265 candidates; drug-like aromatic ITCs emerge | published | 2026-05-22 |
 | [EXP-014](EXP-014-chronic-rescue-dependency.md) | Chronic rescue dependency — patient-reported survey on long-term first-gen H1 use | Pre-registered observational survey; analysis pending n ≥ 30 | running | 2026-05-22 |
+| [EXP-015](EXP-015-audit-retread.md) | Audit retread on post-ChEMBL composite | Rerun EXP-006/007/008/010; 3 of 4 hold; remission recovery regression diagnosed as category-label issue | published | 2026-05-22 |
+| [EXP-016](EXP-016-mast-cell-predictor.md) | Mast-cell-specific bioassay predictor | 1101 compounds, CV AUC **0.916** ± 0.019 (strongest single model in repo); integrated as +0.05 universal bonus | published | 2026-05-22 |

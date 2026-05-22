@@ -55,6 +55,44 @@ BASELINE_WEIGHTS = {
 EVIDENCE_LEVEL_MAP = {"high": 1.0, "medium": 0.6, "low": 0.3, "": 0.0}
 
 
+def _load_c151_table():
+    out = {}
+    p = REPO_ROOT / "outputs" / "c151_adduct_energies.csv"
+    if not p.exists():
+        return out
+    with p.open() as fh:
+        for row in csv.DictReader(fh):
+            smi = row.get("smiles", "")
+            if smi and row.get("status") == "ok":
+                try:
+                    out[smi] = float(row.get("score_c151") or 0)
+                except ValueError:
+                    pass
+    return out
+
+
+def _load_chembl_table():
+    out = {}
+    p = REPO_ROOT / "outputs" / "chembl_predictions.csv"
+    if not p.exists():
+        return out
+    with p.open() as fh:
+        for row in csv.DictReader(fh):
+            smi = row.get("smiles", "")
+            if not smi:
+                continue
+            preds = {}
+            for col, val in row.items():
+                if col.startswith("chembl_pIC50_") and val:
+                    try:
+                        preds[col.replace("chembl_pIC50_", "")] = float(val)
+                    except ValueError:
+                        pass
+            if preds:
+                out[smi] = preds
+    return out
+
+
 def load_records():
     """Return list of records ready for composite scoring."""
     target_scores = {}
@@ -123,10 +161,14 @@ def load_records():
                 })
 
     # Attach scores
+    c151_table = _load_c151_table()
+    chembl_table = _load_chembl_table()
     for r in records:
         r["target_scores"] = target_scores.get(r["smiles"], {})
         r["warhead"] = warhead.get(r["smiles"], {"has_warhead": False, "warhead_score": 0.0})
         r["qsar"] = qsar.get(r["smiles"], {"hERG": 0.5, "AMES": 0.5, "BBB": 0.5})
+        r["c151_score"] = c151_table.get(r["smiles"], 0.0)
+        r["chembl_preds"] = chembl_table.get(r["smiles"], {})
 
     return records
 
@@ -157,6 +199,8 @@ def composite(record, weights):
         keap1_sim = record["target_scores"].get("KEAP1", 0.0)
         if keap1_sim > 0.4 and not record["warhead"]["has_warhead"]:
             s -= 0.08
+        # C151 covalent adduct (EXP-012) — small fixed bonus, not weight-perturbed
+        s += record.get("c151_score", 0.0) * 0.05
 
     herg = record["qsar"]["hERG"]
     ames = record["qsar"]["AMES"]
@@ -170,6 +214,20 @@ def composite(record, weights):
         hrh1 = record["target_scores"].get("HRH1", 0.0)
         if hrh1 < 0.5:
             s -= weights["w_bbb_context"] * 0.6 * (bbb - 0.5)
+
+    # ChEMBL-trained potency bonus (EXP-011) — fixed +0.10 max, not weight-perturbed
+    chembl_preds = record.get("chembl_preds", {})
+    if chembl_preds:
+        import math
+        chembl_total = 0.0
+        chembl_weight_total = 0.0
+        for tgt, w in target_mix.items():
+            pic50 = chembl_preds.get(tgt)
+            if pic50 is not None:
+                chembl_total += (1.0 / (1.0 + math.exp(-(pic50 - 6.0)))) * w
+                chembl_weight_total += w
+        if chembl_weight_total > 0:
+            s += min(chembl_total / chembl_weight_total, 1.0) * 0.10
 
     return s
 

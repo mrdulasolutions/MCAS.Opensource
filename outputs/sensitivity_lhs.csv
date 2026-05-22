@@ -1,133 +1,133 @@
 name,category,baseline_rank,mean_rank,rank_95_ci_low,rank_95_ci_high,rank_spread,top1_frac,top10_frac,n_samples
 Curcumin,maintenance,1,1.0,1,1,0,1.0,1.0,200
-Rosmarinic acid,maintenance,2,2.5,2,3,1,0.0,1.0,200
-Thymoquinone,maintenance,3,2.63,2,4,2,0.0,1.0,200
-Eicosapentaenoic acid (EPA),maintenance,7,5.89,4,8,4,0.0,1.0,200
-Resveratrol,maintenance,4,5.96,2,10,8,0.0,0.99,200
-Luteolin,maintenance,5,6.24,4,10,6,0.0,0.995,200
-Montelukast,maintenance,6,6.25,5,8,3,0.0,1.0,200
-Docosahexaenoic acid (DHA),maintenance,8,7.03,5,9,4,0.0,1.0,200
-Baicalein,maintenance,9,8.24,7,10,3,0.0,1.0,200
-Cholecalciferol (Vitamin D3),maintenance,10,9.4,6,11,5,0.0,0.915,200
-EGCG,maintenance,11,11.65,11,15,4,0.0,0.005,200
-Apigenin,maintenance,12,11.98,10,14,4,0.0,0.085,200
-Butyric acid,maintenance,14,13.09,11,14,3,0.0,0.01,200
-Kaempferol,maintenance,13,13.55,12,15,3,0.0,0.0,200
-Alpha-lipoic acid,maintenance,15,14.72,12,16,3,0.0,0.0,200
-Naltrexone (low-dose),maintenance,16,16.24,15,18,3,0.0,0.0,200
-Silibinin,maintenance,17,17.12,15,18,3,0.0,0.0,200
-Calcitriol,maintenance,18,17.57,16,19,3,0.0,0.0,200
-Hesperidin,maintenance,19,19.84,19,22,3,0.0,0.0,200
-6-Gingerol,maintenance,20,20.02,18,23,5,0.0,0.0,200
-N-Acetylcysteine (NAC),maintenance,21,20.88,19,23,4,0.0,0.0,200
-Rutin,maintenance,22,21.66,20,24,4,0.0,0.0,200
-Biotin,maintenance,23,22.84,20,24,4,0.0,0.0,200
-Taurine,maintenance,24,23.73,21,25,4,0.0,0.0,200
-Myricitrin,maintenance,25,24.95,24,25,1,0.0,0.0,200
-Erucin,remission,1,1.08,1,2,1,0.915,1.0,200
-Sulforaphane,remission,2,1.92,1,2,1,0.085,1.0,200
-Phenethyl isothiocyanate,remission,3,3.02,3,3,0,0.0,1.0,200
-Iberin,remission,4,4.5,4,8,4,0.0,1.0,200
-Benzyl isothiocyanate,remission,5,6.38,5,10,5,0.0,0.995,200
-Masitinib,remission,6,8.43,4,34,30,0.0,0.86,200
-Sulforaphene,remission,9,8.84,6,13,7,0.0,0.76,200
-Allyl isothiocyanate,remission,10,10.12,6,17,10,0.0,0.585,200
-Glucoraphanin,remission,7,10.52,4,45,41,0.0,0.815,200
-GEN_0005,remission,12,11.48,6,14,8,0.0,0.235,200
-Midostaurin,remission,8,11.87,5,51,46,0.0,0.78,200
-GEN_0002,remission,13,13.17,7,16,9,0.0,0.145,200
-GEN_0008,remission,14,13.55,8,16,8,0.0,0.155,200
-GEN_0006,remission,15,14.46,8,17,8,0.0,0.09,200
-GEN_0004,remission,16,15.12,9,21,12,0.0,0.075,200
-Avapritinib,remission,11,15.28,7,60,53,0.0,0.49,200
-GEN_0009,remission,17,16.86,11,21,10,0.0,0.0,200
-GEN_0020,remission,19,19.39,12,26,14,0.0,0.01,200
-GEN_0019,remission,22,20.39,14,25,11,0.0,0.0,200
-GEN_0031,remission,20,20.96,14,26,12,0.0,0.005,200
-GEN_0036,remission,21,21.54,14,28,14,0.0,0.0,200
-GEN_0016,remission,24,21.66,15,26,10,0.0,0.0,200
-GEN_0029,remission,23,22.82,16,27,10,0.0,0.0,200
-GEN_0012,remission,25,23.57,17,29,11,0.0,0.0,200
-GEN_0014,remission,26,24.36,19,29,10,0.0,0.0,200
-Aspirin (acetylsalicylic acid),remission,18,27.52,12,68,56,0.0,0.0,200
-GEN_0030,remission,30,27.86,18,35,17,0.0,0.0,200
-GEN_0051,remission,27,28.07,19,34,14,0.0,0.0,200
-GEN_0037,remission,28,28.12,23,36,13,0.0,0.0,200
-GEN_0043,remission,29,28.82,24,36,12,0.0,0.0,200
-GEN_0038,remission,31,30.99,26,38,12,0.0,0.0,200
-GEN_0042,remission,32,33.15,28,41,12,0.0,0.0,200
-GEN_0061,remission,34,35.05,26,46,19,0.0,0.0,200
-GEN_0046,remission,35,35.23,27,44,17,0.0,0.0,200
-GEN_0060,remission,33,36.37,23,56,33,0.0,0.0,200
-GEN_0063,remission,36,39.15,28,56,28,0.0,0.0,200
-GEN_0032,remission,37,39.5,33,47,14,0.0,0.0,200
-GEN_0080,remission,43,40.05,30,48,18,0.0,0.0,200
-GEN_0092,remission,42,40.09,29,53,24,0.0,0.0,200
-GEN_0048,remission,38,40.12,30,49,18,0.0,0.0,200
-GEN_0085,remission,44,40.98,27,51,23,0.0,0.0,200
-GEN_0052,remission,39,41.26,32,52,20,0.0,0.0,200
-GEN_0034,remission,40,41.97,30,52,22,0.0,0.0,200
-GEN_0073,remission,46,43.28,34,50,16,0.0,0.0,200
-GEN_0045,remission,41,43.78,35,53,18,0.0,0.0,200
-GEN_0087,remission,47,44.73,34,55,21,0.0,0.0,200
-GEN_0050,remission,48,46.26,35,54,18,0.0,0.0,200
-GEN_0049,remission,45,46.75,38,55,17,0.0,0.0,200
-GEN_0079,remission,49,47.03,37,55,18,0.0,0.0,200
-GEN_0090,remission,50,48.05,37,58,21,0.0,0.0,200
-GEN_0084,remission,51,48.84,40,56,16,0.0,0.0,200
-GEN_0058,remission,52,49.25,42,55,13,0.0,0.0,200
-GEN_0075,remission,53,49.99,42,54,11,0.0,0.0,200
-GEN_0088,remission,54,51.65,37,61,23,0.0,0.0,200
-GEN_0057,remission,55,53.16,45,58,13,0.0,0.0,200
-GEN_0059,remission,56,54.45,46,60,14,0.0,0.0,200
-GEN_0083,remission,57,56.84,51,62,11,0.0,0.0,200
-GEN_0072,remission,58,59.52,57,64,7,0.0,0.0,200
-GEN_0086,remission,59,59.76,56,66,10,0.0,0.0,200
-GEN_0077,remission,60,59.8,54,68,13,0.0,0.0,200
-GEN_0078,remission,61,61.05,56,66,10,0.0,0.0,200
-GEN_0071,remission,62,63.34,60,70,10,0.0,0.0,200
-GEN_0017,remission,67,63.97,39,77,38,0.0,0.0,200
-GEN_0081,remission,63,64.69,61,70,9,0.0,0.0,200
-GEN_0074,remission,64,65.32,61,74,13,0.0,0.0,200
-GEN_0022,remission,69,66.64,44,80,36,0.0,0.0,200
-GEN_0082,remission,65,66.78,64,73,9,0.0,0.0,200
-GEN_0076,remission,66,67.53,63,76,13,0.0,0.0,200
-GEN_0101,remission,71,69.37,63,72,9,0.0,0.0,200
-GEN_0091,remission,68,69.48,64,76,12,0.0,0.0,200
-GEN_0089,remission,70,70.59,65,78,13,0.0,0.0,200
-GEN_0110,remission,72,71.72,68,75,7,0.0,0.0,200
-GEN_0044,remission,73,72.78,55,89,34,0.0,0.0,200
-GEN_0047,remission,74,73.51,54,92,37,0.0,0.0,200
-GEN_0107,remission,75,73.85,67,79,11,0.0,0.0,200
-GEN_0112,remission,76,75.61,69,81,12,0.0,0.0,200
-GEN_0062,remission,77,77.36,58,93,34,0.0,0.0,200
-GEN_0109,remission,78,77.7,73,82,9,0.0,0.0,200
-GEN_0106,remission,79,77.83,74,81,7,0.0,0.0,200
-GEN_0102,remission,80,79.05,74,84,10,0.0,0.0,200
-GEN_0096,remission,81,80.07,75,85,10,0.0,0.0,200
-GEN_0111,remission,82,81.44,75,88,12,0.0,0.0,200
-GEN_0108,remission,83,82.99,79,86,7,0.0,0.0,200
-GEN_0104,remission,84,84.46,80,88,7,0.0,0.0,200
-GEN_0103,remission,85,84.89,81,88,7,0.0,0.0,200
-GEN_0098,remission,86,86.22,80,92,11,0.0,0.0,200
-GEN_0094,remission,87,87.47,82,92,10,0.0,0.0,200
-GEN_0099,remission,88,88.89,82,95,12,0.0,0.0,200
-GEN_0093,remission,89,90.06,84,95,11,0.0,0.0,200
-GEN_0105,remission,91,90.22,85,94,8,0.0,0.0,200
-GEN_0095,remission,90,90.28,87,93,6,0.0,0.0,200
-GEN_0015,remission,94,90.77,77,95,17,0.0,0.0,200
-GEN_0023,remission,95,91.94,79,96,16,0.0,0.0,200
-GEN_0100,remission,92,92.52,88,96,8,0.0,0.0,200
-GEN_0013,remission,96,93.11,81,96,14,0.0,0.0,200
-GEN_0097,remission,93,93.81,90,96,6,0.0,0.0,200
-Fexofenadine,rescue,1,1.25,1,2,1,0.745,1.0,200
-Cetirizine,rescue,2,1.75,1,2,1,0.255,1.0,200
-Diphenhydramine,rescue,3,3.0,3,3,0,0.0,1.0,200
-Hydroxyzine,rescue,4,4.0,4,4,0,0.0,1.0,200
-Loratadine,rescue,5,5.0,5,5,0,0.0,1.0,200
-Famotidine,rescue,6,6.42,6,7,1,0.0,1.0,200
-Quercetin,rescue,7,6.61,6,7,1,0.0,1.0,200
-Cromolyn sodium,rescue,8,8.2,8,9,1,0.0,1.0,200
-Ketotifen,rescue,9,9.35,9,10,1,0.0,0.99,200
-Ranitidine,rescue,10,9.45,8,10,2,0.0,1.0,200
-Ascorbic acid,rescue,11,10.99,11,11,0,0.0,0.01,200
+Rosmarinic acid,maintenance,2,2.46,2,3,1,0.0,1.0,200
+Thymoquinone,maintenance,3,2.73,2,5,3,0.0,1.0,200
+Montelukast,maintenance,4,4.54,4,6,2,0.0,1.0,200
+Eicosapentaenoic acid (EPA),maintenance,6,5.99,4,8,4,0.0,1.0,200
+Resveratrol,maintenance,5,6.2,2,10,8,0.0,0.99,200
+Luteolin,maintenance,8,7.15,5,10,5,0.0,0.99,200
+Docosahexaenoic acid (DHA),maintenance,7,7.2,5,9,4,0.0,1.0,200
+Baicalein,maintenance,9,8.39,7,10,3,0.0,1.0,200
+Cholecalciferol (Vitamin D3),maintenance,10,9.49,7,11,4,0.0,0.925,200
+EGCG,maintenance,11,11.63,11,15,4,0.0,0.005,200
+Apigenin,maintenance,12,12.26,10,14,4,0.0,0.07,200
+Butyric acid,maintenance,13,12.85,11,14,3,0.0,0.02,200
+Kaempferol,maintenance,14,13.88,12,15,3,0.0,0.0,200
+Alpha-lipoic acid,maintenance,15,14.26,12,15,3,0.0,0.0,200
+Silibinin,maintenance,16,16.61,16,18,2,0.0,0.0,200
+Naltrexone (low-dose),maintenance,17,16.75,16,19,3,0.0,0.0,200
+Calcitriol,maintenance,18,18.27,16,21,4,0.0,0.0,200
+Hesperidin,maintenance,19,19.09,17,21,4,0.0,0.0,200
+6-Gingerol,maintenance,20,19.91,17,23,5,0.0,0.0,200
+Rutin,maintenance,21,21.23,18,24,6,0.0,0.0,200
+N-Acetylcysteine (NAC),maintenance,22,21.55,20,23,3,0.0,0.0,200
+Biotin,maintenance,23,22.7,20,23,3,0.0,0.0,200
+Taurine,maintenance,24,23.98,21,25,3,0.0,0.0,200
+Myricitrin,maintenance,25,24.89,24,25,1,0.0,0.0,200
+Erucin,remission,1,1.38,1,2,1,0.62,1.0,200
+Sulforaphane,remission,2,1.62,1,2,1,0.38,1.0,200
+Phenethyl isothiocyanate,remission,3,3.03,3,4,1,0.0,1.0,200
+Iberin,remission,4,4.34,3,7,4,0.0,1.0,200
+Benzyl isothiocyanate,remission,5,6.25,5,10,5,0.0,1.0,200
+Masitinib,remission,6,8.38,4,33,29,0.0,0.85,200
+Sulforaphene,remission,9,8.89,6,13,7,0.0,0.705,200
+Allyl isothiocyanate,remission,10,9.53,6,13,7,0.0,0.735,200
+GEN_0005,remission,12,11.02,6,13,7,0.0,0.275,200
+Midostaurin,remission,7,11.13,5,47,42,0.0,0.79,200
+Glucoraphanin,remission,8,11.97,4,49,45,0.0,0.75,200
+GEN_0002,remission,14,13.29,8,16,8,0.0,0.155,200
+GEN_0004,remission,13,13.35,7,17,9,0.0,0.155,200
+GEN_0006,remission,15,13.47,8,17,9,0.0,0.12,200
+GEN_0008,remission,16,15.08,9,17,8,0.0,0.055,200
+Avapritinib,remission,11,16.5,8,63,55,0.0,0.41,200
+GEN_0009,remission,17,16.57,11,18,7,0.0,0.0,200
+GEN_0019,remission,18,18.22,14,21,7,0.0,0.0,200
+GEN_0016,remission,19,19.75,15,24,9,0.0,0.0,200
+GEN_0012,remission,21,21.89,16,28,11,0.0,0.0,200
+GEN_0014,remission,22,22.53,17,27,9,0.0,0.0,200
+GEN_0037,remission,23,23.91,19,28,9,0.0,0.0,200
+GEN_0058,remission,24,25.14,17,33,16,0.0,0.0,200
+GEN_0043,remission,25,26.55,22,32,10,0.0,0.0,200
+GEN_0031,remission,26,26.79,16,40,23,0.0,0.0,200
+GEN_0050,remission,31,28.23,19,37,18,0.0,0.0,200
+GEN_0036,remission,27,28.68,18,42,23,0.0,0.0,200
+GEN_0042,remission,30,28.91,23,36,12,0.0,0.0,200
+GEN_0020,remission,28,29.06,17,43,25,0.0,0.0,200
+GEN_0029,remission,29,29.52,20,41,20,0.0,0.0,200
+GEN_0057,remission,33,29.88,19,40,20,0.0,0.0,200
+GEN_0038,remission,32,30.67,24,38,13,0.0,0.0,200
+Aspirin (acetylsalicylic acid),remission,20,32.23,12,72,60,0.0,0.0,200
+GEN_0030,remission,34,34.6,25,43,18,0.0,0.0,200
+GEN_0059,remission,35,34.95,24,45,21,0.0,0.0,200
+GEN_0085,remission,36,35.47,23,49,25,0.0,0.0,200
+GEN_0079,remission,38,36.8,27,47,20,0.0,0.0,200
+GEN_0051,remission,37,37.42,28,46,17,0.0,0.0,200
+GEN_0080,remission,39,39.23,30,49,19,0.0,0.0,200
+GEN_0092,remission,40,39.7,29,53,24,0.0,0.0,200
+GEN_0073,remission,41,43.48,35,51,16,0.0,0.0,200
+GEN_0084,remission,42,43.75,36,52,15,0.0,0.0,200
+GEN_0088,remission,44,43.84,27,55,27,0.0,0.0,200
+GEN_0046,remission,46,43.98,34,51,16,0.0,0.0,200
+GEN_0087,remission,43,44.33,35,54,19,0.0,0.0,200
+GEN_0061,remission,47,44.51,36,54,18,0.0,0.0,200
+GEN_0060,remission,45,45.25,30,64,34,0.0,0.0,200
+GEN_0063,remission,48,46.47,32,62,29,0.0,0.0,200
+GEN_0052,remission,49,47.38,36,55,18,0.0,0.0,200
+GEN_0034,remission,50,47.85,37,57,20,0.0,0.0,200
+GEN_0045,remission,52,49.33,40,56,16,0.0,0.0,200
+GEN_0075,remission,51,49.88,43,56,13,0.0,0.0,200
+GEN_0032,remission,53,50.88,42,56,13,0.0,0.0,200
+GEN_0048,remission,54,51.65,41,58,17,0.0,0.0,200
+GEN_0090,remission,56,53.2,44,65,21,0.0,0.0,200
+GEN_0049,remission,55,54.27,44,61,17,0.0,0.0,200
+GEN_0083,remission,57,54.66,47,62,15,0.0,0.0,200
+GEN_0077,remission,58,58.07,51,65,14,0.0,0.0,200
+GEN_0072,remission,59,58.33,50,63,12,0.0,0.0,200
+GEN_0081,remission,60,59.86,53,65,12,0.0,0.0,200
+GEN_0078,remission,61,61.14,56,67,11,0.0,0.0,200
+GEN_0082,remission,62,62.48,58,68,10,0.0,0.0,200
+GEN_0086,remission,63,63.28,57,70,12,0.0,0.0,200
+GEN_0074,remission,64,64.57,58,73,15,0.0,0.0,200
+GEN_0110,remission,67,65.31,56,69,13,0.0,0.0,200
+GEN_0071,remission,65,65.63,62,71,9,0.0,0.0,200
+GEN_0101,remission,68,67.39,60,71,11,0.0,0.0,200
+GEN_0076,remission,66,67.43,62,75,12,0.0,0.0,200
+GEN_0091,remission,69,68.97,63,76,13,0.0,0.0,200
+GEN_0017,remission,71,70.54,49,89,39,0.0,0.0,200
+GEN_0089,remission,70,71.81,67,79,12,0.0,0.0,200
+GEN_0107,remission,72,72.08,68,77,9,0.0,0.0,200
+GEN_0022,remission,73,72.75,56,90,34,0.0,0.0,200
+GEN_0112,remission,74,73.6,69,79,10,0.0,0.0,200
+GEN_0111,remission,75,76.06,73,81,8,0.0,0.0,200
+GEN_0102,remission,76,76.81,71,84,13,0.0,0.0,200
+GEN_0109,remission,79,78.41,74,84,10,0.0,0.0,200
+GEN_0044,remission,77,78.62,65,92,27,0.0,0.0,200
+GEN_0047,remission,78,79.34,63,92,28,0.0,0.0,200
+GEN_0096,remission,80,80.22,75,85,10,0.0,0.0,200
+GEN_0103,remission,81,80.28,76,84,8,0.0,0.0,200
+GEN_0094,remission,82,81.08,75,86,11,0.0,0.0,200
+GEN_0106,remission,83,82.62,78,88,10,0.0,0.0,200
+GEN_0104,remission,84,82.91,78,87,8,0.0,0.0,200
+GEN_0062,remission,85,83.5,68,93,24,0.0,0.0,200
+GEN_0098,remission,86,86.0,80,91,11,0.0,0.0,200
+GEN_0099,remission,87,86.5,79,93,14,0.0,0.0,200
+GEN_0105,remission,88,87.1,81,92,11,0.0,0.0,200
+GEN_0108,remission,89,89.22,84,93,9,0.0,0.0,200
+GEN_0095,remission,90,89.67,86,94,8,0.0,0.0,200
+GEN_0097,remission,92,89.99,83,96,13,0.0,0.0,200
+GEN_0093,remission,91,90.17,85,95,10,0.0,0.0,200
+GEN_0100,remission,93,91.04,85,96,11,0.0,0.0,200
+GEN_0015,remission,94,93.17,85,95,9,0.0,0.0,200
+GEN_0023,remission,95,94.16,87,96,9,0.0,0.0,200
+GEN_0013,remission,96,95.22,88,96,8,0.0,0.0,200
+Fexofenadine,rescue,1,1.45,1,2,1,0.555,1.0,200
+Cetirizine,rescue,2,1.55,1,2,1,0.445,1.0,200
+Hydroxyzine,rescue,3,3.0,3,3,0,0.0,1.0,200
+Loratadine,rescue,4,4.03,4,4,0,0.0,1.0,200
+Diphenhydramine,rescue,5,5.13,5,6,1,0.0,1.0,200
+Famotidine,rescue,6,5.84,4,6,1,0.0,1.0,200
+Quercetin,rescue,7,7.1,7,8,1,0.0,1.0,200
+Ketotifen,rescue,8,8.54,8,10,2,0.0,1.0,200
+Cromolyn sodium,rescue,9,9.06,8,10,2,0.0,1.0,200
+Ranitidine,rescue,10,9.3,7,10,3,0.0,1.0,200
+Ascorbic acid,rescue,11,11.0,11,11,0,0.0,0.0,200
