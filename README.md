@@ -5,10 +5,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Validate SMILES](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/validate.yml/badge.svg)](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/validate.yml)
 [![Sync HF Space](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/sync-hf-space.yml/badge.svg)](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/sync-hf-space.yml)
-[![Experiments](https://img.shields.io/badge/experiments-6-blue)](experiments/)
+[![Experiments](https://img.shields.io/badge/experiments-8-blue)](experiments/)
 [![Compounds](https://img.shields.io/badge/compounds-54-green)](data/compounds/MCAS_Compound_Library_v1.csv)
 [![Generated analogs](https://img.shields.io/badge/SFN--class%20analogs-113-purple)](outputs/reinvent_generated.csv)
 [![Recovery@20](https://img.shields.io/badge/known--actives%20recovery%40_20-100%25-brightgreen)](experiments/EXP-006-known-actives-recovery.md)
+[![Negative precision@10](https://img.shields.io/badge/neg--control%20precision%40_10-100%25-brightgreen)](experiments/EXP-007-negative-control-benchmark.md)
+[![Min Spearman ρ](https://img.shields.io/badge/sensitivity%20min%20%CF%81-0.93-brightgreen)](experiments/EXP-008-sensitivity-analysis.md)
 [![Live viewer](https://img.shields.io/badge/%F0%9F%A4%97_HF_Spaces-live_viewer-blue)](https://huggingface.co/spaces/MRDula/openmcas-browser)
 [![A2A Agent Card](https://img.shields.io/badge/A2A-agent_card-orange)](AGENT_CARD.md)
 
@@ -23,9 +25,13 @@ supplements, and AI-generated novel analogs, scores them against MCAS-relevant
 targets (KEAP1 / MRGPRX2 / KIT / FcεRI / HRH1–4 / CYSLTR1 / BTK / GLP1R),
 filters by covalent-warhead chemistry + predicted ADMET safety, and produces
 a transparent **composite ranking** across rescue / maintenance / remission
-categories. Held-out audit: **100% of 21 known clinical mast-cell drugs are
-recovered into the top-20 of their expected category** without ever being
-shown to the pipeline ([EXP-006](experiments/EXP-006-known-actives-recovery.md)).
+categories.
+
+The ranking has been audited in three independent ways:
+
+1. **It finds what it should.** 21 held-out clinical mast-cell drugs blind-scored → **100% recovery@20** ([EXP-006](experiments/EXP-006-known-actives-recovery.md)).
+2. **It rejects what it shouldn't.** 20 unrelated drugs (statins / antihypertensives / anticonvulsants / etc.) blind-scored → **100% precision@10** — all correctly ranked outside every top-10 ([EXP-007](experiments/EXP-007-negative-control-benchmark.md)).
+3. **It doesn't depend on weight-cherry-picking.** ±50% sweep of all six composite weights → **min Spearman ρ = 0.93** vs. baseline, sulforaphane stays #1 in remission across all 12 remission-affecting perturbations ([EXP-008](experiments/EXP-008-sensitivity-analysis.md)).
 
 ## Try it in your browser (no clone, no install)
 
@@ -135,6 +141,8 @@ Each script is documented as a [standardized experiment report](experiments/):
 | [EXP-004](experiments/EXP-004-admet-qsar.md) | ADMET QSAR | RandomForest on PyTDC tasks (hERG / AMES / BBB) — AUC 0.89–0.91 |
 | [EXP-005](experiments/EXP-005-multi-objective-ranking.md) | Multi-objective ranking | Composite of evidence + target + warhead + safety + drug-likeness |
 | [EXP-006](experiments/EXP-006-known-actives-recovery.md) | Known Actives Recovery benchmark | Blind scoring of 21 held-out clinical drugs — **100% recovery@20** |
+| [EXP-007](experiments/EXP-007-negative-control-benchmark.md) | Negative-control benchmark | 20 unrelated drugs — **100% precision@10**, all correctly rejected |
+| [EXP-008](experiments/EXP-008-sensitivity-analysis.md) | Sensitivity analysis | ±50% per-weight sweep — **min Spearman ρ = 0.93**, SFN #1 stable in 100% of perturbations |
 
 ---
 

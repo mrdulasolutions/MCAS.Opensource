@@ -1,0 +1,37 @@
+weight,scale,category,spearman_rho_vs_baseline,top10_jaccard,top1_baseline,top1_perturbed,top1_same,entered_top10,left_top10,n_compounds
+w_evidence,0.5,rescue,0.9727,1.0,Fexofenadine,Fexofenadine,True,,,11
+w_evidence,0.5,maintenance,0.9885,1.0,Curcumin,Curcumin,True,,,25
+w_evidence,0.5,remission,0.9327,0.333,Sulforaphane,Sulforaphane,True,GEN_0002;GEN_0004;GEN_0006;GEN_0008;GEN_0009,Avapritinib;Erucin;Glucoraphanin;Masitinib;Midostaurin,96
+w_evidence,1.5,rescue,1.0,1.0,Fexofenadine,Fexofenadine,True,,,11
+w_evidence,1.5,maintenance,1.0,1.0,Curcumin,Curcumin,True,,,25
+w_evidence,1.5,remission,0.9943,0.818,Sulforaphane,Sulforaphane,True,Aspirin (acetylsalicylic acid),GEN_0005,96
+w_target,0.5,rescue,0.9909,1.0,Fexofenadine,Cetirizine,False,,,11
+w_target,0.5,maintenance,0.9577,1.0,Curcumin,Curcumin,True,,,25
+w_target,0.5,remission,0.9941,0.818,Sulforaphane,Sulforaphane,True,Aspirin (acetylsalicylic acid),GEN_0005,96
+w_target,1.5,rescue,0.9818,1.0,Fexofenadine,Fexofenadine,True,,,11
+w_target,1.5,maintenance,0.9946,1.0,Curcumin,Curcumin,True,,,25
+w_target,1.5,remission,0.9823,1.0,Sulforaphane,Sulforaphane,True,,,96
+w_qed,0.5,rescue,1.0,1.0,Fexofenadine,Fexofenadine,True,,,11
+w_qed,0.5,maintenance,1.0,1.0,Curcumin,Curcumin,True,,,25
+w_qed,0.5,remission,0.9848,1.0,Sulforaphane,Sulforaphane,True,,,96
+w_qed,1.5,rescue,1.0,1.0,Fexofenadine,Fexofenadine,True,,,11
+w_qed,1.5,maintenance,1.0,1.0,Curcumin,Curcumin,True,,,25
+w_qed,1.5,remission,0.9922,1.0,Sulforaphane,Sulforaphane,True,,,96
+w_warhead,0.5,rescue,1.0,1.0,Fexofenadine,Fexofenadine,True,,,11
+w_warhead,0.5,maintenance,1.0,1.0,Curcumin,Curcumin,True,,,25
+w_warhead,0.5,remission,0.9819,0.818,Sulforaphane,Sulforaphane,True,Aspirin (acetylsalicylic acid),GEN_0005,96
+w_warhead,1.5,rescue,1.0,1.0,Fexofenadine,Fexofenadine,True,,,11
+w_warhead,1.5,maintenance,1.0,1.0,Curcumin,Curcumin,True,,,25
+w_warhead,1.5,remission,0.9823,1.0,Sulforaphane,Sulforaphane,True,,,96
+w_safety,0.5,rescue,0.9909,1.0,Fexofenadine,Fexofenadine,True,,,11
+w_safety,0.5,maintenance,0.99,1.0,Curcumin,Curcumin,True,,,25
+w_safety,0.5,remission,0.9878,1.0,Sulforaphane,Sulforaphane,True,,,96
+w_safety,1.5,rescue,0.9909,1.0,Fexofenadine,Cetirizine,False,,,11
+w_safety,1.5,maintenance,0.9846,1.0,Curcumin,Curcumin,True,,,25
+w_safety,1.5,remission,0.9946,1.0,Sulforaphane,Sulforaphane,True,,,96
+w_bbb_context,0.5,rescue,1.0,1.0,Fexofenadine,Fexofenadine,True,,,11
+w_bbb_context,0.5,maintenance,0.9985,1.0,Curcumin,Curcumin,True,,,25
+w_bbb_context,0.5,remission,0.9971,1.0,Sulforaphane,Sulforaphane,True,,,96
+w_bbb_context,1.5,rescue,0.9909,1.0,Fexofenadine,Fexofenadine,True,,,11
+w_bbb_context,1.5,maintenance,0.9877,1.0,Curcumin,Curcumin,True,,,25
+w_bbb_context,1.5,remission,0.9978,1.0,Sulforaphane,Sulforaphane,True,,,96

@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "description": "Negative-control benchmark: 20 widely-used drugs from therapeutic areas with NO plausible MCAS / MCAD mechanism. None should rank in the top-20 of any category. If they do, the composite is over-rewarding generic drug-likeness instead of mechanism-specific signal.",
+  "purpose": "Closes the credibility loop opened by EXP-006. Recovery@N for known actives shows we can find what we should find. Precision@N for negative controls shows we don't promote what we shouldn't promote.",
+  "evaluation_metric": "precision@N: fraction of negative controls correctly ranked OUTSIDE the top N of any category. Higher = better discrimination.",
+  "exclusion_criteria": [
+    "Not in data/compounds/seeds.json",
+    "Not in any target reference set in scripts/score_against_targets.py",
+    "No published evidence of mast-cell stabilization, histamine receptor activity, leukotriene activity, Nrf2 activation, or KIT inhibition",
+    "Not from a class with known incidental anti-allergic activity (excluded: doxepin / TCAs because they antagonize H1; excluded: certain SSRIs with weak H1 binding)"
+  ],
+  "controls": [
+    {
+      "name": "Acetaminophen",
+      "pubchem_cid": 1983,
+      "therapeutic_class": "Analgesic / antipyretic",
+      "rationale": "COX-1/2 weak inhibitor; CNS-mediated analgesia; no mast-cell mechanism."
+    },
+    {
+      "name": "Caffeine",
+      "pubchem_cid": 2519,
+      "therapeutic_class": "CNS stimulant (adenosine A1/A2A antagonist)",
+      "rationale": "Adenosine receptor antagonist; PDE inhibitor at high doses; no documented MCAS therapeutic effect."
+    },
+    {
+      "name": "Metformin",
+      "pubchem_cid": 4091,
+      "therapeutic_class": "Antidiabetic (biguanide)",
+      "rationale": "AMPK activator / hepatic gluconeogenesis suppressor; unrelated to mast-cell pathways."
+    },
+    {
+      "name": "Atorvastatin",
+      "pubchem_cid": 60823,
+      "therapeutic_class": "Statin (HMG-CoA reductase inhibitor)",
+      "rationale": "Cholesterol biosynthesis inhibitor; pleiotropic but no mast-cell-specific evidence."
+    },
+    {
+      "name": "Simvastatin",
+      "pubchem_cid": 54454,
+      "therapeutic_class": "Statin (HMG-CoA reductase inhibitor)",
+      "rationale": "Same class as above; double-coverage of the statin chemotype."
+    },
+    {
+      "name": "Lisinopril",
+      "pubchem_cid": 5362119,
+      "therapeutic_class": "ACE inhibitor (antihypertensive)",
+      "rationale": "Angiotensin-converting enzyme inhibitor; cardiovascular indication only."
+    },
+    {
+      "name": "Amlodipine",
+      "pubchem_cid": 2162,
+      "therapeutic_class": "Calcium channel blocker (antihypertensive)",
+      "rationale": "Dihydropyridine CCB; vascular smooth-muscle target; not mast-cell related."
+    },
+    {
+      "name": "Warfarin",
+      "pubchem_cid": 54678486,
+      "therapeutic_class": "Anticoagulant (vitamin K antagonist)",
+      "rationale": "VKORC1 inhibitor; clotting factor synthesis; no immune cell mechanism."
+    },
+    {
+      "name": "Levothyroxine",
+      "pubchem_cid": 5819,
+      "therapeutic_class": "Thyroid hormone replacement",
+      "rationale": "T4 hormone replacement; nuclear receptor agonist; not mast-cell relevant."
+    },
+    {
+      "name": "Furosemide",
+      "pubchem_cid": 3440,
+      "therapeutic_class": "Loop diuretic",
+      "rationale": "Na-K-2Cl cotransporter inhibitor in loop of Henle; renal pharmacology only."
+    },
+    {
+      "name": "Methylphenidate",
+      "pubchem_cid": 4158,
+      "therapeutic_class": "CNS stimulant (DAT/NET inhibitor)",
+      "rationale": "Monoamine reuptake inhibitor; ADHD indication; no mast-cell mechanism."
+    },
+    {
+      "name": "Levetiracetam",
+      "pubchem_cid": 5284583,
+      "therapeutic_class": "Anticonvulsant (SV2A modulator)",
+      "rationale": "Synaptic vesicle protein 2A modulator; seizure indication; not immune."
+    },
+    {
+      "name": "Diazepam",
+      "pubchem_cid": 3016,
+      "therapeutic_class": "Benzodiazepine (GABA-A modulator)",
+      "rationale": "GABA receptor positive allosteric modulator; not mast-cell related."
+    },
+    {
+      "name": "Allopurinol",
+      "pubchem_cid": 2094,
+      "therapeutic_class": "Xanthine oxidase inhibitor (urate-lowering)",
+      "rationale": "Purine metabolism; gout therapy; no mast-cell signaling overlap."
+    },
+    {
+      "name": "Clopidogrel",
+      "pubchem_cid": 60606,
+      "therapeutic_class": "Antiplatelet (P2Y12 antagonist)",
+      "rationale": "Platelet ADP receptor antagonist; cardiovascular indication only."
+    },
+    {
+      "name": "Alendronate",
+      "pubchem_cid": 2088,
+      "therapeutic_class": "Bisphosphonate (osteoporosis)",
+      "rationale": "Farnesyl pyrophosphate synthase inhibitor in osteoclasts; bone metabolism."
+    },
+    {
+      "name": "Isotretinoin",
+      "pubchem_cid": 5282379,
+      "therapeutic_class": "Retinoid (severe acne)",
+      "rationale": "Retinoic acid receptor agonist; sebaceous gland effect; not mast-cell."
+    },
+    {
+      "name": "Finasteride",
+      "pubchem_cid": 57363,
+      "therapeutic_class": "5α-reductase inhibitor (BPH / alopecia)",
+      "rationale": "DHT synthesis blockade; endocrine indication only."
+    },
+    {
+      "name": "Donepezil",
+      "pubchem_cid": 3152,
+      "therapeutic_class": "Acetylcholinesterase inhibitor (Alzheimer's)",
+      "rationale": "CNS cholinergic enhancement; not mast-cell signaling."
+    },
+    {
+      "name": "Sildenafil",
+      "pubchem_cid": 5212,
+      "therapeutic_class": "PDE5 inhibitor (erectile dysfunction)",
+      "rationale": "cGMP-specific phosphodiesterase 5 inhibitor; smooth muscle vasodilator."
+    }
+  ]
+}

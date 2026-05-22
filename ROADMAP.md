@@ -19,25 +19,30 @@ A living document. Things at the top of each section are higher priority.
 - ✅ Streamlit public viewer + Hugging Face Spaces deployment recipe.
 - ✅ **Live public viewer deployed:** https://huggingface.co/spaces/MRDula/openmcas-browser
 - ✅ **GitHub Actions auto-sync** of the HF Space on every pipeline rerun (sync-hf-space.yml).
+- ✅ **Negative-control benchmark** (EXP-007) — 100% precision@10 across all categories under realistic scoring.
+- ✅ **Sensitivity analysis** (EXP-008) — min Spearman ρ = 0.93 under ±50% weight sweeps; SFN #1 stable in 100% of remission perturbations.
 
 ## Next (v0.x+1) — credibility & accessibility first
 
 These five are the next 2–4 weeks of high-leverage work (per the
 "100x vision" framing — credibility, accessibility, polish):
 
-1. **Negative-control benchmark** — 20 compounds with no plausible MCAS
-   mechanism; report precision@N to show the ranking doesn't just love
-   anything druglike.
-2. **Expand recovery benchmark to 50+ actives** via ChEMBL bioassay pull
-   (`β-hexosaminidase release`, `mast cell degranulation`, `LAD2`).
-3. **Sensitivity analysis on composite weights** — sweep all 6 weights
-   ±50%, report ranking stability.
-4. **Real Vina/smina KEAP1 docking** on PDB 4L7B for the top-50 ranked
+1. **Real Vina/smina KEAP1 docking** on PDB 4L7B for the top-50 ranked
    remission candidates; replace the ligand-similarity score in
-   `outputs/docking_KEAP1.csv` with physics for that one target.
-5. **Pipeline-driven Space refresh** — extend the sync workflow to
+   `outputs/docking_KEAP1.csv` with physics for that one target. Biggest
+   single scientific upgrade available — moves from ligand similarity
+   to structure-based binding.
+2. **Expand recovery + control sets via ChEMBL bioassay pull** (`β-hexosaminidase release`,
+   `mast cell degranulation`, `LAD2`). Targets: 50+ actives, 100+ controls.
+3. **Joint-perturbation Latin-hypercube weight sweep** — 200-point
+   sweep over all six weights simultaneously; report 95% CI on each
+   compound's rank (extends EXP-008).
+4. **Pipeline-driven Space refresh** — extend the sync workflow to
    also rebuild the rankings (run the full pipeline) on a schedule,
    commit refreshed CSVs, and let the existing sync job pick them up.
+5. **Real REINVENT 4 RL run on Colab** seeded on top-10 SFN-class
+   analogs from EXP-001; replace the deterministic BRICS generator
+   with policy-gradient generation for the next analog batch.
 
 ## Then (v0.x+2)
 

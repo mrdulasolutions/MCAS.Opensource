@@ -29,3 +29,5 @@ Plus what it found and what it didn't.
 | [EXP-004](EXP-004-admet-qsar.md) | ADMET QSAR (hERG / AMES / BBB) | RandomForest on Morgan FP, PyTDC training data | published | 2026-05-21 |
 | [EXP-005](EXP-005-multi-objective-ranking.md) | Multi-objective ranking → rescue / maintenance / remission | composite of evidence + target similarity + warhead + safety | published | 2026-05-21 |
 | [EXP-006](EXP-006-known-actives-recovery.md) | Known Actives Recovery benchmark — 21 held-out mast-cell drugs | blind scoring of compounds *not* in seeds or reference sets | published | 2026-05-21 |
+| [EXP-007](EXP-007-negative-control-benchmark.md) | Negative-control benchmark — 20 unrelated drugs blind-scored | precision@N for compounds with no plausible MCAS mechanism | published | 2026-05-22 |
+| [EXP-008](EXP-008-sensitivity-analysis.md) | Sensitivity analysis on the six composite weights | ±50% per-weight sweep — Spearman, top-10 Jaccard, top-1 stability | published | 2026-05-22 |
