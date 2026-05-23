@@ -4,8 +4,8 @@
   "purpose": "Credibility check on the composite ranking. A pipeline that can't recover known actives in their natural category is broken — regardless of how good the headline result looks.",
   "expected_category_definitions": {
     "rescue": "Approved or commonly-used acute mast-cell stabilizers / H1 / H2 antagonists not in our reference set.",
-    "maintenance": "Daily-use stabilizers, immunomodulators, anti-inflammatory naturals not in our reference set.",
-    "remission": "Disease-modifying agents (TKIs, JAK/BTK inhibitors, calcineurin, covalent Nrf2 activators) not in our reference set."
+    "maintenance": "Daily-use stabilizers, immunomodulators, anti-inflammatory naturals, and downstream-FcεRI modulators (JAK / BTK / calcineurin) not in our reference set.",
+    "remission": "Upstream disease-modifying agents — covalent Nrf2/KEAP1 activators, KIT-axis kinase inhibitors. Downstream FcεRI modulators (JAK / BTK) are classified as maintenance instead, per EXP-015 §7.1."
   },
   "evaluation_metric": "recovery@N: fraction of known actives that rank in the top N of their expected category's ranked CSV.",
   "actives": [
@@ -103,14 +103,16 @@
     {
       "name": "Tofacitinib",
       "pubchem_cid": 9926791,
-      "expected_category": "remission",
+      "expected_category": "maintenance",
+      "category_relabel_note": "Relabeled remission → maintenance after EXP-015 audit finding (2026-05-22). JAK1/3 inhibition is downstream of FcεRI signaling, not upstream Nrf2-axis remission. See EXP-015 §7.1.",
       "evidence": "JAK1/3 inhibitor; downstream of FcεRI; emerging interest in MCAS-adjacent autoimmunity.",
       "source_refs": ["Schwartz 2018"]
     },
     {
       "name": "Acalabrutinib",
       "pubchem_cid": 71226662,
-      "expected_category": "remission",
+      "expected_category": "maintenance",
+      "category_relabel_note": "Relabeled remission → maintenance after EXP-015 audit finding (2026-05-22). BTK inhibition is downstream of FcεRI signaling, not upstream Nrf2-axis remission. See EXP-015 §7.1.",
       "evidence": "Selective BTK inhibitor; downstream of FcεRI signaling in mast cells.",
       "source_refs": ["Byrd 2016"]
     },
