@@ -29,6 +29,14 @@ A living document. Things at the top of each section are higher priority.
 - ✅ **ChEMBL bioassay pull + predictor** (EXP-011) — 67,372 records across 11 targets; CV R² 0.52–0.80 (median 0.69); integrated as +0.10 ChEMBL-validated potency bonus. **Hydroxyzine jumped to #3 in rescue, Montelukast entered maintenance top-5** on real-bioactivity grounding.
 - ✅ **Audit retread on post-ChEMBL composite** (EXP-015) — precision@10 = 100% held, min Spearman ρ tightened 0.933→0.946; remission recovery regression surfaced a benchmark-label issue (JAK/BTK should be relabeled as maintenance, not remission).
 - ✅ **Mast-cell-specific predictor** (EXP-016) — direct stabilizer classifier from ChEMBL β-hex / LAD2 / HMC-1 / histamine release assays. **CV AUC 0.916 ± 0.019 — strongest single model in the repo.** Luteolin 0.728, Midostaurin 0.840. Integrated as +0.05 universal bonus across all three categories. Cetirizine edged Fexofenadine to #1 in rescue; Luteolin entered maintenance top-5.
+- ✅ **JAK/BTK relabel applied** (EXP-015 §12) — Tofacitinib + Acalabrutinib reclassified from remission to maintenance per the §7.1 finding that JAK/BTK are downstream-FcεRI, not upstream-Nrf2 axis. Recovery@20: rescue 100%, maintenance 100%, overall 95.2%.
+- ✅ **Refresh pipeline manual verification** — `refresh-pipeline.yml` triggered ad-hoc and completed clean before the next Sunday cron.
+- ✅ **Streamlit viewer v2** — added Mast-cell Predictor tab + per-compound Deep-Dive tab (composite ranks across all three categories, ChEMBL pIC50 table, Vina ΔG + LE, C151 score, mast-cell probability — all in one place).
+- ✅ **Procurement packet for top generated analogs** (EXP-017) — 20 / 25 novel SFN-class analogs pass the Enamine REAL Space envelope; vendor lookup URLs (Enamine / MolPort / eMolecules / PubChem / ChemSpider) keyed by InChIKey, published as `outputs/exp_017/procurement_packet.md`.
+- ✅ **Pre-registered β-hex / LAD2 wet-lab protocol** — `docs/wet-lab-preregistration-v1.md` (locked dose-response, FDR-controlled stats, stopping rules, falsification criterion).
+- ✅ **CRO + academic outreach packet** — `docs/cro-outreach-packet.md` (cover-email template, target lab list, no-IP / no-NDA / publish-either-way terms).
+- ✅ **bioRxiv-style preprint v0.1.0** — `docs/preprint/preprint.md` (abstract, methods, results, discussion, refs).
+- ✅ **Lay-language patient summary** — `docs/for-mcas-community.md` (plain English, what we found, what we won't do, how to help without spending).
 
 ## Next (v0.x+1) — credibility & accessibility first
 

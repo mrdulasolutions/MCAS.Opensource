@@ -22,6 +22,12 @@ TRIGGERS_CSV = REPO_ROOT / "data" / "triggers" / "MCAS_Triggers_v1.csv"
 INJURY_CSV = REPO_ROOT / "data" / "injury_mechanisms" / "MCAS_Injury_Mechanisms_v1.csv"
 OUT_DIR = REPO_ROOT / "outputs"
 BENCHMARK_CSV = OUT_DIR / "benchmark_known_actives.csv"
+MAST_CELL_CSV = OUT_DIR / "mast_cell_predictions.csv"
+MAST_CELL_METRICS_CSV = OUT_DIR / "mast_cell_model_metrics.csv"
+CHEMBL_PRED_CSV = OUT_DIR / "chembl_predictions.csv"
+C151_CSV = OUT_DIR / "c151_adduct_energies.csv"
+VINA_CSV = OUT_DIR / "docking_KEAP1_vina.csv"
+RANKED_ALL_CSV = OUT_DIR / "ranked_all.csv"
 
 st.set_page_config(
     page_title="OpenMCAS — Hypothesis Browser",
@@ -79,6 +85,49 @@ def load_benchmark() -> pd.DataFrame:
     return pd.read_csv(BENCHMARK_CSV)
 
 
+@st.cache_data
+def load_mast_cell() -> pd.DataFrame:
+    if not MAST_CELL_CSV.exists():
+        return pd.DataFrame()
+    return pd.read_csv(MAST_CELL_CSV)
+
+
+@st.cache_data
+def load_mast_cell_metrics() -> dict:
+    if not MAST_CELL_METRICS_CSV.exists():
+        return {}
+    df = pd.read_csv(MAST_CELL_METRICS_CSV)
+    return dict(zip(df["metric"], df["value"]))
+
+
+@st.cache_data
+def load_chembl() -> pd.DataFrame:
+    if not CHEMBL_PRED_CSV.exists():
+        return pd.DataFrame()
+    return pd.read_csv(CHEMBL_PRED_CSV)
+
+
+@st.cache_data
+def load_c151() -> pd.DataFrame:
+    if not C151_CSV.exists():
+        return pd.DataFrame()
+    return pd.read_csv(C151_CSV)
+
+
+@st.cache_data
+def load_vina() -> pd.DataFrame:
+    if not VINA_CSV.exists():
+        return pd.DataFrame()
+    return pd.read_csv(VINA_CSV)
+
+
+@st.cache_data
+def load_ranked_all() -> pd.DataFrame:
+    if not RANKED_ALL_CSV.exists():
+        return pd.DataFrame()
+    return pd.read_csv(RANKED_ALL_CSV)
+
+
 # -----------------------------
 # Sidebar
 # -----------------------------
@@ -110,6 +159,8 @@ tabs = st.tabs([
     "🔴 Rescue",
     "🟡 Maintenance",
     "🟢 Remission",
+    "🔬 Mast-cell predictor",
+    "🔍 Compound deep-dive",
     "🎯 Targets",
     "⚠️ Triggers",
     "🧪 Injury mechanisms",
@@ -245,9 +296,232 @@ with tabs[3]:
     render_category(tabs[3], "remission", "🟢", ["MRGPRX2", "KIT", "KEAP1", "GLP1R"])
 
 # -----------------------------
-# Tab 4: Targets
+# Tab 4: Mast-cell predictor (EXP-016)
 # -----------------------------
 with tabs[4]:
+    st.subheader("🔬 Mast-cell stabilizer predictor (EXP-016)")
+    st.markdown(
+        "A RandomForest model trained directly on **mast-cell readout assays** from ChEMBL "
+        "(β-hexosaminidase release, LAD2 degranulation, HMC-1, histamine release, "
+        "tryptase release). It predicts the probability that a compound stabilizes mast "
+        "cells — a *direct* phenotypic prediction, not a target-similarity proxy. "
+        "Integrated into the composite as a +0.05 universal bonus across all three "
+        "categories. See "
+        "[EXP-016](https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/experiments/EXP-016-mast-cell-predictor.md)."
+    )
+
+    metrics = load_mast_cell_metrics()
+    mc = load_mast_cell()
+    if mc.empty:
+        st.info(
+            "No predictions found. Run `python scripts/build_mast_cell_predictor.py` "
+            "and `python scripts/score_mast_cell.py`."
+        )
+    else:
+        c1, c2, c3, c4 = st.columns(4)
+        c1.metric("Training compounds", int(float(metrics.get("n_train_compounds", 0))))
+        c2.metric("Active labels", int(float(metrics.get("n_train_active", 0))))
+        c3.metric("Inactive labels", int(float(metrics.get("n_train_inactive", 0))))
+        c4.metric(
+            "5-fold CV AUC",
+            f"{float(metrics.get('cv_mean_auc', 0)):.3f}",
+            help="Strongest single model in the repo — beats hERG (0.81), AMES (0.90), BBB (0.91)."
+        )
+
+        st.markdown("### Prediction distribution")
+        st.markdown(
+            "Higher = more mast-cell-stabilizing-like. The integration bonus is +0.05 × p, "
+            "so a compound predicted 0.8 gets +0.040 over an all-zero prior."
+        )
+
+        hist_df = mc.copy()
+        hist_df["mast_cell_stabilizer_prob"] = hist_df["mast_cell_stabilizer_prob"].astype(float)
+        bins = pd.cut(
+            hist_df["mast_cell_stabilizer_prob"],
+            bins=[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+            include_lowest=True,
+        )
+        hist_counts = (
+            hist_df.groupby([bins, "source"], observed=True)
+            .size()
+            .reset_index(name="count")
+        )
+        hist_counts["bin"] = hist_counts["mast_cell_stabilizer_prob"].astype(str)
+        st.bar_chart(
+            hist_counts.pivot_table(
+                index="bin", columns="source", values="count", fill_value=0
+            ),
+            height=240,
+        )
+
+        st.markdown("### Filter")
+        f1, f2 = st.columns(2)
+        sources_mc = ["all"] + sorted(mc["source"].dropna().unique().tolist())
+        src_pick = f1.selectbox("Source", sources_mc, key="mc_src")
+        min_p = f2.slider("Minimum predicted probability", 0.0, 1.0, 0.4, 0.05, key="mc_min")
+
+        view = mc.copy()
+        view["mast_cell_stabilizer_prob"] = view["mast_cell_stabilizer_prob"].astype(float)
+        if src_pick != "all":
+            view = view[view["source"] == src_pick]
+        view = view[view["mast_cell_stabilizer_prob"] >= min_p].sort_values(
+            "mast_cell_stabilizer_prob", ascending=False
+        )
+
+        st.markdown(f"### Top compounds — {len(view)} match the filter")
+        st.dataframe(
+            view.head(50)[["name", "source", "mast_cell_stabilizer_prob", "smiles"]],
+            use_container_width=True,
+            hide_index=True,
+        )
+
+        st.caption(
+            "Caveat: the predictor is biased toward the chemotypes well-represented in the "
+            "ChEMBL training data. Some classical mast-cell stabilizers (ketotifen, "
+            "quercetin) score lower than expected — see EXP-016 §7.3. The universal +0.05 "
+            "bonus is small precisely because the model is an out-of-distribution "
+            "generalizer for natural-product chemotypes."
+        )
+
+# -----------------------------
+# Tab 5: Compound deep-dive
+# -----------------------------
+with tabs[5]:
+    st.subheader("🔍 Per-compound deep-dive")
+    st.markdown(
+        "Pick one compound and see every signal the pipeline computes for it: composite "
+        "score per category, target similarities, ChEMBL predicted pIC50s, mast-cell "
+        "predictor probability, Vina docking + ligand efficiency (if docked), C151 "
+        "covalent-adduct energy (if ITC-class), and QSAR safety predictions."
+    )
+
+    ranked_all = load_ranked_all()
+    library = load_library()
+    chembl = load_chembl()
+    c151 = load_c151()
+    vina = load_vina()
+    mc = load_mast_cell()
+
+    # Build the union of all names that have any prediction.
+    all_names = sorted(set(
+        list(ranked_all["name"].dropna().unique()) if not ranked_all.empty else []
+    ) | set(library["name"].dropna().unique()))
+
+    if not all_names:
+        st.info("No data found. Run the pipeline first.")
+    else:
+        default_idx = all_names.index("Sulforaphane") if "Sulforaphane" in all_names else 0
+        pick = st.selectbox(
+            "Compound",
+            all_names,
+            index=default_idx,
+            key="deepdive_pick",
+            help="Includes library compounds (54) + AI-generated SFN-class analogs.",
+        )
+
+        # --- Identity ---
+        st.markdown("### Identity")
+        lib_row = library[library["name"] == pick]
+        if not lib_row.empty:
+            lib = lib_row.iloc[0]
+            i1, i2, i3 = st.columns(3)
+            i1.markdown(f"**Category:** `{lib.get('category', '?')}`")
+            i2.markdown(f"**Subcategory:** `{lib.get('subcategory', '?')}`")
+            i3.markdown(f"**Evidence:** `{lib.get('evidence_level', '?')}`")
+            st.markdown(f"**Mechanism:** {lib.get('mechanism', '—')}")
+            st.markdown(f"**Target(s):** `{lib.get('target', '—')}`")
+            st.markdown(f"**SMILES:** `{lib.get('canonical_smiles') or lib.get('smiles', '—')}`")
+            if pd.notna(lib.get("pubchem_cid")):
+                cid = int(lib["pubchem_cid"])
+                st.markdown(f"**PubChem:** [CID {cid}](https://pubchem.ncbi.nlm.nih.gov/compound/{cid})")
+        else:
+            # generated analog
+            if not ranked_all.empty:
+                gen = ranked_all[ranked_all["name"] == pick].iloc[0]
+                st.markdown(f"**Source:** `{gen.get('source', 'generated')}`")
+                st.markdown(f"**SMILES:** `{gen.get('smiles', '—')}`")
+
+        # --- Composite scores ---
+        st.markdown("### Composite ranks (per category)")
+        cols = st.columns(3)
+        for col, cat in zip(cols, ["rescue", "maintenance", "remission"]):
+            df = load_ranked(cat)
+            if df.empty or pick not in df["name"].values:
+                col.metric(cat.title(), "—", help="Not ranked in this category.")
+            else:
+                r = df[df["name"] == pick].iloc[0]
+                rank = int(df.index[df["name"] == pick][0]) + 1
+                col.metric(
+                    cat.title(),
+                    f"rank {rank}/{len(df)}",
+                    f"composite {r['composite_score']:.3f}",
+                )
+
+        # --- Mast-cell predictor ---
+        if not mc.empty:
+            mrow = mc[mc["name"] == pick]
+            if not mrow.empty:
+                p = float(mrow.iloc[0]["mast_cell_stabilizer_prob"])
+                st.markdown("### Mast-cell stabilizer probability (EXP-016)")
+                st.progress(min(max(p, 0.0), 1.0), text=f"p = {p:.3f}")
+
+        # --- ChEMBL pIC50 across targets ---
+        if not chembl.empty:
+            crow = chembl[chembl["name"] == pick]
+            if not crow.empty:
+                st.markdown("### Predicted target binding (ChEMBL, EXP-011)")
+                pIC50_cols = [c for c in chembl.columns if c.startswith("chembl_pIC50_")]
+                pIC50_data = crow.iloc[0][pIC50_cols].to_dict()
+                pIC50_df = pd.DataFrame([
+                    {"target": k.replace("chembl_pIC50_", ""), "predicted_pIC50": round(float(v), 3)}
+                    for k, v in pIC50_data.items()
+                ]).sort_values("predicted_pIC50", ascending=False)
+                st.dataframe(pIC50_df, use_container_width=False, hide_index=True, width=400)
+                st.caption(
+                    "pIC50 = −log10(IC50 in M). 7 = 100 nM (good lead). 6 = 1 µM (moderate). "
+                    "5 = 10 µM (weak). Per-target predictor CV R² varies — see EXP-011."
+                )
+
+        # --- Vina docking + LE ---
+        if not vina.empty:
+            vrow = vina[vina["name"] == pick]
+            if not vrow.empty:
+                v = vrow.iloc[0]
+                st.markdown("### KEAP1 Kelch Vina docking (EXP-009)")
+                v1, v2 = st.columns(2)
+                v1.metric("Vina ΔG (kcal/mol)", f"{float(v.get('vina_dG_kcal_per_mol', 0)):.2f}")
+                if pd.notna(v.get("ligand_efficiency")):
+                    v2.metric("Ligand efficiency", f"{float(v['ligand_efficiency']):.3f}")
+                st.caption("PDB 4L7B Kelch domain. Lower ΔG = better predicted affinity.")
+
+        # --- C151 covalent adduct ---
+        if not c151.empty:
+            crow = c151[c151["name"] == pick]
+            if not crow.empty:
+                cr = crow.iloc[0]
+                st.markdown("### KEAP1-C151 covalent adduct (EXP-012)")
+                cc1, cc2 = st.columns(2)
+                cc1.metric(
+                    "ΔE adduct (kcal/mol)",
+                    f"{float(cr.get('dE_kcal_per_mol', 0)):.2f}",
+                    help="MMFF94 reaction-energy proxy. More negative = more favorable.",
+                )
+                cc2.metric("score_c151", f"{float(cr.get('score_c151', 0)):.3f}")
+
+        st.markdown("---")
+        st.caption(
+            "Want to dig deeper? Click through to the experiments: "
+            "[EXP-005 (ranking)](https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/experiments/EXP-005-multi-objective-ranking.md) · "
+            "[EXP-009 (Vina)](https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/experiments/EXP-009-keap1-vina-docking.md) · "
+            "[EXP-011 (ChEMBL)](https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/experiments/EXP-011-chembl-bioassay-predictor.md) · "
+            "[EXP-012 (C151)](https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/experiments/EXP-012-covalent-c151-adduct.md) · "
+            "[EXP-016 (mast-cell predictor)](https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/experiments/EXP-016-mast-cell-predictor.md)."
+        )
+
+# -----------------------------
+# Tab 6: Targets
+# -----------------------------
+with tabs[6]:
     st.subheader("Druggable MCAS targets")
     st.markdown(
         "UniProt-indexed targets the pipeline scores compounds against. "
@@ -256,9 +530,9 @@ with tabs[4]:
     st.dataframe(load_targets(), use_container_width=True, hide_index=True)
 
 # -----------------------------
-# Tab 5: Triggers
+# Tab 7: Triggers
 # -----------------------------
-with tabs[5]:
+with tabs[7]:
     st.subheader("Reported MCAS triggers")
     st.markdown(
         "Patient-reported + literature-supported triggers mapped to the pathway they act through "
@@ -272,9 +546,9 @@ with tabs[5]:
     st.dataframe(triggers, use_container_width=True, hide_index=True)
 
 # -----------------------------
-# Tab 6: Injury mechanisms
+# Tab 8: Injury mechanisms
 # -----------------------------
-with tabs[6]:
+with tabs[8]:
     st.subheader("MCAS injury mechanisms")
     st.markdown(
         "Upstream priming injuries, acute triggers, clonal drivers, and downstream tissue damage."
@@ -282,9 +556,9 @@ with tabs[6]:
     st.dataframe(load_injury(), use_container_width=True, hide_index=True)
 
 # -----------------------------
-# Tab 7: Benchmark
+# Tab 9: Benchmark
 # -----------------------------
-with tabs[7]:
+with tabs[9]:
     st.subheader("Known-Actives Recovery benchmark (EXP-006)")
     st.markdown(
         "Blind scoring of 21 clinically established mast-cell drugs that are **not** in our "
@@ -325,9 +599,9 @@ with tabs[7]:
         )
 
 # -----------------------------
-# Tab 8: About
+# Tab 10: About
 # -----------------------------
-with tabs[8]:
+with tabs[10]:
     st.subheader("About OpenMCAS")
     st.markdown(
         "**Provider:** MR Dula Medical (a DBA of MR Dula Enterprise, LLC, Raleigh, NC, USA).\n\n"

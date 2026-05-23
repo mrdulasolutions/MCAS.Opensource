@@ -39,3 +39,4 @@ Plus what it found and what it didn't.
 | [EXP-014](EXP-014-chronic-rescue-dependency.md) | Chronic rescue dependency — patient-reported survey on long-term first-gen H1 use | Pre-registered observational survey; analysis pending n ≥ 30 | running | 2026-05-22 |
 | [EXP-015](EXP-015-audit-retread.md) | Audit retread on post-ChEMBL composite | Rerun EXP-006/007/008/010; 3 of 4 hold; remission recovery regression diagnosed as category-label issue | published | 2026-05-22 |
 | [EXP-016](EXP-016-mast-cell-predictor.md) | Mast-cell-specific bioassay predictor | 1101 compounds, CV AUC **0.916** ± 0.019 (strongest single model in repo); integrated as +0.05 universal bonus | published | 2026-05-22 |
+| [EXP-017](EXP-017-enamine-availability-check.md) | Procurement check for top generated SFN-class analogs | RDKit envelope + InChIKey-keyed vendor lookup; 20/25 (80%) REAL-Space-plausible; procurement packet ready for CRO | published | 2026-05-23 |
