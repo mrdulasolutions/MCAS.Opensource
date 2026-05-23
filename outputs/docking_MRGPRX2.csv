@@ -19,23 +19,23 @@ GEN_0114,O=S(CCCN=C=S)CCc1cc(/C=C/c2cc(O)cc(O)c2)ccc1O,candidate,reinvent_genera
 GEN_0116,O=S(CCCN=C=S)CCc1cc(O)ccc1/C=C/c1cc(O)cc(O)c1,candidate,reinvent_generated,MRGPRX2,0.32,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
 Curcumin,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2)ccc1O,maintenance,library,MRGPRX2,0.2821,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0127,O=c1cc(-c2ccccc2CCS(=O)CCCN=C=S)oc2cc(O)c(O)c(O)c12,candidate,reinvent_generated,MRGPRX2,0.2794,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0152,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3CCS(=O)CCCN=C=S)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O,candidate,reinvent_generated,MRGPRX2,0.2771,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0145,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3CCS(=O)CCCN=C=S)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O,candidate,reinvent_generated,MRGPRX2,0.2771,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0124,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccccc2)oc2cc(O)c(O)c(O)c12,candidate,reinvent_generated,MRGPRX2,0.2714,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
 Rosmarinic acid,O=C(/C=C/c1ccc(O)c(O)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,maintenance,library,MRGPRX2,0.234,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
 Silibinin,COc1cc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)ccc1O,maintenance,library,MRGPRX2,0.2083,Luteolin (CID 5280445),ligand_based_similarity_tanimoto_morgan2_2048
 Hesperidin,COc1ccc([C@@H]2CC(=O)c3c(O)cc(O[C@@H]4O[C@H](CO[C@@H]5O[C@@H](C)[C@H](O)[C@@H](O)[C@H]5O)[C@@H](O)[C@H](O)[C@H]4O)cc3O2)cc1O,maintenance,library,MRGPRX2,0.2083,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Cromolyn sodium,O=C(O)c1cc(=O)c2cc(OCC(O)COc3cccc4oc(C(=O)O)cc(=O)c34)ccc2o1,rescue,library,MRGPRX2,0.197,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
 EGCG,O=C(O[C@@H]1Cc2c(O)cc(O)cc2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,maintenance,library,MRGPRX2,0.1875,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0153,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2cc(OC)c(O)cc2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,MRGPRX2,0.1618,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0148,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,MRGPRX2,0.1594,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0138,O=C(/C=C/c1cc(O)c(O)cc1CCS(=O)CCCN=C=S)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,MRGPRX2,0.1585,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0147,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)cc(=O)c4c3CCS(=O)CCCN=C=S)cccc2o1,candidate,reinvent_generated,MRGPRX2,0.1566,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0145,COc1c(O)ccc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,MRGPRX2,0.1562,Luteolin (CID 5280445),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0144,COc1cc([C@H]2Oc3c(ccc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)c3CCS(=O)CCCN=C=S)O[C@@H]2CO)ccc1O,candidate,reinvent_generated,MRGPRX2,0.1531,Luteolin (CID 5280445),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0135,O=C(/C=C/c1cc(O)c(O)c(CCS(=O)CCCN=C=S)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,MRGPRX2,0.1529,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0140,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2cc(OC)c(O)cc2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,MRGPRX2,0.1618,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0136,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,MRGPRX2,0.1594,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0149,O=C(/C=C/c1cc(O)c(O)cc1CCS(=O)CCCN=C=S)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,MRGPRX2,0.1585,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0142,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)cc(=O)c4c3CCS(=O)CCCN=C=S)cccc2o1,candidate,reinvent_generated,MRGPRX2,0.1566,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0150,COc1c(O)ccc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,MRGPRX2,0.1562,Luteolin (CID 5280445),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0143,COc1cc([C@H]2Oc3c(ccc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)c3CCS(=O)CCCN=C=S)O[C@@H]2CO)ccc1O,candidate,reinvent_generated,MRGPRX2,0.1531,Luteolin (CID 5280445),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0138,O=C(/C=C/c1cc(O)c(O)c(CCS(=O)CCCN=C=S)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,MRGPRX2,0.1529,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
 Calcitriol,C=C1/C(=C\C=C2/CCC[C@]3(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]23)C[C@@H](O)C[C@@H]1O,maintenance,library,MRGPRX2,0.1505,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Naltrexone (low-dose),O=C1CC[C@@]2(O)[C@H]3Cc4ccc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,maintenance,library,MRGPRX2,0.1467,Luteolin (CID 5280445),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0149,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)c(CCS(=O)CCCN=C=S)c(=O)c4c3)cccc2o1,candidate,reinvent_generated,MRGPRX2,0.1383,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0141,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)c(CCS(=O)CCCN=C=S)c(=O)c4c3)cccc2o1,candidate,reinvent_generated,MRGPRX2,0.1383,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
 6-Gingerol,CCCCC[C@H](O)CC(=O)CCc1ccc(O)c(OC)c1,maintenance,library,MRGPRX2,0.1343,Luteolin (CID 5280445),ligand_based_similarity_tanimoto_morgan2_2048
 Aspirin (acetylsalicylic acid),CC(=O)Oc1ccccc1C(=O)O,remission,library,MRGPRX2,0.1316,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
 Fexofenadine,CC(C)(C(=O)O)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1,rescue,library,MRGPRX2,0.1264,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
@@ -51,12 +51,12 @@ GEN_0102,CS(=O)Cc1ccc(SC#N)cc1,candidate,reinvent_generated,MRGPRX2,0.1091,Querc
 Biotin,O=C(O)CCCC[C@@H]1SC[C@@H]2NC(=O)N[C@@H]21,maintenance,library,MRGPRX2,0.1053,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0071,CS(=O)CCc1ccc(N=C=S)cc1,candidate,reinvent_generated,MRGPRX2,0.1053,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0092,CS(=O)CCc1ccc(SC#N)cc1,candidate,reinvent_generated,MRGPRX2,0.1053,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0141,O=C(O[C@@H]1Cc2c(cc(O)c(CCS(=O)CCCN=C=S)c2O)O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,MRGPRX2,0.1011,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0146,O=C(O[C@@H]1Cc2c(O)cc(O)c(CCS(=O)CCCN=C=S)c2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,MRGPRX2,0.1011,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0142,O=C1CC[C@@]2(O)[C@H]3Cc4cc(CCS(=O)CCCN=C=S)c(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,MRGPRX2,0.101,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0147,O=C(O[C@@H]1Cc2c(cc(O)c(CCS(=O)CCCN=C=S)c2O)O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,MRGPRX2,0.1011,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0153,O=C(O[C@@H]1Cc2c(O)cc(O)c(CCS(=O)CCCN=C=S)c2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,MRGPRX2,0.1011,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0144,O=C1CC[C@@]2(O)[C@H]3Cc4cc(CCS(=O)CCCN=C=S)c(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,MRGPRX2,0.101,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
 Diphenhydramine,CN(C)CCOC(c1ccccc1)c1ccccc1,rescue,library,MRGPRX2,0.1,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0113,CC(=O)Oc1cc(CCS(=O)CCCN=C=S)ccc1C(=O)O,candidate,reinvent_generated,MRGPRX2,0.0984,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0151,O=C1CC[C@@]2(O)[C@H]3Cc4c(CCS(=O)CCCN=C=S)cc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,MRGPRX2,0.0965,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0139,O=C1CC[C@@]2(O)[C@H]3Cc4c(CCS(=O)CCCN=C=S)cc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,MRGPRX2,0.0965,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0085,CS(=O)Cc1ccc(C#N)cc1,candidate,reinvent_generated,MRGPRX2,0.0962,Luteolin (CID 5280445),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0086,CS(=O)(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,MRGPRX2,0.0952,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
 Loratadine,CCOC(=O)N1CCC(=C2c3ccc(Cl)cc3CCc3cccnc32)CC1,rescue,library,MRGPRX2,0.0938,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
@@ -68,7 +68,7 @@ Cetirizine,O=C(O)COCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,rescue,library,MRGPRX2,0.
 GEN_0112,CC(=O)Oc1c(CCS(=O)CCCN=C=S)cccc1C(=O)O,candidate,reinvent_generated,MRGPRX2,0.0889,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0093,CCS(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,MRGPRX2,0.0862,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
 Thymoquinone,CC1=CC(=O)C(C(C)C)=CC1=O,maintenance,library,MRGPRX2,0.0851,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0150,O=S(CCCN=C=S)CCc1cccc(C(c2ccc(Cl)cc2)N2CCN(CCOCCO)CC2)c1,candidate,reinvent_generated,MRGPRX2,0.0849,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0137,O=S(CCCN=C=S)CCc1cccc(C(c2ccc(Cl)cc2)N2CCN(CCOCCO)CC2)c1,candidate,reinvent_generated,MRGPRX2,0.0849,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Benzyl isothiocyanate,S=C=NCc1ccccc1,remission,library,MRGPRX2,0.0833,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0089,CCS(=O)CCc1ccc(N=C=S)cc1,candidate,reinvent_generated,MRGPRX2,0.0833,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0122,CCCCC[C@H](O)CC(=O)CCc1cc(OC)c(O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,MRGPRX2,0.0833,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
@@ -79,27 +79,27 @@ GEN_0099,O=S(CCCN=C=S)CCc1cccc(CN=C=S)c1,candidate,reinvent_generated,MRGPRX2,0.
 Docosahexaenoic acid (DHA),CC/C=C\C/C=C\C/C=C\C/C=C\C/C=C\C/C=C\CCC(=O)O,maintenance,library,MRGPRX2,0.0789,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
 Phenethyl isothiocyanate,S=C=NCCc1ccccc1,remission,library,MRGPRX2,0.0789,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
 Masitinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nc(-c2cccnc2)cs1,remission,library,MRGPRX2,0.0778,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0134,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2cccc(CCS(=O)CCCN=C=S)c2)CC1,candidate,reinvent_generated,MRGPRX2,0.0759,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0137,O=S(CCCN=C=S)CCc1ccccc1C(c1ccc(Cl)cc1)N1CCN(CCOCCO)CC1,candidate,reinvent_generated,MRGPRX2,0.0755,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0148,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2cccc(CCS(=O)CCCN=C=S)c2)CC1,candidate,reinvent_generated,MRGPRX2,0.0759,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0152,O=S(CCCN=C=S)CCc1ccccc1C(c1ccc(Cl)cc1)N1CCN(CCOCCO)CC1,candidate,reinvent_generated,MRGPRX2,0.0755,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0130,CN/C(=C\[N+](=O)[O-])NCCSCc1cc(CCS(=O)CCCN=C=S)c(CN(C)C)o1,candidate,reinvent_generated,MRGPRX2,0.0753,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0132,CN/C(=C\[N+](=O)[O-])NCCSCc1oc(CN(C)C)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,MRGPRX2,0.0753,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
 Eicosapentaenoic acid (EPA),CC/C=C\C/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)O,maintenance,library,MRGPRX2,0.075,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0139,CCOC(=O)N1CCC(=C2c3ncccc3CCc3cc(Cl)cc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,MRGPRX2,0.0737,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0134,CCOC(=O)N1CCC(=C2c3ncccc3CCc3cc(Cl)cc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,MRGPRX2,0.0737,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
 Famotidine,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)cs1,rescue,library,MRGPRX2,0.0735,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0115,CN(C)CCOC(c1ccccc1)c1cccc(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,MRGPRX2,0.0735,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0090,CSCc1ccc(N=C=S)cc1,candidate,reinvent_generated,MRGPRX2,0.0732,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0140,CCOC(=O)N1CCC(=C2c3cc(CCS(=O)CCCN=C=S)c(Cl)cc3CCc3cccnc32)CC1,candidate,reinvent_generated,MRGPRX2,0.0722,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0151,CCOC(=O)N1CCC(=C2c3cc(CCS(=O)CCCN=C=S)c(Cl)cc3CCc3cccnc32)CC1,candidate,reinvent_generated,MRGPRX2,0.0722,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0073,CSCCc1ccc(N=C=S)cc1,candidate,reinvent_generated,MRGPRX2,0.0702,Quercetin (CID 5280343),ligand_based_similarity_tanimoto_morgan2_2048
 Alpha-lipoic acid,O=C(O)CCCCC1CCSS1,maintenance,library,MRGPRX2,0.0694,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0119,CN1CCC(=C2c3ccsc3C(=O)Cc3cccc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,MRGPRX2,0.0674,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0100,O=S(CCCN=C=S)CCc1ccccc1CCN=C=S,candidate,reinvent_generated,MRGPRX2,0.0667,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0136,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2ccccc2CCS(=O)CCCN=C=S)CC1,candidate,reinvent_generated,MRGPRX2,0.0667,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0146,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2ccccc2CCS(=O)CCCN=C=S)CC1,candidate,reinvent_generated,MRGPRX2,0.0667,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
 Taurine,NCCS(=O)(=O)O,maintenance,library,MRGPRX2,0.0645,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0098,O=S(CCCN=C=S)CCc1ccccc1CN=C=S,candidate,reinvent_generated,MRGPRX2,0.0645,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0117,CN(C)CCOC(c1ccccc1)c1ccccc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,MRGPRX2,0.0619,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
 N-Acetylcysteine (NAC),CC(=O)N[C@@H](CS)C(=O)O,maintenance,library,MRGPRX2,0.0612,Apigenin (CID 5280443),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0052,CS(=O)/C=C/CCC#N,candidate,reinvent_generated,MRGPRX2,0.0577,Luteolin (CID 5280445),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0143,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)c(CCS(=O)CCCN=C=S)s1,candidate,reinvent_generated,MRGPRX2,0.0571,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0135,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)c(CCS(=O)CCCN=C=S)s1,candidate,reinvent_generated,MRGPRX2,0.0571,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Sulforaphene,CS(=O)/C=C/CCN=C=S,remission,library,MRGPRX2,0.0545,Luteolin (CID 5280445),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0062,CS(=O)/C=C/CCSC#N,candidate,reinvent_generated,MRGPRX2,0.0545,Luteolin (CID 5280445),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0095,CS(=O)(=O)/C=C/CCC#N,candidate,reinvent_generated,MRGPRX2,0.0513,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048
@@ -144,8 +144,8 @@ GEN_0109,CS(=O)(=O)CCCSC#N,candidate,reinvent_generated,MRGPRX2,0.0286,Saikosapo
 GEN_0110,CS/C=C/CCSC#N,candidate,reinvent_generated,MRGPRX2,0.0286,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0055,CCSCCCCN=C=S,candidate,reinvent_generated,MRGPRX2,0.0282,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0076,CS/C=C/CCN=C=S,candidate,reinvent_generated,MRGPRX2,0.0282,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0079,CS(=O)(=O)CCCCN=C=S,candidate,reinvent_generated,MRGPRX2,0.0282,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0080,CCS(=O)(=O)CCCN=C=S,candidate,reinvent_generated,MRGPRX2,0.0282,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0079,CCS(=O)(=O)CCCN=C=S,candidate,reinvent_generated,MRGPRX2,0.0282,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0080,CS(=O)(=O)CCCCN=C=S,candidate,reinvent_generated,MRGPRX2,0.0282,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0101,CS(=O)(=O)CCCCSC#N,candidate,reinvent_generated,MRGPRX2,0.0282,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0078,CCS(=O)(=O)CCCCN=C=S,candidate,reinvent_generated,MRGPRX2,0.0278,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0081,CCS(=O)/C=C/CCC#N,candidate,reinvent_generated,MRGPRX2,0.0278,Saikosaponin a (approx),ligand_based_similarity_tanimoto_morgan2_2048

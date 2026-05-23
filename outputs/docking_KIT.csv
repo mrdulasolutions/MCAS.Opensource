@@ -3,26 +3,26 @@ Masitinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nc(-c2cccnc2)cs1,remission,l
 Midostaurin,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4,remission,library,KIT,0.5581,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 Loratadine,CCOC(=O)N1CCC(=C2c3ccc(Cl)cc3CCc3cccnc32)CC1,rescue,library,KIT,0.2211,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
 Hydroxyzine,OCCOCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,rescue,library,KIT,0.1932,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0139,CCOC(=O)N1CCC(=C2c3ncccc3CCc3cc(Cl)cc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,KIT,0.193,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0140,CCOC(=O)N1CCC(=C2c3cc(CCS(=O)CCCN=C=S)c(Cl)cc3CCc3cccnc32)CC1,candidate,reinvent_generated,KIT,0.1897,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0134,CCOC(=O)N1CCC(=C2c3ncccc3CCc3cc(Cl)cc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,KIT,0.193,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0151,CCOC(=O)N1CCC(=C2c3cc(CCS(=O)CCCN=C=S)c(Cl)cc3CCc3cccnc32)CC1,candidate,reinvent_generated,KIT,0.1897,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
 Cetirizine,O=C(O)COCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,rescue,library,KIT,0.1889,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0150,O=S(CCCN=C=S)CCc1cccc(C(c2ccc(Cl)cc2)N2CCN(CCOCCO)CC2)c1,candidate,reinvent_generated,KIT,0.1818,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0137,O=S(CCCN=C=S)CCc1cccc(C(c2ccc(Cl)cc2)N2CCN(CCOCCO)CC2)c1,candidate,reinvent_generated,KIT,0.1818,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
 Avapritinib,CC1(C)OB(O)c2cc(CNC(=O)c3ccc(C4=NO[C@](c5cc(Cl)c(F)c(Cl)c5)(C(F)(F)F)C4)n4cccc34)ccc21,remission,library,KIT,0.1803,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
 Ketotifen,CN1CCC(=C2c3ccccc3CC(=O)c3sccc32)CC1,rescue,library,KIT,0.1724,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0134,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2cccc(CCS(=O)CCCN=C=S)c2)CC1,candidate,reinvent_generated,KIT,0.1696,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0148,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2cccc(CCS(=O)CCCN=C=S)c2)CC1,candidate,reinvent_generated,KIT,0.1696,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
 Fexofenadine,CC(C)(C(=O)O)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1,rescue,library,KIT,0.1684,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0118,CN1CCC(=C2c3cc(CCS(=O)CCCN=C=S)ccc3CC(=O)c3sccc32)CC1,candidate,reinvent_generated,KIT,0.1667,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0137,O=S(CCCN=C=S)CCc1ccccc1C(c1ccc(Cl)cc1)N1CCN(CCOCCO)CC1,candidate,reinvent_generated,KIT,0.1622,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0152,O=S(CCCN=C=S)CCc1ccccc1C(c1ccc(Cl)cc1)N1CCN(CCOCCO)CC1,candidate,reinvent_generated,KIT,0.1622,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0119,CN1CCC(=C2c3ccsc3C(=O)Cc3cccc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,KIT,0.1545,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 Montelukast,CC(C)(O)c1ccccc1CC[C@@H](SCC1(CC(=O)O)CC1)c1cccc(/C=C/c2ccc3ccc(Cl)cc3n2)c1,maintenance,library,KIT,0.1513,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0136,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2ccccc2CCS(=O)CCCN=C=S)CC1,candidate,reinvent_generated,KIT,0.1504,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0146,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2ccccc2CCS(=O)CCCN=C=S)CC1,candidate,reinvent_generated,KIT,0.1504,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
 Cromolyn sodium,O=C(O)c1cc(=O)c2cc(OCC(O)COc3cccc4oc(C(=O)O)cc(=O)c34)ccc2o1,rescue,library,KIT,0.1443,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 Baicalein,O=c1cc(-c2ccccc2)oc2cc(O)c(O)c(O)c12,maintenance,library,KIT,0.1294,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 Aspirin (acetylsalicylic acid),CC(=O)Oc1ccccc1C(=O)O,remission,library,KIT,0.1282,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 6-Gingerol,CCCCC[C@H](O)CC(=O)CCc1ccc(O)c(OC)c1,maintenance,library,KIT,0.1277,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 Diphenhydramine,CN(C)CCOC(c1ccccc1)c1ccccc1,rescue,library,KIT,0.1268,Avapritinib (CID 71576428),ligand_based_similarity_tanimoto_morgan2_2048
 Naltrexone (low-dose),O=C1CC[C@@]2(O)[C@H]3Cc4ccc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,maintenance,library,KIT,0.125,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0147,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)cc(=O)c4c3CCS(=O)CCCN=C=S)cccc2o1,candidate,reinvent_generated,KIT,0.1228,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0142,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)cc(=O)c4c3CCS(=O)CCCN=C=S)cccc2o1,candidate,reinvent_generated,KIT,0.1228,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 Rosmarinic acid,O=C(/C=C/c1ccc(O)c(O)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,maintenance,library,KIT,0.1209,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 Hesperidin,COc1ccc([C@@H]2CC(=O)c3c(O)cc(O[C@@H]4O[C@H](CO[C@@H]5O[C@@H](C)[C@H](O)[C@@H](O)[C@H]5O)[C@@H](O)[C@H](O)[C@H]4O)cc3O2)cc1O,maintenance,library,KIT,0.1207,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 Curcumin,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2)ccc1O,maintenance,library,KIT,0.119,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
@@ -30,7 +30,7 @@ GEN_0113,CC(=O)Oc1cc(CCS(=O)CCCN=C=S)ccc1C(=O)O,candidate,reinvent_generated,KIT
 Rutin,C[C@@H]1O[C@@H](OC[C@H]2O[C@@H](Oc3c(-c4ccc(O)c(O)c4)oc4cc(O)cc(O)c4c3=O)[C@H](O)[C@@H](O)[C@@H]2O)[C@H](O)[C@H](O)[C@H]1O,maintenance,library,KIT,0.1161,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 EGCG,O=C(O[C@@H]1Cc2c(O)cc(O)cc2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,maintenance,library,KIT,0.1158,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 Biotin,O=C(O)CCCC[C@@H]1SC[C@@H]2NC(=O)N[C@@H]21,maintenance,library,KIT,0.1136,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0149,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)c(CCS(=O)CCCN=C=S)c(=O)c4c3)cccc2o1,candidate,reinvent_generated,KIT,0.112,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0141,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)c(CCS(=O)CCCN=C=S)c(=O)c4c3)cccc2o1,candidate,reinvent_generated,KIT,0.112,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0124,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccccc2)oc2cc(O)c(O)c(O)c12,candidate,reinvent_generated,KIT,0.1111,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0063,CS(=O)CCc1ccc(C#N)cc1,candidate,reinvent_generated,KIT,0.1098,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0086,CS(=O)(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,KIT,0.1084,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
@@ -38,35 +38,35 @@ Myricitrin,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3)oc3cc(O)cc(O)c3c2=O)[C@H](O)[
 GEN_0071,CS(=O)CCc1ccc(N=C=S)cc1,candidate,reinvent_generated,KIT,0.1059,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0092,CS(=O)CCc1ccc(SC#N)cc1,candidate,reinvent_generated,KIT,0.1059,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
 N-Acetylcysteine (NAC),CC(=O)N[C@@H](CS)C(=O)O,maintenance,library,KIT,0.1053,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0138,O=C(/C=C/c1cc(O)c(O)cc1CCS(=O)CCCN=C=S)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,KIT,0.1053,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0149,O=C(/C=C/c1cc(O)c(O)cc1CCS(=O)CCCN=C=S)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,KIT,0.1053,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0115,CN(C)CCOC(c1ccccc1)c1cccc(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,KIT,0.1038,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0089,CCS(=O)CCc1ccc(N=C=S)cc1,candidate,reinvent_generated,KIT,0.1034,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0151,O=C1CC[C@@]2(O)[C@H]3Cc4c(CCS(=O)CCCN=C=S)cc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,KIT,0.1032,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0139,O=C1CC[C@@]2(O)[C@H]3Cc4c(CCS(=O)CCCN=C=S)cc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,KIT,0.1032,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 Silibinin,COc1cc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)ccc1O,maintenance,library,KIT,0.1028,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0135,O=C(/C=C/c1cc(O)c(O)c(CCS(=O)CCCN=C=S)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,KIT,0.1026,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0138,O=C(/C=C/c1cc(O)c(O)c(CCS(=O)CCCN=C=S)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,KIT,0.1026,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0085,CS(=O)Cc1ccc(C#N)cc1,candidate,reinvent_generated,KIT,0.1013,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0091,O=S(CCCN=C=S)CCc1cccc(CCN=C=S)c1,candidate,reinvent_generated,KIT,0.0989,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
 Ascorbic acid,O=C1O[C@H]([C@@H](O)CO)C(O)=C1O,rescue,library,KIT,0.0988,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0087,CS(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,KIT,0.0976,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0102,CS(=O)Cc1ccc(SC#N)cc1,candidate,reinvent_generated,KIT,0.0976,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0148,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,KIT,0.0973,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0136,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,KIT,0.0973,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0112,CC(=O)Oc1c(CCS(=O)CCCN=C=S)cccc1C(=O)O,candidate,reinvent_generated,KIT,0.0971,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0099,O=S(CCCN=C=S)CCc1cccc(CN=C=S)c1,candidate,reinvent_generated,KIT,0.0968,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0153,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2cc(OC)c(O)cc2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,KIT,0.0965,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0140,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2cc(OC)c(O)cc2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,KIT,0.0965,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0075,CS(=O)(=O)CCc1ccc(N=C=S)cc1,candidate,reinvent_generated,KIT,0.0952,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0093,CCS(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,KIT,0.0952,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0123,CCCCC[C@H](O)CC(=O)CCc1cc(CCS(=O)CCCN=C=S)c(O)c(OC)c1,candidate,reinvent_generated,KIT,0.0948,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0142,O=C1CC[C@@]2(O)[C@H]3Cc4cc(CCS(=O)CCCN=C=S)c(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,KIT,0.0945,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0141,O=C(O[C@@H]1Cc2c(cc(O)c(CCS(=O)CCCN=C=S)c2O)O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,KIT,0.094,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0146,O=C(O[C@@H]1Cc2c(O)cc(O)c(CCS(=O)CCCN=C=S)c2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,KIT,0.094,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0144,O=C1CC[C@@]2(O)[C@H]3Cc4cc(CCS(=O)CCCN=C=S)c(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,KIT,0.0945,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0147,O=C(O[C@@H]1Cc2c(cc(O)c(CCS(=O)CCCN=C=S)c2O)O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,KIT,0.094,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0153,O=C(O[C@@H]1Cc2c(O)cc(O)c(CCS(=O)CCCN=C=S)c2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,KIT,0.094,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 Apigenin,O=c1cc(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,maintenance,library,KIT,0.092,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0145,COc1c(O)ccc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KIT,0.0916,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0150,COc1c(O)ccc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KIT,0.0916,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
 Kaempferol,O=c1c(O)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,maintenance,library,KIT,0.0909,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0127,O=c1cc(-c2ccccc2CCS(=O)CCCN=C=S)oc2cc(O)c(O)c(O)c12,candidate,reinvent_generated,KIT,0.0909,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 Ranitidine,CN/C(=C\[N+](=O)[O-])NCCSCc1ccc(CN(C)C)o1,rescue,library,KIT,0.09,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 Luteolin,O=c1cc(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12,maintenance,library,KIT,0.0899,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 Quercetin,O=c1c(O)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12,rescue,library,KIT,0.0889,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0152,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3CCS(=O)CCCN=C=S)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O,candidate,reinvent_generated,KIT,0.088,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0145,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3CCS(=O)CCCN=C=S)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O,candidate,reinvent_generated,KIT,0.088,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 Benzyl isothiocyanate,S=C=NCc1ccccc1,remission,library,KIT,0.087,Avapritinib (CID 71576428),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0122,CCCCC[C@H](O)CC(=O)CCc1cc(OC)c(O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KIT,0.087,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0090,CSCc1ccc(N=C=S)cc1,candidate,reinvent_generated,KIT,0.0864,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
@@ -75,7 +75,7 @@ Butyric acid,CCCC(=O)O,maintenance,library,KIT,0.0845,Midostaurin (CID 9829523),
 Phenethyl isothiocyanate,S=C=NCCc1ccccc1,remission,library,KIT,0.0845,Avapritinib (CID 71576428),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0073,CSCCc1ccc(N=C=S)cc1,candidate,reinvent_generated,KIT,0.0843,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 Alpha-lipoic acid,O=C(O)CCCCC1CCSS1,maintenance,library,KIT,0.0833,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0144,COc1cc([C@H]2Oc3c(ccc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)c3CCS(=O)CCCN=C=S)O[C@@H]2CO)ccc1O,candidate,reinvent_generated,KIT,0.0827,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0143,COc1cc([C@H]2Oc3c(ccc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)c3CCS(=O)CCCN=C=S)O[C@@H]2CO)ccc1O,candidate,reinvent_generated,KIT,0.0827,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 Famotidine,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)cs1,rescue,library,KIT,0.0825,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0120,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,KIT,0.0818,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0130,CN/C(=C\[N+](=O)[O-])NCCSCc1cc(CCS(=O)CCCN=C=S)c(CN(C)C)o1,candidate,reinvent_generated,KIT,0.0806,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
@@ -97,7 +97,7 @@ GEN_0062,CS(=O)/C=C/CCSC#N,candidate,reinvent_generated,KIT,0.0714,Dasatinib (CI
 GEN_0121,O=c1cc(-c2ccc(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,KIT,0.0714,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0125,O=c1c(O)c(-c2ccc(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,KIT,0.0714,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0133,O=c1c(O)c(-c2cc(O)c(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,KIT,0.0714,Imatinib (CID 5291),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0143,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)c(CCS(=O)CCCN=C=S)s1,candidate,reinvent_generated,KIT,0.0678,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0135,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)c(CCS(=O)CCCN=C=S)s1,candidate,reinvent_generated,KIT,0.0678,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0128,O=c1cc(-c2cc(O)c(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,KIT,0.0631,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0131,O=c1c(O)c(-c2cc(O)c(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,KIT,0.0631,Midostaurin (CID 9829523),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0081,CCS(=O)/C=C/CCC#N,candidate,reinvent_generated,KIT,0.0595,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
@@ -139,8 +139,8 @@ GEN_0066,CSCCCCCSC#N,candidate,reinvent_generated,KIT,0.037,Dasatinib (CID 30623
 GEN_0065,CCSCCCN=C=S,candidate,reinvent_generated,KIT,0.0366,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0083,CS(=O)(=O)CCCN=C=S,candidate,reinvent_generated,KIT,0.0366,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0105,CS/C=C/CCC#N,candidate,reinvent_generated,KIT,0.0366,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0079,CS(=O)(=O)CCCCN=C=S,candidate,reinvent_generated,KIT,0.0361,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0080,CCS(=O)(=O)CCCN=C=S,candidate,reinvent_generated,KIT,0.0361,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0079,CCS(=O)(=O)CCCN=C=S,candidate,reinvent_generated,KIT,0.0361,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0080,CS(=O)(=O)CCCCN=C=S,candidate,reinvent_generated,KIT,0.0361,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0078,CCS(=O)(=O)CCCCN=C=S,candidate,reinvent_generated,KIT,0.0357,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0084,CS(=O)(=O)CCCCCN=C=S,candidate,reinvent_generated,KIT,0.0357,Masitinib (CID 10074640),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0110,CS/C=C/CCSC#N,candidate,reinvent_generated,KIT,0.0357,Dasatinib (CID 3062316),ligand_based_similarity_tanimoto_morgan2_2048
