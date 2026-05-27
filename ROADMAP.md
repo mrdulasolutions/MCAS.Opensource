@@ -37,6 +37,7 @@ A living document. Things at the top of each section are higher priority.
 - ✅ **CRO + academic outreach packet** — `docs/cro-outreach-packet.md` (cover-email template, target lab list, no-IP / no-NDA / publish-either-way terms).
 - ✅ **bioRxiv-style preprint v0.1.0** — `docs/preprint/preprint.md` (abstract, methods, results, discussion, refs).
 - ✅ **Lay-language patient summary** — `docs/for-mcas-community.md` (plain English, what we found, what we won't do, how to help without spending).
+- ✅ **Cannabinoid + terpene expansion** (EXP-019) — 24 new compounds (8 phytocannabinoids + 4 endocannabinoid-likes + 12 terpenes); CB2 (CNR2) wired as 9th MCAS target; **PEA lands #9 in maintenance**, β-caryophyllene #25, α-bisabolol #26; all audits hold (recovery@20 = 95.2%, precision@10 = 100%). Stabilizer ⇄ trigger bidirectionality cross-referenced in MCAS_Triggers_v1.csv (limonene, linalool, eucalyptol, pinenes, geraniol).
 
 ## Next (v0.x+1) — credibility & accessibility first
 

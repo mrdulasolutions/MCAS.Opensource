@@ -98,6 +98,18 @@ TARGET_REFERENCES: dict[str, list[tuple[str, str, str]]] = {
     "GLP1R": [  # small-molecule GLP-1R agonists for ligand-based comparison
         ("Orforglipron",  "Cc1cc(F)cc(C2CCN(Cc3ccc(C(=O)O)nc3OC(F)(F)F)CC2)c1F",                            "approx"),
     ],
+    # CB2 (CNR2) — added in EXP-019. Mast-cell stabilization is well-documented
+    # for selective CB2 agonists. Reference set spans phytocannabinoids,
+    # synthetic CB2-selective agonists, and the only dietary CB2 agonist
+    # (beta-caryophyllene).
+    "CNR2": [
+        ("Beta-caryophyllene",  "C=C1CCC2CC1CCC(=C)C2(C)CCC=C(C)C",                                          "CID 5281515"),
+        ("HU-308",              "CC(C)(C)c1cc(OC)c(C/C=C2\\C[C@@H]3OC(C)(C)C[C@H]3C2(C)C)c(OC)c1",            "CID 11652556 (approx)"),
+        ("JWH-133",             "CCCCCCc1cc(O)c2c(c1)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21",                       "CID 6918505 (approx)"),
+        ("AM-1241",             "CC(C)Cn1c(C(=O)c2ccc(I)cc2[N+](=O)[O-])c2ccc(Cl)cc2c1=O",                    "CID 9839084 (approx)"),
+        ("Cannabidiol",         "CCCCCc1cc(O)c([C@@H]2C=C(C)CC[C@H]2C(=C)C)c(O)c1",                          "CID 644019"),
+        ("Delta-9-THC",         "CCCCCc1cc(O)c2c(c1)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21",                        "CID 16078"),
+    ],
 }
 
 

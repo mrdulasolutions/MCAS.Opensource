@@ -35,9 +35,9 @@ HYP_DIR = REPO_ROOT / "hypotheses"
 # Per-category target weights for docking-style score aggregation.
 # Pick targets that matter for what the category is trying to do.
 CATEGORY_TARGETS: dict[str, dict[str, float]] = {
-    "rescue":      {"HRH1": 0.4, "HRH2": 0.2, "CYSLTR1": 0.2, "MRGPRX2": 0.2},
-    "maintenance": {"CYSLTR1": 0.3, "HRH1": 0.15, "BTK": 0.15, "MRGPRX2": 0.2, "KEAP1": 0.2},
-    "remission":   {"MRGPRX2": 0.3, "KIT": 0.3, "KEAP1": 0.3, "GLP1R": 0.1},
+    "rescue":      {"HRH1": 0.40, "HRH2": 0.20, "CYSLTR1": 0.20, "MRGPRX2": 0.20},
+    "maintenance": {"CYSLTR1": 0.25, "HRH1": 0.15, "BTK": 0.15, "MRGPRX2": 0.15, "KEAP1": 0.15, "CNR2": 0.15},
+    "remission":   {"MRGPRX2": 0.25, "KIT": 0.25, "KEAP1": 0.30, "GLP1R": 0.10, "CNR2": 0.10},
 }
 
 EVIDENCE_WEIGHT = {"high": 1.0, "medium": 0.6, "low": 0.3, "": 0.0}
