@@ -422,18 +422,27 @@ with tabs[5]:
         # --- Identity ---
         st.markdown("### Identity")
         lib_row = library[library["name"] == pick]
+        is_biologic = False
+        biologic_flag = ""
         if not lib_row.empty:
             lib = lib_row.iloc[0]
+            biologic_flag = str(lib.get("biologic_flag") or "").strip()
+            is_biologic = bool(biologic_flag) and biologic_flag.lower() != "nan"
             i1, i2, i3 = st.columns(3)
             i1.markdown(f"**Category:** `{lib.get('category', '?')}`")
             i2.markdown(f"**Subcategory:** `{lib.get('subcategory', '?')}`")
             i3.markdown(f"**Evidence:** `{lib.get('evidence_level', '?')}`")
             st.markdown(f"**Mechanism:** {lib.get('mechanism', '—')}")
             st.markdown(f"**Target(s):** `{lib.get('target', '—')}`")
-            st.markdown(f"**SMILES:** `{lib.get('canonical_smiles') or lib.get('smiles', '—')}`")
-            if pd.notna(lib.get("pubchem_cid")):
-                cid = int(lib["pubchem_cid"])
-                st.markdown(f"**PubChem:** [CID {cid}](https://pubchem.ncbi.nlm.nih.gov/compound/{cid})")
+            if is_biologic:
+                st.markdown(
+                    f"**Modality:** `biologic` &nbsp;·&nbsp; `flag = {biologic_flag}`"
+                )
+            else:
+                st.markdown(f"**SMILES:** `{lib.get('canonical_smiles') or lib.get('smiles', '—')}`")
+                if pd.notna(lib.get("pubchem_cid")):
+                    cid = int(lib["pubchem_cid"])
+                    st.markdown(f"**PubChem:** [CID {cid}](https://pubchem.ncbi.nlm.nih.gov/compound/{cid})")
         else:
             # generated analog
             if not ranked_all.empty:
@@ -441,76 +450,127 @@ with tabs[5]:
                 st.markdown(f"**Source:** `{gen.get('source', 'generated')}`")
                 st.markdown(f"**SMILES:** `{gen.get('smiles', '—')}`")
 
-        # --- Composite scores ---
-        st.markdown("### Composite ranks (per category)")
-        cols = st.columns(3)
-        for col, cat in zip(cols, ["rescue", "maintenance", "remission"]):
-            df = load_ranked(cat)
-            if df.empty or pick not in df["name"].values:
-                col.metric(cat.title(), "—", help="Not ranked in this category.")
-            else:
-                r = df[df["name"] == pick].iloc[0]
-                rank = int(df.index[df["name"] == pick][0]) + 1
-                col.metric(
-                    cat.title(),
-                    f"rank {rank}/{len(df)}",
-                    f"composite {r['composite_score']:.3f}",
+        # --- Biologic short-circuit ---
+        # Biologics have no canonical SMILES and so don't appear in any of the
+        # structure-based scorer outputs (composite, ChEMBL pIC50, Vina, C151,
+        # mast-cell predictor). Render a clean mechanism note instead of empty
+        # scorer cards.
+        if is_biologic and not lib_row.empty:
+            lib = lib_row.iloc[0]
+            st.info(
+                "**This compound is a biologic** — small-molecule scoring does "
+                "not apply.\n\n"
+                "The structure-based pipeline (composite score, ChEMBL pIC50 "
+                "predictor, Vina docking, C151 covalent-adduct energy, mast-cell "
+                "stabilizer RandomForest) all require a canonical SMILES. Biologics "
+                "(monoclonal antibodies, peptides, enzymes, plant extracts, "
+                "homeopathic preparations) have none, so the pipeline tracks "
+                "them descriptively rather than scoring them."
+            )
+
+            st.markdown("### Clinical context")
+            st.markdown(f"**Evidence notes:** {lib.get('evidence_notes', '—')}")
+
+            refs = lib.get("source_refs", "")
+            if refs and str(refs) != "nan":
+                st.markdown(f"**References:** {refs}")
+
+            # Biologic-class cross-reference: list other biologics with the
+            # same flag, so a user reading about Omalizumab also sees Dupilumab,
+            # and a user reading about Semaglutide also sees Tirzepatide.
+            same_class = library[
+                (library["biologic_flag"].notna())
+                & (library["biologic_flag"].astype(str).str.strip() != "")
+                & (library["name"] != pick)
+            ].copy()
+            if not same_class.empty:
+                st.markdown("### Other biologics in the library")
+                show = same_class[["name", "category", "subcategory", "biologic_flag"]].rename(
+                    columns={"biologic_flag": "flag"}
                 )
+                st.dataframe(show, use_container_width=True, hide_index=True)
 
-        # --- Mast-cell predictor ---
-        if not mc.empty:
-            mrow = mc[mc["name"] == pick]
-            if not mrow.empty:
-                p = float(mrow.iloc[0]["mast_cell_stabilizer_prob"])
-                st.markdown("### Mast-cell stabilizer probability (EXP-016)")
-                st.progress(min(max(p, 0.0), 1.0), text=f"p = {p:.3f}")
+            st.markdown("---")
+            st.caption(
+                "Want this biologic scored anyway? It would need either (a) a "
+                "small-molecule analog with a SMILES, or (b) a target-only score "
+                "based on its known target (we already weight the target "
+                "category — e.g., IL4R for Dupilumab — at the target-similarity "
+                "level for *other* compounds matching that target)."
+            )
 
-        # --- ChEMBL pIC50 across targets ---
-        if not chembl.empty:
-            crow = chembl[chembl["name"] == pick]
-            if not crow.empty:
-                st.markdown("### Predicted target binding (ChEMBL, EXP-011)")
-                pIC50_cols = [c for c in chembl.columns if c.startswith("chembl_pIC50_")]
-                pIC50_data = crow.iloc[0][pIC50_cols].to_dict()
-                pIC50_df = pd.DataFrame([
-                    {"target": k.replace("chembl_pIC50_", ""), "predicted_pIC50": round(float(v), 3)}
-                    for k, v in pIC50_data.items()
-                ]).sort_values("predicted_pIC50", ascending=False)
-                st.dataframe(pIC50_df, use_container_width=False, hide_index=True, width=400)
-                st.caption(
-                    "pIC50 = −log10(IC50 in M). 7 = 100 nM (good lead). 6 = 1 µM (moderate). "
-                    "5 = 10 µM (weak). Per-target predictor CV R² varies — see EXP-011."
-                )
+        else:
+            # --- Small-molecule scoring (the original cards) ---
+            # --- Composite scores ---
+            st.markdown("### Composite ranks (per category)")
+            cols = st.columns(3)
+            for col, cat in zip(cols, ["rescue", "maintenance", "remission"]):
+                df = load_ranked(cat)
+                if df.empty or pick not in df["name"].values:
+                    col.metric(cat.title(), "—", help="Not ranked in this category.")
+                else:
+                    r = df[df["name"] == pick].iloc[0]
+                    rank = int(df.index[df["name"] == pick][0]) + 1
+                    col.metric(
+                        cat.title(),
+                        f"rank {rank}/{len(df)}",
+                        f"composite {r['composite_score']:.3f}",
+                    )
 
-        # --- Vina docking + LE ---
-        if not vina.empty:
-            vrow = vina[vina["name"] == pick]
-            if not vrow.empty:
-                v = vrow.iloc[0]
-                st.markdown("### KEAP1 Kelch Vina docking (EXP-009)")
-                v1, v2 = st.columns(2)
-                v1.metric("Vina ΔG (kcal/mol)", f"{float(v.get('vina_dG_kcal_per_mol', 0)):.2f}")
-                if pd.notna(v.get("ligand_efficiency")):
-                    v2.metric("Ligand efficiency", f"{float(v['ligand_efficiency']):.3f}")
-                st.caption("PDB 4L7B Kelch domain. Lower ΔG = better predicted affinity.")
+            # --- Mast-cell predictor ---
+            if not mc.empty:
+                mrow = mc[mc["name"] == pick]
+                if not mrow.empty:
+                    p = float(mrow.iloc[0]["mast_cell_stabilizer_prob"])
+                    st.markdown("### Mast-cell stabilizer probability (EXP-016)")
+                    st.progress(min(max(p, 0.0), 1.0), text=f"p = {p:.3f}")
 
-        # --- C151 covalent adduct ---
-        if not c151.empty:
-            crow = c151[c151["name"] == pick]
-            if not crow.empty:
-                cr = crow.iloc[0]
-                st.markdown("### KEAP1-C151 covalent adduct (EXP-012)")
-                cc1, cc2 = st.columns(2)
-                cc1.metric(
-                    "ΔE adduct (kcal/mol)",
-                    f"{float(cr.get('dE_kcal_per_mol', 0)):.2f}",
-                    help="MMFF94 reaction-energy proxy. More negative = more favorable.",
-                )
-                cc2.metric("score_c151", f"{float(cr.get('score_c151', 0)):.3f}")
+            # --- ChEMBL pIC50 across targets ---
+            if not chembl.empty:
+                crow = chembl[chembl["name"] == pick]
+                if not crow.empty:
+                    st.markdown("### Predicted target binding (ChEMBL, EXP-011)")
+                    pIC50_cols = [c for c in chembl.columns if c.startswith("chembl_pIC50_")]
+                    pIC50_data = crow.iloc[0][pIC50_cols].to_dict()
+                    pIC50_df = pd.DataFrame([
+                        {"target": k.replace("chembl_pIC50_", ""), "predicted_pIC50": round(float(v), 3)}
+                        for k, v in pIC50_data.items()
+                    ]).sort_values("predicted_pIC50", ascending=False)
+                    st.dataframe(pIC50_df, use_container_width=False, hide_index=True, width=400)
+                    st.caption(
+                        "pIC50 = −log10(IC50 in M). 7 = 100 nM (good lead). 6 = 1 µM (moderate). "
+                        "5 = 10 µM (weak). Per-target predictor CV R² varies — see EXP-011."
+                    )
 
-        st.markdown("---")
-        st.caption(
-            "Want to dig deeper? Click through to the experiments: "
+            # --- Vina docking + LE ---
+            if not vina.empty:
+                vrow = vina[vina["name"] == pick]
+                if not vrow.empty:
+                    v = vrow.iloc[0]
+                    st.markdown("### KEAP1 Kelch Vina docking (EXP-009)")
+                    v1, v2 = st.columns(2)
+                    v1.metric("Vina ΔG (kcal/mol)", f"{float(v.get('vina_dG_kcal_per_mol', 0)):.2f}")
+                    if pd.notna(v.get("ligand_efficiency")):
+                        v2.metric("Ligand efficiency", f"{float(v['ligand_efficiency']):.3f}")
+                    st.caption("PDB 4L7B Kelch domain. Lower ΔG = better predicted affinity.")
+
+            # --- C151 covalent adduct ---
+            if not c151.empty:
+                crow = c151[c151["name"] == pick]
+                if not crow.empty:
+                    cr = crow.iloc[0]
+                    st.markdown("### KEAP1-C151 covalent adduct (EXP-012)")
+                    cc1, cc2 = st.columns(2)
+                    cc1.metric(
+                        "ΔE adduct (kcal/mol)",
+                        f"{float(cr.get('dE_kcal_per_mol', 0)):.2f}",
+                        help="MMFF94 reaction-energy proxy. More negative = more favorable.",
+                    )
+                    cc2.metric("score_c151", f"{float(cr.get('score_c151', 0)):.3f}")
+
+            st.markdown("---")
+            st.caption(
+                "Want to dig deeper? Click through to the experiments: "
             "[EXP-005 (ranking)](https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/experiments/EXP-005-multi-objective-ranking.md) · "
             "[EXP-009 (Vina)](https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/experiments/EXP-009-keap1-vina-docking.md) · "
             "[EXP-011 (ChEMBL)](https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/experiments/EXP-011-chembl-bioassay-predictor.md) · "
