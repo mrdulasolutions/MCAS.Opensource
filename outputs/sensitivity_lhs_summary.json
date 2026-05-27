@@ -73,7 +73,7 @@
     "median_rank_spread": 1
   },
   "maintenance": {
-    "n_candidates": 25,
+    "n_candidates": 80,
     "top1_winners_by_frequency": [
       {
         "name": "Curcumin",
@@ -100,7 +100,7 @@
       {
         "name": "Rosmarinic acid",
         "top10_frac": 1.0,
-        "rank_spread": 1
+        "rank_spread": 2
       },
       {
         "name": "Thymoquinone",
@@ -108,54 +108,54 @@
         "rank_spread": 3
       },
       {
-        "name": "Montelukast",
+        "name": "Baicalein",
+        "top10_frac": 1.0,
+        "rank_spread": 1
+      },
+      {
+        "name": "Luteolin",
         "top10_frac": 1.0,
         "rank_spread": 2
       },
       {
-        "name": "Eicosapentaenoic acid (EPA)",
-        "top10_frac": 1.0,
-        "rank_spread": 4
-      },
-      {
-        "name": "Docosahexaenoic acid (DHA)",
-        "top10_frac": 1.0,
-        "rank_spread": 4
-      },
-      {
-        "name": "Baicalein",
-        "top10_frac": 1.0,
-        "rank_spread": 3
-      },
-      {
-        "name": "Resveratrol",
-        "top10_frac": 0.99,
-        "rank_spread": 8
-      },
-      {
-        "name": "Luteolin",
-        "top10_frac": 0.99,
+        "name": "Montelukast",
+        "top10_frac": 0.97,
         "rank_spread": 5
       },
       {
-        "name": "Cholecalciferol (Vitamin D3)",
-        "top10_frac": 0.925,
-        "rank_spread": 4
+        "name": "EGCG",
+        "top10_frac": 0.965,
+        "rank_spread": 5
+      },
+      {
+        "name": "Eicosapentaenoic acid (EPA)",
+        "top10_frac": 0.94,
+        "rank_spread": 6
+      },
+      {
+        "name": "Docosahexaenoic acid (DHA)",
+        "top10_frac": 0.725,
+        "rank_spread": 6
+      },
+      {
+        "name": "Piceatannol",
+        "top10_frac": 0.47,
+        "rank_spread": 7
       }
     ],
-    "median_rank_spread": 3
+    "median_rank_spread": 10
   },
   "remission": {
-    "n_candidates": 96,
+    "n_candidates": 102,
     "top1_winners_by_frequency": [
       {
         "name": "Erucin",
-        "frac_at_top1": 0.62,
+        "frac_at_top1": 0.6,
         "baseline_rank": 1
       },
       {
         "name": "Sulforaphane",
-        "frac_at_top1": 0.38,
+        "frac_at_top1": 0.4,
         "baseline_rank": 2
       },
       {
@@ -192,30 +192,30 @@
       },
       {
         "name": "Masitinib",
-        "top10_frac": 0.85,
-        "rank_spread": 29
-      },
-      {
-        "name": "Midostaurin",
-        "top10_frac": 0.79,
-        "rank_spread": 42
-      },
-      {
-        "name": "Glucoraphanin",
-        "top10_frac": 0.75,
-        "rank_spread": 45
-      },
-      {
-        "name": "Allyl isothiocyanate",
-        "top10_frac": 0.735,
-        "rank_spread": 7
+        "top10_frac": 0.815,
+        "rank_spread": 36
       },
       {
         "name": "Sulforaphene",
-        "top10_frac": 0.705,
+        "top10_frac": 0.78,
+        "rank_spread": 6
+      },
+      {
+        "name": "Glucoraphanin",
+        "top10_frac": 0.76,
+        "rank_spread": 49
+      },
+      {
+        "name": "Midostaurin",
+        "top10_frac": 0.755,
+        "rank_spread": 50
+      },
+      {
+        "name": "Allyl isothiocyanate",
+        "top10_frac": 0.64,
         "rank_spread": 7
       }
     ],
-    "median_rank_spread": 13
+    "median_rank_spread": 15
   }
 }

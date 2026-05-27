@@ -38,9 +38,13 @@ OUT_CSV = REPO_ROOT / "outputs" / "sensitivity_analysis.csv"
 TOP_CHANGES_CSV = REPO_ROOT / "outputs" / "sensitivity_top10_changes.csv"
 
 CATEGORY_TARGETS = {
-    "rescue":      {"HRH1": 0.4, "HRH2": 0.2, "CYSLTR1": 0.2, "MRGPRX2": 0.2},
-    "maintenance": {"CYSLTR1": 0.3, "HRH1": 0.15, "BTK": 0.15, "MRGPRX2": 0.2, "KEAP1": 0.2},
-    "remission":   {"MRGPRX2": 0.3, "KIT": 0.3, "KEAP1": 0.3, "GLP1R": 0.1},
+    "rescue":      {"HRH1": 0.40, "HRH2": 0.20, "CYSLTR1": 0.20, "MRGPRX2": 0.20},
+    # Maintenance — 8 weighted targets after EXP-021 (added SYK + PTGS2; CNR2 was added in EXP-019).
+    "maintenance": {"CYSLTR1": 0.20, "HRH1": 0.12, "BTK": 0.12, "MRGPRX2": 0.12,
+                    "KEAP1": 0.12, "CNR2": 0.12, "SYK": 0.10, "PTGS2": 0.10},
+    # Remission — 6 weighted targets after EXP-021 (added SYK; CNR2 added in EXP-019).
+    "remission":   {"MRGPRX2": 0.22, "KIT": 0.22, "KEAP1": 0.28,
+                    "GLP1R": 0.08, "CNR2": 0.10, "SYK": 0.10},
 }
 
 BASELINE_WEIGHTS = {
