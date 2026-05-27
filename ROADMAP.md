@@ -38,6 +38,7 @@ A living document. Things at the top of each section are higher priority.
 - ✅ **bioRxiv-style preprint v0.1.0** — `docs/preprint/preprint.md` (abstract, methods, results, discussion, refs).
 - ✅ **Lay-language patient summary** — `docs/for-mcas-community.md` (plain English, what we found, what we won't do, how to help without spending).
 - ✅ **Cannabinoid + terpene expansion** (EXP-019) — 24 new compounds (8 phytocannabinoids + 4 endocannabinoid-likes + 12 terpenes); CB2 (CNR2) wired as 9th MCAS target; **PEA lands #9 in maintenance**, β-caryophyllene #25, α-bisabolol #26; all audits hold (recovery@20 = 95.2%, precision@10 = 100%). Stabilizer ⇄ trigger bidirectionality cross-referenced in MCAS_Triggers_v1.csv (limonene, linalool, eucalyptol, pinenes, geraniol).
+- ✅ **Flavonoid + polyphenol + cannabinoid-acid expansion** (EXP-020) — 29 new compounds across 3 batches. **Library now 107 anchors.** Best new landings: CBDA #24, Xanthohumol #28 (Michael-acceptor warhead detected!), Fisetin #38 in maintenance. Audits hold. Surfaced two real composite gaps — piceatannol-SYK mechanism (SYK not weighted) and carnosic-acid-quinone covalent KEAP1 modification (catechol warhead not in detector) — both filed as next-step targets.
 
 ## Next (v0.x+1) — credibility & accessibility first
 

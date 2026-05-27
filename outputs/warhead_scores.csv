@@ -12,6 +12,7 @@ Erucin,CSCCCCN=C=S,library,remission,True,isothiocyanate,1,True,1.0
 Sulforaphene,CS(=O)/C=C/CCN=C=S,library,remission,True,isothiocyanate,1,True,1.0
 Benzyl isothiocyanate,S=C=NCc1ccccc1,library,remission,True,isothiocyanate,1,True,1.0
 Phenethyl isothiocyanate,S=C=NCCc1ccccc1,library,remission,True,isothiocyanate,1,True,1.0
+Xanthohumol,COc1cc(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1,library,maintenance,True,michael_enone,1,True,1.0
 GEN_0006,CSCCCCCN=C=S,reinvent_generated,candidate,True,isothiocyanate,1,True,1.0
 GEN_0008,CS(=O)CCCCCN=C=S,reinvent_generated,candidate,True,isothiocyanate,1,True,1.0
 GEN_0009,CSCCCN=C=S,reinvent_generated,candidate,True,isothiocyanate,1,True,1.0
@@ -161,6 +162,33 @@ Terpinolene,CC1=CCC(=C(C)C)CC1,library,maintenance,False,,0,True,0.0
 Geraniol,CC(C)=CCC/C(C)=C/CO,library,maintenance,False,,0,True,0.0
 Alpha-bisabolol,CC(C)=CCC[C@@](C)(O)[C@H]1CC=C(C)CC1,library,maintenance,False,,0,True,0.0
 Nerolidol,C=CC(C)(O)CC/C=C(\C)CCC=C(C)C,library,maintenance,False,,0,True,0.0
+Wogonin,COc1c(O)cc(O)c2c(=O)cc(-c3ccccc3)oc12,library,maintenance,False,,0,True,0.0
+Chrysin,O=c1cc(-c2ccccc2)oc2cc(O)cc(O)c12,library,maintenance,False,,0,True,0.0
+Tangeretin,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1,library,maintenance,False,,0,True,0.0
+Nobiletin,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1OC,library,maintenance,False,,0,True,0.0
+Acacetin,COc1ccc(-c2cc(=O)c3c(O)cc(O)cc3o2)cc1,library,maintenance,False,,0,True,0.0
+Myricetin,O=c1c(O)c(-c2cc(O)c(O)c(O)c2)oc2cc(O)cc(O)c12,library,maintenance,False,,0,True,0.0
+Fisetin,O=c1c(O)c(-c2ccc(O)c(O)c2)oc2cc(O)ccc12,library,maintenance,False,,0,True,0.0
+Galangin,O=c1c(O)c(-c2ccccc2)oc2cc(O)cc(O)c12,library,maintenance,False,,0,True,0.0
+Isorhamnetin,COc1cc(-c2oc3cc(O)cc(O)c3c(=O)c2O)ccc1O,library,maintenance,False,,0,True,0.0
+Naringenin,O=C1CC(c2ccc(O)cc2)Oc2cc(O)cc(O)c21,library,maintenance,False,,0,True,0.0
+Hesperetin,COc1ccc([C@@H]2CC(=O)c3c(O)cc(O)cc3O2)cc1O,library,maintenance,False,,0,True,0.0
+Phloretin,O=C(CCc1ccc(O)cc1)c1c(O)cc(O)cc1O,library,maintenance,False,,0,True,0.0
+Honokiol,C=CCc1ccc(O)c(-c2ccc(O)c(CC=C)c2)c1,library,maintenance,False,,0,True,0.0
+Magnolol,C=CCc1ccc(O)c(-c2cc(CC=C)ccc2O)c1,library,maintenance,False,,0,True,0.0
+Pterostilbene,COc1cc(/C=C/c2ccc(O)cc2)cc(OC)c1,library,maintenance,False,,0,True,0.0
+Carnosic acid,CC(C)c1cc2c(c(O)c1O)[C@@]1(C(=O)O)CCCC(C)(C)[C@@H]1CC2,library,remission,False,,0,True,0.0
+Carnosol,CC(C)c1cc2c(c(O)c1O)[C@@]13CCCC(C)(C)[C@@H]1C[C@@H]2OC3=O,library,remission,False,,0,True,0.0
+Ursolic acid,C[C@H]1[C@H](C)CC[C@]2(C(=O)O)CC[C@]3(C)C(=CC[C@@H]4[C@@]5(C)CC[C@H](O)C(C)(C)[C@@H]5CC[C@]43C)[C@H]12,library,remission,False,,0,False,0.0
+Oleanolic acid,CC1(C)CC[C@]2(C(=O)O)CC[C@]3(C)C(=CC[C@@H]4[C@@]5(C)CC[C@H](O)C(C)(C)[C@@H]5CC[C@]43C)[C@@H]2C1,library,remission,False,,0,False,0.0
+Betulinic acid,C=C(C)[C@@H]1CC[C@]2(C(=O)O)CC[C@]3(C)[C@H](CC[C@@H]4[C@@]5(C)CC[C@H](O)C(C)(C)[C@@H]5CC[C@]43C)[C@@H]12,library,remission,False,,0,False,0.0
+Lupeol,C=C(C)[C@@H]1CC[C@]2(C)CC[C@]3(C)[C@H](CC[C@@H]4[C@@]5(C)CC[C@H](O)C(C)(C)[C@@H]5CC[C@]43C)[C@@H]12,library,remission,False,,0,False,0.0
+Piceatannol,Oc1cc(O)cc(/C=C/c2ccc(O)c(O)c2)c1,library,maintenance,False,,0,True,0.0
+Ellagic acid,O=c1oc2c(O)c(O)cc3c(=O)oc4c(O)c(O)cc1c4c23,library,maintenance,False,,0,True,0.0
+Cannabidiolic acid,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCCCC)c(C(=O)O)c1O,library,maintenance,False,,0,False,0.0
+Tetrahydrocannabinolic acid,CCCCCc1cc2c(c(O)c1C(=O)O)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,library,maintenance,False,,0,False,0.0
+Cannabigerolic acid,CC1(C)SC2C(NC(=O)C(C(=O)O)c3ccsc3)C(=O)N2C1C(=O)O,library,maintenance,False,,0,True,0.0
+Cannabicyclol,CC(C)C(NCCNC(C(C)C)C(C)C)C(C)C,library,maintenance,False,,0,True,0.0
 GEN_0011,CS(=O)/C=C/CCC#N,reinvent_generated,candidate,False,,0,True,0.0
 GEN_0013,CS(=O)CCCCC#N,reinvent_generated,candidate,False,,0,True,0.0
 GEN_0015,CS(=O)CCCCCC#N,reinvent_generated,candidate,False,,0,True,0.0

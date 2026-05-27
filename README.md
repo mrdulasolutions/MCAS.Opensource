@@ -158,6 +158,7 @@ Each script is documented as a [standardized experiment report](experiments/):
 | [EXP-013](experiments/EXP-013-rl-generation.md) | Iterative REINVENT-style generation | 4-iter generate-and-select; **265 candidates**; drug-like aromatic sulfonyl-ITCs emerge in iter 3 (QED 0.59-0.60) |
 | [EXP-017](experiments/EXP-017-enamine-availability-check.md) | Procurement check for top generated SFN-class analogs | **20 / 25 (80%)** novel analogs pass the Enamine REAL Space envelope; vendor lookup URLs published. Wet-lab bridge ready. |
 | [EXP-019](experiments/EXP-019-cannabinoids-and-terpenes.md) | Cannabinoid + terpene library expansion + CB2 (CNR2) target | 24 new compounds (CBD / CBG / Δ9-THC / PEA / β-caryophyllene / α-bisabolol / linalool / limonene / eucalyptol / ...); **PEA #9 in maintenance**; all audits hold |
+| [EXP-020](experiments/EXP-020-flavonoids-polyphenols-cannabinoid-acids.md) | Flavonoid + Nrf2 polyphenol + cannabinoid-acid expansion | 29 new compounds (16 mast-cell flavonoids + 8 Nrf2 polyphenols/triterpenes + 5 cannabinoid acids). **CBDA #24 maintenance**, Xanthohumol #28 (Michael warhead), Fisetin #38. Audits hold; surfaced piceatannol-SYK + carnosic-acid-quinone target/warhead gaps |
 
 ---
 
