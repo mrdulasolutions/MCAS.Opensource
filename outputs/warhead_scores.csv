@@ -197,6 +197,7 @@ Nicotinamide mononucleotide,NC(=O)c1ccc[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](
 Nicotinamide riboside,NC(=O)c1ccc[n+]([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)c1,library,maintenance,False,,0,True,0.0
 Ivermectin,CC[C@H](C)[C@H]1O[C@]2(CC[C@@H]1C)C[C@@H]1C[C@@H](C/C=C(\C)[C@@H](O[C@H]3C[C@H](OC)[C@@H](O[C@H]4C[C@H](OC)[C@@H](O)[C@H](C)O4)[C@H](C)O3)[C@@H](C)/C=C/C=C3\CO[C@@H]4[C@H](O)C(C)=C[C@@H](C(=O)O1)[C@]34O)O2,library,maintenance,False,,0,False,0.0
 Lycopodine,Nc1ccc(N=Nc2cccc(N=Nc3ccc(N)cc3N)c2)c(N)c1,library,maintenance,False,,0,True,0.0
+Imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,library,remission,False,,0,False,0.0
 GEN_0011,CS(=O)/C=C/CCC#N,reinvent_generated,candidate,False,,0,True,0.0
 GEN_0013,CS(=O)CCCCC#N,reinvent_generated,candidate,False,,0,True,0.0
 GEN_0015,CS(=O)CCCCCC#N,reinvent_generated,candidate,False,,0,True,0.0

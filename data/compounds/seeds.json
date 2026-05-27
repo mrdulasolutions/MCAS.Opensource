@@ -1315,6 +1315,29 @@
       "evidence_notes": "**Extract / mixture — no canonical SMILES.** Treated like our other biologics (omalizumab, semaglutide). The homeopathic preparation (most common patient form) contains essentially no original molecule beyond ~12C dilution; any biological effect at that dilution is not mediated by pharmacology in the conventional sense. The crude extract has some preclinical anti-tumor / immunomodulator data on Calvacin. Included by user request for completeness.",
       "source_refs": ["Roland 1960 (Calvacin isolation)"],
       "biologic_flag": "extract"
+    },
+    {
+      "name": "Imatinib",
+      "pubchem_cid": 5291,
+      "category": "remission",
+      "subcategory": "BCR-ABL / KIT tyrosine kinase inhibitor (first-generation)",
+      "mechanism": "Selective inhibitor of KIT, PDGFR, BCR-ABL. Effective on wild-type KIT and most KIT-juxtamembrane mutations; **NOT effective on KIT D816V** (the most common mastocytosis driver — D816V is the *resistance* mutation that motivated avapritinib). Useful for non-D816V mast cell disease, eosinophilic disorders, hypereosinophilic syndrome, GIST.",
+      "target": "KIT (wild-type + non-D816V); BCR-ABL; PDGFR",
+      "evidence_level": "high",
+      "evidence_notes": "Approved for CML, GIST, hypereosinophilic syndrome, systemic mastocytosis without D816V. Glivec/Gleevec — Novartis. The OG KIT TKI; we already use it as a KIT reference ligand. Adding to library so it appears in remission rankings alongside Masitinib / Midostaurin / Avapritinib.",
+      "source_refs": ["Heinrich 2003; Akin 2003"]
+    },
+    {
+      "name": "Dupilumab",
+      "pubchem_cid": null,
+      "category": "maintenance",
+      "subcategory": "Anti-IL-4Rα monoclonal antibody (Th2-axis blockade)",
+      "mechanism": "Fully human IgG4 mAb binding IL-4 receptor alpha → blocks IL-4 AND IL-13 signaling → suppresses Th2 cascade (IgE production, eosinophil recruitment, mast-cell maturation/priming, mucus, barrier disruption). NOT a direct mast-cell blocker — works upstream by quieting the Th2 environment that primes mast cells.",
+      "target": "IL4R; IL-13Rα1 (indirect)",
+      "evidence_level": "medium",
+      "evidence_notes": "Dupixent — Sanofi/Regeneron. Approved for atopic dermatitis, asthma, CRSwNP, eosinophilic esophagitis, prurigo nodularis, COPD with eosinophilic phenotype. **MCAS use is off-label** but increasingly reported in Th2-skewed mast-cell-activation phenotypes with elevated total IgE / eosinophils / FeNO / atopic comorbidity. Mechanistically aligned with omalizumab (both quiet IgE-axis) but distinct mechanism. Subcutaneous biologic — no SMILES.",
+      "source_refs": ["Beck 2014; Lommatzsch 2024"],
+      "biologic_flag": "monoclonal_antibody_anti_il4r"
     }
   ]
 }

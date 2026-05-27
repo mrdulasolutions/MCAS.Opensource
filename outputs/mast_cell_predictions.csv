@@ -108,6 +108,7 @@ Nicotinamide riboside,NC(=O)c1ccc[n+]([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)c1,libra
 Ivermectin,CC[C@H](C)[C@H]1O[C@]2(CC[C@@H]1C)C[C@@H]1C[C@@H](C/C=C(\C)[C@@H](O[C@H]3C[C@H](OC)[C@@H](O[C@H]4C[C@H](OC)[C@@H](O)[C@H](C)O4)[C@H](C)O3)[C@@H](C)/C=C/C=C3\CO[C@@H]4[C@H](O)C(C)=C[C@@H](C(=O)O1)[C@]34O)O2,library,0.3613
 Lycopodine,Nc1ccc(N=Nc2cccc(N=Nc3ccc(N)cc3N)c2)c(N)c1,library,0.6288
 Testosterone,C[C@]12CC[C@H]3[C@@H](CCC4=CC(=O)CC[C@@]43C)[C@@H]1CC[C@@H]2O,library,0.3271
+Imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,library,0.2325
 GEN_0000,S=C=NCCc1ccccc1,reinvent_generated,0.2804
 GEN_0001,S=C=NCc1ccccc1,reinvent_generated,0.2504
 GEN_0002,CSCCCCN=C=S,reinvent_generated,0.3956
