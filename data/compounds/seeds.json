@@ -1211,6 +1211,110 @@
       "evidence_level": "low",
       "evidence_notes": "CBCA — note: some databases list this CID under CBC (decarboxylated form). Pipeline will use whatever PubChem returns.",
       "source_refs": ["Pollastro 2017"]
+    },
+    {
+      "name": "Methylene blue",
+      "pubchem_cid": 6099,
+      "category": "maintenance",
+      "subcategory": "Thiazine dye / redox cycler",
+      "mechanism": "Alternative mitochondrial electron carrier (bypasses Complex I/III); MAO-A inhibitor; cGMP/sGC modulator; weak anti-inflammatory + anti-oxidative-stress at low dose; mast-cell evidence preclinical",
+      "target": "MAO-A; sGC; mitochondrial e- transport",
+      "evidence_level": "medium",
+      "evidence_notes": "Approved for methemoglobinemia + ifosfamide encephalopathy. Off-label vasoplegia in septic shock. Long-COVID + mitochondrial fatigue interest. Sub-therapeutic doses (0.5-1 mg/kg) are anti-inflammatory; supra-therapeutic doses are PRO-oxidative. Drug interaction: serotonergic interaction (SSRI/MAOI) — clinically significant. Urine + sclera turn blue.",
+      "source_refs": ["Schirmer 2011; Atamna 2008"],
+      "regulatory_flag": "off-label-common"
+    },
+    {
+      "name": "Methyl red",
+      "pubchem_cid": 10303,
+      "category": "maintenance",
+      "subcategory": "Azo dye / pH indicator (NOT a clinical therapeutic)",
+      "mechanism": "Azobenzene with carboxylic acid; weak antimicrobial in vitro; NO clinical therapeutic use",
+      "target": "—",
+      "evidence_level": "low",
+      "evidence_notes": "Included by user request. This is a laboratory pH indicator (red <4.4, yellow >6.2), not a drug or supplement. No human safety profile. Pipeline scores it for chemical-class completeness only; do NOT interpret a high rank as a recommendation.",
+      "source_refs": ["—"],
+      "regulatory_flag": "not-for-human-use"
+    },
+    {
+      "name": "NAD+",
+      "pubchem_cid": 925,
+      "category": "maintenance",
+      "subcategory": "Pyridine dinucleotide cofactor (endogenous)",
+      "mechanism": "Universal redox cofactor + substrate for sirtuins (SIRT1-7), PARPs, CD38; mast-cell ADP-ribosylation + SIRT-mediated NF-κB suppression; mitochondrial energy",
+      "target": "SIRT1; SIRT3; CD38",
+      "evidence_level": "low",
+      "evidence_notes": "Oral NAD+ is poorly absorbed (degraded in gut); IV + sublingual + IM routes used clinically. Most evidence in MCAS-adjacent fatigue + long-COVID + aging. NAD+ supports the same SIRT3 mechanism honokiol/magnolol activate.",
+      "source_refs": ["Bogan 2008; Nikiforov 2015"]
+    },
+    {
+      "name": "Nicotinamide mononucleotide",
+      "pubchem_cid": 14180,
+      "category": "maintenance",
+      "subcategory": "NAD+ precursor (NMN)",
+      "mechanism": "Direct intermediate in NAD+ salvage pathway; raises tissue NAD+ better than NAD+ itself orally",
+      "target": "NAD+ pool (SIRT1/3 downstream)",
+      "evidence_level": "low",
+      "evidence_notes": "Sinclair-group human trials (small) show oral NMN raises blood NAD+ ~30%. Better bioavailability than NAD+ itself. Reasonably safe at 250-1000 mg/day in published trials.",
+      "source_refs": ["Yoshino 2018; Yoshino 2021"]
+    },
+    {
+      "name": "Nicotinamide riboside",
+      "pubchem_cid": 439924,
+      "category": "maintenance",
+      "subcategory": "NAD+ precursor (NR; commercial 'Niagen')",
+      "mechanism": "Crosses cell membrane via nucleoside transporters; converted intracellularly to NAD+; SIRT-pathway support",
+      "target": "NAD+ pool (SIRT1/3 downstream)",
+      "evidence_level": "medium",
+      "evidence_notes": "Larger human-trial base than NMN. FDA-recognized GRAS. 300-600 mg/day common. Some MCAS-adjacent fatigue reports.",
+      "source_refs": ["Trammell 2016; Martens 2018"]
+    },
+    {
+      "name": "Ivermectin",
+      "pubchem_cid": 6321424,
+      "category": "maintenance",
+      "subcategory": "Macrocyclic lactone antiparasitic — off-label mast-cell stabilizer evidence",
+      "mechanism": "Glutamate-gated chloride channel agonist (parasitic primary); secondary mast-cell stabilization via P2X4 antagonism (Yan 2019); GABA-A allosteric (CNS at high dose); P-glycoprotein substrate",
+      "target": "P2X4; GABA-A (low affinity); GluCl (parasitic)",
+      "evidence_level": "medium",
+      "evidence_notes": "Topical 1% ivermectin (Soolantra) approved for rosacea — partly via Demodex but also via direct mast-cell stabilization. Yan 2019 J Allergy Clin Immunol showed P2X4-mediated mast-cell inhibition. Oral off-label use for various indications is regulatorily contested; we score for in-silico class membership only.",
+      "source_refs": ["Yan 2019; Stein-Gold 2014"],
+      "regulatory_flag": "off-label-contested"
+    },
+    {
+      "name": "Lycopodine",
+      "pubchem_cid": 13981,
+      "category": "maintenance",
+      "subcategory": "Lycopodium alkaloid (clubmoss / Lycopodium clavatum)",
+      "mechanism": "Weak acetylcholinesterase inhibitor; weak NMDA antagonist; very limited mast-cell data; mostly anti-tumor preclinical",
+      "target": "AChE (weak); NMDA",
+      "evidence_level": "low",
+      "evidence_notes": "Lycopodium clavatum is widely used homeopathically — at homeopathic dilutions (12C+) no actual molecule remains, so 'taking Lycopodium' in that context is NOT the same as taking lycopodine. The pipeline scores the actual alkaloid. Honest evidence base is minimal.",
+      "source_refs": ["Mandal 2010"]
+    },
+    {
+      "name": "Testosterone",
+      "pubchem_cid": 6013,
+      "category": "maintenance",
+      "subcategory": "Endogenous androgen (steroid hormone)",
+      "mechanism": "Androgen receptor agonist; **mast cells express AR**; testosterone has documented MAST-CELL-STABILIZING effect (lowers degranulation in male-vs-female studies); sex-hormone modulation of MCAS is real but under-studied",
+      "target": "AR",
+      "evidence_level": "medium",
+      "evidence_notes": "Premenopausal women have ~2x the mast-cell mediator burden of age-matched men; testosterone replacement in hypogonadal men has been anecdotally reported to reduce MCAS symptom load. This is endogenous — supplementation requires medical supervision + monitoring. Recreational/PED use is regulated.",
+      "source_refs": ["Mackey 2020; Chen 2010"],
+      "regulatory_flag": "controlled-substance"
+    },
+    {
+      "name": "Bovista (Lycoperdon)",
+      "pubchem_cid": null,
+      "category": "maintenance",
+      "subcategory": "Puffball mushroom extract (Lycoperdon bovista / L. perlatum)",
+      "mechanism": "Mixture — primary constituents include calvacin (anti-tumor polysaccharide), various sterols, possibly hemolytic principles. Homeopathically used for urticaria + chemical sensitivity.",
+      "target": "—",
+      "evidence_level": "low",
+      "evidence_notes": "**Extract / mixture — no canonical SMILES.** Treated like our other biologics (omalizumab, semaglutide). The homeopathic preparation (most common patient form) contains essentially no original molecule beyond ~12C dilution; any biological effect at that dilution is not mediated by pharmacology in the conventional sense. The crude extract has some preclinical anti-tumor / immunomodulator data on Calvacin. Included by user request for completeness.",
+      "source_refs": ["Roland 1960 (Calvacin isolation)"],
+      "biologic_flag": "extract"
     }
   ]
 }

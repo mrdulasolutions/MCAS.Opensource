@@ -57,6 +57,18 @@ WARHEADS: list[tuple[str, str]] = [
     ("ortho_quinone",         "O=C1C=CC=CC1=O"),
     ("alpha_beta_unsat_ester","[CX3]=[CX3][CX3](=[OX1])[OX2]"),
     ("alpha_beta_unsat_lactone","[CX3]=[CX3][CX3](=[OX1])[OX2;R]"),
+    # --- Pro-electrophile catechol class (EXP-021) ---
+    # Catechols oxidize readily to ortho-quinones, which Michael-accept
+    # with cysteine thiols. This is the actual mechanism by which carnosic
+    # acid, carnosol, curcumin (via its enol-tautomer ortho-quinone path),
+    # and EGCG covalently modify KEAP1 Cys-151/273/288. Important: the
+    # catechol itself is not the electrophile — the in-vivo-oxidized
+    # quinone is. We flag the precursor as a "pro-warhead."
+    # SMARTS are H-constrained ([OX2H]) so methylethers (methoxy on
+    # tangeretin/nobiletin) are NOT misclassified as phenols.
+    ("catechol",              "c1ccc([OX2H])c([OX2H])c1"),         # adjacent ring -OH/-OH
+    ("pyrogallol",            "c1cc([OX2H])c([OX2H])c([OX2H])c1"), # 3 adjacent ring -OH
+    ("hydroquinone",          "[OX2H]c1ccc([OX2H])cc1"),           # para -OH/-OH
 ]
 
 

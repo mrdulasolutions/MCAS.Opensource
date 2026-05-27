@@ -159,6 +159,7 @@ Each script is documented as a [standardized experiment report](experiments/):
 | [EXP-017](experiments/EXP-017-enamine-availability-check.md) | Procurement check for top generated SFN-class analogs | **20 / 25 (80%)** novel analogs pass the Enamine REAL Space envelope; vendor lookup URLs published. Wet-lab bridge ready. |
 | [EXP-019](experiments/EXP-019-cannabinoids-and-terpenes.md) | Cannabinoid + terpene library expansion + CB2 (CNR2) target | 24 new compounds (CBD / CBG / Δ9-THC / PEA / β-caryophyllene / α-bisabolol / linalool / limonene / eucalyptol / ...); **PEA #9 in maintenance**; all audits hold |
 | [EXP-020](experiments/EXP-020-flavonoids-polyphenols-cannabinoid-acids.md) | Flavonoid + Nrf2 polyphenol + cannabinoid-acid expansion | 29 new compounds (16 mast-cell flavonoids + 8 Nrf2 polyphenols/triterpenes + 5 cannabinoid acids). **CBDA #24 maintenance**, Xanthohumol #28 (Michael warhead), Fisetin #38. Audits hold; surfaced piceatannol-SYK + carnosic-acid-quinone target/warhead gaps |
+| [EXP-021](experiments/EXP-021-new-compounds-syk-cox2-catechol.md) | SYK + COX-2 weighted + catechol covalent warhead + 9 new compounds (methylene blue, NAD+/NMN/NR, ivermectin, testosterone) | **Piceatannol #47 → #12** (SYK); **Luteolin #5 → #2** (catechol); **Baicalein into top-5**; **Carnosic acid #86 → #53** (catechol). recovery@10 *improved* 4.8% → 9.5% with audits intact. The three EXP-020 §10 gaps closed. |
 
 ---
 

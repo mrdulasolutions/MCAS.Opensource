@@ -110,6 +110,29 @@ TARGET_REFERENCES: dict[str, list[tuple[str, str, str]]] = {
         ("Cannabidiol",         "CCCCCc1cc(O)c([C@@H]2C=C(C)CC[C@H]2C(=C)C)c(O)c1",                          "CID 644019"),
         ("Delta-9-THC",         "CCCCCc1cc(O)c2c(c1)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21",                        "CID 16078"),
     ],
+    # SYK — added in EXP-021. SYK is the proximal kinase in FcεRI mast-cell
+    # signaling; piceatannol was the EXP-020 §10 motivating finding. Reference
+    # set spans the natural-product probe (piceatannol) and the clinical
+    # SYK-inhibitor scaffold class (fostamatinib + analogs).
+    "SYK": [
+        ("Piceatannol",   "Oc1cc(/C=C/c2ccc(O)c(O)c2)cc(O)c1",                                                "CID 667639"),
+        ("Fostamatinib",  "COc1cc2ncnc(Nc3cc(OC)c(OC)c(OC)c3)c2cc1NC(=O)c1cncc(c1)C(F)(F)F",                  "CID 11671467 (approx)"),
+        ("R406",          "COc1cc2ncnc(Nc3cc(OC)c(OC)c(OC)c3)c2cc1NC(=O)CN1CCOCC1",                           "CID 11213558 (approx)"),
+        ("Entospletinib", "Cc1nc(Nc2ncc(s2)C(=O)Nc2cccc(c2)C(C)(C)O)cc(c1)C",                                  "CID 51000275 (approx)"),
+        ("Cerdulatinib",  "CCN(CC)CCNc1nccc(n1)Nc1nccnc1NS(=O)(=O)c1ccc(F)cc1",                                "CID 71462969 (approx)"),
+    ],
+    # COX-2 (PTGS2) — added in EXP-021. Maintenance-axis target for CBDA,
+    # aspirin, polymethoxyflavones, curcumin. Reference set spans the selective
+    # coxib class + non-selective NSAIDs + the natural-product COX-2 inhibitors.
+    "PTGS2": [
+        ("Celecoxib",   "Cc1ccc(cc1)c1cc(C(F)(F)F)nn1c1ccc(cc1)S(=O)(=O)N",                                    "CID 2662"),
+        ("Rofecoxib",   "CS(=O)(=O)c1ccc(cc1)C1=C(C(=O)OC1)c1ccccc1",                                          "CID 5090"),
+        ("Etoricoxib",  "Cc1ccc(nc1)c1nc(ccc1c1ccc(cc1Cl)S(=O)(=O)C)c1ccc(C)cn1",                              "CID 123619"),
+        ("Aspirin",     "CC(=O)Oc1ccccc1C(=O)O",                                                              "CID 2244"),
+        ("Naproxen",    "COc1ccc2cc(ccc2c1)C(C)C(=O)O",                                                       "CID 156391"),
+        ("Ibuprofen",   "CC(C)Cc1ccc(cc1)C(C)C(=O)O",                                                         "CID 3672"),
+        ("Curcumin",    "COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2)ccc1O",                                  "CID 969516"),
+    ],
 }
 
 

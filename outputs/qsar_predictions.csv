@@ -99,6 +99,14 @@ Cannabidiolic acid,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCCCC)c(C(=O)O)c1O,librar
 Tetrahydrocannabinolic acid,CCCCCc1cc2c(c(O)c1C(=O)O)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,library,0.5483,0.3,0.76
 Cannabigerolic acid,CC1(C)SC2C(NC(=O)C(C(=O)O)c3ccsc3)C(=O)N2C1C(=O)O,library,0.4392,0.16,0.005
 Cannabicyclol,CC(C)C(NCCNC(C(C)C)C(C)C)C(C)C,library,0.32,0.225,0.91
+Methylene blue,CN(C)c1ccc2nc3ccc(=[N+](C)C)cc-3sc2c1.[Cl-],library,0.582,0.77,0.83
+Methyl red,CN(C)c1ccc(N=Nc2ccccc2C(=O)O)cc1,library,0.6317,0.575,0.595
+NAD+,NC(=O)c1ccc[n+](C2OC(COP(=O)([O-])OP(=O)(O)OCC3OC(n4cnc5c(N)ncnc54)C(O)C3O)C(O)C2O)c1,library,0.44,0.35,0.835
+Nicotinamide mononucleotide,NC(=O)c1ccc[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)c1,library,0.4225,0.335,0.83
+Nicotinamide riboside,NC(=O)c1ccc[n+]([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)c1,library,0.3975,0.325,0.865
+Ivermectin,CC[C@H](C)[C@H]1O[C@]2(CC[C@@H]1C)C[C@@H]1C[C@@H](C/C=C(\C)[C@@H](O[C@H]3C[C@H](OC)[C@@H](O[C@H]4C[C@H](OC)[C@@H](O)[C@H](C)O4)[C@H](C)O3)[C@@H](C)/C=C/C=C3\CO[C@@H]4[C@H](O)C(C)=C[C@@H](C(=O)O1)[C@]34O)O2,library,0.4433,0.365,0.255
+Lycopodine,Nc1ccc(N=Nc2cccc(N=Nc3ccc(N)cc3N)c2)c(N)c1,library,0.518,0.975,0.865
+Testosterone,C[C@]12CC[C@H]3[C@@H](CCC4=CC(=O)CC[C@@]43C)[C@@H]1CC[C@@H]2O,library,0.35,0.09,0.185
 GEN_0006,CSCCCCCN=C=S,reinvent_generated,0.27,0.37,0.92
 GEN_0008,CS(=O)CCCCCN=C=S,reinvent_generated,0.24,0.455,0.92
 GEN_0009,CSCCCN=C=S,reinvent_generated,0.265,0.365,0.915

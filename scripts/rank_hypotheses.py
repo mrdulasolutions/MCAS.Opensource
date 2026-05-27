@@ -36,8 +36,13 @@ HYP_DIR = REPO_ROOT / "hypotheses"
 # Pick targets that matter for what the category is trying to do.
 CATEGORY_TARGETS: dict[str, dict[str, float]] = {
     "rescue":      {"HRH1": 0.40, "HRH2": 0.20, "CYSLTR1": 0.20, "MRGPRX2": 0.20},
-    "maintenance": {"CYSLTR1": 0.25, "HRH1": 0.15, "BTK": 0.15, "MRGPRX2": 0.15, "KEAP1": 0.15, "CNR2": 0.15},
-    "remission":   {"MRGPRX2": 0.25, "KIT": 0.25, "KEAP1": 0.30, "GLP1R": 0.10, "CNR2": 0.10},
+    # Maintenance — SYK (FcεRI proximal) + PTGS2 (COX-2) added in EXP-021.
+    "maintenance": {"CYSLTR1": 0.20, "HRH1": 0.12, "BTK": 0.12, "MRGPRX2": 0.12,
+                    "KEAP1": 0.12, "CNR2": 0.12, "SYK": 0.10, "PTGS2": 0.10},
+    # Remission — SYK gets a small weight too (proximal FcεRI is upstream
+    # enough to count). PTGS2 stays out — COX-2 is symptomatic, not remission.
+    "remission":   {"MRGPRX2": 0.22, "KIT": 0.22, "KEAP1": 0.28,
+                    "GLP1R": 0.08, "CNR2": 0.10, "SYK": 0.10},
 }
 
 EVIDENCE_WEIGHT = {"high": 1.0, "medium": 0.6, "low": 0.3, "": 0.0}
