@@ -1,9 +1,9 @@
 name,smiles,category,source,target,score,best_ref,method
 Famotidine,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)cs1,rescue,library,HRH2,1.0,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 Ranitidine,CN/C(=C\[N+](=O)[O-])NCCSCc1ccc(CN(C)C)o1,rescue,library,HRH2,1.0,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0191,CN/C(=C\[N+](=O)[O-])NCCSCc1cc(CCS(=O)CCCN=C=S)c(CN(C)C)o1,candidate,reinvent_generated,HRH2,0.52,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0193,CN/C(=C\[N+](=O)[O-])NCCSCc1oc(CN(C)C)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.52,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0214,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)c(CCS(=O)CCCN=C=S)s1,candidate,reinvent_generated,HRH2,0.4507,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0214,CN/C(=C\[N+](=O)[O-])NCCSCc1cc(CCS(=O)CCCN=C=S)c(CN(C)C)o1,candidate,reinvent_generated,HRH2,0.52,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0217,CN/C(=C\[N+](=O)[O-])NCCSCc1oc(CN(C)C)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.52,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0251,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)c(CCS(=O)CCCN=C=S)s1,candidate,reinvent_generated,HRH2,0.4507,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0170,CS(=O)(=O)CCCSC#N,candidate,reinvent_generated,HRH2,0.1404,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0162,CS(=O)(=O)CCCCSC#N,candidate,reinvent_generated,HRH2,0.1379,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Nicotinamide riboside,NC(=O)c1ccc[n+]([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)c1,maintenance,library,HRH2,0.137,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
@@ -21,6 +21,8 @@ GEN_0134,CSCCc1ccc(N=C=S)cc1,candidate,reinvent_generated,HRH2,0.129,Cimetidine 
 GEN_0163,CS(=O)Cc1ccc(SC#N)cc1,candidate,reinvent_generated,HRH2,0.129,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0120,CSCCCCCC#N,candidate,reinvent_generated,HRH2,0.1273,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0127,CSCCCCCSC#N,candidate,reinvent_generated,HRH2,0.1273,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0218,CN(C)c1cc(CCS(=O)CCCN=C=S)c2nc3ccc(=[N+](C)C)cc-3sc2c1.[Cl-],candidate,reinvent_generated,HRH2,0.1273,Nizatidine (CID 3033),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0219,CN(C)c1cc2sc3cc(=[N+](C)C)ccc-3nc2cc1CCS(=O)CCCN=C=S.[Cl-],candidate,reinvent_generated,HRH2,0.1273,Nizatidine (CID 3033),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0153,CS(=O)CCc1ccc(SC#N)cc1,candidate,reinvent_generated,HRH2,0.125,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Methylene blue,CN(C)c1ccc2nc3ccc(=[N+](C)C)cc-3sc2c1.[Cl-],maintenance,library,HRH2,0.1236,Nizatidine (CID 3033),ligand_based_similarity_tanimoto_morgan2_2048
 Nicotinamide mononucleotide,NC(=O)c1ccc[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)c1,maintenance,library,HRH2,0.122,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
@@ -36,6 +38,7 @@ Methyl red,CN(C)c1ccc(N=Nc2ccccc2C(=O)O)cc1,maintenance,library,HRH2,0.1176,Niza
 GEN_0133,CS(=O)CCCCCSC#N,candidate,reinvent_generated,HRH2,0.1167,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0146,CS(=O)Cc1ccc(C#N)cc1,candidate,reinvent_generated,HRH2,0.1167,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0169,CCS(=O)CCCSC#N,candidate,reinvent_generated,HRH2,0.1167,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0232,CC1(C)SC2C(NC(=O)C(C(=O)O)c3csc(CCS(=O)CCCN=C=S)c3)C(=O)N2C1C(=O)O,candidate,reinvent_generated,HRH2,0.1167,Nizatidine (CID 3033),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0123,CS(=O)/C=C/CCSC#N,candidate,reinvent_generated,HRH2,0.1148,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0165,CCS(=O)CCCCSC#N,candidate,reinvent_generated,HRH2,0.1148,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Luteolin,O=c1cc(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12,maintenance,library,HRH2,0.1143,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
@@ -47,42 +50,59 @@ GEN_0147,CS(=O)(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,HRH2,0.1129,Fam
 Silibinin,COc1cc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)ccc1O,maintenance,library,HRH2,0.1124,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Glucoraphanin,CS(=O)CCCC/C(=N\OS(=O)(=O)O)S[C@@H]1O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O,remission,library,HRH2,0.1111,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0155,CCS(=O)/C=C/CCSC#N,candidate,reinvent_generated,HRH2,0.1111,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0222,NC(=O)c1c[n+]([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)ccc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.1101,Nizatidine (CID 3033),ligand_based_similarity_tanimoto_morgan2_2048
 Nobiletin,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1OC,maintenance,library,HRH2,0.1096,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0136,CS(=O)(=O)CCc1ccc(N=C=S)cc1,candidate,reinvent_generated,HRH2,0.1094,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 Wogonin,COc1c(O)cc(O)c2c(=O)cc(-c3ccccc3)oc12,maintenance,library,HRH2,0.1081,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Acacetin,COc1ccc(-c2cc(=O)c3c(O)cc(O)cc3o2)cc1,maintenance,library,HRH2,0.1081,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0148,CS(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,HRH2,0.1077,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0168,CS(=O)(=O)CCCC#N,candidate,reinvent_generated,HRH2,0.1071,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0205,CCOC(=O)N1CCC(=C2c3ncccc3CCc3cc(Cl)cc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,HRH2,0.1068,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0262,CCOC(=O)N1CCC(=C2c3ncccc3CCc3cc(Cl)cc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,HRH2,0.1068,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Loratadine,CCOC(=O)N1CCC(=C2c3ccc(Cl)cc3CCc3cccnc32)CC1,rescue,library,HRH2,0.1059,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0111,CSCCCN=C=S,candidate,reinvent_generated,HRH2,0.1053,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0164,CS(=O)(=O)CCCCC#N,candidate,reinvent_generated,HRH2,0.1053,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0166,CS/C=C/CCC#N,candidate,reinvent_generated,HRH2,0.1053,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0203,CCOC(=O)N1CCC(=C2c3cc(CCS(=O)CCCN=C=S)c(Cl)cc3CCc3cccnc32)CC1,candidate,reinvent_generated,HRH2,0.1048,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0198,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,HRH2,0.1042,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0188,COc1c(O)c(CCS(=O)CCCN=C=S)c(O)c2c(=O)cc(-c3ccccc3)oc12,candidate,reinvent_generated,HRH2,0.1053,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0189,COc1c(O)cc(O)c2c(=O)c(CCS(=O)CCCN=C=S)c(-c3ccccc3)oc12,candidate,reinvent_generated,HRH2,0.1053,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0268,CCOC(=O)N1CCC(=C2c3cc(CCS(=O)CCCN=C=S)c(Cl)cc3CCc3cccnc32)CC1,candidate,reinvent_generated,HRH2,0.1048,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0240,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,HRH2,0.1042,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Isorhamnetin,COc1cc(-c2oc3cc(O)cc(O)c3c(=O)c2O)ccc1O,maintenance,library,HRH2,0.1039,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Erucin,CSCCCCN=C=S,remission,library,HRH2,0.1034,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0227,Nc1ccc(N=Nc2cccc(N=Nc3c(N)cc(N)cc3CCS(=O)CCCN=C=S)c2)c(N)c1,candidate,reinvent_generated,HRH2,0.1034,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0196,COc1ccc(-c2cc(=O)c3c(O)cc(O)cc3o2)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.1031,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0211,COc1cc(-c2oc3c(CCS(=O)CCCN=C=S)c(O)cc(O)c3c(=O)c2O)ccc1O,candidate,reinvent_generated,HRH2,0.1031,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0213,COc1c(O)ccc(-c2oc3cc(O)cc(O)c3c(=O)c2O)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.1031,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0185,CN(C)c1ccc(N=Nc2ccccc2C(=O)O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.1028,Nizatidine (CID 3033),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0178,O=S(CCCN=C=S)CCc1c(O)cc(/C=C/c2ccc(O)c(O)c2)cc1O,candidate,reinvent_generated,HRH2,0.1026,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0109,CSCCCCCN=C=S,candidate,reinvent_generated,HRH2,0.1017,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0156,CS(=O)(=O)/C=C/CCC#N,candidate,reinvent_generated,HRH2,0.1017,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0260,NC(=O)c1c[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)ccc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.1017,Nizatidine (CID 3033),ligand_based_similarity_tanimoto_morgan2_2048
 Apigenin,O=c1cc(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,maintenance,library,HRH2,0.1014,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 EGCG,O=C(O[C@@H]1Cc2c(O)cc(O)cc2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,maintenance,library,HRH2,0.1013,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Hesperetin,COc1ccc([C@@H]2CC(=O)c3c(O)cc(O)cc3O2)cc1O,maintenance,library,HRH2,0.1013,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0178,CN(C)CCOC(c1ccccc1)c1ccccc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.1011,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0210,O=C(O[C@@H]1Cc2c(cc(O)c(CCS(=O)CCCN=C=S)c2O)O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,HRH2,0.101,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0211,O=C(O[C@@H]1Cc2c(O)cc(O)c(CCS(=O)CCCN=C=S)c2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,HRH2,0.101,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0183,CN(C)CCOC(c1ccccc1)c1ccccc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.1011,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0234,O=C(O[C@@H]1Cc2c(O)cc(O)c(CCS(=O)CCCN=C=S)c2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,HRH2,0.101,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0264,O=C(O[C@@H]1Cc2c(cc(O)c(CCS(=O)CCCN=C=S)c2O)O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,HRH2,0.101,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0221,NC(=O)c1cc(CCS(=O)CCCN=C=S)c[n+]([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)c1,candidate,reinvent_generated,HRH2,0.1009,Nizatidine (CID 3033),ligand_based_similarity_tanimoto_morgan2_2048
 Kaempferol,O=c1c(O)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,maintenance,library,HRH2,0.1,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Baicalein,O=c1cc(-c2ccccc2)oc2cc(O)c(O)c(O)c12,maintenance,library,HRH2,0.1,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Chrysin,O=c1cc(-c2ccccc2)oc2cc(O)cc(O)c12,maintenance,library,HRH2,0.1,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0175,O=S(CCCN=C=S)CCc1cc(/C=C/c2cc(O)cc(O)c2)ccc1O,candidate,reinvent_generated,HRH2,0.1,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0176,CN(C)CCOC(c1ccccc1)c1cccc(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,HRH2,0.1,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0181,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.1,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0185,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccccc2)oc2cc(O)c(O)c(O)c12,candidate,reinvent_generated,HRH2,0.0989,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0192,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.1,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0269,CC1(C)SC2C(NC(=O)C(C(=O)O)c3cscc3CCS(=O)CCCN=C=S)C(=O)N2C1C(=O)O,candidate,reinvent_generated,HRH2,0.0992,Nizatidine (CID 3033),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0179,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccccc2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.0989,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0182,COc1cc(/C=C/c2ccc(O)cc2)c(CCS(=O)CCCN=C=S)c(OC)c1,candidate,reinvent_generated,HRH2,0.0989,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0184,CN(C)c1ccc(N=Nc2ccccc2C(=O)O)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,HRH2,0.0989,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0205,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccccc2)oc2cc(O)c(O)c(O)c12,candidate,reinvent_generated,HRH2,0.0989,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Galangin,O=c1c(O)c(-c2ccccc2)oc2cc(O)cc(O)c12,maintenance,library,HRH2,0.0986,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Docosahexaenoic acid (DHA),CC/C=C\C/C=C\C/C=C\C/C=C\C/C=C\C/C=C\CCC(=O)O,maintenance,library,HRH2,0.0984,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Lycopodine,Nc1ccc(N=Nc2cccc(N=Nc3ccc(N)cc3N)c2)c(N)c1,maintenance,library,HRH2,0.0984,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0208,COc1c(O)ccc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.0982,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0188,O=c1cc(-c2ccccc2CCS(=O)CCCN=C=S)oc2cc(O)c(O)c(O)c12,candidate,reinvent_generated,HRH2,0.0978,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0190,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.0978,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0276,COc1c(O)ccc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.0982,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0181,O=c1cc(-c2ccccc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.0978,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0197,O=c1c(O)c(-c2ccccc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.0978,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0208,O=c1cc(-c2ccccc2CCS(=O)CCCN=C=S)oc2cc(O)c(O)c(O)c12,candidate,reinvent_generated,HRH2,0.0978,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0212,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.0978,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Montelukast,CC(C)(O)c1ccccc1CC[C@@H](SCC1(CC(=O)O)CC1)c1cccc(/C=C/c2ccc3ccc(Cl)cc3n2)c1,maintenance,library,HRH2,0.0976,Nizatidine (CID 3033),ligand_based_similarity_tanimoto_morgan2_2048
 Xanthohumol,COc1cc(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1,maintenance,library,HRH2,0.0976,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Quercetin,O=c1c(O)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12,rescue,library,HRH2,0.0972,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
@@ -91,45 +111,75 @@ Fisetin,O=c1c(O)c(-c2ccc(O)c(O)c2)oc2cc(O)ccc12,maintenance,library,HRH2,0.0972,
 Naringenin,O=C1CC(c2ccc(O)cc2)Oc2cc(O)cc(O)c21,maintenance,library,HRH2,0.0972,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Magnolol,C=CCc1ccc(O)c(-c2cc(CC=C)ccc2O)c1,maintenance,library,HRH2,0.0968,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Ellagic acid,O=c1oc2c(O)c(O)cc3c(=O)oc4c(O)c(O)cc1c4c23,maintenance,library,HRH2,0.0968,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0196,COc1cc([C@H]2Oc3c(ccc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)c3CCS(=O)CCCN=C=S)O[C@@H]2CO)ccc1O,candidate,reinvent_generated,HRH2,0.0965,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0230,COc1cc([C@H]2Oc3c(ccc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)c3CCS(=O)CCCN=C=S)O[C@@H]2CO)ccc1O,candidate,reinvent_generated,HRH2,0.0965,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0199,O=C(CCc1ccc(O)cc1CCS(=O)CCCN=C=S)c1c(O)cc(O)cc1O,candidate,reinvent_generated,HRH2,0.0964,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 Eicosapentaenoic acid (EPA),CC/C=C\C/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)O,maintenance,library,HRH2,0.0952,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Aspirin (acetylsalicylic acid),CC(=O)Oc1ccccc1C(=O)O,remission,library,HRH2,0.0952,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Midostaurin,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4,remission,library,HRH2,0.0952,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0202,O=C(CCc1ccc(O)c(CCS(=O)CCCN=C=S)c1)c1c(O)cc(O)cc1O,candidate,reinvent_generated,HRH2,0.0952,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0274,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.0947,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabidivarin,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCC)cc1O,maintenance,library,HRH2,0.0946,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Fexofenadine,CC(C)(C(=O)O)c1ccc(C(O)CCCN2CCC(C(O)(c3ccccc3)c3ccccc3)CC2)cc1,rescue,library,HRH2,0.0941,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Cromolyn sodium,O=C(O)c1cc(=O)c2cc(OCC(O)COc3cccc4oc(C(=O)O)cc(=O)c34)ccc2o1,rescue,library,HRH2,0.0941,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Pterostilbene,COc1cc(/C=C/c2ccc(O)cc2)cc(OC)c1,maintenance,library,HRH2,0.0938,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0212,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2cc(OC)c(O)cc2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,HRH2,0.0938,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0270,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2cc(OC)c(O)cc2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,HRH2,0.0938,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0236,NC(=O)c1cc(CCS(=O)CCCN=C=S)c[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)c1,candidate,reinvent_generated,HRH2,0.0932,Nizatidine (CID 3033),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0247,C=CCc1cc(-c2cc(CC=C)c(CCS(=O)CCCN=C=S)cc2O)ccc1O,candidate,reinvent_generated,HRH2,0.093,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0277,Nc1ccc(N=Nc2cccc(N=Nc3cc(CCS(=O)CCCN=C=S)c(N)cc3N)c2)c(N)c1,candidate,reinvent_generated,HRH2,0.093,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 Rutin,C[C@@H]1O[C@@H](OC[C@H]2O[C@@H](Oc3c(-c4ccc(O)c(O)c4)oc4cc(O)cc(O)c4c3=O)[C@H](O)[C@@H](O)[C@@H]2O)[C@H](O)[C@H](O)[C@H]1O,maintenance,library,HRH2,0.0928,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0237,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCC)c(CCS(=O)CCCN=C=S)c1O,candidate,reinvent_generated,HRH2,0.0928,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0172,C=CCSC#N,candidate,reinvent_generated,HRH2,0.0926,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Avapritinib,CC1(C)OB(O)c2cc(CNC(=O)c3ccc(C4=NO[C@](c5cc(Cl)c(F)c(Cl)c5)(C(F)(F)F)C4)n4cccc34)ccc21,remission,library,HRH2,0.0923,Nizatidine (CID 3033),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0193,O=S(CCCN=C=S)CCc1c(O)cc(O)cc1/C=C/c1ccc(O)c(O)c1,candidate,reinvent_generated,HRH2,0.092,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0195,COc1ccc(-c2cc(=O)c3c(O)cc(O)cc3o2)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,HRH2,0.0918,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0252,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)c1ccc(C)cc1-2,candidate,reinvent_generated,HRH2,0.0918,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 N-Acetylcysteine (NAC),CC(=O)N[C@@H](CS)C(=O)O,maintenance,library,HRH2,0.0909,Nizatidine (CID 3033),ligand_based_similarity_tanimoto_morgan2_2048
 Rosmarinic acid,O=C(/C=C/c1ccc(O)c(O)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,maintenance,library,HRH2,0.0909,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabidiol,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCCCC)cc1O,maintenance,library,HRH2,0.0909,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 NAD+,NC(=O)c1ccc[n+](C2OC(COP(=O)([O-])OP(=O)(O)OCC3OC(n4cnc5c(N)ncnc54)C(O)C3O)C(O)C2O)c1,maintenance,library,HRH2,0.0909,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0132,CS(=O)CCc1ccc(N=C=S)cc1,candidate,reinvent_generated,HRH2,0.0909,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0154,CCS(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,HRH2,0.0909,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0224,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)c(CCS(=O)CCCN=C=S)c(CCCCC)c(C(=O)O)c1O,candidate,reinvent_generated,HRH2,0.0909,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0238,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)-c1cc(C)ccc1C(C)(C)O2,candidate,reinvent_generated,HRH2,0.0909,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0254,COc1c(CCS(=O)CCCN=C=S)c(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1,candidate,reinvent_generated,HRH2,0.0909,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0267,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCCCC)c(CCS(=O)CCCN=C=S)c1O,candidate,reinvent_generated,HRH2,0.0909,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0255,CCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,candidate,reinvent_generated,HRH2,0.09,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0263,CCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,HRH2,0.09,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0256,O=c1oc2c(O)c(O)c(CCS(=O)CCCN=C=S)c3c(=O)oc4c(O)c(O)cc1c4c23,candidate,reinvent_generated,HRH2,0.0899,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 6-Gingerol,CCCCC[C@H](O)CC(=O)CCc1ccc(O)c(OC)c1,maintenance,library,HRH2,0.0897,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0199,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)cc(=O)c4c3CCS(=O)CCCN=C=S)cccc2o1,candidate,reinvent_generated,HRH2,0.0891,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0275,CCCCCc1cc(O)c(C/C=C(\C)CCC=C(C)C)c(O)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.0893,Nizatidine (CID 3033),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0225,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)C=CC(C)(CCC=C(C)C)O2,candidate,reinvent_generated,HRH2,0.0891,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0235,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)cc(=O)c4c3CCS(=O)CCCN=C=S)cccc2o1,candidate,reinvent_generated,HRH2,0.0891,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0245,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(CCC=C(C)C)C=C2,candidate,reinvent_generated,HRH2,0.0891,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0180,COc1cc(/C=C/c2ccc(O)cc2CCS(=O)CCCN=C=S)cc(OC)c1,candidate,reinvent_generated,HRH2,0.0889,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Hesperidin,COc1ccc([C@@H]2CC(=O)c3c(O)cc(O[C@@H]4O[C@H](CO[C@@H]5O[C@@H](C)[C@H](O)[C@@H](O)[C@H]5O)[C@@H](O)[C@H](O)[C@H]4O)cc3O2)cc1O,maintenance,library,HRH2,0.0882,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Honokiol,C=CCc1ccc(O)c(-c2ccc(O)c(CC=C)c2)c1,maintenance,library,HRH2,0.0882,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0150,CCS(=O)CCc1ccc(N=C=S)cc1,candidate,reinvent_generated,HRH2,0.0882,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0242,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)C1C=C(C)CCC1C(C)(C)O2,candidate,reinvent_generated,HRH2,0.0882,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0250,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,HRH2,0.0882,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0266,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,candidate,reinvent_generated,HRH2,0.0882,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0272,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)C1CCC(C)=CC21,candidate,reinvent_generated,HRH2,0.0882,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0125,CS(=O)CCCC#N,candidate,reinvent_generated,HRH2,0.0877,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Cetirizine,O=C(O)COCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,rescue,library,HRH2,0.0875,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabinol,CCCCCc1cc(O)c2c(c1)OC(C)(C)c1ccc(C)cc1-2,maintenance,library,HRH2,0.0875,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Tetrahydrocannabivarin,CCCc1cc(O)c2c(c1)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,maintenance,library,HRH2,0.0875,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0210,O=c1c(O)c(-c2cc(O)c(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)ccc12,candidate,reinvent_generated,HRH2,0.087,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0258,O=c1c(O)c(-c2cc(O)c(O)c(O)c2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.087,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0229,CCCCCc1c(CCS(=O)CCCN=C=S)c2c(c(O)c1C(=O)O)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,HRH2,0.0865,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Benzyl isothiocyanate,S=C=NCc1ccccc1,remission,library,HRH2,0.0862,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Terpinolene,CC1=CCC(=C(C)C)CC1,maintenance,library,HRH2,0.0862,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0115,CS(=O)CCCCC#N,candidate,reinvent_generated,HRH2,0.0862,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0182,O=c1cc(-c2ccc(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.086,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0186,O=c1c(O)c(-c2ccc(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.086,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0198,O=c1cc(-c2ccc(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.086,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0206,O=c1c(O)c(-c2ccc(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.086,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Biotin,O=C(O)CCCC[C@@H]1SC[C@@H]2NC(=O)N[C@@H]21,maintenance,library,HRH2,0.0857,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 Myricetin,O=c1c(O)c(-c2cc(O)c(O)c(O)c2)oc2cc(O)cc(O)c12,maintenance,library,HRH2,0.0857,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabichromene,CCCCCc1cc(O)c2c(c1)OC(C)(CCC=C(C)C)C=C2,maintenance,library,HRH2,0.0854,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Carnosol,CC(C)c1cc2c(c(O)c1O)[C@@]13CCCC(C)(C)[C@@H]1C[C@@H]2OC3=O,remission,library,HRH2,0.0854,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0177,O=S(CCCN=C=S)CCc1cc(O)ccc1/C=C/c1cc(O)cc(O)c1,candidate,reinvent_generated,HRH2,0.0854,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0183,CCCCC[C@H](O)CC(=O)CCc1cc(OC)c(O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.0851,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0187,O=c1c(O)c(-c2ccc(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.0851,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0190,O=C1CC(c2ccc(O)c(CCS(=O)CCCN=C=S)c2)Oc2cc(O)cc(O)c21,candidate,reinvent_generated,HRH2,0.0851,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0201,CCCCC[C@H](O)CC(=O)CCc1cc(OC)c(O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.0851,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0207,O=c1c(O)c(-c2ccc(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.0851,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0216,O=c1c(O)c(-c2cc(O)c(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)ccc12,candidate,reinvent_generated,HRH2,0.0851,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Resveratrol,Oc1ccc(/C=C/c2cc(O)cc(O)c2)cc1,maintenance,library,HRH2,0.0847,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Piceatannol,Oc1cc(O)cc(/C=C/c2ccc(O)c(O)c2)c1,maintenance,library,HRH2,0.0847,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0117,CS(=O)CCCCCC#N,candidate,reinvent_generated,HRH2,0.0847,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
@@ -137,56 +187,69 @@ GEN_0144,CS(=O)(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.0847,Famotidine 
 GEN_0157,CCS(=O)CCCC#N,candidate,reinvent_generated,HRH2,0.0847,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Delta-9-THC,CCCCCc1cc(O)c2c(c1)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,maintenance,library,HRH2,0.0843,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Delta-8-THC,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(C)=CC21,maintenance,library,HRH2,0.0843,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0191,O=c1c(O)c(-c2cccc(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.0842,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Phenethyl isothiocyanate,S=C=NCCc1ccccc1,remission,library,HRH2,0.0833,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 2-Arachidonoylglycerol,CCCCC/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)OC(CO)CO,maintenance,library,HRH2,0.0833,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Alpha-bisabolol,CC(C)=CCC[C@@](C)(O)[C@H]1CC=C(C)CC1,maintenance,library,HRH2,0.0833,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0113,CS(=O)/C=C/CCC#N,candidate,reinvent_generated,HRH2,0.0833,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0140,CS(=O)(=O)CCCCN=C=S,candidate,reinvent_generated,HRH2,0.0833,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0141,CCS(=O)(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.0833,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0140,CCS(=O)(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.0833,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0141,CS(=O)(=O)CCCCN=C=S,candidate,reinvent_generated,HRH2,0.0833,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0149,CCS(=O)CCCCC#N,candidate,reinvent_generated,HRH2,0.0833,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0173,CC(=O)Oc1c(CCS(=O)CCCN=C=S)cccc1C(=O)O,candidate,reinvent_generated,HRH2,0.0833,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0174,CC(=O)Oc1cc(CCS(=O)CCCN=C=S)ccc1C(=O)O,candidate,reinvent_generated,HRH2,0.0833,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0213,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3CCS(=O)CCCN=C=S)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O,candidate,reinvent_generated,HRH2,0.0833,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0179,CN1CCC(=C2c3cc(CCS(=O)CCCN=C=S)ccc3CC(=O)c3sccc32)CC1,candidate,reinvent_generated,HRH2,0.0825,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0241,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,HRH2,0.0833,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0244,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3CCS(=O)CCCN=C=S)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O,candidate,reinvent_generated,HRH2,0.0833,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0186,CN1CCC(=C2c3cc(CCS(=O)CCCN=C=S)ccc3CC(=O)c3sccc32)CC1,candidate,reinvent_generated,HRH2,0.0825,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabigerol,CCCCCc1cc(O)c(C/C=C(\C)CCC=C(C)C)c(O)c1,maintenance,library,HRH2,0.0822,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0137,CS/C=C/CCN=C=S,candidate,reinvent_generated,HRH2,0.082,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0139,CCS(=O)(=O)CCCCN=C=S,candidate,reinvent_generated,HRH2,0.082,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0145,CS(=O)(=O)CCCCCN=C=S,candidate,reinvent_generated,HRH2,0.082,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0180,CN1CCC(=C2c3ccsc3C(=O)Cc3cccc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,HRH2,0.0816,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0197,O=C(/C=C/c1cc(O)c(O)c(CCS(=O)CCCN=C=S)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,HRH2,0.0816,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0187,CN1CCC(=C2c3ccsc3C(=O)Cc3cccc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,HRH2,0.0816,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0246,O=C(/C=C/c1cc(O)c(O)c(CCS(=O)CCCN=C=S)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,HRH2,0.0816,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabidiolic acid,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCCCC)c(C(=O)O)c1O,maintenance,library,HRH2,0.0814,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0201,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2ccccc2CCS(=O)CCCN=C=S)CC1,candidate,reinvent_generated,HRH2,0.0808,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0271,C=CCc1ccc(O)c(-c2cc(CC=C)c(CCS(=O)CCCN=C=S)cc2O)c1,candidate,reinvent_generated,HRH2,0.0814,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0265,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2ccccc2CCS(=O)CCCN=C=S)CC1,candidate,reinvent_generated,HRH2,0.0808,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 D-Limonene,C=C(C)C1CC=C(C)CC1,maintenance,library,HRH2,0.0806,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0130,CS(=O)(=O)/C=C/CCN=C=S,candidate,reinvent_generated,HRH2,0.0806,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0142,CCS(=O)/C=C/CCC#N,candidate,reinvent_generated,HRH2,0.0806,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Myricitrin,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O,maintenance,library,HRH2,0.0805,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0209,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)c(CCS(=O)CCCN=C=S)c(=O)c4c3)cccc2o1,candidate,reinvent_generated,HRH2,0.0804,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0233,C=CCc1ccc(O)c(-c2cc(CC=C)cc(CCS(=O)CCCN=C=S)c2O)c1,candidate,reinvent_generated,HRH2,0.0805,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0231,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)c(CCS(=O)CCCN=C=S)c(=O)c4c3)cccc2o1,candidate,reinvent_generated,HRH2,0.0804,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Ketotifen,CN1CCC(=C2c3ccccc3CC(=O)c3sccc32)CC1,rescue,library,HRH2,0.08,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0200,COc1c(O)cc([C@@H]2CC(=O)c3c(O)cc(O)cc3O2)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.08,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0128,CCS(=O)(=O)/C=C/CCN=C=S,candidate,reinvent_generated,HRH2,0.0794,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0143,CCS/C=C/CCN=C=S,candidate,reinvent_generated,HRH2,0.0794,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Tetrahydrocannabinolic acid,CCCCCc1cc2c(c(O)c1C(=O)O)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,maintenance,library,HRH2,0.0787,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0189,O=c1cc(-c2cc(O)c(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.0787,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0192,O=c1c(O)c(-c2cc(O)c(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.0787,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0209,O=c1cc(-c2cc(O)c(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.0787,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0215,O=c1c(O)c(-c2cc(O)c(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.0787,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 Butyric acid,CCCC(=O)O,maintenance,library,HRH2,0.0784,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 Alpha-lipoic acid,O=C(O)CCCCC1CCSS1,maintenance,library,HRH2,0.0781,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0194,O=c1c(O)c(-c2cc(O)c(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.0778,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0220,O=c1c(O)c(-c2cc(O)c(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,HRH2,0.0778,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0259,C=CCc1cc(CCS(=O)CCCN=C=S)c(O)c(-c2ccc(O)c(CC=C)c2)c1,candidate,reinvent_generated,HRH2,0.0778,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 Ascorbic acid,O=C1O[C@H]([C@@H](O)CO)C(O)=C1O,rescue,library,HRH2,0.0769,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Naltrexone (low-dose),O=C1CC[C@@]2(O)[C@H]3Cc4ccc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,maintenance,library,HRH2,0.0769,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabicyclol,CC(C)C(NCCNC(C(C)C)C(C)C)C(C)C,maintenance,library,HRH2,0.0769,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0158,C=CCC#N,candidate,reinvent_generated,HRH2,0.0769,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0223,CC(C)c1c(O)c(O)c2c(c1CCS(=O)CCCN=C=S)[C@@H]1C[C@H]3C(C)(C)CCC[C@]23C(=O)O1,candidate,reinvent_generated,HRH2,0.0769,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0261,COc1cc(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.0762,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Hydroxyzine,OCCOCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,rescue,library,HRH2,0.0759,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Nerolidol,C=CC(C)(O)CC/C=C(\C)CCC=C(C)C,maintenance,library,HRH2,0.0758,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Carnosic acid,CC(C)c1cc2c(c(O)c1O)[C@@]1(C(=O)O)CCCC(C)(C)[C@@H]1CC2,remission,library,HRH2,0.075,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0204,O=C(/C=C/c1cc(O)c(O)cc1CCS(=O)CCCN=C=S)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,HRH2,0.0729,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0184,CCCCC[C@H](O)CC(=O)CCc1cc(CCS(=O)CCCN=C=S)c(O)c(OC)c1,candidate,reinvent_generated,HRH2,0.0722,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0194,O=C1CC(c2ccc(O)cc2CCS(=O)CCCN=C=S)Oc2cc(O)cc(O)c21,candidate,reinvent_generated,HRH2,0.0745,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0243,COc1cc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc(CCS(=O)CCCN=C=S)c1OC,candidate,reinvent_generated,HRH2,0.0745,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0253,COc1cc(CCS(=O)CCCN=C=S)c(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1OC,candidate,reinvent_generated,HRH2,0.0737,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0257,O=C(/C=C/c1cc(O)c(O)cc1CCS(=O)CCCN=C=S)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,HRH2,0.0729,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0204,CCCCC[C@H](O)CC(=O)CCc1cc(CCS(=O)CCCN=C=S)c(O)c(OC)c1,candidate,reinvent_generated,HRH2,0.0722,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0161,O=S(CCCN=C=S)CCc1ccccc1CCN=C=S,candidate,reinvent_generated,HRH2,0.0714,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0195,O=S(CCCN=C=S)CCc1ccccc1C(c1ccc(Cl)cc1)N1CCN(CCOCCO)CC1,candidate,reinvent_generated,HRH2,0.0707,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0203,COc1cc(CCS(=O)CCCN=C=S)c([C@@H]2CC(=O)c3c(O)cc(O)cc3O2)cc1O,candidate,reinvent_generated,HRH2,0.0707,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0249,O=S(CCCN=C=S)CCc1ccccc1C(c1ccc(Cl)cc1)N1CCN(CCOCCO)CC1,candidate,reinvent_generated,HRH2,0.0707,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0152,O=S(CCCN=C=S)CCc1cccc(CCN=C=S)c1,candidate,reinvent_generated,HRH2,0.0694,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0159,O=S(CCCN=C=S)CCc1ccccc1CN=C=S,candidate,reinvent_generated,HRH2,0.0694,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0206,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2cccc(CCS(=O)CCCN=C=S)c2)CC1,candidate,reinvent_generated,HRH2,0.0693,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0228,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2cccc(CCS(=O)CCCN=C=S)c2)CC1,candidate,reinvent_generated,HRH2,0.0693,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0273,CC(C)c1c(O)c(O)c2c(c1CCS(=O)CCCN=C=S)CC[C@H]1C(C)(C)CCC[C@]21C(=O)O,candidate,reinvent_generated,HRH2,0.0693,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Geraniol,CC(C)=CCC/C(C)=C/CO,maintenance,library,HRH2,0.069,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Oleanolic acid,CC1(C)CC[C@]2(C(=O)O)CC[C@]3(C)C(=CC[C@@H]4[C@@]5(C)CC[C@H](O)C(C)(C)[C@@H]5CC[C@]43C)[C@@H]2C1,remission,library,HRH2,0.0682,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0207,O=S(CCCN=C=S)CCc1cccc(C(c2ccc(Cl)cc2)N2CCN(CCOCCO)CC2)c1,candidate,reinvent_generated,HRH2,0.068,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0226,O=S(CCCN=C=S)CCc1cccc(C(c2ccc(Cl)cc2)N2CCN(CCOCCO)CC2)c1,candidate,reinvent_generated,HRH2,0.068,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Thymoquinone,CC1=CC(=O)C(C(C)C)=CC1=O,maintenance,library,HRH2,0.0678,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Beta-myrcene,C=CC(=C)CCC=C(C)C,maintenance,library,HRH2,0.0678,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0160,O=S(CCCN=C=S)CCc1cccc(CN=C=S)c1,candidate,reinvent_generated,HRH2,0.0676,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
@@ -196,11 +259,11 @@ Alpha-pinene,CC1=CCC2CC1C2(C)C,maintenance,library,HRH2,0.0656,Cimetidine (CID 2
 Linalool,C=CC(C)(O)CCC=C(C)C,maintenance,library,HRH2,0.0656,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Cholecalciferol (Vitamin D3),C=C1CC[C@H](O)C/C1=C/C=C1\CCC[C@]2(C)[C@@H]([C@H](C)CCCC(C)C)CC[C@@H]12,maintenance,library,HRH2,0.0652,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Sulforaphane,CS(=O)CCCCN=C=S,remission,library,HRH2,0.0645,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0200,O=C1CC[C@@]2(O)[C@H]3Cc4c(CCS(=O)CCCN=C=S)cc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,HRH2,0.0636,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0239,O=C1CC[C@@]2(O)[C@H]3Cc4c(CCS(=O)CCCN=C=S)cc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,HRH2,0.0636,Famotidine (CID 3325),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0110,CS(=O)CCCCCN=C=S,candidate,reinvent_generated,HRH2,0.0635,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0118,CCS(=O)CCCN=C=S,candidate,reinvent_generated,HRH2,0.0635,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Testosterone,C[C@]12CC[C@H]3[C@@H](CCC4=CC(=O)CC[C@@]43C)[C@@H]1CC[C@@H]2O,maintenance,library,HRH2,0.0633,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0202,O=C1CC[C@@]2(O)[C@H]3Cc4cc(CCS(=O)CCCN=C=S)c(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,HRH2,0.0631,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0248,O=C1CC[C@@]2(O)[C@H]3Cc4cc(CCS(=O)CCCN=C=S)c(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,HRH2,0.0631,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 Calcitriol,C=C1/C(=C\C=C2/CCC[C@]3(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]23)C[C@@H](O)C[C@@H]1O,maintenance,library,HRH2,0.0625,Ranitidine (CID 3001055),ligand_based_similarity_tanimoto_morgan2_2048
 Sulforaphene,CS(=O)/C=C/CCN=C=S,remission,library,HRH2,0.0625,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0114,CCS(=O)CCCCN=C=S,candidate,reinvent_generated,HRH2,0.0625,Cimetidine (CID 2756),ligand_based_similarity_tanimoto_morgan2_2048

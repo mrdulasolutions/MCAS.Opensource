@@ -1,17 +1,41 @@
 weight,scale,category,compound,change,baseline_rank,perturbed_rank
-w_evidence,0.5,remission,GEN_0002,entered,14,8
-w_evidence,0.5,remission,GEN_0004,entered,13,7
-w_evidence,0.5,remission,GEN_0005,entered,12,6
-w_evidence,0.5,remission,GEN_0006,entered,15,9
-w_evidence,0.5,remission,GEN_0008,entered,16,10
+w_evidence,0.5,remission,GEN_0002,entered,18,9
+w_evidence,0.5,remission,GEN_0004,entered,17,8
+w_evidence,0.5,remission,GEN_0005,entered,15,6
+w_evidence,0.5,remission,GEN_0006,entered,16,7
+w_evidence,0.5,remission,GEN_0008,entered,19,10
 w_evidence,0.5,remission,Allyl isothiocyanate,left,10,13
-w_evidence,0.5,remission,Glucoraphanin,left,8,38
-w_evidence,0.5,remission,Masitinib,left,6,21
-w_evidence,0.5,remission,Midostaurin,left,7,34
-w_evidence,0.5,remission,Sulforaphene,left,9,11
-w_evidence,1.5,remission,Avapritinib,entered,11,8
-w_evidence,1.5,remission,Allyl isothiocyanate,left,10,11
-w_target,0.5,remission,Avapritinib,entered,11,10
+w_evidence,0.5,remission,Glucoraphanin,left,9,37
+w_evidence,0.5,remission,Masitinib,left,6,29
+w_evidence,0.5,remission,Midostaurin,left,7,35
+w_evidence,0.5,remission,Sulforaphene,left,8,11
+w_evidence,1.5,maintenance,Resveratrol,entered,11,10
+w_evidence,1.5,maintenance,Piceatannol,left,10,13
+w_evidence,1.5,remission,Avapritinib,entered,12,9
+w_evidence,1.5,remission,Imatinib,entered,11,8
+w_evidence,1.5,remission,Allyl isothiocyanate,left,10,12
+w_evidence,1.5,remission,Sulforaphene,left,8,11
+w_target,0.5,maintenance,Palmitoylethanolamide,entered,12,10
+w_target,0.5,maintenance,Piceatannol,left,10,12
+w_target,0.5,remission,Avapritinib,entered,12,10
 w_target,0.5,remission,Allyl isothiocyanate,left,10,11
-w_warhead,0.5,remission,Avapritinib,entered,11,9
-w_warhead,0.5,remission,Sulforaphene,left,9,11
+w_target,1.5,maintenance,Resveratrol,entered,11,7
+w_target,1.5,maintenance,Docosahexaenoic acid (DHA),left,9,11
+w_target,1.5,remission,Imatinib,entered,11,7
+w_target,1.5,remission,Glucoraphanin,left,9,11
+w_warhead,0.5,maintenance,Resveratrol,entered,11,10
+w_warhead,0.5,maintenance,Piceatannol,left,10,13
+w_warhead,0.5,remission,Avapritinib,entered,12,10
+w_warhead,0.5,remission,Imatinib,entered,11,8
+w_warhead,0.5,remission,Allyl isothiocyanate,left,10,11
+w_warhead,0.5,remission,Sulforaphene,left,8,12
+w_safety,0.5,remission,Imatinib,entered,11,8
+w_safety,0.5,remission,Glucoraphanin,left,9,11
+w_safety,1.5,maintenance,Palmitoylethanolamide,entered,12,9
+w_safety,1.5,maintenance,Piceatannol,left,10,13
+w_bbb_context,0.5,maintenance,Resveratrol,entered,11,10
+w_bbb_context,0.5,maintenance,Piceatannol,left,10,11
+w_bbb_context,0.5,remission,Imatinib,entered,11,10
+w_bbb_context,0.5,remission,Allyl isothiocyanate,left,10,11
+w_bbb_context,1.5,maintenance,Palmitoylethanolamide,entered,12,10
+w_bbb_context,1.5,maintenance,Piceatannol,left,10,11
