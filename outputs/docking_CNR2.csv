@@ -6,16 +6,16 @@ Tetrahydrocannabivarin,CCCc1cc(O)c2c(c1)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,maintena
 Cannabidivarin,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCC)cc1O,maintenance,library,CNR2,0.8372,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabidiolic acid,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCCCC)c(C(=O)O)c1O,maintenance,library,CNR2,0.6545,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Tetrahydrocannabinolic acid,CCCCCc1cc2c(c(O)c1C(=O)O)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,maintenance,library,CNR2,0.6393,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0248,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCCCC)c(CCS(=O)CCCN=C=S)c1O,candidate,reinvent_generated,CNR2,0.5143,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0262,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,CNR2,0.5132,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0275,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)C1C=C(C)CCC1C(C)(C)O2,candidate,reinvent_generated,CNR2,0.5132,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0246,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)C1CCC(C)=CC21,candidate,reinvent_generated,CNR2,0.4935,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0256,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,candidate,reinvent_generated,CNR2,0.4935,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0274,CCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,CNR2,0.4675,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0250,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCC)c(CCS(=O)CCCN=C=S)c1O,candidate,reinvent_generated,CNR2,0.4648,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0241,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)c(CCS(=O)CCCN=C=S)c(CCCCC)c(C(=O)O)c1O,candidate,reinvent_generated,CNR2,0.4521,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0247,CCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,candidate,reinvent_generated,CNR2,0.4487,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0259,CCCCCc1c(CCS(=O)CCCN=C=S)c2c(c(O)c1C(=O)O)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,CNR2,0.4268,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0276,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCCCC)c(CCS(=O)CCCN=C=S)c1O,candidate,reinvent_generated,CNR2,0.5143,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0266,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,CNR2,0.5132,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0271,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)C1C=C(C)CCC1C(C)(C)O2,candidate,reinvent_generated,CNR2,0.5132,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0229,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)C1CCC(C)=CC21,candidate,reinvent_generated,CNR2,0.4935,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0264,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,candidate,reinvent_generated,CNR2,0.4935,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0242,CCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,CNR2,0.4675,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0227,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCC)c(CCS(=O)CCCN=C=S)c1O,candidate,reinvent_generated,CNR2,0.4648,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0228,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)c(CCS(=O)CCCN=C=S)c(CCCCC)c(C(=O)O)c1O,candidate,reinvent_generated,CNR2,0.4521,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0261,CCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,candidate,reinvent_generated,CNR2,0.4487,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0245,CCCCCc1c(CCS(=O)CCCN=C=S)c2c(c(O)c1C(=O)O)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,CNR2,0.4268,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabinol,CCCCCc1cc(O)c2c(c1)OC(C)(C)c1ccc(C)cc1-2,maintenance,library,CNR2,0.4127,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabichromene,CCCCCc1cc(O)c2c(c1)OC(C)(CCC=C(C)C)C=C2,maintenance,library,CNR2,0.3788,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Beta-pinene,C=C1CCC2CC1C2(C)C,maintenance,library,CNR2,0.3721,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
@@ -27,12 +27,12 @@ Beta-caryophyllene,C=C1CC/C=C(\C)CC[C@@H]2[C@@H]1CC2(C)C,maintenance,library,CNR
 Beta-myrcene,C=CC(=C)CCC=C(C)C,maintenance,library,CNR2,0.2391,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
 6-Gingerol,CCCCC[C@H](O)CC(=O)CCc1ccc(O)c(OC)c1,maintenance,library,CNR2,0.2353,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Linalool,C=CC(C)(O)CCC=C(C)C,maintenance,library,CNR2,0.2292,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0263,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)-c1cc(C)ccc1C(C)(C)O2,candidate,reinvent_generated,CNR2,0.2222,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0251,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)c1ccc(C)cc1-2,candidate,reinvent_generated,CNR2,0.2198,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0240,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)C=CC(C)(CCC=C(C)C)O2,candidate,reinvent_generated,CNR2,0.2174,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0249,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(CCC=C(C)C)C=C2,candidate,reinvent_generated,CNR2,0.2043,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0224,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)-c1cc(C)ccc1C(C)(C)O2,candidate,reinvent_generated,CNR2,0.2222,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0246,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)c1ccc(C)cc1-2,candidate,reinvent_generated,CNR2,0.2198,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0255,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)C=CC(C)(CCC=C(C)C)O2,candidate,reinvent_generated,CNR2,0.2174,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0252,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(CCC=C(C)C)C=C2,candidate,reinvent_generated,CNR2,0.2043,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Nerolidol,C=CC(C)(O)CC/C=C(\C)CCC=C(C)C,maintenance,library,CNR2,0.2037,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0266,CCCCCc1cc(O)c(C/C=C(\C)CCC=C(C)C)c(O)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.1905,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0247,CCCCCc1cc(O)c(C/C=C(\C)CCC=C(C)C)c(O)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.1905,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Calcitriol,C=C1/C(=C\C=C2/CCC[C@]3(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]23)C[C@@H](O)C[C@@H]1O,maintenance,library,CNR2,0.1899,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
 Hesperetin,COc1ccc([C@@H]2CC(=O)c3c(O)cc(O)cc3O2)cc1O,maintenance,library,CNR2,0.1892,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Cholecalciferol (Vitamin D3),C=C1CC[C@H](O)C/C1=C/C=C1\CCC[C@]2(C)[C@@H]([C@H](C)CCCC(C)C)CC[C@@H]12,maintenance,library,CNR2,0.1842,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
@@ -51,33 +51,33 @@ Magnolol,C=CCc1ccc(O)c(-c2cc(CC=C)ccc2O)c1,maintenance,library,CNR2,0.1636,Canna
 GEN_0200,COc1c(O)cc([C@@H]2CC(=O)c3c(O)cc(O)cc3O2)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.1596,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Lupeol,C=C(C)[C@@H]1CC[C@]2(C)CC[C@]3(C)[C@H](CC[C@@H]4[C@@]5(C)CC[C@H](O)C(C)(C)[C@@H]5CC[C@]43C)[C@@H]12,remission,library,CNR2,0.1571,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
 Alpha-pinene,CC1=CCC2CC1C2(C)C,maintenance,library,CNR2,0.1569,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0244,COc1cc([C@H]2Oc3c(ccc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)c3CCS(=O)CCCN=C=S)O[C@@H]2CO)ccc1O,candidate,reinvent_generated,CNR2,0.156,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0237,COc1cc([C@H]2Oc3c(ccc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)c3CCS(=O)CCCN=C=S)O[C@@H]2CO)ccc1O,candidate,reinvent_generated,CNR2,0.156,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Phloretin,O=C(CCc1ccc(O)cc1)c1c(O)cc(O)cc1O,maintenance,library,CNR2,0.1525,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Carnosol,CC(C)c1cc2c(c(O)c1O)[C@@]13CCCC(C)(C)[C@@H]1C[C@@H]2OC3=O,remission,library,CNR2,0.1519,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0270,COc1cc(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.1515,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0233,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,CNR2,0.1505,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0275,COc1cc(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.1515,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0248,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,CNR2,0.1505,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0195,COc1ccc(-c2cc(=O)c3c(O)cc(O)cc3o2)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.1489,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0211,COc1cc(-c2oc3c(CCS(=O)CCCN=C=S)c(O)cc(O)c3c(=O)c2O)ccc1O,candidate,reinvent_generated,CNR2,0.1489,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0230,COc1c(O)ccc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.1481,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0239,COc1c(O)ccc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.1481,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Rosmarinic acid,O=C(/C=C/c1ccc(O)c(O)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,maintenance,library,CNR2,0.1467,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Isorhamnetin,COc1cc(-c2oc3cc(O)cc(O)c3c(=O)c2O)ccc1O,maintenance,library,CNR2,0.1467,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Eucalyptol,CC12CCC(CC1)C(C)(C)O2,maintenance,library,CNR2,0.1458,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0253,COc1cc(CCS(=O)CCCN=C=S)c(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1OC,candidate,reinvent_generated,CNR2,0.1444,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0236,COc1cc(CCS(=O)CCCN=C=S)c(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1OC,candidate,reinvent_generated,CNR2,0.1444,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 EGCG,O=C(O[C@@H]1Cc2c(O)cc(O)cc2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,maintenance,library,CNR2,0.1429,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Hesperidin,COc1ccc([C@@H]2CC(=O)c3c(O)cc(O[C@@H]4O[C@H](CO[C@@H]5O[C@@H](C)[C@H](O)[C@@H](O)[C@H]5O)[C@@H](O)[C@H](O)[C@H]4O)cc3O2)cc1O,maintenance,library,CNR2,0.1429,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Palmitoylethanolamide,CCCCCCCCCCCCCCCC(=O)NCCO,maintenance,library,CNR2,0.1429,JWH-133 (CID 6918505 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Honokiol,C=CCc1ccc(O)c(-c2ccc(O)c(CC=C)c2)c1,maintenance,library,CNR2,0.1429,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0190,O=C1CC(c2ccc(O)c(CCS(=O)CCCN=C=S)c2)Oc2cc(O)cc(O)c21,candidate,reinvent_generated,CNR2,0.1429,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0252,COc1cc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc(CCS(=O)CCCN=C=S)c1OC,candidate,reinvent_generated,CNR2,0.1429,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0257,CC(C)c1c(O)c(O)c2c(c1CCS(=O)CCCN=C=S)CC[C@H]1C(C)(C)CCC[C@]21C(=O)O,candidate,reinvent_generated,CNR2,0.1429,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0255,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.1413,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0233,CC(C)c1c(O)c(O)c2c(c1CCS(=O)CCCN=C=S)CC[C@H]1C(C)(C)CCC[C@]21C(=O)O,candidate,reinvent_generated,CNR2,0.1429,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0265,COc1cc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc(CCS(=O)CCCN=C=S)c1OC,candidate,reinvent_generated,CNR2,0.1429,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0262,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.1413,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Naringenin,O=C1CC(c2ccc(O)cc2)Oc2cc(O)cc(O)c21,maintenance,library,CNR2,0.1408,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Anandamide,CCCCC/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)NCCO,maintenance,library,CNR2,0.1406,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0265,O=C1CC[C@@]2(O)[C@H]3Cc4c(CCS(=O)CCCN=C=S)cc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,CNR2,0.1402,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0236,CC(C)c1c(O)c(O)c2c(c1CCS(=O)CCCN=C=S)[C@@H]1C[C@H]3C(C)(C)CCC[C@]23C(=O)O1,candidate,reinvent_generated,CNR2,0.14,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0268,O=C1CC[C@@]2(O)[C@H]3Cc4c(CCS(=O)CCCN=C=S)cc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,CNR2,0.1402,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0226,CC(C)c1c(O)c(O)c2c(c1CCS(=O)CCCN=C=S)[C@@H]1C[C@H]3C(C)(C)CCC[C@]23C(=O)O1,candidate,reinvent_generated,CNR2,0.14,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0188,COc1c(O)c(CCS(=O)CCCN=C=S)c(O)c2c(=O)cc(-c3ccccc3)oc12,candidate,reinvent_generated,CNR2,0.1398,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0194,O=C1CC(c2ccc(O)cc2CCS(=O)CCCN=C=S)Oc2cc(O)cc(O)c21,candidate,reinvent_generated,CNR2,0.1398,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0224,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2cc(OC)c(O)cc2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,CNR2,0.1398,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0251,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2cc(OC)c(O)cc2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,CNR2,0.1398,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Betulinic acid,C=C(C)[C@@H]1CC[C@]2(C(=O)O)CC[C@]3(C)[C@H](CC[C@@H]4[C@@]5(C)CC[C@H](O)C(C)(C)[C@@H]5CC[C@]43C)[C@@H]12,remission,library,CNR2,0.1392,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Nobiletin,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1OC,maintenance,library,CNR2,0.1389,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 2-Arachidonoylglycerol,CCCCC/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)OC(CO)CO,maintenance,library,CNR2,0.1385,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
@@ -85,19 +85,19 @@ GEN_0178,O=S(CCCN=C=S)CCc1c(O)cc(/C=C/c2ccc(O)c(O)c2)cc1O,candidate,reinvent_gen
 GEN_0213,COc1c(O)ccc(-c2oc3cc(O)cc(O)c3c(=O)c2O)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.1368,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Naltrexone (low-dose),O=C1CC[C@@]2(O)[C@H]3Cc4ccc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,maintenance,library,CNR2,0.1364,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Loratadine,CCOC(=O)N1CCC(=C2c3ccc(Cl)cc3CCc3cccnc32)CC1,rescue,library,CNR2,0.1358,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0260,C=CCc1ccc(O)c(-c2cc(CC=C)c(CCS(=O)CCCN=C=S)cc2O)c1,candidate,reinvent_generated,CNR2,0.1358,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0231,C=CCc1ccc(O)c(-c2cc(CC=C)c(CCS(=O)CCCN=C=S)cc2O)c1,candidate,reinvent_generated,CNR2,0.1358,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0175,O=S(CCCN=C=S)CCc1cc(/C=C/c2cc(O)cc(O)c2)ccc1O,candidate,reinvent_generated,CNR2,0.1341,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0258,C=CCc1ccc(O)c(-c2cc(CC=C)cc(CCS(=O)CCCN=C=S)c2O)c1,candidate,reinvent_generated,CNR2,0.1341,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0232,O=C(O[C@@H]1Cc2c(cc(O)c(CCS(=O)CCCN=C=S)c2O)O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,CNR2,0.134,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0223,O=C(/C=C/c1cc(O)c(O)cc1CCS(=O)CCCN=C=S)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,CNR2,0.1333,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0240,C=CCc1ccc(O)c(-c2cc(CC=C)cc(CCS(=O)CCCN=C=S)c2O)c1,candidate,reinvent_generated,CNR2,0.1341,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0267,O=C(O[C@@H]1Cc2c(cc(O)c(CCS(=O)CCCN=C=S)c2O)O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,CNR2,0.134,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0241,O=C(/C=C/c1cc(O)c(O)cc1CCS(=O)CCCN=C=S)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,CNR2,0.1333,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Oleanolic acid,CC1(C)CC[C@]2(C(=O)O)CC[C@]3(C)C(=CC[C@@H]4[C@@]5(C)CC[C@H](O)C(C)(C)[C@@H]5CC[C@]43C)[C@@H]2C1,remission,library,CNR2,0.1316,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0254,CCOC(=O)N1CCC(=C2c3ncccc3CCc3cc(Cl)cc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,CNR2,0.1313,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0272,CCOC(=O)N1CCC(=C2c3ncccc3CCc3cc(Cl)cc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,CNR2,0.1313,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Piceatannol,Oc1cc(O)cc(/C=C/c2ccc(O)c(O)c2)c1,maintenance,library,CNR2,0.1311,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Oleoylethanolamide,CCCCCCCC/C=C\CCCCCCCC(=O)NCCO,maintenance,library,CNR2,0.1304,JWH-133 (CID 6918505 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0272,O=C1CC[C@@]2(O)[C@H]3Cc4cc(CCS(=O)CCCN=C=S)c(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,CNR2,0.1296,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0237,C=CCc1cc(CCS(=O)CCCN=C=S)c(O)c(-c2ccc(O)c(CC=C)c2)c1,candidate,reinvent_generated,CNR2,0.1294,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0242,O=C(/C=C/c1cc(O)c(O)c(CCS(=O)CCCN=C=S)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,CNR2,0.129,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0238,CCOC(=O)N1CCC(=C2c3cc(CCS(=O)CCCN=C=S)c(Cl)cc3CCc3cccnc32)CC1,candidate,reinvent_generated,CNR2,0.1287,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0256,O=C1CC[C@@]2(O)[C@H]3Cc4cc(CCS(=O)CCCN=C=S)c(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,CNR2,0.1296,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0234,C=CCc1cc(CCS(=O)CCCN=C=S)c(O)c(-c2ccc(O)c(CC=C)c2)c1,candidate,reinvent_generated,CNR2,0.1294,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0263,O=C(/C=C/c1cc(O)c(O)c(CCS(=O)CCCN=C=S)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,CNR2,0.129,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0259,CCOC(=O)N1CCC(=C2c3cc(CCS(=O)CCCN=C=S)c(Cl)cc3CCc3cccnc32)CC1,candidate,reinvent_generated,CNR2,0.1287,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Ursolic acid,C[C@H]1[C@H](C)CC[C@]2(C(=O)O)CC[C@]3(C)C(=CC[C@@H]4[C@@]5(C)CC[C@H](O)C(C)(C)[C@@H]5CC[C@]43C)[C@H]12,remission,library,CNR2,0.1282,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0193,O=S(CCCN=C=S)CCc1c(O)cc(O)cc1/C=C/c1ccc(O)c(O)c1,candidate,reinvent_generated,CNR2,0.1279,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0189,COc1c(O)cc(O)c2c(=O)c(CCS(=O)CCCN=C=S)c(-c3ccccc3)oc12,candidate,reinvent_generated,CNR2,0.1277,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
@@ -105,10 +105,10 @@ Pterostilbene,COc1cc(/C=C/c2ccc(O)cc2)cc(OC)c1,maintenance,library,CNR2,0.127,HU
 GEN_0174,CC(=O)Oc1cc(CCS(=O)CCCN=C=S)ccc1C(=O)O,candidate,reinvent_generated,CNR2,0.1266,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0180,COc1cc(/C=C/c2ccc(O)cc2CCS(=O)CCCN=C=S)cc(OC)c1,candidate,reinvent_generated,CNR2,0.125,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0196,COc1ccc(-c2cc(=O)c3c(O)cc(O)cc3o2)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,CNR2,0.125,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0239,COc1c(CCS(=O)CCCN=C=S)c(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1,candidate,reinvent_generated,CNR2,0.1237,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0273,COc1c(CCS(=O)CCCN=C=S)c(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1,candidate,reinvent_generated,CNR2,0.1237,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0202,O=C(CCc1ccc(O)c(CCS(=O)CCCN=C=S)c1)c1c(O)cc(O)cc1O,candidate,reinvent_generated,CNR2,0.1235,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0226,O=C(O[C@@H]1Cc2c(O)cc(O)c(CCS(=O)CCCN=C=S)c2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,CNR2,0.1224,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0225,C=CCc1cc(-c2cc(CC=C)c(CCS(=O)CCCN=C=S)cc2O)ccc1O,candidate,reinvent_generated,CNR2,0.122,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0260,O=C(O[C@@H]1Cc2c(O)cc(O)c(CCS(=O)CCCN=C=S)c2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,CNR2,0.1224,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0230,C=CCc1cc(-c2cc(CC=C)c(CCS(=O)CCCN=C=S)cc2O)ccc1O,candidate,reinvent_generated,CNR2,0.122,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Acacetin,COc1ccc(-c2cc(=O)c3c(O)cc(O)cc3o2)cc1,maintenance,library,CNR2,0.1216,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0205,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccccc2)oc2cc(O)c(O)c(O)c12,candidate,reinvent_generated,CNR2,0.1209,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0208,O=c1cc(-c2ccccc2CCS(=O)CCCN=C=S)oc2cc(O)c(O)c(O)c12,candidate,reinvent_generated,CNR2,0.1196,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
@@ -118,18 +118,18 @@ GEN_0186,CN1CCC(=C2c3cc(CCS(=O)CCCN=C=S)ccc3CC(=O)c3sccc32)CC1,candidate,reinven
 GEN_0221,NC(=O)c1cc(CCS(=O)CCCN=C=S)c[n+]([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)c1,candidate,reinvent_generated,CNR2,0.1183,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0152,O=S(CCCN=C=S)CCc1cccc(CCN=C=S)c1,candidate,reinvent_generated,CNR2,0.1176,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0191,O=c1c(O)c(-c2cccc(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CNR2,0.117,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0268,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,CNR2,0.117,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0257,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,CNR2,0.117,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Midostaurin,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4,remission,library,CNR2,0.1154,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0159,O=S(CCCN=C=S)CCc1cccc(CN=C=S)c1,candidate,reinvent_generated,CNR2,0.1143,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0160,O=S(CCCN=C=S)CCc1cccc(CN=C=S)c1,candidate,reinvent_generated,CNR2,0.1143,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0177,O=S(CCCN=C=S)CCc1cc(O)ccc1/C=C/c1cc(O)cc(O)c1,candidate,reinvent_generated,CNR2,0.1139,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0245,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3CCS(=O)CCCN=C=S)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O,candidate,reinvent_generated,CNR2,0.1132,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0271,CC1(C)SC2C(NC(=O)C(C(=O)O)c3csc(CCS(=O)CCCN=C=S)c3)C(=O)N2C1C(=O)O,candidate,reinvent_generated,CNR2,0.1132,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0244,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3CCS(=O)CCCN=C=S)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O,candidate,reinvent_generated,CNR2,0.1132,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0250,CC1(C)SC2C(NC(=O)C(C(=O)O)c3csc(CCS(=O)CCCN=C=S)c3)C(=O)N2C1C(=O)O,candidate,reinvent_generated,CNR2,0.1132,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Baicalein,O=c1cc(-c2ccccc2)oc2cc(O)c(O)c(O)c12,maintenance,library,CNR2,0.1127,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0243,O=c1oc2c(O)c(O)c(CCS(=O)CCCN=C=S)c3c(=O)oc4c(O)c(O)cc1c4c23,candidate,reinvent_generated,CNR2,0.1124,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0253,O=c1oc2c(O)c(O)c(CCS(=O)CCCN=C=S)c3c(=O)oc4c(O)c(O)cc1c4c23,candidate,reinvent_generated,CNR2,0.1124,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Tangeretin,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1,maintenance,library,CNR2,0.1111,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Ellagic acid,O=c1oc2c(O)c(O)cc3c(=O)oc4c(O)c(O)cc1c4c23,maintenance,library,CNR2,0.1111,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0199,O=C(CCc1ccc(O)cc1CCS(=O)CCCN=C=S)c1c(O)cc(O)cc1O,candidate,reinvent_generated,CNR2,0.1111,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0231,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)cc(=O)c4c3CCS(=O)CCCN=C=S)cccc2o1,candidate,reinvent_generated,CNR2,0.11,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0249,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)cc(=O)c4c3CCS(=O)CCCN=C=S)cccc2o1,candidate,reinvent_generated,CNR2,0.11,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0192,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CNR2,0.1099,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0209,O=c1cc(-c2cc(O)c(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CNR2,0.1099,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0215,O=c1c(O)c(-c2cc(O)c(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CNR2,0.1099,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
@@ -137,23 +137,23 @@ Eicosapentaenoic acid (EPA),CC/C=C\C/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)O,maintenance
 GEN_0179,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccccc2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CNR2,0.1087,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0210,O=c1c(O)c(-c2cc(O)c(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)ccc12,candidate,reinvent_generated,CNR2,0.1087,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0220,O=c1c(O)c(-c2cc(O)c(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CNR2,0.1087,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0229,O=c1c(O)c(-c2cc(O)c(O)c(O)c2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CNR2,0.1087,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0235,NC(=O)c1cc(CCS(=O)CCCN=C=S)c[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)c1,candidate,reinvent_generated,CNR2,0.1078,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0243,O=c1c(O)c(-c2cc(O)c(O)c(O)c2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CNR2,0.1087,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0258,NC(=O)c1cc(CCS(=O)CCCN=C=S)c[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)c1,candidate,reinvent_generated,CNR2,0.1078,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Ascorbic acid,O=C1O[C@H]([C@@H](O)CO)C(O)=C1O,rescue,library,CNR2,0.1077,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0150,CCS(=O)CCc1ccc(N=C=S)cc1,candidate,reinvent_generated,CNR2,0.1077,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0181,O=c1cc(-c2ccccc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CNR2,0.1075,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0197,O=c1cc(-c2ccc(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CNR2,0.1075,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0198,O=c1c(O)c(-c2ccccc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CNR2,0.1075,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0197,O=c1c(O)c(-c2ccccc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CNR2,0.1075,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0198,O=c1cc(-c2ccc(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CNR2,0.1075,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0206,O=c1c(O)c(-c2ccc(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CNR2,0.1075,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0212,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CNR2,0.1075,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0143,CCS/C=C/CCN=C=S,candidate,reinvent_generated,CNR2,0.1071,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
 Ivermectin,CC[C@H](C)[C@H]1O[C@]2(CC[C@@H]1C)C[C@@H]1C[C@@H](C/C=C(\C)[C@@H](O[C@H]3C[C@H](OC)[C@@H](O[C@H]4C[C@H](OC)[C@@H](O)[C@H](C)O4)[C@H](C)O3)[C@@H](C)/C=C/C=C3\CO[C@@H]4[C@H](O)C(C)=C[C@@H](C(=O)O1)[C@]34O)O2,maintenance,library,CNR2,0.1069,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Wogonin,COc1c(O)cc(O)c2c(=O)cc(-c3ccccc3)oc12,maintenance,library,CNR2,0.1067,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0207,O=c1c(O)c(-c2ccc(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,CNR2,0.1064,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0217,O=c1c(O)c(-c2cc(O)c(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)ccc12,candidate,reinvent_generated,CNR2,0.1064,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0216,O=c1c(O)c(-c2cc(O)c(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)ccc12,candidate,reinvent_generated,CNR2,0.1064,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Avapritinib,CC1(C)OB(O)c2cc(CNC(=O)c3ccc(C4=NO[C@](c5cc(Cl)c(F)c(Cl)c5)(C(F)(F)F)C4)n4cccc34)ccc21,remission,library,CNR2,0.1053,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Myricitrin,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O,maintenance,library,CNR2,0.1034,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0184,CN(C)c1ccc(N=Nc2ccccc2C(=O)O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.1034,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0185,CN(C)c1ccc(N=Nc2ccccc2C(=O)O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.1034,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Biotin,O=C(O)CCCC[C@@H]1SC[C@@H]2NC(=O)N[C@@H]21,maintenance,library,CNR2,0.1029,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Montelukast,CC(C)(O)c1ccccc1CC[C@@H](SCC1(CC(=O)O)CC1)c1cccc(/C=C/c2ccc3ccc(Cl)cc3n2)c1,maintenance,library,CNR2,0.1028,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Hydroxyzine,OCCOCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,rescue,library,CNR2,0.1026,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
@@ -165,14 +165,14 @@ GEN_0173,CC(=O)Oc1c(CCS(=O)CCCN=C=S)cccc1C(=O)O,candidate,reinvent_generated,CNR
 Apigenin,O=c1cc(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,maintenance,library,CNR2,0.0986,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Myricetin,O=c1c(O)c(-c2cc(O)c(O)c(O)c2)oc2cc(O)cc(O)c12,maintenance,library,CNR2,0.0986,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0124,CS(=O)CCc1ccc(C#N)cc1,candidate,reinvent_generated,CNR2,0.0984,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0267,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2cccc(CCS(=O)CCCN=C=S)c2)CC1,candidate,reinvent_generated,CNR2,0.098,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0277,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2cccc(CCS(=O)CCCN=C=S)c2)CC1,candidate,reinvent_generated,CNR2,0.098,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Kaempferol,O=c1c(O)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,maintenance,library,CNR2,0.0972,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Chrysin,O=c1cc(-c2ccccc2)oc2cc(O)cc(O)c12,maintenance,library,CNR2,0.0972,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Alpha-lipoic acid,O=C(O)CCCCC1CCSS1,maintenance,library,CNR2,0.0968,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0134,CSCCc1ccc(N=C=S)cc1,candidate,reinvent_generated,CNR2,0.0968,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Luteolin,O=c1cc(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12,maintenance,library,CNR2,0.0959,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Galangin,O=c1c(O)c(-c2ccccc2)oc2cc(O)cc(O)c12,maintenance,library,CNR2,0.0959,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0216,CN/C(=C\[N+](=O)[O-])NCCSCc1oc(CN(C)C)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.0952,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0217,CN/C(=C\[N+](=O)[O-])NCCSCc1oc(CN(C)C)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.0952,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Quercetin,O=c1c(O)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12,rescue,library,CNR2,0.0946,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Fisetin,O=c1c(O)c(-c2ccc(O)c(O)c2)oc2cc(O)ccc12,maintenance,library,CNR2,0.0946,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0132,CS(=O)CCc1ccc(N=C=S)cc1,candidate,reinvent_generated,CNR2,0.0938,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
@@ -181,7 +181,7 @@ GEN_0146,CS(=O)Cc1ccc(C#N)cc1,candidate,reinvent_generated,CNR2,0.0938,HU-308 (C
 GEN_0153,CS(=O)CCc1ccc(SC#N)cc1,candidate,reinvent_generated,CNR2,0.0938,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0154,CCS(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,CNR2,0.0938,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0187,CN1CCC(=C2c3ccsc3C(=O)Cc3cccc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,CNR2,0.0938,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0228,CC1(C)SC2C(NC(=O)C(C(=O)O)c3cscc3CCS(=O)CCCN=C=S)C(=O)N2C1C(=O)O,candidate,reinvent_generated,CNR2,0.0935,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0254,CC1(C)SC2C(NC(=O)C(C(=O)O)c3cscc3CCS(=O)CCCN=C=S)C(=O)N2C1C(=O)O,candidate,reinvent_generated,CNR2,0.0935,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Ranitidine,CN/C(=C\[N+](=O)[O-])NCCSCc1ccc(CN(C)C)o1,rescue,library,CNR2,0.0933,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
 Imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,remission,library,CNR2,0.0928,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Docosahexaenoic acid (DHA),CC/C=C\C/C=C\C/C=C\C/C=C\C/C=C\C/C=C\CCC(=O)O,maintenance,library,CNR2,0.0926,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
@@ -189,12 +189,12 @@ GEN_0151,CSCc1ccc(N=C=S)cc1,candidate,reinvent_generated,CNR2,0.0923,HU-308 (CID
 GEN_0176,CN(C)CCOC(c1ccccc1)c1cccc(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,CNR2,0.092,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Masitinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nc(-c2cccnc2)cs1,remission,library,CNR2,0.0918,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0137,CS/C=C/CCN=C=S,candidate,reinvent_generated,CNR2,0.0909,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0185,CN(C)c1ccc(N=Nc2ccccc2C(=O)O)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,CNR2,0.0909,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0184,CN(C)c1ccc(N=Nc2ccccc2C(=O)O)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,CNR2,0.0909,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0148,CS(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,CNR2,0.0896,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0163,CS(=O)Cc1ccc(SC#N)cc1,candidate,reinvent_generated,CNR2,0.0896,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0234,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)c(CCS(=O)CCCN=C=S)c(=O)c4c3)cccc2o1,candidate,reinvent_generated,CNR2,0.0893,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0264,O=S(CCCN=C=S)CCc1ccccc1C(c1ccc(Cl)cc1)N1CCN(CCOCCO)CC1,candidate,reinvent_generated,CNR2,0.0891,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0277,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2ccccc2CCS(=O)CCCN=C=S)CC1,candidate,reinvent_generated,CNR2,0.0882,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0223,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)c(CCS(=O)CCCN=C=S)c(=O)c4c3)cccc2o1,candidate,reinvent_generated,CNR2,0.0893,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0232,O=S(CCCN=C=S)CCc1ccccc1C(c1ccc(Cl)cc1)N1CCN(CCOCCO)CC1,candidate,reinvent_generated,CNR2,0.0891,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0270,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2ccccc2CCS(=O)CCCN=C=S)CC1,candidate,reinvent_generated,CNR2,0.0882,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Sulforaphene,CS(=O)/C=C/CCN=C=S,remission,library,CNR2,0.0877,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0130,CS(=O)(=O)/C=C/CCN=C=S,candidate,reinvent_generated,CNR2,0.0877,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
 Phenethyl isothiocyanate,S=C=NCCc1ccccc1,remission,library,CNR2,0.0862,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
@@ -210,12 +210,12 @@ GEN_0117,CS(=O)CCCCCC#N,candidate,reinvent_generated,CNR2,0.0806,HU-308 (CID 116
 Cromolyn sodium,O=C(O)c1cc(=O)c2cc(OCC(O)COc3cccc4oc(C(=O)O)cc(=O)c34)ccc2o1,rescue,library,CNR2,0.0805,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Glucoraphanin,CS(=O)CCCC/C(=N\OS(=O)(=O)O)S[C@@H]1O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O,remission,library,CNR2,0.0795,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabigerolic acid,CC1(C)SC2C(NC(=O)C(C(=O)O)c3ccsc3)C(=O)N2C1C(=O)O,maintenance,library,CNR2,0.0795,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0227,Nc1ccc(N=Nc2cccc(N=Nc3c(N)cc(N)cc3CCS(=O)CCCN=C=S)c2)c(N)c1,candidate,reinvent_generated,CNR2,0.0795,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0235,Nc1ccc(N=Nc2cccc(N=Nc3c(N)cc(N)cc3CCS(=O)CCCN=C=S)c2)c(N)c1,candidate,reinvent_generated,CNR2,0.0795,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0113,CS(=O)/C=C/CCC#N,candidate,reinvent_generated,CNR2,0.0794,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0147,CS(=O)(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,CNR2,0.0794,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0149,CCS(=O)CCCCC#N,candidate,reinvent_generated,CNR2,0.0794,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0142,CCS(=O)/C=C/CCC#N,candidate,reinvent_generated,CNR2,0.0769,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0276,NC(=O)c1c[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)ccc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.0762,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0225,NC(=O)c1c[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)ccc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.0762,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0183,CN(C)CCOC(c1ccccc1)c1ccccc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.0761,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Nicotinamide riboside,NC(=O)c1ccc[n+]([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)c1,maintenance,library,CNR2,0.0759,Delta-9-THC (CID 16078),ligand_based_similarity_tanimoto_morgan2_2048
 Diphenhydramine,CN(C)CCOC(c1ccccc1)c1ccccc1,rescue,library,CNR2,0.0758,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
@@ -228,17 +228,17 @@ GEN_0156,CS(=O)(=O)/C=C/CCC#N,candidate,reinvent_generated,CNR2,0.0727,Beta-cary
 GEN_0171,CS/C=C/CCSC#N,candidate,reinvent_generated,CNR2,0.0727,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0121,CCS(=O)CCCCCN=C=S,candidate,reinvent_generated,CNR2,0.0725,JWH-133 (CID 6918505 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0161,O=S(CCCN=C=S)CCc1ccccc1CCN=C=S,candidate,reinvent_generated,CNR2,0.0725,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0160,O=S(CCCN=C=S)CCc1ccccc1CN=C=S,candidate,reinvent_generated,CNR2,0.0704,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0159,O=S(CCCN=C=S)CCc1ccccc1CN=C=S,candidate,reinvent_generated,CNR2,0.0704,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Thymoquinone,CC1=CC(=O)C(C(C)C)=CC1=O,maintenance,library,CNR2,0.0702,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Benzyl isothiocyanate,S=C=NCc1ccccc1,remission,library,CNR2,0.0702,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Nicotinamide mononucleotide,NC(=O)c1ccc[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)c1,maintenance,library,CNR2,0.069,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0157,CCS(=O)CCCC#N,candidate,reinvent_generated,CNR2,0.069,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0167,CS(=O)(=O)/C=C/CCSC#N,candidate,reinvent_generated,CNR2,0.069,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0261,Nc1ccc(N=Nc2cccc(N=Nc3cc(CCS(=O)CCCN=C=S)c(N)cc3N)c2)c(N)c1,candidate,reinvent_generated,CNR2,0.069,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0238,Nc1ccc(N=Nc2cccc(N=Nc3cc(CCS(=O)CCCN=C=S)c(N)cc3N)c2)c(N)c1,candidate,reinvent_generated,CNR2,0.069,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0126,CCSCCCN=C=S,candidate,reinvent_generated,CNR2,0.0678,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0116,CCSCCCCN=C=S,candidate,reinvent_generated,CNR2,0.0667,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0119,CSCCCCC#N,candidate,reinvent_generated,CNR2,0.0667,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0141,CCS(=O)(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.0667,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0140,CCS(=O)(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.0667,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0118,CCS(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.0656,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0120,CSCCCCCC#N,candidate,reinvent_generated,CNR2,0.0656,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0125,CS(=O)CCCC#N,candidate,reinvent_generated,CNR2,0.0656,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
@@ -252,7 +252,7 @@ GEN_0158,C=CCC#N,candidate,reinvent_generated,CNR2,0.0638,Beta-caryophyllene (CI
 GEN_0127,CSCCCCCSC#N,candidate,reinvent_generated,CNR2,0.0635,JWH-133 (CID 6918505 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 Iberin,CS(=O)CCCN=C=S,remission,library,CNR2,0.0625,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0138,CS(=O)CCCSC#N,candidate,reinvent_generated,CNR2,0.0625,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0273,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)c(CCS(=O)CCCN=C=S)s1,candidate,reinvent_generated,CNR2,0.0625,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0274,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)c(CCS(=O)CCCN=C=S)s1,candidate,reinvent_generated,CNR2,0.0625,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Sulforaphane,CS(=O)CCCCN=C=S,remission,library,CNR2,0.0615,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0131,CS(=O)CCCCSC#N,candidate,reinvent_generated,CNR2,0.0615,HU-308 (CID 11652556 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0109,CSCCCCCN=C=S,candidate,reinvent_generated,CNR2,0.0606,JWH-133 (CID 6918505 (approx)),ligand_based_similarity_tanimoto_morgan2_2048
@@ -273,7 +273,7 @@ GEN_0111,CSCCCN=C=S,candidate,reinvent_generated,CNR2,0.0517,Cannabidiol (CID 64
 Erucin,CSCCCCN=C=S,remission,library,CNR2,0.0508,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0144,CS(=O)(=O)CCCN=C=S,candidate,reinvent_generated,CNR2,0.05,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0170,CS(=O)(=O)CCCSC#N,candidate,reinvent_generated,CNR2,0.05,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0140,CS(=O)(=O)CCCCN=C=S,candidate,reinvent_generated,CNR2,0.0492,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0141,CS(=O)(=O)CCCCN=C=S,candidate,reinvent_generated,CNR2,0.0492,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0162,CS(=O)(=O)CCCCSC#N,candidate,reinvent_generated,CNR2,0.0492,Cannabidiol (CID 644019),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabicyclol,CC(C)C(NCCNC(C(C)C)C(C)C)C(C)C,maintenance,library,CNR2,0.0417,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
 Taurine,NCCS(=O)(=O)O,maintenance,library,CNR2,0.0408,Beta-caryophyllene (CID 5281515),ligand_based_similarity_tanimoto_morgan2_2048
