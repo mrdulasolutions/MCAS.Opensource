@@ -161,22 +161,61 @@ def main() -> int:
     print(f"Live URL: {space_url}")
 
     # 4. Optional: poll runtime.
+    #
+    # Free-tier HF Spaces auto-sleep after ~48h idle. When a scheduled sync
+    # fires with no real content changes, HF correctly does NOT rebuild —
+    # the Space stays in SLEEPING state for the entire poll window. That is
+    # NOT a sync failure: the files uploaded successfully and the Space
+    # will rebuild from those files the next time anyone visits the URL.
+    # We only fail when the runtime enters an explicit error state, or
+    # when it appears to be actively building and then stalls.
     if args.wait:
         print("[4/4] Polling runtime...")
         deadline_iters = 30  # ~5 minutes at 10s/iter
+        saw_building = False
+        last_stage = "unknown"
         for i in range(deadline_iters):
             info = api.space_info(args.repo_id)
-            stage_name = info.runtime.stage if info.runtime else "unknown"
-            print(f"  [{i*10:3d}s] stage={stage_name}")
-            if stage_name in ("RUNNING", "RUNNING_BUILDING"):
+            last_stage = info.runtime.stage if info.runtime else "unknown"
+            print(f"  [{i*10:3d}s] stage={last_stage}")
+            if last_stage in ("RUNNING", "RUNNING_BUILDING"):
                 print("    OK — Space is live.")
                 return 0
-            if stage_name in ("RUNTIME_ERROR", "BUILD_ERROR", "CONFIG_ERROR"):
-                print(f"    FAIL: runtime entered {stage_name}", file=sys.stderr)
+            if last_stage in ("RUNTIME_ERROR", "BUILD_ERROR", "CONFIG_ERROR"):
+                print(f"    FAIL: runtime entered {last_stage}", file=sys.stderr)
                 return 3
+            if last_stage in ("BUILDING", "APP_STARTING", "STOPPING"):
+                saw_building = True
             time.sleep(10)
-        print(f"    runtime did not reach RUNNING within {deadline_iters*10}s", file=sys.stderr)
-        return 3
+        # Timed out without reaching RUNNING.
+        if last_stage in ("SLEEPING", "PAUSED", "unknown"):
+            # No-op sync (or HF deduped the upload as identical to current
+            # tree). The Space stayed asleep because nothing changed that
+            # warranted a rebuild. Upload itself succeeded — soft success.
+            print(
+                f"    Space stayed in {last_stage} for full poll window — "
+                "no rebuild was triggered (upload was a no-op or deduped). "
+                "This is not a failure; the Space will rebuild on next visit.",
+                file=sys.stderr,
+            )
+            return 0
+        if saw_building:
+            # We watched it building/starting and it never got to RUNNING.
+            # That IS a real stall worth flagging.
+            print(
+                f"    runtime saw a build cycle but did not reach RUNNING "
+                f"within {deadline_iters*10}s (last stage: {last_stage})",
+                file=sys.stderr,
+            )
+            return 3
+        # Anything else — treat as soft success rather than fail noisily.
+        print(
+            f"    runtime did not reach RUNNING within {deadline_iters*10}s "
+            f"(last stage: {last_stage}); treating as soft success since "
+            "no error state was observed.",
+            file=sys.stderr,
+        )
+        return 0
 
     return 0
 

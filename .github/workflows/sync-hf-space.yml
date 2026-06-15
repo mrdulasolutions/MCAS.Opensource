@@ -89,10 +89,29 @@ jobs:
 
       - name: Sync to Hugging Face Space
         run: |
+          # Wait policy:
+          #   push              → --wait (content changed; expect a rebuild)
+          #   workflow_dispatch → respect the wait_for_running input (default true)
+          #   schedule          → NO --wait. Cron syncs typically fire with no
+          #                       material content change; HF correctly skips the
+          #                       rebuild and the Space stays SLEEPING. We don't
+          #                       want that benign condition to fail the workflow.
+          EVENT="${{ github.event_name }}"
+          INPUT_WAIT="${{ github.event.inputs.wait_for_running }}"
           WAIT_FLAG=""
-          if [ "${{ github.event.inputs.wait_for_running }}" = "true" ] || [ -z "${{ github.event.inputs.wait_for_running }}" ]; then
-            WAIT_FLAG="--wait"
-          fi
+          case "$EVENT" in
+            push)
+              WAIT_FLAG="--wait"
+              ;;
+            workflow_dispatch)
+              if [ "$INPUT_WAIT" = "true" ] || [ -z "$INPUT_WAIT" ]; then
+                WAIT_FLAG="--wait"
+              fi
+              ;;
+            schedule)
+              WAIT_FLAG=""
+              ;;
+          esac
           python scripts/sync_hf_space.py \
             --repo-id "${{ steps.target.outputs.repo_id }}" \
             --commit-message "Sync from MCAS.Opensource@${GITHUB_SHA::7}" \
