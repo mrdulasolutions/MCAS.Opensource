@@ -73,8 +73,11 @@ def fetch_by_cid(cid: int) -> dict:
     """
     cache = _load_cache()
     key = f"cid:{cid}"
-    if key in cache and cache[key]:
-        return cache[key]
+    cached = cache.get(key)
+    if cached and cached.get("isomeric_smiles"):
+        # Honor a previously-good cache entry. Avoids re-fetching during
+        # tight reruns AND survives transient PubChem outages.
+        return cached
     url = f"{PUG_BASE}/compound/cid/{cid}/property/SMILES,ConnectivitySMILES/JSON"
     data = _request_json(url)
     result: dict = {}
@@ -83,14 +86,25 @@ def fetch_by_cid(cid: int) -> dict:
             props = data["PropertyTable"]["Properties"][0]
             iso = props.get("SMILES") or props.get("IsomericSMILES") or ""
             can = props.get("ConnectivitySMILES") or props.get("CanonicalSMILES") or iso
-            result = {
-                "isomeric_smiles": iso,
-                "canonical_smiles": can,
-            }
+            if iso:  # Only treat as success when we actually got a SMILES.
+                result = {
+                    "isomeric_smiles": iso,
+                    "canonical_smiles": can,
+                }
         except (KeyError, IndexError):
             result = {}
-    cache[key] = result
-    _save_cache(cache)
+    # Only write back to cache when we have a real result. Preserves any
+    # previously-cached good value across transient PubChem hiccups
+    # (e.g. the June 2026 outage that briefly empty-returned Sulforaphane,
+    # Rosmarinic acid, and Avapritinib).
+    if result.get("isomeric_smiles"):
+        cache[key] = result
+        _save_cache(cache)
+        return result
+    if cached:
+        # Fall through to whatever we had cached — even if it was empty,
+        # don't make things worse by re-storing an empty.
+        return cached
     return result
 
 

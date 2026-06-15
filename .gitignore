@@ -68,7 +68,10 @@ outputs/keap1_docking/4l7b_receptor.pdbqt
 .tools/
 
 # Caches
-data/compounds/.smiles_cache.json
+# Note: data/compounds/.smiles_cache.json is intentionally NOT ignored —
+# committing the cache means CI runs survive transient PubChem outages
+# (see June 2026 incident where PubChem briefly empty-returned three
+# anchor compounds and broke refresh-pipeline.yml).
 .cache/
 .mypy_cache/
 .pytest_cache/
