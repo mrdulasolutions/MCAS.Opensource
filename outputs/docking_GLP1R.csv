@@ -6,24 +6,24 @@ Loratadine,CCOC(=O)N1CCC(=C2c3ccc(Cl)cc3CCc3cccnc32)CC1,rescue,library,GLP1R,0.1
 Cetirizine,O=C(O)COCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,rescue,library,GLP1R,0.1807,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabidiolic acid,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCCCC)c(C(=O)O)c1O,maintenance,library,GLP1R,0.1778,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Avapritinib,CC1(C)OB(O)c2cc(CNC(=O)c3ccc(C4=NO[C@](c5cc(Cl)c(F)c(Cl)c5)(C(F)(F)F)C4)n4cccc34)ccc21,remission,library,GLP1R,0.1739,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0230,CCOC(=O)N1CCC(=C2c3cc(CCS(=O)CCCN=C=S)c(Cl)cc3CCc3cccnc32)CC1,candidate,reinvent_generated,GLP1R,0.1727,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0255,CCOC(=O)N1CCC(=C2c3cc(CCS(=O)CCCN=C=S)c(Cl)cc3CCc3cccnc32)CC1,candidate,reinvent_generated,GLP1R,0.1727,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Tetrahydrocannabinolic acid,CCCCCc1cc2c(c(O)c1C(=O)O)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,maintenance,library,GLP1R,0.172,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0253,CCOC(=O)N1CCC(=C2c3ncccc3CCc3cc(Cl)cc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,GLP1R,0.1651,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0258,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2cccc(CCS(=O)CCCN=C=S)c2)CC1,candidate,reinvent_generated,GLP1R,0.1619,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0239,CCOC(=O)N1CCC(=C2c3ncccc3CCc3cc(Cl)cc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,GLP1R,0.1651,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0277,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2cccc(CCS(=O)CCCN=C=S)c2)CC1,candidate,reinvent_generated,GLP1R,0.1619,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Aspirin (acetylsalicylic acid),CC(=O)Oc1ccccc1C(=O)O,remission,library,GLP1R,0.1594,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Hydroxyzine,OCCOCCN1CCN(C(c2ccccc2)c2ccc(Cl)cc2)CC1,rescue,library,GLP1R,0.1566,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0173,CC(=O)Oc1c(CCS(=O)CCCN=C=S)cccc1C(=O)O,candidate,reinvent_generated,GLP1R,0.1556,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0174,CC(=O)Oc1cc(CCS(=O)CCCN=C=S)ccc1C(=O)O,candidate,reinvent_generated,GLP1R,0.1556,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Montelukast,CC(C)(O)c1ccccc1CC[C@@H](SCC1(CC(=O)O)CC1)c1cccc(/C=C/c2ccc3ccc(Cl)cc3n2)c1,maintenance,library,GLP1R,0.1532,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0246,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2ccccc2CCS(=O)CCCN=C=S)CC1,candidate,reinvent_generated,GLP1R,0.1524,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0236,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2ccccc2CCS(=O)CCCN=C=S)CC1,candidate,reinvent_generated,GLP1R,0.1524,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Alpha-bisabolol,CC(C)=CCC[C@@](C)(O)[C@H]1CC=C(C)CC1,maintenance,library,GLP1R,0.1519,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Cromolyn sodium,O=C(O)c1cc(=O)c2cc(OCC(O)COc3cccc4oc(C(=O)O)cc(=O)c34)ccc2o1,rescue,library,GLP1R,0.1429,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0237,O=S(CCCN=C=S)CCc1cccc(C(c2ccc(Cl)cc2)N2CCN(CCOCCO)CC2)c1,candidate,reinvent_generated,GLP1R,0.1415,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0184,CN(C)c1ccc(N=Nc2ccccc2C(=O)O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.1327,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0185,CN(C)c1ccc(N=Nc2ccccc2C(=O)O)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,GLP1R,0.1327,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0261,O=S(CCCN=C=S)CCc1cccc(C(c2ccc(Cl)cc2)N2CCN(CCOCCO)CC2)c1,candidate,reinvent_generated,GLP1R,0.1415,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0184,CN(C)c1ccc(N=Nc2ccccc2C(=O)O)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,GLP1R,0.1327,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0185,CN(C)c1ccc(N=Nc2ccccc2C(=O)O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.1327,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabidivarin,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCC)cc1O,maintenance,library,GLP1R,0.1325,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0265,O=S(CCCN=C=S)CCc1ccccc1C(c1ccc(Cl)cc1)N1CCN(CCOCCO)CC1,candidate,reinvent_generated,GLP1R,0.1321,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0268,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)c(CCS(=O)CCCN=C=S)c(CCCCC)c(C(=O)O)c1O,candidate,reinvent_generated,GLP1R,0.1308,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0275,O=S(CCCN=C=S)CCc1ccccc1C(c1ccc(Cl)cc1)N1CCN(CCOCCO)CC1,candidate,reinvent_generated,GLP1R,0.1321,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0244,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)c(CCS(=O)CCCN=C=S)c(CCCCC)c(C(=O)O)c1O,candidate,reinvent_generated,GLP1R,0.1308,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Docosahexaenoic acid (DHA),CC/C=C\C/C=C\C/C=C\C/C=C\C/C=C\C/C=C\CCC(=O)O,maintenance,library,GLP1R,0.1304,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Curcumin,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2)ccc1O,maintenance,library,GLP1R,0.1299,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabigerolic acid,CC1(C)SC2C(NC(=O)C(C(=O)O)c3ccsc3)C(=O)N2C1C(=O)O,maintenance,library,GLP1R,0.129,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
@@ -35,26 +35,26 @@ EGCG,O=C(O[C@@H]1Cc2c(O)cc(O)cc2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,main
 6-Gingerol,CCCCC[C@H](O)CC(=O)CCc1ccc(O)c(OC)c1,maintenance,library,GLP1R,0.125,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Midostaurin,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4,remission,library,GLP1R,0.125,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Carnosic acid,CC(C)c1cc2c(c(O)c1O)[C@@]1(C(=O)O)CCCC(C)(C)[C@@H]1CC2,remission,library,GLP1R,0.125,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0250,CCCCCc1c(CCS(=O)CCCN=C=S)c2c(c(O)c1C(=O)O)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,GLP1R,0.125,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0276,CCCCCc1c(CCS(=O)CCCN=C=S)c2c(c(O)c1C(=O)O)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,GLP1R,0.125,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Naltrexone (low-dose),O=C1CC[C@@]2(O)[C@H]3Cc4ccc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,maintenance,library,GLP1R,0.1237,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Tetrahydrocannabivarin,CCCc1cc(O)c2c(c1)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,maintenance,library,GLP1R,0.1236,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0228,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCC)c(CCS(=O)CCCN=C=S)c1O,candidate,reinvent_generated,GLP1R,0.1226,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0231,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCC)c(CCS(=O)CCCN=C=S)c1O,candidate,reinvent_generated,GLP1R,0.1226,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Wogonin,COc1c(O)cc(O)c2c(=O)cc(-c3ccccc3)oc12,maintenance,library,GLP1R,0.1205,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0249,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCCCC)c(CCS(=O)CCCN=C=S)c1O,candidate,reinvent_generated,GLP1R,0.1204,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0253,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCCCC)c(CCS(=O)CCCN=C=S)c1O,candidate,reinvent_generated,GLP1R,0.1204,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Delta-9-THC,CCCCCc1cc(O)c2c(c1)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,maintenance,library,GLP1R,0.1196,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Delta-8-THC,CCCCCc1cc(O)c2c(c1)OC(C)(C)C1CCC(C)=CC21,maintenance,library,GLP1R,0.1196,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0233,CCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,GLP1R,0.1193,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0254,CCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,candidate,reinvent_generated,GLP1R,0.1193,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0273,CCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,GLP1R,0.1193,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Ketotifen,CN1CCC(=C2c3ccccc3CC(=O)c3sccc32)CC1,rescue,library,GLP1R,0.1176,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Rosmarinic acid,O=C(/C=C/c1ccc(O)c(O)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,maintenance,library,GLP1R,0.1176,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0225,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)C1C=C(C)CCC1C(C)(C)O2,candidate,reinvent_generated,GLP1R,0.1171,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0229,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,candidate,reinvent_generated,GLP1R,0.1171,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0239,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,GLP1R,0.1171,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0276,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)C1CCC(C)=CC21,candidate,reinvent_generated,GLP1R,0.1171,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0223,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,candidate,reinvent_generated,GLP1R,0.1171,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0230,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)C1C=C(C)CCC1C(C)(C)O2,candidate,reinvent_generated,GLP1R,0.1171,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0250,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,GLP1R,0.1171,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0256,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)C1CCC(C)=CC21,candidate,reinvent_generated,GLP1R,0.1171,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0194,O=C1CC(c2ccc(O)cc2CCS(=O)CCCN=C=S)Oc2cc(O)cc(O)c21,candidate,reinvent_generated,GLP1R,0.1165,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0189,COc1c(O)c(CCS(=O)CCCN=C=S)c(O)c2c(=O)cc(-c3ccccc3)oc12,candidate,reinvent_generated,GLP1R,0.1154,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0266,CC1(C)SC2C(NC(=O)C(C(=O)O)c3cscc3CCS(=O)CCCN=C=S)C(=O)N2C1C(=O)O,candidate,reinvent_generated,GLP1R,0.115,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0247,CC1(C)SC2C(NC(=O)C(C(=O)O)c3csc(CCS(=O)CCCN=C=S)c3)C(=O)N2C1C(=O)O,candidate,reinvent_generated,GLP1R,0.114,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0188,COc1c(O)c(CCS(=O)CCCN=C=S)c(O)c2c(=O)cc(-c3ccccc3)oc12,candidate,reinvent_generated,GLP1R,0.1154,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0238,CC1(C)SC2C(NC(=O)C(C(=O)O)c3cscc3CCS(=O)CCCN=C=S)C(=O)N2C1C(=O)O,candidate,reinvent_generated,GLP1R,0.115,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0234,CC1(C)SC2C(NC(=O)C(C(=O)O)c3csc(CCS(=O)CCCN=C=S)c3)C(=O)N2C1C(=O)O,candidate,reinvent_generated,GLP1R,0.114,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Hesperetin,COc1ccc([C@@H]2CC(=O)c3c(O)cc(O)cc3O2)cc1O,maintenance,library,GLP1R,0.1136,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0204,CCCCC[C@H](O)CC(=O)CCc1cc(CCS(=O)CCCN=C=S)c(O)c(OC)c1,candidate,reinvent_generated,GLP1R,0.1132,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 2-Arachidonoylglycerol,CCCCC/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)OC(CO)CO,maintenance,library,GLP1R,0.1125,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
@@ -63,14 +63,14 @@ Silibinin,COc1cc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)c
 GEN_0176,CN(C)CCOC(c1ccccc1)c1cccc(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,GLP1R,0.1111,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0187,CN1CCC(=C2c3ccsc3C(=O)Cc3cccc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,GLP1R,0.1111,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0203,COc1cc(CCS(=O)CCCN=C=S)c([C@@H]2CC(=O)c3c(O)cc(O)cc3O2)cc1O,candidate,reinvent_generated,GLP1R,0.1111,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0241,O=C(O[C@@H]1Cc2c(cc(O)c(CCS(=O)CCCN=C=S)c2O)O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,GLP1R,0.1111,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0260,O=C(O[C@@H]1Cc2c(O)cc(O)c(CCS(=O)CCCN=C=S)c2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,GLP1R,0.1111,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0234,O=C1CC[C@@]2(O)[C@H]3Cc4cc(CCS(=O)CCCN=C=S)c(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,GLP1R,0.1102,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0245,O=C1CC[C@@]2(O)[C@H]3Cc4c(CCS(=O)CCCN=C=S)cc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,GLP1R,0.1102,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0267,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)cc(=O)c4c3CCS(=O)CCCN=C=S)cccc2o1,candidate,reinvent_generated,GLP1R,0.1101,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0240,O=C(O[C@@H]1Cc2c(O)cc(O)c(CCS(=O)CCCN=C=S)c2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,GLP1R,0.1111,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0266,O=C(O[C@@H]1Cc2c(cc(O)c(CCS(=O)CCCN=C=S)c2O)O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,GLP1R,0.1111,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0229,O=C1CC[C@@]2(O)[C@H]3Cc4c(CCS(=O)CCCN=C=S)cc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,GLP1R,0.1102,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0235,O=C1CC[C@@]2(O)[C@H]3Cc4cc(CCS(=O)CCCN=C=S)c(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,GLP1R,0.1102,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0252,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)cc(=O)c4c3CCS(=O)CCCN=C=S)cccc2o1,candidate,reinvent_generated,GLP1R,0.1101,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Xanthohumol,COc1cc(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1,maintenance,library,GLP1R,0.1099,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Diphenhydramine,CN(C)CCOC(c1ccccc1)c1ccccc1,rescue,library,GLP1R,0.1096,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0264,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)c(CCS(=O)CCCN=C=S)c(=O)c4c3)cccc2o1,candidate,reinvent_generated,GLP1R,0.1092,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0242,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)c(CCS(=O)CCCN=C=S)c(=O)c4c3)cccc2o1,candidate,reinvent_generated,GLP1R,0.1092,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0124,CS(=O)CCc1ccc(C#N)cc1,candidate,reinvent_generated,GLP1R,0.1081,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Nicotinamide mononucleotide,NC(=O)c1ccc[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)c1,maintenance,library,GLP1R,0.1075,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Alpha-lipoic acid,O=C(O)CCCCC1CCSS1,maintenance,library,GLP1R,0.1067,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
@@ -78,64 +78,64 @@ Phloretin,O=C(CCc1ccc(O)cc1)c1c(O)cc(O)cc1O,maintenance,library,GLP1R,0.1067,Orf
 Nicotinamide riboside,NC(=O)c1ccc[n+]([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)c1,maintenance,library,GLP1R,0.1059,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Oleanolic acid,CC1(C)CC[C@]2(C(=O)O)CC[C@]3(C)C(=CC[C@@H]4[C@@]5(C)CC[C@H](O)C(C)(C)[C@@H]5CC[C@]43C)[C@@H]2C1,remission,library,GLP1R,0.1053,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0199,O=C(CCc1ccc(O)cc1CCS(=O)CCCN=C=S)c1c(O)cc(O)cc1O,candidate,reinvent_generated,GLP1R,0.1053,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0188,COc1c(O)cc(O)c2c(=O)c(CCS(=O)CCCN=C=S)c(-c3ccccc3)oc12,candidate,reinvent_generated,GLP1R,0.1048,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0224,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2cc(OC)c(O)cc2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,GLP1R,0.1048,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0189,COc1c(O)cc(O)c2c(=O)c(CCS(=O)CCCN=C=S)c(-c3ccccc3)oc12,candidate,reinvent_generated,GLP1R,0.1048,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0269,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2cc(OC)c(O)cc2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,GLP1R,0.1048,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0132,CS(=O)CCc1ccc(N=C=S)cc1,candidate,reinvent_generated,GLP1R,0.1039,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0153,CS(=O)CCc1ccc(SC#N)cc1,candidate,reinvent_generated,GLP1R,0.1039,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0259,O=C(/C=C/c1cc(O)c(O)cc1CCS(=O)CCCN=C=S)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,GLP1R,0.1038,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0270,O=C(/C=C/c1cc(O)c(O)cc1CCS(=O)CCCN=C=S)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,GLP1R,0.1038,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Ursolic acid,C[C@H]1[C@H](C)CC[C@]2(C(=O)O)CC[C@]3(C)C(=CC[C@@H]4[C@@]5(C)CC[C@H](O)C(C)(C)[C@@H]5CC[C@]43C)[C@H]12,remission,library,GLP1R,0.1031,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Beta-caryophyllene,C=C1CC/C=C(\C)CC[C@@H]2[C@@H]1CC2(C)C,maintenance,library,GLP1R,0.1026,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0200,COc1c(O)cc([C@@H]2CC(=O)c3c(O)cc(O)cc3O2)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.1019,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0270,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)-c1cc(C)ccc1C(C)(C)O2,candidate,reinvent_generated,GLP1R,0.1019,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0248,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)-c1cc(C)ccc1C(C)(C)O2,candidate,reinvent_generated,GLP1R,0.1019,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Terpinolene,CC1=CCC(=C(C)C)CC1,maintenance,library,GLP1R,0.1014,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabinol,CCCCCc1cc(O)c2c(c1)OC(C)(C)c1ccc(C)cc1-2,maintenance,library,GLP1R,0.1011,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0180,COc1cc(/C=C/c2ccc(O)cc2CCS(=O)CCCN=C=S)cc(OC)c1,candidate,reinvent_generated,GLP1R,0.101,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0183,CN(C)CCOC(c1ccccc1)c1ccccc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.101,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0232,O=C(/C=C/c1cc(O)c(O)c(CCS(=O)CCCN=C=S)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,GLP1R,0.1009,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0242,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)c1ccc(C)cc1-2,candidate,reinvent_generated,GLP1R,0.1009,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0251,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)c1ccc(C)cc1-2,candidate,reinvent_generated,GLP1R,0.1009,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0265,O=C(/C=C/c1cc(O)c(O)c(CCS(=O)CCCN=C=S)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,GLP1R,0.1009,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 NAD+,NC(=O)c1ccc[n+](C2OC(COP(=O)([O-])OP(=O)(O)OCC3OC(n4cnc5c(N)ncnc54)C(O)C3O)C(O)C2O)c1,maintenance,library,GLP1R,0.1008,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Baicalein,O=c1cc(-c2ccccc2)oc2cc(O)c(O)c(O)c12,maintenance,library,GLP1R,0.1,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Anandamide,CCCCC/C=C\C/C=C\C/C=C\C/C=C\CCCC(=O)NCCO,maintenance,library,GLP1R,0.1,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Chrysin,O=c1cc(-c2ccccc2)oc2cc(O)cc(O)c12,maintenance,library,GLP1R,0.1,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0262,CC(C)c1c(O)c(O)c2c(c1CCS(=O)CCCN=C=S)CC[C@H]1C(C)(C)CCC[C@]21C(=O)O,candidate,reinvent_generated,GLP1R,0.1,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0268,CC(C)c1c(O)c(O)c2c(c1CCS(=O)CCCN=C=S)CC[C@H]1C(C)(C)CCC[C@]21C(=O)O,candidate,reinvent_generated,GLP1R,0.1,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Hesperidin,COc1ccc([C@@H]2CC(=O)c3c(O)cc(O[C@@H]4O[C@H](CO[C@@H]5O[C@@H](C)[C@H](O)[C@@H](O)[C@H]5O)[C@@H](O)[C@H](O)[C@H]4O)cc3O2)cc1O,maintenance,library,GLP1R,0.0991,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Carnosol,CC(C)c1cc2c(c(O)c1O)[C@@]13CCCC(C)(C)[C@@H]1C[C@@H]2OC3=O,remission,library,GLP1R,0.0989,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Galangin,O=c1c(O)c(-c2ccccc2)oc2cc(O)cc(O)c12,maintenance,library,GLP1R,0.0988,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0256,COc1c(O)ccc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.0984,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0274,COc1c(O)ccc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.0984,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Biotin,O=C(O)CCCC[C@@H]1SC[C@@H]2NC(=O)N[C@@H]21,maintenance,library,GLP1R,0.0976,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Naringenin,O=C1CC(c2ccc(O)cc2)Oc2cc(O)cc(O)c21,maintenance,library,GLP1R,0.0976,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0243,COc1cc(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.0973,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0246,COc1cc(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.0973,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0190,O=C1CC(c2ccc(O)c(CCS(=O)CCCN=C=S)c2)Oc2cc(O)cc(O)c21,candidate,reinvent_generated,GLP1R,0.0971,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0175,O=S(CCCN=C=S)CCc1cc(/C=C/c2cc(O)cc(O)c2)ccc1O,candidate,reinvent_generated,GLP1R,0.0968,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0248,COc1cc([C@H]2Oc3c(ccc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)c3CCS(=O)CCCN=C=S)O[C@@H]2CO)ccc1O,candidate,reinvent_generated,GLP1R,0.0968,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0226,COc1cc([C@H]2Oc3c(ccc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)c3CCS(=O)CCCN=C=S)O[C@@H]2CO)ccc1O,candidate,reinvent_generated,GLP1R,0.0968,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0152,O=S(CCCN=C=S)CCc1cccc(CCN=C=S)c1,candidate,reinvent_generated,GLP1R,0.0964,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0177,O=S(CCCN=C=S)CCc1cc(O)ccc1/C=C/c1cc(O)cc(O)c1,candidate,reinvent_generated,GLP1R,0.0957,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Butyric acid,CCCC(=O)O,maintenance,library,GLP1R,0.0952,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Pterostilbene,COc1cc(/C=C/c2ccc(O)cc2)cc(OC)c1,maintenance,library,GLP1R,0.0946,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0201,CCCCC[C@H](O)CC(=O)CCc1cc(OC)c(O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.0943,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Acacetin,COc1ccc(-c2cc(=O)c3c(O)cc(O)cc3o2)cc1,maintenance,library,GLP1R,0.0941,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0159,O=S(CCCN=C=S)CCc1cccc(CN=C=S)c1,candidate,reinvent_generated,GLP1R,0.0941,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0160,O=S(CCCN=C=S)CCc1cccc(CN=C=S)c1,candidate,reinvent_generated,GLP1R,0.0941,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Betulinic acid,C=C(C)[C@@H]1CC[C@]2(C(=O)O)CC[C@]3(C)[C@H](CC[C@@H]4[C@@]5(C)CC[C@H](O)C(C)(C)[C@@H]5CC[C@]43C)[C@@H]12,remission,library,GLP1R,0.0938,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Rutin,C[C@@H]1O[C@@H](OC[C@H]2O[C@@H](Oc3c(-c4ccc(O)c(O)c4)oc4cc(O)cc(O)c4c3=O)[C@H](O)[C@@H](O)[C@@H]2O)[C@H](O)[C@H](O)[C@H]1O,maintenance,library,GLP1R,0.0935,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0218,CN(C)c1cc(CCS(=O)CCCN=C=S)c2nc3ccc(=[N+](C)C)cc-3sc2c1.[Cl-],candidate,reinvent_generated,GLP1R,0.0935,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0219,CN(C)c1cc2sc3cc(=[N+](C)C)ccc-3nc2cc1CCS(=O)CCCN=C=S.[Cl-],candidate,reinvent_generated,GLP1R,0.0935,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0240,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,GLP1R,0.0935,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0264,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,GLP1R,0.0935,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Alpha-humulene,C/C1=C\CC/C(C)=C/CC(C)(C)/C=C/C1,maintenance,library,GLP1R,0.0933,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0202,O=C(CCc1ccc(O)c(CCS(=O)CCCN=C=S)c1)c1c(O)cc(O)cc1O,candidate,reinvent_generated,GLP1R,0.0928,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0195,COc1ccc(-c2cc(=O)c3c(O)cc(O)cc3o2)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,GLP1R,0.0926,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0196,COc1ccc(-c2cc(=O)c3c(O)cc(O)cc3o2)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.0926,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0195,COc1ccc(-c2cc(=O)c3c(O)cc(O)cc3o2)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.0926,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0196,COc1ccc(-c2cc(=O)c3c(O)cc(O)cc3o2)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,GLP1R,0.0926,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Testosterone,C[C@]12CC[C@H]3[C@@H](CCC4=CC(=O)CC[C@@]43C)[C@@H]1CC[C@@H]2O,maintenance,library,GLP1R,0.092,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Ivermectin,CC[C@H](C)[C@H]1O[C@]2(CC[C@@H]1C)C[C@@H]1C[C@@H](C/C=C(\C)[C@@H](O[C@H]3C[C@H](OC)[C@@H](O[C@H]4C[C@H](OC)[C@@H](O)[C@H](C)O4)[C@H](C)O3)[C@@H](C)/C=C/C=C3\CO[C@@H]4[C@H](O)C(C)=C[C@@H](C(=O)O1)[C@]34O)O2,maintenance,library,GLP1R,0.0915,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Isorhamnetin,COc1cc(-c2oc3cc(O)cc(O)c3c(=O)c2O)ccc1O,maintenance,library,GLP1R,0.0909,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0269,NC(=O)c1cc(CCS(=O)CCCN=C=S)c[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)c1,candidate,reinvent_generated,GLP1R,0.0893,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0227,NC(=O)c1c[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)ccc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.0885,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0258,NC(=O)c1cc(CCS(=O)CCCN=C=S)c[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)c1,candidate,reinvent_generated,GLP1R,0.0893,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0257,NC(=O)c1c[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)ccc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.0885,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0179,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccccc2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,GLP1R,0.0882,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0182,COc1cc(/C=C/c2ccc(O)cc2)c(CCS(=O)CCCN=C=S)c(OC)c1,candidate,reinvent_generated,GLP1R,0.0882,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0205,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccccc2)oc2cc(O)c(O)c(O)c12,candidate,reinvent_generated,GLP1R,0.0882,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Honokiol,C=CCc1ccc(O)c(-c2ccc(O)c(CC=C)c2)c1,maintenance,library,GLP1R,0.0875,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0150,CCS(=O)CCc1ccc(N=C=S)cc1,candidate,reinvent_generated,GLP1R,0.0875,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0181,O=c1cc(-c2ccccc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,GLP1R,0.0874,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0198,O=c1c(O)c(-c2ccccc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,GLP1R,0.0874,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0197,O=c1c(O)c(-c2ccccc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,GLP1R,0.0874,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0208,O=c1cc(-c2ccccc2CCS(=O)CCCN=C=S)oc2cc(O)c(O)c(O)c12,candidate,reinvent_generated,GLP1R,0.0874,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Resveratrol,Oc1ccc(/C=C/c2cc(O)cc(O)c2)cc1,maintenance,library,GLP1R,0.087,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Calcitriol,C=C1/C(=C\C=C2/CCC[C@]3(C)[C@@H]([C@H](C)CCCC(C)(C)O)CC[C@@H]23)C[C@@H](O)C[C@@H]1O,maintenance,library,GLP1R,0.0865,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
@@ -145,9 +145,9 @@ Benzyl isothiocyanate,S=C=NCc1ccccc1,remission,library,GLP1R,0.0857,Orforglipron
 GEN_0191,O=c1c(O)c(-c2cccc(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,GLP1R,0.0857,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0222,NC(=O)c1c[n+]([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)ccc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.0857,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0161,O=S(CCCN=C=S)CCc1ccccc1CCN=C=S,candidate,reinvent_generated,GLP1R,0.0854,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0226,CCCCCc1cc(O)c(C/C=C(\C)CCC=C(C)C)c(O)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.0849,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0231,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.0849,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0244,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,GLP1R,0.0849,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0243,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.0849,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0245,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,GLP1R,0.0849,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0249,CCCCCc1cc(O)c(C/C=C(\C)CCC=C(C)C)c(O)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.0849,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 N-Acetylcysteine (NAC),CC(=O)N[C@@H](CS)C(=O)O,maintenance,library,GLP1R,0.0845,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Tangeretin,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1,maintenance,library,GLP1R,0.0843,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Phenethyl isothiocyanate,S=C=NCCc1ccccc1,remission,library,GLP1R,0.0833,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
@@ -155,42 +155,42 @@ Alpha-pinene,CC1=CCC2CC1C2(C)C,maintenance,library,GLP1R,0.0833,Orforglipron (ap
 Linalool,C=CC(C)(O)CCC=C(C)C,maintenance,library,GLP1R,0.0833,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Piceatannol,Oc1cc(O)cc(/C=C/c2ccc(O)c(O)c2)c1,maintenance,library,GLP1R,0.0833,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0156,CS(=O)(=O)/C=C/CCC#N,candidate,reinvent_generated,GLP1R,0.0833,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0160,O=S(CCCN=C=S)CCc1ccccc1CN=C=S,candidate,reinvent_generated,GLP1R,0.0833,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0159,O=S(CCCN=C=S)CCc1ccccc1CN=C=S,candidate,reinvent_generated,GLP1R,0.0833,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0211,COc1cc(-c2oc3c(CCS(=O)CCCN=C=S)c(O)cc(O)c3c(=O)c2O)ccc1O,candidate,reinvent_generated,GLP1R,0.0826,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0213,COc1c(O)ccc(-c2oc3cc(O)cc(O)c3c(=O)c2O)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.0826,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Myricitrin,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O,maintenance,library,GLP1R,0.0825,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Nobiletin,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1OC,maintenance,library,GLP1R,0.0824,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Magnolol,C=CCc1ccc(O)c(-c2cc(CC=C)ccc2O)c1,maintenance,library,GLP1R,0.0822,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0274,COc1c(CCS(=O)CCCN=C=S)c(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1,candidate,reinvent_generated,GLP1R,0.0818,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0262,COc1c(CCS(=O)CCCN=C=S)c(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1,candidate,reinvent_generated,GLP1R,0.0818,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabigerol,CCCCCc1cc(O)c(C/C=C(\C)CCC=C(C)C)c(O)c1,maintenance,library,GLP1R,0.0814,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Methylene blue,CN(C)c1ccc2nc3ccc(=[N+](C)C)cc-3sc2c1.[Cl-],maintenance,library,GLP1R,0.0814,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0146,CS(=O)Cc1ccc(C#N)cc1,candidate,reinvent_generated,GLP1R,0.0811,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0275,C=CCc1ccc(O)c(-c2cc(CC=C)c(CCS(=O)CCCN=C=S)cc2O)c1,candidate,reinvent_generated,GLP1R,0.0808,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0277,C=CCc1cc(-c2cc(CC=C)c(CCS(=O)CCCN=C=S)cc2O)ccc1O,candidate,reinvent_generated,GLP1R,0.0808,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0251,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)C=CC(C)(CCC=C(C)C)O2,candidate,reinvent_generated,GLP1R,0.0804,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0224,C=CCc1ccc(O)c(-c2cc(CC=C)c(CCS(=O)CCCN=C=S)cc2O)c1,candidate,reinvent_generated,GLP1R,0.0808,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0237,C=CCc1cc(-c2cc(CC=C)c(CCS(=O)CCCN=C=S)cc2O)ccc1O,candidate,reinvent_generated,GLP1R,0.0808,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0232,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)C=CC(C)(CCC=C(C)C)O2,candidate,reinvent_generated,GLP1R,0.0804,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0271,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(CCC=C(C)C)C=C2,candidate,reinvent_generated,GLP1R,0.0804,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Ascorbic acid,O=C1O[C@H]([C@@H](O)CO)C(O)=C1O,rescue,library,GLP1R,0.08,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0223,Nc1ccc(N=Nc2cccc(N=Nc3cc(CCS(=O)CCCN=C=S)c(N)cc3N)c2)c(N)c1,candidate,reinvent_generated,GLP1R,0.08,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0255,C=CCc1ccc(O)c(-c2cc(CC=C)cc(CCS(=O)CCCN=C=S)c2O)c1,candidate,reinvent_generated,GLP1R,0.08,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0238,Nc1ccc(N=Nc2cccc(N=Nc3c(N)cc(N)cc3CCS(=O)CCCN=C=S)c2)c(N)c1,candidate,reinvent_generated,GLP1R,0.0784,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0247,Nc1ccc(N=Nc2cccc(N=Nc3cc(CCS(=O)CCCN=C=S)c(N)cc3N)c2)c(N)c1,candidate,reinvent_generated,GLP1R,0.08,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0273,C=CCc1ccc(O)c(-c2cc(CC=C)cc(CCS(=O)CCCN=C=S)c2O)c1,candidate,reinvent_generated,GLP1R,0.08,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0225,Nc1ccc(N=Nc2cccc(N=Nc3c(N)cc(N)cc3CCS(=O)CCCN=C=S)c2)c(N)c1,candidate,reinvent_generated,GLP1R,0.0784,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0147,CS(=O)(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,GLP1R,0.0779,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0148,CS(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,GLP1R,0.0779,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0163,CS(=O)Cc1ccc(SC#N)cc1,candidate,reinvent_generated,GLP1R,0.0779,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0210,O=c1c(O)c(-c2cc(O)c(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)ccc12,candidate,reinvent_generated,GLP1R,0.0777,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0235,C=CCc1cc(CCS(=O)CCCN=C=S)c(O)c(-c2ccc(O)c(CC=C)c2)c1,candidate,reinvent_generated,GLP1R,0.0777,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0259,C=CCc1cc(CCS(=O)CCCN=C=S)c(O)c(-c2ccc(O)c(CC=C)c2)c1,candidate,reinvent_generated,GLP1R,0.0777,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0214,CN/C(=C\[N+](=O)[O-])NCCSCc1cc(CCS(=O)CCCN=C=S)c(CN(C)C)o1,candidate,reinvent_generated,GLP1R,0.0776,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0217,CN/C(=C\[N+](=O)[O-])NCCSCc1oc(CN(C)C)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,GLP1R,0.0776,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Famotidine,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)cs1,rescue,library,GLP1R,0.0769,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Nerolidol,C=CC(C)(O)CC/C=C(\C)CCC=C(C)C,maintenance,library,GLP1R,0.0769,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0197,O=c1cc(-c2ccc(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,GLP1R,0.0769,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0198,O=c1cc(-c2ccc(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,GLP1R,0.0769,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0206,O=c1c(O)c(-c2ccc(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,GLP1R,0.0769,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0207,O=c1c(O)c(-c2ccc(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,GLP1R,0.0762,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0216,O=c1c(O)c(-c2cc(O)c(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)ccc12,candidate,reinvent_generated,GLP1R,0.0762,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0263,COc1cc(CCS(=O)CCCN=C=S)c(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1OC,candidate,reinvent_generated,GLP1R,0.0762,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0241,COc1cc(CCS(=O)CCCN=C=S)c(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1OC,candidate,reinvent_generated,GLP1R,0.0762,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0136,CS(=O)(=O)CCc1ccc(N=C=S)cc1,candidate,reinvent_generated,GLP1R,0.0759,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0154,CCS(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,GLP1R,0.0759,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0261,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3CCS(=O)CCCN=C=S)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O,candidate,reinvent_generated,GLP1R,0.0756,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0236,COc1cc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc(CCS(=O)CCCN=C=S)c1OC,candidate,reinvent_generated,GLP1R,0.0755,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0228,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3CCS(=O)CCCN=C=S)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O,candidate,reinvent_generated,GLP1R,0.0756,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0272,COc1cc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc(CCS(=O)CCCN=C=S)c1OC,candidate,reinvent_generated,GLP1R,0.0755,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Cannabichromene,CCCCCc1cc(O)c2c(c1)OC(C)(CCC=C(C)C)C=C2,maintenance,library,GLP1R,0.0753,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0178,O=S(CCCN=C=S)CCc1c(O)cc(/C=C/c2ccc(O)c(O)c2)cc1O,candidate,reinvent_generated,GLP1R,0.0753,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Oleoylethanolamide,CCCCCCCC/C=C\CCCCCCCC(=O)NCCO,maintenance,library,GLP1R,0.075,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
@@ -203,7 +203,7 @@ Geraniol,CC(C)=CCC/C(C)=C/CO,maintenance,library,GLP1R,0.0714,Orforglipron (appr
 Fisetin,O=c1c(O)c(-c2ccc(O)c(O)c2)oc2cc(O)ccc12,maintenance,library,GLP1R,0.0714,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0193,O=S(CCCN=C=S)CCc1c(O)cc(O)cc1/C=C/c1ccc(O)c(O)c1,candidate,reinvent_generated,GLP1R,0.0707,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Thymoquinone,CC1=CC(=O)C(C(C)C)=CC1=O,maintenance,library,GLP1R,0.0704,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0233,CC(C)c1c(O)c(O)c2c(c1CCS(=O)CCCN=C=S)[C@@H]1C[C@H]3C(C)(C)CCC[C@]23C(=O)O1,candidate,reinvent_generated,GLP1R,0.0696,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0227,CC(C)c1c(O)c(O)c2c(c1CCS(=O)CCCN=C=S)[C@@H]1C[C@H]3C(C)(C)CCC[C@]23C(=O)O1,candidate,reinvent_generated,GLP1R,0.0696,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Cholecalciferol (Vitamin D3),C=C1CC[C@H](O)C/C1=C/C=C1\CCC[C@]2(C)[C@@H]([C@H](C)CCCC(C)C)CC[C@@H]12,maintenance,library,GLP1R,0.0686,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Beta-pinene,C=C1CCC2CC1C2(C)C,maintenance,library,GLP1R,0.0685,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0113,CS(=O)/C=C/CCC#N,candidate,reinvent_generated,GLP1R,0.0685,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
@@ -223,9 +223,9 @@ GEN_0128,CCS(=O)(=O)/C=C/CCN=C=S,candidate,reinvent_generated,GLP1R,0.0649,Orfor
 GEN_0134,CSCCc1ccc(N=C=S)cc1,candidate,reinvent_generated,GLP1R,0.0641,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Lupeol,C=C(C)[C@@H]1CC[C@]2(C)CC[C@]3(C)[C@H](CC[C@@H]4[C@@]5(C)CC[C@H](O)C(C)(C)[C@@H]5CC[C@]43C)[C@@H]12,remission,library,GLP1R,0.0638,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Myricetin,O=c1c(O)c(-c2cc(O)c(O)c(O)c2)oc2cc(O)cc(O)c12,maintenance,library,GLP1R,0.061,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0272,O=c1oc2c(O)c(O)c(CCS(=O)CCCN=C=S)c3c(=O)oc4c(O)c(O)cc1c4c23,candidate,reinvent_generated,GLP1R,0.0588,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0263,O=c1oc2c(O)c(O)c(CCS(=O)CCCN=C=S)c3c(=O)oc4c(O)c(O)cc1c4c23,candidate,reinvent_generated,GLP1R,0.0588,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Eucalyptol,CC12CCC(CC1)C(C)(C)O2,maintenance,library,GLP1R,0.0571,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0257,O=c1c(O)c(-c2cc(O)c(O)c(O)c2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,GLP1R,0.0571,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0260,O=c1c(O)c(-c2cc(O)c(O)c(O)c2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,GLP1R,0.0571,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0125,CS(=O)CCCC#N,candidate,reinvent_generated,GLP1R,0.0563,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Beta-myrcene,C=CC(=C)CCC=C(C)C,maintenance,library,GLP1R,0.0556,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0115,CS(=O)CCCCC#N,candidate,reinvent_generated,GLP1R,0.0556,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
@@ -233,7 +233,7 @@ GEN_0166,CS/C=C/CCC#N,candidate,reinvent_generated,GLP1R,0.0556,Orforglipron (ap
 GEN_0117,CS(=O)CCCCCC#N,candidate,reinvent_generated,GLP1R,0.0548,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Iberin,CS(=O)CCCN=C=S,remission,library,GLP1R,0.0541,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0138,CS(=O)CCCSC#N,candidate,reinvent_generated,GLP1R,0.0541,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
-GEN_0252,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)c(CCS(=O)CCCN=C=S)s1,candidate,reinvent_generated,GLP1R,0.0541,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
+GEN_0267,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)c(CCS(=O)CCCN=C=S)s1,candidate,reinvent_generated,GLP1R,0.0541,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 Sulforaphane,CS(=O)CCCCN=C=S,remission,library,GLP1R,0.0533,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0131,CS(=O)CCCCSC#N,candidate,reinvent_generated,GLP1R,0.0533,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
 GEN_0110,CS(=O)CCCCCN=C=S,candidate,reinvent_generated,GLP1R,0.0526,Orforglipron (approx),ligand_based_similarity_tanimoto_morgan2_2048
