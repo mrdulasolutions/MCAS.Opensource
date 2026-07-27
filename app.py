@@ -45,17 +45,11 @@ st.set_page_config(
 st.markdown(
     """
 <style>
-  /* Do NOT crush Streamlit's top padding — the fixed header clips content
-     if padding-top is too small (disclaimer looked "cut off" / needed to
-     "come down"). Keep max-width only. */
   .block-container {
     max-width: 1180px;
-    padding-top: 3.25rem !important;
+    /* Streamlit header is sticky; keep content fully below it */
+    padding-top: 4.5rem !important;
     padding-bottom: 2rem !important;
-  }
-  /* Extra air under the deploy/header chrome on HF Spaces embeds */
-  section.main > div:first-child {
-    padding-top: 0.5rem;
   }
 
   /* Metric tiles — always dark text on soft green surface */
@@ -144,43 +138,30 @@ st.markdown(
   }
   .om-falsify, .om-falsify * { color: #1c1917 !important; }
 
-  /* Disclaimer banner — forced high contrast; avoid Streamlit clipping */
-  div[data-testid="stMarkdownContainer"]:has(.om-disclaimer),
-  div[data-testid="stVerticalBlockBorderWrapper"]:has(.om-disclaimer) {
-    overflow: visible !important;
-  }
-  .om-disclaimer {
-    display: block !important;
-    background: #fff3cd !important;
+  /* Native st.warning / stAlert — layout height is correct (no HTML clip).
+     Only recolor for dark-mode readability. */
+  div[data-testid="stAlert"] {
+    background-color: #fff3cd !important;
     border: 1px solid #e0a800 !important;
-    border-left: 5px solid #c45c00 !important;
-    border-radius: 10px;
-    padding: 1.15rem 1.2rem 1.15rem 1.2rem !important;
-    margin: 0.75rem 0 1.25rem 0 !important;
+    border-left: 0.4rem solid #c45c00 !important;
     color: #1a1200 !important;
-    font-size: 0.95rem !important;
-    line-height: 1.55 !important;
-    white-space: normal !important;
-    overflow: visible !important;
-    overflow-wrap: anywhere !important;
-    word-break: break-word !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
   }
-  .om-disclaimer, .om-disclaimer p, .om-disclaimer span, .om-disclaimer a, .om-disclaimer strong {
+  div[data-testid="stAlert"] [data-testid="stMarkdownContainer"],
+  div[data-testid="stAlert"] [data-testid="stMarkdownContainer"] p,
+  div[data-testid="stAlert"] [data-testid="stMarkdownContainer"] strong,
+  div[data-testid="stAlert"] [data-testid="stMarkdownContainer"] a,
+  div[data-testid="stAlert"] * {
     color: #1a1200 !important;
-    line-height: 1.55 !important;
-    white-space: normal !important;
   }
-  .om-disclaimer strong {
-    color: #7a3e00 !important;
-    font-weight: 750;
-  }
-  .om-disclaimer a {
+  div[data-testid="stAlert"] a {
     color: #0b57d0 !important;
-    font-weight: 650;
     text-decoration: underline !important;
-    word-break: break-all;
+  }
+  /* Hide the default warning icon if it crowds the first line on narrow embeds */
+  div[data-testid="stAlert"] [data-testid="stAlertContentWarning"] {
+    gap: 0.75rem;
   }
 
   /* Overview stat strip (custom, not st.metric) */
@@ -219,25 +200,14 @@ st.markdown(
 )
 
 # -----------------------------
-# Disclaimer (always visible — custom HTML so dark mode can't wash it out)
+# Disclaimer — use native Streamlit alert (correct height; no HTML clipping)
 # -----------------------------
-st.markdown(
-    """
-<div class="om-disclaimer" role="alert">
-  <p style="margin:0 0 0.4rem 0;">
-    <strong>Not medical advice.</strong>
-    This is a research / hypothesis-generation tool.
-    It does not diagnose, treat, cure, or prevent any condition.
-  </p>
-  <p style="margin:0;">
-    If you have MCAS / MCAD, work with a mast-cell-knowledgeable clinician.
-    Full disclaimer:
-    <a href="https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/docs/disclaimers.md"
-       target="_blank" rel="noopener noreferrer">docs/disclaimers.md</a>.
-  </p>
-</div>
-""",
-    unsafe_allow_html=True,
+st.warning(
+    "**Not medical advice.** This is a research / hypothesis-generation tool. "
+    "It does not diagnose, treat, cure, or prevent any condition. "
+    "If you have MCAS / MCAD, work with a mast-cell-knowledgeable clinician. "
+    "Full disclaimer: "
+    "[docs/disclaimers.md](https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/docs/disclaimers.md)."
 )
 
 
