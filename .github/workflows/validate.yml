@@ -5,13 +5,19 @@ on:
     branches: [main]
     paths:
       - 'data/compounds/**'
+      - 'data/benchmarks/**'
       - 'scripts/**'
+      - 'outputs/benchmark_*.csv'
+      - 'outputs/ranked_*.csv'
       - 'pyproject.toml'
       - '.github/workflows/validate.yml'
   pull_request:
     paths:
       - 'data/compounds/**'
+      - 'data/benchmarks/**'
       - 'scripts/**'
+      - 'outputs/benchmark_*.csv'
+      - 'outputs/ranked_*.csv'
       - 'pyproject.toml'
       - '.github/workflows/validate.yml'
 
@@ -40,4 +46,17 @@ jobs:
       - name: Confirm CSV did not drift
         run: |
           # Allow drift (PubChem updates) but require non-empty + RDKit-parseable.
-          python -c "import pandas as pd, sys; df = pd.read_csv('data/compounds/MCAS_Compound_Library_v1.csv'); assert len(df) >= 40, 'library shrank unexpectedly'; print(f'OK: {len(df)} rows')"
+          python -c "import pandas as pd, sys; df = pd.read_csv('data/compounds/MCAS_Compound_Library_v1.csv'); assert len(df) >= 100, 'library shrank unexpectedly'; print(f'OK: {len(df)} rows')"
+
+  audit-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run audit-gate floors
+        run: python scripts/check_audit_gates.py

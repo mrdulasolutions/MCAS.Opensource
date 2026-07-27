@@ -35,32 +35,35 @@ publicly auditable drug-discovery pipeline. Existing computational
 screens for MCAS are siloed inside pharma or behind paywalled chemical
 libraries, while patient-grounded efforts on Reddit, TMS for a Cure,
 and Discord lack chemoinformatic rigor. We present **OpenMCAS**, an
-end-to-end, MIT-licensed pipeline that (1) curates a 54-compound
-MCAS-relevant library spanning approved drugs, herbs, supplements, and
-biologics; (2) generates SFN-class isothiocyanate analogs by BRICS +
-bioisostere replacement + a CPU substitute for REINVENT-style
-reinforcement-learning generation; (3) scores all compounds against
-8 MCAS targets via ligand-based screening, covalent-warhead SMARTS
-detection, PyTDC-trained RandomForest QSAR (hERG / AMES / BBB),
-AutoDock Vina docking against KEAP1 Kelch (PDB 4L7B), an MMFF94 covalent
-C151 adduct thermodynamic proxy, per-target ChEMBL bioactivity
-predictors (67,372 records, median CV R² 0.69), and a direct
-mast-cell-stabilizer RandomForest (1101 compounds, **CV AUC 0.916 ±
-0.019**); (4) combines into a transparent multi-objective composite
-per category (rescue / maintenance / remission); and (5) audits the
-composite for credibility via a known-actives recovery benchmark,
-a negative-control benchmark, single-weight sensitivity analysis,
-and 200-sample Latin-hypercube joint perturbation. The post-audit
-pipeline achieves **95.2% recovery@20** on 21 held-out clinically
-established mast-cell drugs, **100% precision@10** on 20 unrelated
-negative-control drugs, and a worst-case single-weight Spearman
-ρ = 0.946 over 36 perturbations. Sulforaphane-class isothiocyanates
-(Erucin, Sulforaphane, PEITC, Iberin, Benzyl-ITC) consistently
-rank in the top of the remission category — Erucin holds remission
-#1 in **91.5%** of 200 LHS samples. We provide a pre-registered
-β-hexosaminidase release wet-lab protocol and a procurement-ready
-candidate list for three novel REAL-Space-plausible SFN-class
-analogs. Every experiment is published as a numbered, standardized
+end-to-end, MIT-licensed pipeline that (1) curates a **118-compound**
+MCAS-relevant library spanning approved drugs, herbs, supplements,
+biologics, cannabinoids/terpenes, and polyphenols; (2) generates
+SFN-class isothiocyanate analogs by BRICS + bioisostere replacement +
+a CPU substitute for REINVENT-style reinforcement-learning generation
+(176 unique SMILES in the current release); (3) scores all compounds
+against 11 weighted MCAS targets via ligand-based screening,
+covalent-warhead SMARTS detection, PyTDC-trained RandomForest QSAR
+(hERG / AMES / BBB), AutoDock Vina docking against KEAP1 Kelch
+(PDB 4L7B), an MMFF94 covalent C151 adduct thermodynamic proxy,
+per-target ChEMBL bioactivity predictors (67,372 records, median CV
+R² 0.69), and a direct mast-cell-stabilizer RandomForest (1101
+compounds, **CV AUC 0.916 ± 0.019**); (4) combines into a transparent
+multi-objective composite per category (rescue / maintenance /
+remission); and (5) audits the composite for credibility via a
+known-actives recovery benchmark, a negative-control benchmark,
+single-weight sensitivity analysis, and 200-sample Latin-hypercube
+joint perturbation. The post-audit pipeline achieves **95.2%
+recovery@20** on 21 held-out clinically established mast-cell drugs
+(**~9.5% recovery@10**, **~4.8% recovery@5** — strict cutoffs remain
+weak and are reported honestly), **100% precision@10** on 20 unrelated
+negative-control drugs, and worst-case single-weight Spearman ρ ≈
+0.93–0.95. Sulforaphane-class isothiocyanates (Erucin, Sulforaphane,
+PEITC, Iberin, Benzyl-ITC) consistently rank at the top of remission —
+the combined SFN class holds remission #1 in **100%** of 200 LHS
+samples under the EXP-022 composite (Erucin/SFN split ~60/40). We
+provide a pre-registered β-hexosaminidase release wet-lab protocol
+and a procurement-ready candidate list for REAL-Space-plausible
+SFN-class analogs. Every experiment is a numbered, standardized
 report with reproducible inputs, run commands, and outputs. Every
 prediction is auditable in the repository.
 
@@ -103,20 +106,25 @@ hypothesis can be falsified by a wet-lab partner.
 
 ### 2.1 Compound library
 
-54 anchor compounds were curated by hand across categories:
+**118** anchor compounds were curated by hand across categories
+(counts from the committed `MCAS_Compound_Library_v1.csv` at freeze time):
 
-- **Rescue** (n = 14): H1 / H2 antagonists, cromones, ketotifen,
-  doxepin, hydroxyzine.
-- **Maintenance** (n = 25): leukotriene blockers, mast-cell
-  stabilizers (tranilast, amlexanox, pemirolast), JAK / BTK /
-  calcineurin inhibitors, anti-inflammatory naturals (curcumin,
-  rosmarinic acid, luteolin, quercetin, EGCG, baicalein).
-- **Remission** (n = 15): SFN-class isothiocyanates (Sulforaphane,
+- **Rescue** (n ≈ 14): H1 / H2 antagonists, cromones, ketotifen,
+  hydroxyzine, dual stabilizers, selected adjuncts.
+- **Maintenance** (n ≈ 82): leukotriene blockers, mast-cell
+  stabilizers, JAK / BTK agents, flavonoids / polyphenols,
+  cannabinoids / terpenes / endocannabinoid-likes, NAD+ pathway
+  adjuncts, and related stabilizers.
+- **Remission** (n ≈ 22): SFN-class isothiocyanates (Sulforaphane,
   Iberin, Erucin, Sulforaphene, Allyl-ITC, Benzyl-ITC, PEITC,
-  Glucoraphanin), KIT TKIs (masitinib, midostaurin, avapritinib),
-  GLP-1 agonists, low-dose naltrexone.
+  Glucoraphanin), KIT TKIs (masitinib, midostaurin, avapritinib,
+  imatinib), GLP-1 agonists, rosemary catechol Nrf2 activators,
+  selected triterpenes.
 
-SMILES were fetched from PubChem PUG-REST with throttling + caching;
+Library growth after the original 54-compound seed set is documented
+in EXP-019 (cannabinoids/terpenes), EXP-020 (flavonoids/polyphenols/
+cannabinoid acids), and EXP-021 (SYK/PTGS2/catechol + additional
+anchors). SMILES were fetched from PubChem PUG-REST with throttling + caching;
 all SMILES were RDKit-canonicalized; the ITC anchor CIDs were
 manually verified after three were found to be wrong in an earlier
 pipeline iteration (Iberin 3032358→10455, Erucin 7373→78160,
