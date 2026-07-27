@@ -133,6 +133,31 @@ st.markdown(
   }
   .om-falsify, .om-falsify * { color: #1c1917 !important; }
 
+  /* Disclaimer banner — forced high contrast (st.warning breaks in dark theme) */
+  .om-disclaimer {
+    background: #fff3cd !important;
+    border: 1px solid #e0a800 !important;
+    border-left: 5px solid #c45c00 !important;
+    border-radius: 10px;
+    padding: 0.85rem 1rem;
+    margin: 0 0 1rem 0;
+    color: #1a1200 !important;
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+  .om-disclaimer, .om-disclaimer * {
+    color: #1a1200 !important;
+  }
+  .om-disclaimer strong {
+    color: #7a3e00 !important;
+    font-weight: 750;
+  }
+  .om-disclaimer a {
+    color: #0b57d0 !important;
+    font-weight: 650;
+    text-decoration: underline !important;
+  }
+
   /* Overview stat strip (custom, not st.metric) */
   .om-stat-row {
     display: grid;
@@ -169,13 +194,21 @@ st.markdown(
 )
 
 # -----------------------------
-# Disclaimer (always visible)
+# Disclaimer (always visible — custom HTML so dark mode can't wash it out)
 # -----------------------------
-st.warning(
-    "**Not medical advice.** This is a research / hypothesis-generation tool. "
-    "It does not diagnose, treat, cure, or prevent any condition. "
-    "If you have MCAS / MCAD, work with a mast-cell-knowledgeable clinician. "
-    "Full disclaimer: [docs/disclaimers.md](https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/docs/disclaimers.md)."
+st.markdown(
+    """
+<div class="om-disclaimer" role="alert">
+  <strong>Not medical advice.</strong>
+  This is a research / hypothesis-generation tool.
+  It does not diagnose, treat, cure, or prevent any condition.
+  If you have MCAS / MCAD, work with a mast-cell-knowledgeable clinician.
+  Full disclaimer:
+  <a href="https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/docs/disclaimers.md"
+     target="_blank" rel="noopener noreferrer">docs/disclaimers.md</a>.
+</div>
+""",
+    unsafe_allow_html=True,
 )
 
 
