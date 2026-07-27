@@ -8,7 +8,7 @@ sdk_version: 1.50.0
 app_file: app.py
 pinned: false
 license: mit
-short_description: "Open MCAS/MCAD hypothesis browser — rankings, audits, why + falsify."
+short_description: "Open MCAS/MCAD hypothesis browser with audits + why."
 hf_oauth: false
 preload_from_hub: []
 tags:
