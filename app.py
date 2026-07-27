@@ -45,7 +45,18 @@ st.set_page_config(
 st.markdown(
     """
 <style>
-  .block-container { padding-top: 1.1rem; max-width: 1180px; }
+  /* Do NOT crush Streamlit's top padding — the fixed header clips content
+     if padding-top is too small (disclaimer looked "cut off" / needed to
+     "come down"). Keep max-width only. */
+  .block-container {
+    max-width: 1180px;
+    padding-top: 3.25rem !important;
+    padding-bottom: 2rem !important;
+  }
+  /* Extra air under the deploy/header chrome on HF Spaces embeds */
+  section.main > div:first-child {
+    padding-top: 0.5rem;
+  }
 
   /* Metric tiles — always dark text on soft green surface */
   div[data-testid="stMetric"] {
@@ -144,8 +155,8 @@ st.markdown(
     border: 1px solid #e0a800 !important;
     border-left: 5px solid #c45c00 !important;
     border-radius: 10px;
-    padding: 1rem 1.15rem 1.05rem 1.15rem !important;
-    margin: 0.25rem 0 1.1rem 0 !important;
+    padding: 1.15rem 1.2rem 1.15rem 1.2rem !important;
+    margin: 0.75rem 0 1.25rem 0 !important;
     color: #1a1200 !important;
     font-size: 0.95rem !important;
     line-height: 1.55 !important;
