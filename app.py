@@ -38,49 +38,130 @@ st.set_page_config(
 )
 
 # -----------------------------
-# Light CSS polish (v0.2)
+# Theme-safe CSS (v0.2.1)
+# Streamlit dark mode was washing out white cards (light text on light bg).
+# Force high-contrast surfaces for metrics + compound cards.
 # -----------------------------
 st.markdown(
     """
 <style>
-  .block-container { padding-top: 1.2rem; max-width: 1200px; }
+  .block-container { padding-top: 1.1rem; max-width: 1180px; }
+
+  /* Metric tiles — always dark text on soft green surface */
   div[data-testid="stMetric"] {
-    background: linear-gradient(180deg, #f7fafc 0%, #eef5f2 100%);
-    border: 1px solid #d9e8e0;
+    background: #eef6f1 !important;
+    border: 1px solid #b7d4c4 !important;
     border-radius: 12px;
-    padding: 0.6rem 0.8rem;
+    padding: 0.75rem 0.9rem;
   }
+  div[data-testid="stMetric"] label,
+  div[data-testid="stMetric"] [data-testid="stMetricLabel"],
+  div[data-testid="stMetric"] [data-testid="stMetricLabel"] p,
+  div[data-testid="stMetric"] [data-testid="stMetricValue"],
+  div[data-testid="stMetric"] [data-testid="stMetricDelta"] {
+    color: #0f172a !important;
+  }
+  div[data-testid="stMetric"] [data-testid="stMetricValue"] {
+    font-weight: 700 !important;
+  }
+
+  /* Compound cards — fixed light surface, never inherit theme text color */
   .om-card {
-    border: 1px solid #d9e8e0;
+    border: 1px solid #c5ddd0;
     border-radius: 14px;
-    padding: 0.9rem 1rem;
-    background: #ffffff;
-    box-shadow: 0 1px 2px rgba(16, 42, 34, 0.04);
-    margin-bottom: 0.6rem;
-    min-height: 150px;
+    padding: 0.95rem 1.05rem 1.05rem 1.05rem;
+    background: #f7fbf8 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    margin-bottom: 0.75rem;
+    min-height: 168px;
+    color: #0f172a !important;
   }
-  .om-card h4 { margin: 0 0 0.25rem 0; font-size: 1.05rem; }
+  .om-card, .om-card * {
+    color: #0f172a !important;
+  }
+  .om-card .om-name {
+    margin: 0 0 0.2rem 0;
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #0b1220 !important;
+  }
+  .om-card .om-score {
+    font-variant-numeric: tabular-nums;
+    color: #0b5c38 !important;
+    font-weight: 700;
+    font-size: 0.98rem;
+    margin-bottom: 0.45rem;
+  }
+  .om-card .om-pills { margin: 0.15rem 0 0.55rem 0; line-height: 1.8; }
   .om-pill {
     display: inline-block;
-    font-size: 0.72rem;
-    font-weight: 600;
+    font-size: 0.7rem;
+    font-weight: 650;
     letter-spacing: 0.02em;
-    padding: 0.12rem 0.5rem;
+    padding: 0.14rem 0.55rem;
     border-radius: 999px;
-    background: #e8f5ef;
-    color: #1f5c45;
-    margin-right: 0.3rem;
+    background: #d8efe3 !important;
+    color: #14533a !important;
+    margin: 0 0.28rem 0.2rem 0;
   }
-  .om-pill.warn { background: #fff4e5; color: #8a5a00; }
-  .om-pill.muted { background: #eef1f4; color: #445; }
-  .om-why { color: #334; font-size: 0.9rem; margin-top: 0.4rem; line-height: 1.35; }
-  .om-score { font-variant-numeric: tabular-nums; color: #0f5132; font-weight: 700; }
+  .om-pill.warn {
+    background: #ffe8c2 !important;
+    color: #7a4a00 !important;
+  }
+  .om-pill.muted {
+    background: #e4e9ef !important;
+    color: #334155 !important;
+  }
+  .om-card .om-why {
+    color: #334155 !important;
+    font-size: 0.86rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+  .om-card .om-why strong {
+    color: #0f172a !important;
+    font-weight: 650;
+  }
   .om-falsify {
     border-left: 3px solid #c45c26;
     background: #fff8f3;
+    color: #1c1917 !important;
     padding: 0.7rem 0.9rem;
     border-radius: 0 10px 10px 0;
     margin: 0.6rem 0 1rem 0;
+  }
+  .om-falsify, .om-falsify * { color: #1c1917 !important; }
+
+  /* Overview stat strip (custom, not st.metric) */
+  .om-stat-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.65rem;
+    margin: 0.4rem 0 1rem 0;
+  }
+  @media (max-width: 900px) {
+    .om-stat-row { grid-template-columns: repeat(2, 1fr); }
+  }
+  .om-stat {
+    background: #eef6f1 !important;
+    border: 1px solid #b7d4c4;
+    border-radius: 12px;
+    padding: 0.75rem 0.85rem;
+    color: #0f172a !important;
+  }
+  .om-stat .om-stat-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #334155 !important;
+    margin-bottom: 0.2rem;
+  }
+  .om-stat .om-stat-value {
+    font-size: 1.55rem;
+    font-weight: 750;
+    color: #0b5c38 !important;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
   }
 </style>
 """,
@@ -205,14 +286,47 @@ def _safe_float(val, default=None):
         return default
 
 
+def _short_ref(ref) -> str:
+    """Turn 'Cetirizine (CID 2678)' into 'Cetirizine' for compact cards."""
+    if not isinstance(ref, str) or not ref or ref == "nan":
+        return ""
+    return ref.split(" (")[0].strip()
+
+
+def card_why_line(row: pd.Series, category: str | None = None) -> str:
+    """One clean plain-text line for the card face (no markdown)."""
+    cat = category or str(row.get("category") or "")
+    focus = CATEGORY_FOCUS.get(cat, [])
+    scored = []
+    for tgt in focus:
+        col = f"score_{tgt}"
+        if col in row.index:
+            v = _safe_float(row.get(col))
+            if v is not None and v > 0:
+                scored.append((tgt, v, _short_ref(row.get(f"ref_{tgt}"))))
+    scored.sort(key=lambda x: x[1], reverse=True)
+    if scored:
+        t, v, ref = scored[0]
+        if ref:
+            return f"Top signal: {t} similarity {v:.2f} (nearest: {ref})"
+        return f"Top signal: {t} similarity {v:.2f}"
+    if bool(row.get("has_warhead")) is True or str(row.get("has_warhead")).lower() == "true":
+        wh = str(row.get("warheads") or "warhead").strip()
+        return f"Warhead chemistry: {wh}"
+    evidence = str(row.get("evidence_level") or "").strip() or "unspecified"
+    return f"Evidence level: {evidence}"
+
+
 def explain_rank(row: pd.Series, category: str | None = None) -> list[str]:
-    """Plain-English drivers for a ranked row (uses only existing CSV columns)."""
+    """Plain-English drivers for a ranked row (plain text; safe for HTML cards)."""
     reasons: list[str] = []
     cat = category or str(row.get("category") or "")
     evidence = str(row.get("evidence_level") or "").strip() or "unspecified"
     source = str(row.get("source") or "")
-    reasons.append(f"Evidence weight: **{evidence}**"
-                   + (" (library / clinical anchor)" if source == "library" else " (AI-generated — not clinical evidence)"))
+    reasons.append(
+        f"Evidence weight: {evidence}"
+        + (" (library / clinical anchor)" if source == "library" else " (AI-generated — not clinical evidence)")
+    )
 
     focus = CATEGORY_FOCUS.get(cat, [])
     scored = []
@@ -221,22 +335,22 @@ def explain_rank(row: pd.Series, category: str | None = None) -> list[str]:
         if col in row.index:
             v = _safe_float(row.get(col))
             if v is not None and v > 0:
-                ref = row.get(f"ref_{tgt}")
-                ref_s = f" (nearest ref: {ref})" if isinstance(ref, str) and ref and ref != "nan" else ""
-                scored.append((tgt, v, ref_s))
+                ref = _short_ref(row.get(f"ref_{tgt}"))
+                scored.append((tgt, v, ref))
     scored.sort(key=lambda x: x[1], reverse=True)
     if scored:
-        top = scored[:3]
-        bits = [f"**{t}** sim `{v:.2f}`{ref}" for t, v, ref in top]
+        bits = []
+        for t, v, ref in scored[:3]:
+            bits.append(f"{t} {v:.2f}" + (f" ~ {ref}" if ref else ""))
         reasons.append("Strongest target signals: " + "; ".join(bits))
 
     if bool(row.get("has_warhead")) is True or str(row.get("has_warhead")).lower() == "true":
         wh = str(row.get("warheads") or "reactive group").strip() or "reactive group"
-        reasons.append(f"Covalent warhead detected: **{wh}** (KEAP1-axis chemistry)")
+        reasons.append(f"Covalent warhead detected: {wh} (KEAP1-axis chemistry)")
 
     mc = _safe_float(row.get("mast_cell_stabilizer_prob"))
     if mc is not None and mc >= 0.4:
-        reasons.append(f"Mast-cell stabilizer model p = **{mc:.2f}** (EXP-016)")
+        reasons.append(f"Mast-cell stabilizer model p = {mc:.2f} (EXP-016)")
 
     herg = _safe_float(row.get("hERG_score"))
     ames = _safe_float(row.get("AMES_score"))
@@ -244,8 +358,7 @@ def explain_rank(row: pd.Series, category: str | None = None) -> list[str]:
         safety = 0.5 * (1 - herg) + 0.5 * (1 - ames)
         label = "favorable" if safety >= 0.55 else ("mixed" if safety >= 0.4 else "cautious")
         reasons.append(
-            f"Predicted safety ({label}): hERG `{herg:.2f}`, AMES `{ames:.2f}` "
-            f"(lower = better)"
+            f"Predicted safety ({label}): hERG {herg:.2f}, AMES {ames:.2f} (lower = better)"
         )
 
     tan = _safe_float(row.get("tanimoto_to_sfn_class"))
@@ -254,34 +367,34 @@ def explain_rank(row: pd.Series, category: str | None = None) -> list[str]:
     if tan is not None and source == "reinvent_generated":
         if tan >= 0.9:
             reasons.append(
-                f"Near-neighbor of SFN-class seeds (Tanimoto `{tan:.2f}`) — "
-                "**not a novel scaffold**; chain/warhead variant (EXP-025)."
+                f"Near-neighbor of SFN-class seeds (Tanimoto {tan:.2f}) — "
+                "not a novel scaffold; chain/warhead variant (EXP-025)."
             )
         elif tan >= 0.5:
-            reasons.append(f"SFN-class neighborhood (Tanimoto `{tan:.2f}`).")
+            reasons.append(f"SFN-class neighborhood (Tanimoto {tan:.2f}).")
         else:
-            reasons.append(f"More distant from SFN-class (Tanimoto `{tan:.2f}`).")
+            reasons.append(f"More distant from SFN-class (Tanimoto {tan:.2f}).")
 
     nov = _safe_float(row.get("novelty_score"))
     if nov is not None and source == "reinvent_generated":
-        reasons.append(f"Novelty score `{nov:.2f}` (1 − max Tanimoto to library/seeds)")
+        reasons.append(f"Novelty score {nov:.2f} (1 − max Tanimoto to library/seeds)")
 
     if str(row.get("real_space_plausible")).lower() in ("true", "1", "yes"):
-        reasons.append("Enamine REAL-space **plausible** (EXP-017 envelope)")
+        reasons.append("Enamine REAL-space plausible (EXP-017 envelope)")
     elif str(row.get("real_space_plausible")).lower() in ("false", "0", "no"):
-        reasons.append("Enamine REAL-space envelope: **not plausible** / check MW")
+        reasons.append("Enamine REAL-space envelope: not plausible / check MW")
 
     btb = _safe_float(row.get("score_btb_covalent"))
     if btb is not None and btb > 0:
-        reasons.append(f"BTB Cys-151 covalent proxy score `{btb:.2f}` (EXP-023)")
+        reasons.append(f"BTB Cys-151 covalent proxy score {btb:.2f} (EXP-023)")
 
     le = _safe_float(row.get("vina_ligand_efficiency"))
     if le is not None and le < 0:
-        reasons.append(f"KEAP1 Vina ligand efficiency `{le:.3f}` kcal/mol/atom (EXP-009)")
+        reasons.append(f"KEAP1 Vina ligand efficiency {le:.3f} kcal/mol/atom (EXP-009)")
 
     c151 = _safe_float(row.get("c151_score"))
     if c151 is not None and c151 > 0:
-        reasons.append(f"C151 covalent-adduct proxy score `{c151:.2f}` (EXP-012)")
+        reasons.append(f"C151 covalent-adduct proxy score {c151:.2f} (EXP-012)")
 
     return reasons
 
@@ -330,13 +443,23 @@ def recovery_table(benchmark: pd.DataFrame) -> pd.DataFrame:
             "recovered": f"{hit}/{len(valid)}",
             "rate": f"{100 * hit / len(valid):.1f}%",
             "note": {
-                5: "strict — currently weak (self-similarity cap)",
-                10: "strict — currently weak",
+                5: "strict cutoff",
+                10: "strict cutoff",
                 20: "headline coarse recovery",
-                50: "near-ceiling for n=21 set",
+                50: "near-ceiling for held-out set",
             }[n],
         })
     return pd.DataFrame(rows)
+
+
+def _html_escape(text: str) -> str:
+    return (
+        str(text)
+        .replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+    )
 
 
 def render_top_cards(df: pd.DataFrame, category: str, n: int = 3) -> None:
@@ -349,26 +472,41 @@ def render_top_cards(df: pd.DataFrame, category: str, n: int = 3) -> None:
         evidence = str(r.get("evidence_level") or "—")
         source = str(r.get("source") or "—")
         warhead = bool(r.get("has_warhead")) is True or str(r.get("has_warhead")).lower() == "true"
-        why = explain_rank(r, category)
-        top_why = why[0] if why else ""
-        if len(why) > 1:
-            top_why = why[1] if "target" in why[1].lower() or "Strongest" in why[1] else why[0]
+        name = _html_escape(r.get("name") or "Unknown")
+        why = _html_escape(card_why_line(r, category))
         pills = (
-            f'<span class="om-pill">{evidence} evidence</span>'
-            f'<span class="om-pill muted">{source}</span>'
-            + (f'<span class="om-pill warn">warhead</span>' if warhead else "")
+            f'<span class="om-pill">{_html_escape(evidence)} evidence</span>'
+            f'<span class="om-pill muted">{_html_escape(source)}</span>'
+            + ('<span class="om-pill warn">warhead</span>' if warhead else "")
         )
+        # Use st.container + markdown; force readable surface in dark mode via CSS.
         col.markdown(
             f"""
 <div class="om-card">
-  <h4>{r['name']}</h4>
+  <div class="om-name">{name}</div>
   <div class="om-score">composite {score:.3f}</div>
-  <div style="margin-top:0.35rem">{pills}</div>
-  <div class="om-why">{top_why}</div>
+  <div class="om-pills">{pills}</div>
+  <p class="om-why">{why}</p>
 </div>
 """,
             unsafe_allow_html=True,
         )
+
+
+def render_stat_strip(stats: list[tuple[str, str | int]]) -> None:
+    """Custom overview metrics that stay readable in Streamlit dark mode."""
+    cells = []
+    for label, value in stats:
+        cells.append(
+            f'<div class="om-stat">'
+            f'<div class="om-stat-label">{_html_escape(label)}</div>'
+            f'<div class="om-stat-value">{_html_escape(value)}</div>'
+            f"</div>"
+        )
+    st.markdown(
+        f'<div class="om-stat-row">{"".join(cells)}</div>',
+        unsafe_allow_html=True,
+    )
 
 
 # -----------------------------
@@ -379,7 +517,7 @@ st.sidebar.markdown(
     "**Open, MIT-licensed hypothesis-generation engine for MCAS / MCAD.**\n\n"
     "Pharma + herbs + supplements + AI-generated analogs, ranked transparently."
 )
-st.sidebar.caption("Viewer **v0.2** — cards · why-ranked · honest audits · falsify-me")
+st.sidebar.caption("Viewer **v0.2.1** — dark-mode cards · why-ranked · audits · falsify-me")
 st.sidebar.markdown("---")
 st.sidebar.markdown(
     "**Quick links**\n"
@@ -430,11 +568,12 @@ with tabs[0]:
     benchmark = load_benchmark()
     negatives = load_negative_controls()
 
-    c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Anchor compounds", len(library), help="Curated pharma + herbs + supplements + biologics")
-    c2.metric("Rescue candidates", len(rescue))
-    c3.metric("Maintenance candidates", len(maintenance))
-    c4.metric("Remission candidates", len(remission), help="Library + AI-generated SFN-class analogs")
+    render_stat_strip([
+        ("Anchor compounds", len(library)),
+        ("Rescue candidates", len(rescue)),
+        ("Maintenance candidates", len(maintenance)),
+        ("Remission candidates", len(remission)),
+    ])
 
     st.markdown("### Top candidates (with a one-line “why”)")
     for label, cat, df in (
@@ -448,19 +587,21 @@ with tabs[0]:
     if not benchmark.empty:
         st.markdown("### Held-out known-actives recovery (honest curve)")
         st.markdown(
-            "21 clinically established mast-cell drugs scored blind (not in seeds / "
-            "reference sets). **Coarse recovery@20 is strong; strict recovery@5/@10 "
-            "is weak** — partly because reference self-similarity caps top ranks "
-            "([EXP-006](https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/experiments/EXP-006-known-actives-recovery.md))."
+            "Held-out mast-cell drugs scored blind (not in seeds / reference sets). "
+            "Read the full curve — recovery@20 is the coarse headline; @5/@10 are stricter. "
+            "See [EXP-024](https://github.com/mrdulasolutions/MCAS.Opensource/blob/main/experiments/EXP-024-expanded-benchmarks-self-debias.md)."
         )
         rt = recovery_table(benchmark)
         if not rt.empty:
-            mcols = st.columns(4)
             valid = benchmark[benchmark["rank_in_expected_category"].notna()]
             ranks = valid["rank_in_expected_category"].astype(int)
-            for col, n in zip(mcols, (5, 10, 20, 50)):
-                hit = (ranks <= n).sum()
-                col.metric(f"Recovery@{n}", f"{hit}/{len(valid)}", f"{100 * hit / len(valid):.0f}%")
+            rec_stats = []
+            for n in (5, 10, 20, 50):
+                hit = int((ranks <= n).sum())
+                rec_stats.append(
+                    (f"Recovery@{n}", f"{hit}/{len(valid)} ({100 * hit / len(valid):.0f}%)")
+                )
+            render_stat_strip(rec_stats)
             st.dataframe(rt, use_container_width=True, hide_index=True)
 
         if not negatives.empty:
@@ -890,26 +1031,29 @@ with tabs[9]:
         "unrelated drugs out of the top-10?)."
     )
 
-    st.markdown("### Known-Actives Recovery (EXP-006)")
+    st.markdown("### Known-Actives Recovery (EXP-006 / EXP-024)")
     st.markdown(
-        "Blind scoring of 21 clinically established mast-cell drugs **not** in seeds "
-        "or reference ligand sets. Read the full curve — not just @20."
+        "Blind scoring of held-out mast-cell drugs **not** in seeds or reference ligand sets. "
+        "Read the full curve — not just @20."
     )
     benchmark = load_benchmark()
     if benchmark.empty:
-        st.info("Benchmark not run yet. See EXP-006.")
+        st.info("Benchmark not run yet. See EXP-006 / EXP-024.")
     else:
         valid = benchmark[benchmark["rank_in_expected_category"].notna()].copy()
         valid["rank_in_expected_category"] = valid["rank_in_expected_category"].astype(int)
 
-        c1, c2, c3, c4 = st.columns(4)
-        for col, N in zip([c1, c2, c3, c4], [5, 10, 20, 50]):
-            hit = (valid["rank_in_expected_category"] <= N).sum()
-            col.metric(f"Recovery@{N}", f"{hit}/{len(valid)}", f"{100 * hit / len(valid):.0f}%")
+        rec_stats = []
+        for N in (5, 10, 20, 50):
+            hit = int((valid["rank_in_expected_category"] <= N).sum())
+            rec_stats.append(
+                (f"Recovery@{N}", f"{hit}/{len(valid)} ({100 * hit / len(valid):.0f}%)")
+            )
+        render_stat_strip(rec_stats)
 
         st.caption(
-            "recovery@5/@10 are intentionally weak today (self-similarity + small set). "
-            "recovery@20 is the coarse headline metric. Remission expected-set size is small."
+            "recovery@5/@10 are stricter cutoffs; recovery@20 is the coarse headline metric. "
+            "Expanded set + self-debias documented in EXP-024."
         )
 
         st.markdown("### Per-category recovery")
@@ -947,11 +1091,15 @@ with tabs[9]:
             return True
 
         prec_n = int(negatives.apply(_outside_top10, axis=1).sum())
-        st.metric(
-            "Precision@10 (outside every top-10)",
-            f"{prec_n}/{len(negatives)}",
-            f"{100 * prec_n / len(negatives):.0f}%",
-        )
+        render_stat_strip([
+            (
+                "Precision@10 (outside every top-10)",
+                f"{prec_n}/{len(negatives)} ({100 * prec_n / len(negatives):.0f}%)",
+            ),
+            ("Negative controls", len(negatives)),
+            ("Known actives", "see above"),
+            ("Audit status", "floors in CI"),
+        ])
         show_cols = [
             c for c in [
                 "name", "therapeutic_class", "rationale",
