@@ -54,16 +54,20 @@ ranked, AI-evaluated hypothesis, with a clear handoff to wet-lab validation.
    DAO, bromelain, and plant extracts have no usable SMILES — they're still in
    the library with a `biologic_flag`, so they survive merges but bypass
    chemistry-only pipelines.
-4. **CPU on Mac for data + QSAR; Colab GPU for REINVENT + DiffDock.** Splits
-   the heavy work to free Colab. Notebooks 01-02 + 05 run locally. 03-04
-   are Colab-first.
-5. **Multi-target docking (notebook 04) per category.** Rescue compounds
-   are scored against HRH1/HRH2/CYSLTR1; remission against MRGPRX2/KIT/NFE2L2.
-   Composite ranking (notebook 05) is category-aware.
+4. **CPU-first path is canonical.** `scripts/generate_sfn_analogs.py`,
+   `score_against_targets.py`, `run_qsar.py`, `rank_hypotheses.py` reproduce
+   rankings on a laptop. Notebooks 03–04 (REINVENT / DiffDock) remain optional
+   GPU enrichment; Vina KEAP1 docking is available via `scripts/dock_keap1.py`.
+5. **Category-aware multi-target scoring.** Rescue weights H1/H2/CysLT1/MRGPRX2;
+   maintenance adds BTK/SYK/PTGS2/CNR2/KEAP1; remission is KEAP1/KIT-heavy.
+   Composite ranking (`scripts/rank_hypotheses.py`) is category-aware.
 6. **Evidence weighting persists through the pipeline.** A compound with
    strong human clinical evidence keeps that boost even if QSAR or docking is
    middling — we're hunting for hypotheses, not pretending in silico beats real
    data.
+7. **Audit gates in CI.** `scripts/check_audit_gates.py` fails the build if
+   recovery@20, recovery@10, negative precision@10, or library size fall below
+   documented floors.
 
 ## CPU-only path (no GPU, no Colab)
 
