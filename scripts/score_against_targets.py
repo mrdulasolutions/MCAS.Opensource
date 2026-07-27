@@ -140,14 +140,31 @@ def fingerprint(mol) -> object:
     return AllChem.GetMorganFingerprintAsBitVect(mol, 2, nBits=2048)
 
 
-def best_similarity(query_fp, ref_fps: list) -> tuple[float, int]:
-    best = 0.0
-    best_idx = -1
+def best_similarity(
+    query_fp,
+    ref_fps: list,
+    exclude_self: bool = True,
+    self_threshold: float = 0.99,
+) -> tuple[float, int]:
+    """Max Tanimoto to reference set, with optional self-match de-bias (EXP-024).
+
+    Library anchors that also sit in TARGET_REFERENCES otherwise score ~1.0
+    against themselves, inflating composites and capping recovery@5/@10 for
+    held-out known actives. When exclude_self is True, refs with
+    Tanimoto >= self_threshold are skipped in favor of the next-best neighbor.
+    """
+    if not ref_fps:
+        return 0.0, -1
+    scored = []
     for i, rfp in enumerate(ref_fps):
-        s = DataStructs.TanimotoSimilarity(query_fp, rfp)
-        if s > best:
-            best = s
-            best_idx = i
+        scored.append((float(DataStructs.TanimotoSimilarity(query_fp, rfp)), i))
+    scored.sort(key=lambda t: t[0], reverse=True)
+    best, best_idx = scored[0]
+    if exclude_self and best >= self_threshold:
+        for s, i in scored[1:]:
+            if s < self_threshold:
+                return s, i
+        return min(best, 0.85), best_idx
     return best, best_idx
 
 
@@ -211,16 +228,20 @@ def main() -> int:
 
         rows = []
         for s in source_mols:
-            score, idx = best_similarity(s["fp"], ref_mols)
+            # Raw (with self) for diagnostics; debiased for ranking.
+            raw_score, raw_idx = best_similarity(s["fp"], ref_mols, exclude_self=False)
+            score, idx = best_similarity(s["fp"], ref_mols, exclude_self=True)
             rows.append({
                 "name": s["name"],
                 "smiles": s["smiles"],
                 "category": s["category"],
                 "source": s["source"],
                 "target": target,
-                "score": round(score, 4),                # higher = more likely class member
+                "score": round(score, 4),                # debiased; higher = more likely class member
+                "score_raw_with_self": round(raw_score, 4),
+                "self_match_excluded": raw_score >= 0.99 and score < raw_score,
                 "best_ref": ref_labels[idx] if idx >= 0 else "",
-                "method": "ligand_based_similarity_tanimoto_morgan2_2048",
+                "method": "ligand_based_similarity_tanimoto_morgan2_2048_self_debias",
             })
 
         rows.sort(key=lambda r: r["score"], reverse=True)

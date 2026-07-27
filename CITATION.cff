@@ -1,7 +1,9 @@
 cff-version: 1.2.0
-title: "MCAS.Opensource"
-message: "If you use this repository or its hypotheses, please cite it."
+title: "OpenMCAS (MCAS.Opensource)"
+message: "If you use this repository or its hypotheses, please cite it (include the git commit hash)."
 type: software
+version: "0.2.0"
+date-released: "2026-07-27"
 authors:
   - name: "MR Dula Medical (a DBA of MR Dula Enterprise, LLC)"
     city: "Raleigh"
@@ -18,7 +20,12 @@ keywords:
   - drug discovery
   - cheminformatics
   - open science
+  - KEAP1
+  - sulforaphane
 abstract: >
-  An MIT-licensed, end-to-end open-source pipeline for hypothesis generation and
-  in silico testing of MCAS/MCAD rescue, maintenance, and remission compounds across
-  pharma, herbs, and supplements, integrated with AI tooling (PyTDC, DeepChem, REINVENT 4).
+  An MIT-licensed, CPU-reproducible pipeline for hypothesis generation and
+  in silico testing of MCAS/MCAD rescue, maintenance, and remission compounds
+  across pharma, herbs, supplements, and AI-generated analogs. Includes multi-target
+  ligand-based screening, ADMET QSAR, ChEMBL and mast-cell predictors, KEAP1
+  Kelch + BTB docking proxies, recovery/negative-control audits, and a public
+  Streamlit browser on Hugging Face Spaces.

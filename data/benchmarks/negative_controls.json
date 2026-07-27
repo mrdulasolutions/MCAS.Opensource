@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "description": "Negative-control benchmark: 20 widely-used drugs from therapeutic areas with NO plausible MCAS / MCAD mechanism. None should rank in the top-20 of any category. If they do, the composite is over-rewarding generic drug-likeness instead of mechanism-specific signal.",
+  "description": "Negative-control benchmark: drugs from therapeutic areas with no plausible MCAS/MCAD mechanism. Expanded in EXP-024 to n=117 (target \u2265100).",
   "purpose": "Closes the credibility loop opened by EXP-006. Recovery@N for known actives shows we can find what we should find. Precision@N for negative controls shows we don't promote what we shouldn't promote.",
   "evaluation_metric": "precision@N: fraction of negative controls correctly ranked OUTSIDE the top N of any category. Higher = better discrimination.",
   "exclusion_criteria": [
@@ -115,7 +115,7 @@
     {
       "name": "Finasteride",
       "pubchem_cid": 57363,
-      "therapeutic_class": "5α-reductase inhibitor (BPH / alopecia)",
+      "therapeutic_class": "5\u03b1-reductase inhibitor (BPH / alopecia)",
       "rationale": "DHT synthesis blockade; endocrine indication only."
     },
     {
@@ -129,6 +129,588 @@
       "pubchem_cid": 5212,
       "therapeutic_class": "PDE5 inhibitor (erectile dysfunction)",
       "rationale": "cGMP-specific phosphodiesterase 5 inhibitor; smooth muscle vasodilator."
+    },
+    {
+      "name": "Ibuprofen",
+      "pubchem_cid": 3672,
+      "therapeutic_class": "NSAID",
+      "rationale": "COX inhibitor analgesic; not MCAS-specific therapy."
+    },
+    {
+      "name": "Naproxen",
+      "pubchem_cid": 156391,
+      "therapeutic_class": "NSAID",
+      "rationale": "COX inhibitor; no mast-cell stabilizer indication."
+    },
+    {
+      "name": "Sertraline",
+      "pubchem_cid": 68617,
+      "therapeutic_class": "SSRI",
+      "rationale": "Serotonin reuptake inhibitor; psychiatric indication."
+    },
+    {
+      "name": "Escitalopram",
+      "pubchem_cid": 146570,
+      "therapeutic_class": "SSRI",
+      "rationale": "SSRI antidepressant."
+    },
+    {
+      "name": "Fluoxetine",
+      "pubchem_cid": 3386,
+      "therapeutic_class": "SSRI",
+      "rationale": "SSRI antidepressant."
+    },
+    {
+      "name": "Venlafaxine",
+      "pubchem_cid": 5656,
+      "therapeutic_class": "SNRI",
+      "rationale": "Serotonin-norepinephrine reuptake inhibitor."
+    },
+    {
+      "name": "Bupropion",
+      "pubchem_cid": 444,
+      "therapeutic_class": "NDRI antidepressant",
+      "rationale": "Dopamine/norepinephrine reuptake inhibitor."
+    },
+    {
+      "name": "Quetiapine",
+      "pubchem_cid": 5002,
+      "therapeutic_class": "Atypical antipsychotic",
+      "rationale": "D2/5-HT2A antagonist antipsychotic."
+    },
+    {
+      "name": "Olanzapine",
+      "pubchem_cid": 4585,
+      "therapeutic_class": "Atypical antipsychotic",
+      "rationale": "Multi-receptor antipsychotic."
+    },
+    {
+      "name": "Aripiprazole",
+      "pubchem_cid": 60795,
+      "therapeutic_class": "Atypical antipsychotic",
+      "rationale": "Partial D2 agonist antipsychotic."
+    },
+    {
+      "name": "Risperidone",
+      "pubchem_cid": 5073,
+      "therapeutic_class": "Atypical antipsychotic",
+      "rationale": "D2/5-HT2 antagonist."
+    },
+    {
+      "name": "Gabapentin",
+      "pubchem_cid": 3446,
+      "therapeutic_class": "Anticonvulsant / neuropathic pain",
+      "rationale": "\u03b12\u03b4 calcium channel ligand."
+    },
+    {
+      "name": "Pregabalin",
+      "pubchem_cid": 5486971,
+      "therapeutic_class": "Anticonvulsant / neuropathic pain",
+      "rationale": "\u03b12\u03b4 ligand."
+    },
+    {
+      "name": "Lamotrigine",
+      "pubchem_cid": 3878,
+      "therapeutic_class": "Anticonvulsant",
+      "rationale": "Sodium channel modulator AED."
+    },
+    {
+      "name": "Topiramate",
+      "pubchem_cid": 5284627,
+      "therapeutic_class": "Anticonvulsant",
+      "rationale": "Multi-mechanism AED."
+    },
+    {
+      "name": "Valproic acid",
+      "pubchem_cid": 3121,
+      "therapeutic_class": "Anticonvulsant / mood stabilizer",
+      "rationale": "HDAC/sodium channel effects; not MCAS."
+    },
+    {
+      "name": "Lithium carbonate",
+      "pubchem_cid": 11125,
+      "therapeutic_class": "Mood stabilizer",
+      "rationale": "Bipolar disorder therapy."
+    },
+    {
+      "name": "Metoprolol",
+      "pubchem_cid": 4171,
+      "therapeutic_class": "Beta blocker",
+      "rationale": "\u03b21 antagonist antihypertensive."
+    },
+    {
+      "name": "Atenolol",
+      "pubchem_cid": 2249,
+      "therapeutic_class": "Beta blocker",
+      "rationale": "\u03b21 antagonist."
+    },
+    {
+      "name": "Losartan",
+      "pubchem_cid": 3961,
+      "therapeutic_class": "ARB antihypertensive",
+      "rationale": "AT1 receptor antagonist."
+    },
+    {
+      "name": "Valsartan",
+      "pubchem_cid": 60846,
+      "therapeutic_class": "ARB antihypertensive",
+      "rationale": "AT1 antagonist."
+    },
+    {
+      "name": "Hydrochlorothiazide",
+      "pubchem_cid": 3639,
+      "therapeutic_class": "Thiazide diuretic",
+      "rationale": "NCC inhibitor diuretic."
+    },
+    {
+      "name": "Spironolactone",
+      "pubchem_cid": 5833,
+      "therapeutic_class": "Mineralocorticoid antagonist",
+      "rationale": "Potassium-sparing diuretic."
+    },
+    {
+      "name": "Digoxin",
+      "pubchem_cid": 2724385,
+      "therapeutic_class": "Cardiac glycoside",
+      "rationale": "Na/K-ATPase inhibitor."
+    },
+    {
+      "name": "Amiodarone",
+      "pubchem_cid": 2157,
+      "therapeutic_class": "Antiarrhythmic",
+      "rationale": "Class III multi-channel blocker."
+    },
+    {
+      "name": "Apixaban",
+      "pubchem_cid": 10182969,
+      "therapeutic_class": "DOAC anticoagulant",
+      "rationale": "Factor Xa inhibitor."
+    },
+    {
+      "name": "Rivaroxaban",
+      "pubchem_cid": 9875401,
+      "therapeutic_class": "DOAC anticoagulant",
+      "rationale": "Factor Xa inhibitor."
+    },
+    {
+      "name": "Rosuvastatin",
+      "pubchem_cid": 446157,
+      "therapeutic_class": "Statin",
+      "rationale": "HMG-CoA reductase inhibitor."
+    },
+    {
+      "name": "Pravastatin",
+      "pubchem_cid": 54687,
+      "therapeutic_class": "Statin",
+      "rationale": "HMG-CoA reductase inhibitor."
+    },
+    {
+      "name": "Ezetimibe",
+      "pubchem_cid": 150311,
+      "therapeutic_class": "Cholesterol absorption inhibitor",
+      "rationale": "NPC1L1 inhibitor."
+    },
+    {
+      "name": "Omeprazole",
+      "pubchem_cid": 4594,
+      "therapeutic_class": "PPI",
+      "rationale": "H+/K+-ATPase inhibitor; GERD."
+    },
+    {
+      "name": "Pantoprazole",
+      "pubchem_cid": 4679,
+      "therapeutic_class": "PPI",
+      "rationale": "Proton pump inhibitor."
+    },
+    {
+      "name": "Ondansetron",
+      "pubchem_cid": 4595,
+      "therapeutic_class": "5-HT3 antagonist antiemetic",
+      "rationale": "Chemo-induced nausea."
+    },
+    {
+      "name": "Metoclopramide",
+      "pubchem_cid": 4168,
+      "therapeutic_class": "Prokinetic / antiemetic",
+      "rationale": "D2 antagonist prokinetic."
+    },
+    {
+      "name": "Loperamide",
+      "pubchem_cid": 3955,
+      "therapeutic_class": "Antidiarrheal",
+      "rationale": "Peripheral \u03bc-opioid agonist."
+    },
+    {
+      "name": "Docusate",
+      "pubchem_cid": 11339,
+      "therapeutic_class": "Stool softener",
+      "rationale": "Surfactant laxative."
+    },
+    {
+      "name": "Colchicine",
+      "pubchem_cid": 6167,
+      "therapeutic_class": "Antigout",
+      "rationale": "Microtubule inhibitor for gout/FMF."
+    },
+    {
+      "name": "Methotrexate",
+      "pubchem_cid": 126941,
+      "therapeutic_class": "Antimetabolite / DMARD",
+      "rationale": "DHFR inhibitor."
+    },
+    {
+      "name": "Leflunomide",
+      "pubchem_cid": 3899,
+      "therapeutic_class": "DMARD",
+      "rationale": "DHODH inhibitor."
+    },
+    {
+      "name": "Sulfasalazine",
+      "pubchem_cid": 5359476,
+      "therapeutic_class": "DMARD / IBD",
+      "rationale": "Aminosalicylate prodrug."
+    },
+    {
+      "name": "Mesalamine",
+      "pubchem_cid": 4075,
+      "therapeutic_class": "5-ASA IBD",
+      "rationale": "Topical gut anti-inflammatory."
+    },
+    {
+      "name": "Azathioprine",
+      "pubchem_cid": 2265,
+      "therapeutic_class": "Immunosuppressant",
+      "rationale": "Thiopurine antimetabolite."
+    },
+    {
+      "name": "Mycophenolate mofetil",
+      "pubchem_cid": 5281078,
+      "therapeutic_class": "Immunosuppressant",
+      "rationale": "IMPDH inhibitor transplant drug."
+    },
+    {
+      "name": "Tamoxifen",
+      "pubchem_cid": 2733526,
+      "therapeutic_class": "SERM",
+      "rationale": "Breast cancer endocrine therapy."
+    },
+    {
+      "name": "Anastrozole",
+      "pubchem_cid": 2187,
+      "therapeutic_class": "Aromatase inhibitor",
+      "rationale": "Breast cancer endocrine therapy."
+    },
+    {
+      "name": "Letrozole",
+      "pubchem_cid": 3902,
+      "therapeutic_class": "Aromatase inhibitor",
+      "rationale": "Breast cancer."
+    },
+    {
+      "name": "Enzalutamide",
+      "pubchem_cid": 15951529,
+      "therapeutic_class": "Antiandrogen",
+      "rationale": "Prostate cancer AR antagonist."
+    },
+    {
+      "name": "Bicalutamide",
+      "pubchem_cid": 2375,
+      "therapeutic_class": "Antiandrogen",
+      "rationale": "Prostate cancer."
+    },
+    {
+      "name": "Sunitinib",
+      "pubchem_cid": 5329102,
+      "therapeutic_class": "Multi-kinase TKI (non-MCAS)",
+      "rationale": "VEGFR/PDGFR TKI oncology \u2014 not mastocytosis-labeled."
+    },
+    {
+      "name": "Erlotinib",
+      "pubchem_cid": 176870,
+      "therapeutic_class": "EGFR TKI",
+      "rationale": "NSCLC EGFR inhibitor."
+    },
+    {
+      "name": "Gefitinib",
+      "pubchem_cid": 123631,
+      "therapeutic_class": "EGFR TKI",
+      "rationale": "NSCLC."
+    },
+    {
+      "name": "Oseltamivir",
+      "pubchem_cid": 65028,
+      "therapeutic_class": "Antiviral (neuraminidase)",
+      "rationale": "Influenza."
+    },
+    {
+      "name": "Acyclovir",
+      "pubchem_cid": 2022,
+      "therapeutic_class": "Antiviral (HSV)",
+      "rationale": "Nucleoside analog."
+    },
+    {
+      "name": "Valacyclovir",
+      "pubchem_cid": 60773,
+      "therapeutic_class": "Antiviral (HSV)",
+      "rationale": "Acyclovir prodrug."
+    },
+    {
+      "name": "Azithromycin",
+      "pubchem_cid": 447043,
+      "therapeutic_class": "Macrolide antibiotic",
+      "rationale": "Protein synthesis inhibitor antibacterial."
+    },
+    {
+      "name": "Amoxicillin",
+      "pubchem_cid": 33613,
+      "therapeutic_class": "Beta-lactam antibiotic",
+      "rationale": "Cell wall synthesis inhibitor."
+    },
+    {
+      "name": "Ciprofloxacin",
+      "pubchem_cid": 2764,
+      "therapeutic_class": "Fluoroquinolone antibiotic",
+      "rationale": "DNA gyrase inhibitor."
+    },
+    {
+      "name": "Doxycycline",
+      "pubchem_cid": 54671203,
+      "therapeutic_class": "Tetracycline antibiotic",
+      "rationale": "Protein synthesis inhibitor."
+    },
+    {
+      "name": "Metronidazole",
+      "pubchem_cid": 4173,
+      "therapeutic_class": "Nitroimidazole antibiotic",
+      "rationale": "Anaerobe / protozoal infections."
+    },
+    {
+      "name": "Fluconazole",
+      "pubchem_cid": 3365,
+      "therapeutic_class": "Azole antifungal",
+      "rationale": "Ergosterol synthesis inhibitor."
+    },
+    {
+      "name": "Terbinafine",
+      "pubchem_cid": 1549008,
+      "therapeutic_class": "Allylamine antifungal",
+      "rationale": "Squalene epoxidase inhibitor."
+    },
+    {
+      "name": "Albendazole",
+      "pubchem_cid": 2082,
+      "therapeutic_class": "Anthelmintic",
+      "rationale": "Benzimidazole tubulin binder."
+    },
+    {
+      "name": "Chloroquine",
+      "pubchem_cid": 2719,
+      "therapeutic_class": "Antimalarial",
+      "rationale": "Heme polymerization inhibitor."
+    },
+    {
+      "name": "Artemisinin",
+      "pubchem_cid": 68827,
+      "therapeutic_class": "Antimalarial",
+      "rationale": "Endoperoxide antimalarial."
+    },
+    {
+      "name": "Tretinoin",
+      "pubchem_cid": 444795,
+      "therapeutic_class": "Retinoid",
+      "rationale": "RAR agonist dermatology/oncology."
+    },
+    {
+      "name": "Adapalene",
+      "pubchem_cid": 60164,
+      "therapeutic_class": "Retinoid (topical)",
+      "rationale": "RAR-\u03b2/\u03b3 agonist acne therapy."
+    },
+    {
+      "name": "Minoxidil",
+      "pubchem_cid": 4201,
+      "therapeutic_class": "Vasodilator / hair growth",
+      "rationale": "KATP opener."
+    },
+    {
+      "name": "Tadalafil",
+      "pubchem_cid": 110635,
+      "therapeutic_class": "PDE5 inhibitor",
+      "rationale": "Erectile dysfunction / PAH."
+    },
+    {
+      "name": "Vardenafil",
+      "pubchem_cid": 110634,
+      "therapeutic_class": "PDE5 inhibitor",
+      "rationale": "Erectile dysfunction."
+    },
+    {
+      "name": "Tamsulosin",
+      "pubchem_cid": 129211,
+      "therapeutic_class": "Alpha-1 blocker",
+      "rationale": "BPH."
+    },
+    {
+      "name": "Dutasteride",
+      "pubchem_cid": 6918296,
+      "therapeutic_class": "5\u03b1-reductase inhibitor",
+      "rationale": "BPH / alopecia."
+    },
+    {
+      "name": "Oxybutynin",
+      "pubchem_cid": 4634,
+      "therapeutic_class": "Antimuscarinic",
+      "rationale": "Overactive bladder."
+    },
+    {
+      "name": "Tolterodine",
+      "pubchem_cid": 443879,
+      "therapeutic_class": "Antimuscarinic",
+      "rationale": "Overactive bladder."
+    },
+    {
+      "name": "Mirabegron",
+      "pubchem_cid": 9865528,
+      "therapeutic_class": "Beta-3 agonist",
+      "rationale": "Overactive bladder."
+    },
+    {
+      "name": "Sumatriptan",
+      "pubchem_cid": 5358,
+      "therapeutic_class": "5-HT1B/1D agonist",
+      "rationale": "Migraine abortive."
+    },
+    {
+      "name": "Rizatriptan",
+      "pubchem_cid": 5078,
+      "therapeutic_class": "Triptan",
+      "rationale": "Migraine."
+    },
+    {
+      "name": "Baclofen",
+      "pubchem_cid": 2284,
+      "therapeutic_class": "GABA-B agonist",
+      "rationale": "Spasticity."
+    },
+    {
+      "name": "Tizanidine",
+      "pubchem_cid": 5487,
+      "therapeutic_class": "Alpha-2 agonist",
+      "rationale": "Muscle relaxant."
+    },
+    {
+      "name": "Cyclobenzaprine",
+      "pubchem_cid": 2895,
+      "therapeutic_class": "Muscle relaxant",
+      "rationale": "Central muscle relaxant."
+    },
+    {
+      "name": "Carisoprodol",
+      "pubchem_cid": 2576,
+      "therapeutic_class": "Muscle relaxant",
+      "rationale": "Centrally acting."
+    },
+    {
+      "name": "Zolpidem",
+      "pubchem_cid": 5732,
+      "therapeutic_class": "Z-drug hypnotic",
+      "rationale": "GABA-A modulator sleep aid."
+    },
+    {
+      "name": "Eszopiclone",
+      "pubchem_cid": 969472,
+      "therapeutic_class": "Z-drug hypnotic",
+      "rationale": "Sleep aid."
+    },
+    {
+      "name": "Modafinil",
+      "pubchem_cid": 4236,
+      "therapeutic_class": "Wakefulness promoter",
+      "rationale": "Narcolepsy."
+    },
+    {
+      "name": "Amphetamine",
+      "pubchem_cid": 3007,
+      "therapeutic_class": "Stimulant",
+      "rationale": "ADHD / narcolepsy."
+    },
+    {
+      "name": "Atomoxetine",
+      "pubchem_cid": 54841,
+      "therapeutic_class": "NRI ADHD",
+      "rationale": "NET inhibitor."
+    },
+    {
+      "name": "Varenicline",
+      "pubchem_cid": 5310966,
+      "therapeutic_class": "nAChR partial agonist",
+      "rationale": "Smoking cessation."
+    },
+    {
+      "name": "Nicotine",
+      "pubchem_cid": 89594,
+      "therapeutic_class": "nAChR agonist",
+      "rationale": "Alkaloid; not MCAS therapy."
+    },
+    {
+      "name": "Theophylline",
+      "pubchem_cid": 2153,
+      "therapeutic_class": "Methylxanthine",
+      "rationale": "Asthma PDE inhibitor \u2014 borderline but not mast-cell stabilizer class in our sense; still used as weak control of xanthine chemotype."
+    },
+    {
+      "name": "Acetazolamide",
+      "pubchem_cid": 1986,
+      "therapeutic_class": "Carbonic anhydrase inhibitor",
+      "rationale": "Glaucoma / altitude sickness."
+    },
+    {
+      "name": "Diclofenac",
+      "pubchem_cid": 3033,
+      "therapeutic_class": "NSAID",
+      "rationale": "COX inhibitor analgesic; not MCAS-specific therapy."
+    },
+    {
+      "name": "Meloxicam",
+      "pubchem_cid": 54677470,
+      "therapeutic_class": "NSAID",
+      "rationale": "Preferential COX-2 inhibitor."
+    },
+    {
+      "name": "Celecoxib",
+      "pubchem_cid": 2662,
+      "therapeutic_class": "COX-2 inhibitor",
+      "rationale": "Selective COX-2 NSAID."
+    },
+    {
+      "name": "Tramadol",
+      "pubchem_cid": 33741,
+      "therapeutic_class": "Opioid analgesic",
+      "rationale": "Weak \u03bc-agonist / SNRI analgesic."
+    },
+    {
+      "name": "Morphine",
+      "pubchem_cid": 5288826,
+      "therapeutic_class": "Opioid analgesic",
+      "rationale": "\u03bc-opioid agonist."
+    },
+    {
+      "name": "Oxycodone",
+      "pubchem_cid": 5284603,
+      "therapeutic_class": "Opioid analgesic",
+      "rationale": "\u03bc-opioid agonist."
+    },
+    {
+      "name": "Fentanyl",
+      "pubchem_cid": 3345,
+      "therapeutic_class": "Opioid analgesic",
+      "rationale": "Potent \u03bc-opioid agonist."
+    },
+    {
+      "name": "Naloxone",
+      "pubchem_cid": 5284596,
+      "therapeutic_class": "Opioid antagonist",
+      "rationale": "Overdose reversal; not MCAS."
     }
   ]
 }

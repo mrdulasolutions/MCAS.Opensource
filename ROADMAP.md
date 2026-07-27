@@ -2,65 +2,44 @@
 
 A living document. Things at the top of each section are higher priority.
 
-## Now (v0.1.x) — shipped
+## Now (v0.2.x) — shipped
 
-- ✅ Curated **118-compound** MCAS library (pharma + herbs + supplements + biologics + cannabinoids/terpenes/flavonoids expansions).
-- ✅ Injury-mechanism + trigger frameworks.
-- ✅ SFN-class generation (BRICS + bioisostere + RL-style local path; **176** generated SMILES in current outputs).
-- ✅ Ligand-based screening across MCAS targets (incl. SYK, PTGS2, CNR2).
-- ✅ Covalent-warhead SMARTS + catechol/pyrogallol + KEAP1 pharmacophore filter.
-- ✅ ADMET QSAR (hERG / AMES / BBB).
-- ✅ Multi-objective ranking → rescue / maintenance / remission.
-- ✅ Experiment reports through **EXP-022** (+ template).
-- ✅ Audience-segmented onboarding docs + A2A agent card.
-- ✅ Known-actives recovery + negative-control + sensitivity + LHS audits.
-- ✅ KEAP1 Vina (Kelch) + C151 adduct proxy + ChEMBL predictors + mast-cell RF (AUC 0.916).
-- ✅ Enamine REAL procurement packet (EXP-017).
-- ✅ Wet-lab prereg + CRO outreach packet + preprint draft + patient summary.
-- ✅ Streamlit public viewer on HF Spaces + weekly pipeline refresh + auto-sync CI.
-- ✅ **Viewer v0.2** — top cards, “why ranked”, honest recovery@5/10/20, negative-control table, falsify-me.
-- ✅ **CI audit gates** (`scripts/check_audit_gates.py`) — floor checks on recovery@20, recovery@10, precision@10, library size.
-- ✅ Metric honesty pass — badges / README / Space card no longer over-claim recovery@20 as 100% or library as 54.
+- ✅ Curated **118-compound** MCAS library + SFN-class generation + multi-target scoring.
+- ✅ Multi-objective ranking with ChEMBL, mast-cell RF, Kelch Vina, C151 adduct.
+- ✅ Streamlit viewer v0.2 + HF Space + CI audit gates + metric honesty.
+- ✅ **EXP-023** — KEAP1 BTB Cys-151 encounter docking (PDB 5DAD) fused with adduct energy.
+- ✅ **EXP-024** — Expanded known-actives (≥50) + negative controls (≥100) + self-similarity de-bias.
+- ✅ **EXP-025** — Generated novelty filter + Enamine REAL flags on rankings / UI.
+- ✅ **Zenodo snapshot prep** — `.zenodo.json` + `scripts/deposit_zenodo.py` + `outputs/zenodo/`.
+- ✅ **Wet-lab partner pack** — panel CSV, academic/CRO emails, tracker under `docs/wet-lab-partner-pack/`.
 
-## Next (v0.2+) — credibility & wet-lab bridge
+## Next (v0.3) — after first partner engagement
 
-These are the *actual* open work items (previous “Next” items that shipped were moved up):
-
-1. **Covalent KEAP1 docking at C151** (BTB domain) — CovDock / GOLD-Covalent on PDB 4IFL or similar; non-covalent Kelch is already done (EXP-009).
-2. **Expand recovery + control sets** via ChEMBL mast-cell assays — target **50+ actives, 100+ controls**; rebalance remission expected labels.
-3. **Self-similarity de-bias** in composite / recovery — so recovery@5/@10 become meaningful without discarding anchors.
-4. **Generated-analog novelty filter** in ranking + Space — flag near-duplicates of SFN/Erucin/Iberin; surface Enamine availability on cards.
-5. **Zenodo DOI snapshot** of a frozen commit + preprint lockstep (n=118, current audits).
-6. **First wet-lab partner run** of preregistered β-hex / LAD2 panel on SFN, Erucin, PEA, Luteolin + ≥2 negatives.
+1. **True covalent docking** (CovDock / GNINA covalent / OpenMM) — replace encounter proxy.
+2. **ChEMBL-auto expansion** of recovery set to 100+ actives with assay-level labels.
+3. **Execute wet-lab partner run** — first β-hex panel results as EXP-026+ (positive or negative).
+4. **Mint Zenodo DOI** — run `python scripts/deposit_zenodo.py --deposit` with `ZENODO_TOKEN` + GitHub release.
+5. **Package refactor** — installable `openmcas/` library + unit tests beyond SMILES/audit floors.
+6. **CYP / GST / UGT** metabolism QSAR for SFN-class liability.
 
 ## Then (v0.x+2)
 
-- Polypharmacology bonus + selectivity penalty in `rank_hypotheses.py`.
 - DeepChem GraphConv QSAR delta vs RandomForest.
-- Real REINVENT 4 RL on Colab GPU (replace remaining BRICS-heavy tops).
-- PubMed auto-scan per top compound (prior-art surfacing).
-- Multi-pred QSAR — CYP1A2 / 2C9 / 2C19 / 2D6 / 3A4 inhibition.
-- Package refactor: installable `openmcas/` library + unit tests beyond SMILES/audit floors.
+- Real REINVENT 4 RL on Colab GPU.
+- PubMed auto-scan per top compound.
+- Combination scoring (pairs / triples).
 
 ## Later (v0.5)
 
-- Patient-data infrastructure beyond GitHub issues (structured, privacy-preserving).
-- xTB / DFT electrophilicity ranking for covalent warheads.
-- iPSC-derived mast cell readouts in wet-lab protocol references.
-- Combination scoring (synergy for pairs / triples).
-- Pre-registration registry with DOI minting per experiment.
+- Patient-data infrastructure beyond GitHub issues.
+- iPSC-derived mast cell readouts.
 - Quarterly Zenodo DOI snapshots.
+- 501(c)(3) fiscal home exploration.
 
 ## Big-picture (v1.0)
 
-- A wet-lab partner running a continuous validation campaign on the
-  current top-30 every quarter, published as new `EXP-NNN` reports.
-- A 501(c)(3) fiscal home (or hosted under an existing one — see
-  [audiences/for-nonprofits.md](audiences/for-nonprofits.md)).
-- A patient-coreference network for trigger / response data without
-  PHI capture.
-- A 1.0 release with the first wet-lab-validated remission candidate
-  (positive or negative — both are publishable).
+- Continuous wet-lab validation campaign on top-30 each quarter.
+- First wet-lab-validated remission candidate (pos or neg) as 1.0 release.
 
 ## Not on the roadmap (intentionally)
 

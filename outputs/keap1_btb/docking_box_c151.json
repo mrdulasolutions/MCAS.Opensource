@@ -1,0 +1,16 @@
+{
+  "center": [
+    -25.319,
+    -6.713,
+    9.476
+  ],
+  "size": [
+    18.0,
+    18.0,
+    18.0
+  ],
+  "pdb": "5DAD.pdb",
+  "chain": "A",
+  "residue": "CYS151",
+  "note": "Box centered on Cys-151 SG (covalent warhead attack site)."
+}

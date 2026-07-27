@@ -47,22 +47,22 @@ escape is harder.
 
 ## Top AI-ranked candidates
 
-> 🤖 **Auto-generated artifact.** Produced by `scripts/rank_hypotheses.py` on 2026-07-26 05:39 UTC from commit `b9cfc28`. Inputs: `data/compounds/MCAS_Compound_Library_v1.csv`, `outputs/reinvent_generated.csv`, `outputs/docking_*.csv`, `outputs/warhead_scores.csv`, `outputs/qsar_predictions.csv`. Composite formula and weights documented in [EXP-005](../experiments/EXP-005-multi-objective-ranking.md). Recovery benchmark: [EXP-006](../experiments/EXP-006-known-actives-recovery.md).
+> 🤖 **Auto-generated artifact.** Produced by `scripts/rank_hypotheses.py` on 2026-07-27 13:44 UTC from commit `0b75955`. Inputs: `data/compounds/MCAS_Compound_Library_v1.csv`, `outputs/reinvent_generated.csv`, `outputs/docking_*.csv`, `outputs/warhead_scores.csv`, `outputs/qsar_predictions.csv`. Composite formula and weights documented in [EXP-005](../experiments/EXP-005-multi-objective-ranking.md). Recovery benchmark: [EXP-006](../experiments/EXP-006-known-actives-recovery.md).
 
 _Higher composite = better hypothesis. Edit `scripts/rank_hypotheses.py` to change weights or category target mix; the next run will overwrite this table._
 
 | # | Name | Composite | KEAP1 | MRGPRX2 | KIT | HRH1 | Warhead | hERG | AMES | BBB | Source |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | Cetirizine | 0.612 | 0.14 | 0.09 | 0.19 | 1.00 | — | 0.86 | 0.16 | 0.33 | library |
-| 2 | Fexofenadine | 0.611 | 0.11 | 0.13 | 0.17 | 1.00 | — | 0.90 | 0.17 | 0.12 | library |
-| 3 | Hydroxyzine | 0.606 | 0.13 | 0.09 | 0.19 | 1.00 | — | 0.90 | 0.19 | 0.94 | library |
-| 4 | Loratadine | 0.592 | 0.14 | 0.09 | 0.22 | 1.00 | — | 0.97 | 0.28 | 0.33 | library |
-| 5 | Diphenhydramine | 0.585 | 0.18 | 0.10 | 0.13 | 1.00 | — | 0.98 | 0.10 | 1.00 | library |
-| 6 | Famotidine | 0.559 | 0.10 | 0.07 | 0.08 | 0.08 | — | 0.38 | 0.52 | 0.90 | library |
-| 7 | Quercetin | 0.506 | 0.18 | 1.00 | 0.09 | 0.08 | yes | 0.25 | 0.86 | 0.61 | library |
-| 8 | Cromolyn sodium | 0.490 | 0.14 | 0.20 | 0.14 | 0.14 | — | 0.64 | 0.20 | 0.71 | library |
-| 9 | Ketotifen | 0.477 | 0.09 | 0.09 | 0.17 | 0.25 | — | 0.76 | 0.26 | 0.91 | library |
-| 10 | Ranitidine | 0.470 | 0.13 | 0.11 | 0.09 | 0.13 | — | 0.51 | 0.12 | 0.21 | library |
+| 1 | Cetirizine | 0.576 | 0.14 | 0.09 | 0.19 | 0.74 | — | 0.86 | 0.16 | 0.33 | library |
+| 2 | Hydroxyzine | 0.570 | 0.13 | 0.09 | 0.19 | 0.74 | — | 0.90 | 0.19 | 0.94 | library |
+| 3 | Fexofenadine | 0.522 | 0.11 | 0.13 | 0.17 | 0.29 | — | 0.90 | 0.17 | 0.12 | library |
+| 4 | Loratadine | 0.516 | 0.14 | 0.09 | 0.22 | 0.42 | — | 0.97 | 0.28 | 0.33 | library |
+| 5 | Famotidine | 0.513 | 0.10 | 0.07 | 0.08 | 0.08 | — | 0.38 | 0.52 | 0.90 | library |
+| 6 | Cromolyn sodium | 0.490 | 0.14 | 0.20 | 0.14 | 0.14 | — | 0.64 | 0.20 | 0.71 | library |
+| 7 | Quercetin | 0.478 | 0.18 | 0.60 | 0.09 | 0.08 | yes | 0.25 | 0.86 | 0.61 | library |
+| 8 | Ketotifen | 0.477 | 0.09 | 0.09 | 0.17 | 0.25 | — | 0.76 | 0.26 | 0.91 | library |
+| 9 | Diphenhydramine | 0.465 | 0.18 | 0.10 | 0.13 | 0.25 | — | 0.98 | 0.10 | 1.00 | library |
+| 10 | Ranitidine | 0.432 | 0.13 | 0.11 | 0.09 | 0.13 | — | 0.51 | 0.12 | 0.21 | library |
 
 
 ## Route of administration matters as much as compound choice

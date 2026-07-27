@@ -248,17 +248,32 @@ def explain_rank(row: pd.Series, category: str | None = None) -> list[str]:
             f"(lower = better)"
         )
 
-    tan = _safe_float(row.get("tanimoto_to_SFN"))
+    tan = _safe_float(row.get("tanimoto_to_sfn_class"))
+    if tan is None:
+        tan = _safe_float(row.get("tanimoto_to_SFN"))
     if tan is not None and source == "reinvent_generated":
         if tan >= 0.9:
             reasons.append(
-                f"Near-neighbor of sulforaphane (Tanimoto-to-SFN `{tan:.2f}`) — "
-                "**not a novel scaffold**; chain/warhead variant."
+                f"Near-neighbor of SFN-class seeds (Tanimoto `{tan:.2f}`) — "
+                "**not a novel scaffold**; chain/warhead variant (EXP-025)."
             )
         elif tan >= 0.5:
-            reasons.append(f"SFN-class neighborhood (Tanimoto-to-SFN `{tan:.2f}`).")
+            reasons.append(f"SFN-class neighborhood (Tanimoto `{tan:.2f}`).")
         else:
-            reasons.append(f"More distant from SFN (Tanimoto `{tan:.2f}`) — check warhead retention.")
+            reasons.append(f"More distant from SFN-class (Tanimoto `{tan:.2f}`).")
+
+    nov = _safe_float(row.get("novelty_score"))
+    if nov is not None and source == "reinvent_generated":
+        reasons.append(f"Novelty score `{nov:.2f}` (1 − max Tanimoto to library/seeds)")
+
+    if str(row.get("real_space_plausible")).lower() in ("true", "1", "yes"):
+        reasons.append("Enamine REAL-space **plausible** (EXP-017 envelope)")
+    elif str(row.get("real_space_plausible")).lower() in ("false", "0", "no"):
+        reasons.append("Enamine REAL-space envelope: **not plausible** / check MW")
+
+    btb = _safe_float(row.get("score_btb_covalent"))
+    if btb is not None and btb > 0:
+        reasons.append(f"BTB Cys-151 covalent proxy score `{btb:.2f}` (EXP-023)")
 
     le = _safe_float(row.get("vina_ligand_efficiency"))
     if le is not None and le < 0:
@@ -526,7 +541,8 @@ def render_category(tab, category, color, target_cols):
         "score_SYK", "score_PTGS2",
         "mast_cell_stabilizer_prob",
         "hERG_score", "AMES_score", "BBB_score",
-        "tanimoto_to_SFN", "qed",
+        "tanimoto_to_sfn_class", "novelty_score", "near_duplicate_of_seed",
+        "real_space_plausible", "score_btb_covalent", "qed",
     ]
     display_cols = [c for c in display_cols if c in filtered.columns]
 

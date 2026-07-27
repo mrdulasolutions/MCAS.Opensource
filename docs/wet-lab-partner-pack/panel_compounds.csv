@@ -1,0 +1,11 @@
+role,name,pubchem_cid,category_hypothesis,priority,notes,procurement_hint
+active_hypothesis,Sulforaphane,5350,remission,1,Primary Nrf2/KEAP1 ITC hypothesis,commercial SFN or broccoli-sprout extract with myrosinase
+active_hypothesis,Erucin,7373,remission,1,Remission #1 in silico; longer t½ sulfide congener,commercial erucin / arugula extracts
+active_hypothesis,Luteolin,5280445,maintenance,1,Strong mast-cell stabilizer literature + model p,commercial luteolin ≥98%
+active_hypothesis,Palmitoylethanolamide,4671,maintenance,1,ALIAmide clinical trial base,ultra-micronized PEA preferred
+optional_active,Curcumin,969516,maintenance,2,Maintenance #1 composite; formulation-sensitive,phytosomal if available
+optional_active,Baicalein,5281605,maintenance,2,Top maintenance flavone,commercial ≥98%
+optional_active,Phenethyl isothiocyanate,16741,remission,2,ITC class; HDAC + KEAP1,commercial PEITC
+clinical_anchor,Midostaurin,9829523,remission,3,Clinical KIT multi-kinase; expect strong β-hex if class-sensitive,research use only
+negative_control,Acetaminophen,1983,none,1,No mast-cell mechanism; must not stabilize,USP grade
+negative_control,Metformin,4091,none,1,No mast-cell mechanism; must not stabilize,USP grade

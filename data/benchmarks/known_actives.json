@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "description": "Held-out benchmark: clinically established mast-cell stabilizers, MCAS-relevant drugs, and well-supported allergic-disease compounds that are NOT in data/compounds/seeds.json AND NOT in the reference ligand sets in scripts/score_against_targets.py. The benchmark asks: when the full pipeline scores these blind, do they land in the top of the appropriate category ranking?",
-  "purpose": "Credibility check on the composite ranking. A pipeline that can't recover known actives in their natural category is broken — regardless of how good the headline result looks.",
+  "description": "Held-out benchmark: clinically established mast-cell stabilizers, MCAS-relevant drugs, and well-supported allergic-disease compounds that are NOT intended to be pipeline seeds. Expanded in EXP-024 to n=54 actives (target \u226550).",
+  "purpose": "Credibility check on the composite ranking. A pipeline that can't recover known actives in their natural category is broken \u2014 regardless of how good the headline result looks.",
   "expected_category_definitions": {
     "rescue": "Approved or commonly-used acute mast-cell stabilizers / H1 / H2 antagonists not in our reference set.",
-    "maintenance": "Daily-use stabilizers, immunomodulators, anti-inflammatory naturals, and downstream-FcεRI modulators (JAK / BTK / calcineurin) not in our reference set.",
-    "remission": "Upstream disease-modifying agents — covalent Nrf2/KEAP1 activators, KIT-axis kinase inhibitors. Downstream FcεRI modulators (JAK / BTK) are classified as maintenance instead, per EXP-015 §7.1."
+    "maintenance": "Daily-use stabilizers, immunomodulators, anti-inflammatory naturals, and downstream-Fc\u03b5RI modulators (JAK / BTK / calcineurin) not in our reference set.",
+    "remission": "Upstream disease-modifying agents \u2014 covalent Nrf2/KEAP1 activators, KIT-axis kinase inhibitors. Downstream Fc\u03b5RI modulators (JAK / BTK) are classified as maintenance instead, per EXP-015 \u00a77.1."
   },
   "evaluation_metric": "recovery@N: fraction of known actives that rank in the top N of their expected category's ranked CSV.",
   "actives": [
@@ -14,149 +14,470 @@
       "pubchem_cid": 2267,
       "expected_category": "rescue",
       "evidence": "H1 antagonist + documented mast cell stabilizer; approved as intranasal/ophthalmic anti-allergic.",
-      "source_refs": ["Bernstein 2007"]
+      "source_refs": [
+        "Bernstein 2007"
+      ]
     },
     {
       "name": "Olopatadine",
       "pubchem_cid": 5281071,
       "expected_category": "rescue",
       "evidence": "Dual H1 antagonist + mast cell stabilizer; topical ophthalmic/nasal anti-allergic.",
-      "source_refs": ["Sharif 1996"]
+      "source_refs": [
+        "Sharif 1996"
+      ]
     },
     {
       "name": "Nedocromil",
       "pubchem_cid": 5117,
       "expected_category": "rescue",
       "evidence": "Cromone class; mast cell stabilizer (asthma + allergic conjunctivitis).",
-      "source_refs": ["Schwartz 1995"]
+      "source_refs": [
+        "Schwartz 1995"
+      ]
     },
     {
       "name": "Pemirolast",
       "pubchem_cid": 51063,
       "expected_category": "rescue",
       "evidence": "Mast cell stabilizer; ophthalmic anti-allergic.",
-      "source_refs": ["Yanni 1993"]
+      "source_refs": [
+        "Yanni 1993"
+      ]
     },
     {
       "name": "Tranilast",
       "pubchem_cid": 5512,
       "expected_category": "maintenance",
       "evidence": "Anti-allergic + anti-fibrotic mast cell stabilizer; used in atopic dermatitis + keloid scars; cited in MCAS literature.",
-      "source_refs": ["Suzawa 1992"]
+      "source_refs": [
+        "Suzawa 1992"
+      ]
     },
     {
       "name": "Lodoxamide",
       "pubchem_cid": 44564,
       "expected_category": "rescue",
       "evidence": "Cromone class; ophthalmic mast cell stabilizer for vernal keratoconjunctivitis.",
-      "source_refs": ["Caldwell 1992"]
+      "source_refs": [
+        "Caldwell 1992"
+      ]
     },
     {
       "name": "Amlexanox",
       "pubchem_cid": 2161,
       "expected_category": "maintenance",
       "evidence": "Cromone-like anti-allergic; topical for aphthous ulcers + asthma adjunct; IKK-epsilon inhibitor.",
-      "source_refs": ["Reilly 2013"]
+      "source_refs": [
+        "Reilly 2013"
+      ]
     },
     {
       "name": "Levocetirizine",
       "pubchem_cid": 1549000,
       "expected_category": "rescue",
       "evidence": "Active R-enantiomer of cetirizine; H1 antagonist.",
-      "source_refs": ["Walsh 2006"]
+      "source_refs": [
+        "Walsh 2006"
+      ]
     },
     {
       "name": "Bilastine",
       "pubchem_cid": 185460,
       "expected_category": "rescue",
       "evidence": "Newer-generation H1 antagonist; minimal CNS penetration.",
-      "source_refs": ["Lucero 2012"]
+      "source_refs": [
+        "Lucero 2012"
+      ]
     },
     {
       "name": "Ebastine",
       "pubchem_cid": 3191,
       "expected_category": "rescue",
       "evidence": "Long-acting H1 antagonist.",
-      "source_refs": ["Hurst 1999"]
+      "source_refs": [
+        "Hurst 1999"
+      ]
     },
     {
       "name": "Mizolastine",
       "pubchem_cid": 65555,
       "expected_category": "rescue",
       "evidence": "H1 antagonist + LOX inhibition.",
-      "source_refs": ["Levrier 1991"]
+      "source_refs": [
+        "Levrier 1991"
+      ]
     },
     {
       "name": "Doxepin",
       "pubchem_cid": 667477,
       "expected_category": "rescue",
       "evidence": "Tricyclic with extremely potent H1 + H2 antagonism; used for refractory urticaria.",
-      "source_refs": ["Goldsobel 1986"]
+      "source_refs": [
+        "Goldsobel 1986"
+      ]
     },
     {
       "name": "Cinnarizine",
       "pubchem_cid": 1547484,
       "expected_category": "rescue",
       "evidence": "H1 antagonist + Ca channel blocker; antiallergic + antivertigo.",
-      "source_refs": ["Towse 1973"]
+      "source_refs": [
+        "Towse 1973"
+      ]
     },
     {
       "name": "Tofacitinib",
       "pubchem_cid": 9926791,
       "expected_category": "maintenance",
-      "category_relabel_note": "Relabeled remission → maintenance after EXP-015 audit finding (2026-05-22). JAK1/3 inhibition is downstream of FcεRI signaling, not upstream Nrf2-axis remission. See EXP-015 §7.1.",
-      "evidence": "JAK1/3 inhibitor; downstream of FcεRI; emerging interest in MCAS-adjacent autoimmunity.",
-      "source_refs": ["Schwartz 2018"]
+      "category_relabel_note": "Relabeled remission \u2192 maintenance after EXP-015 audit finding (2026-05-22). JAK1/3 inhibition is downstream of Fc\u03b5RI signaling, not upstream Nrf2-axis remission. See EXP-015 \u00a77.1.",
+      "evidence": "JAK1/3 inhibitor; downstream of Fc\u03b5RI; emerging interest in MCAS-adjacent autoimmunity.",
+      "source_refs": [
+        "Schwartz 2018"
+      ]
     },
     {
       "name": "Acalabrutinib",
       "pubchem_cid": 71226662,
       "expected_category": "maintenance",
-      "category_relabel_note": "Relabeled remission → maintenance after EXP-015 audit finding (2026-05-22). BTK inhibition is downstream of FcεRI signaling, not upstream Nrf2-axis remission. See EXP-015 §7.1.",
-      "evidence": "Selective BTK inhibitor; downstream of FcεRI signaling in mast cells.",
-      "source_refs": ["Byrd 2016"]
+      "category_relabel_note": "Relabeled remission \u2192 maintenance after EXP-015 audit finding (2026-05-22). BTK inhibition is downstream of Fc\u03b5RI signaling, not upstream Nrf2-axis remission. See EXP-015 \u00a77.1.",
+      "evidence": "Selective BTK inhibitor; downstream of Fc\u03b5RI signaling in mast cells.",
+      "source_refs": [
+        "Byrd 2016"
+      ]
     },
     {
       "name": "Tacrolimus",
       "pubchem_cid": 445643,
       "expected_category": "maintenance",
       "evidence": "Calcineurin inhibitor; suppresses mast cell mediator release.",
-      "source_refs": ["de Paulis 1991"]
+      "source_refs": [
+        "de Paulis 1991"
+      ]
     },
     {
       "name": "Pimecrolimus",
       "pubchem_cid": 6509979,
       "expected_category": "maintenance",
       "evidence": "Topical calcineurin inhibitor; suppresses mast cell + T cell activation.",
-      "source_refs": ["Stuetz 2001"]
+      "source_refs": [
+        "Stuetz 2001"
+      ]
     },
     {
       "name": "Hydroxychloroquine",
       "pubchem_cid": 3652,
       "expected_category": "maintenance",
       "evidence": "Anti-malarial + immunomodulator; reported in some MCAS regimens.",
-      "source_refs": ["Schrezenmeier 2020"]
+      "source_refs": [
+        "Schrezenmeier 2020"
+      ]
     },
     {
       "name": "Glycyrrhizin",
       "pubchem_cid": 14982,
       "expected_category": "maintenance",
       "evidence": "Licorice triterpene saponin; anti-allergic + anti-inflammatory.",
-      "source_refs": ["Asl 2008"]
+      "source_refs": [
+        "Asl 2008"
+      ]
     },
     {
       "name": "Hydroxytyrosol",
       "pubchem_cid": 82755,
       "expected_category": "maintenance",
       "evidence": "Olive polyphenol; Nrf2 activator; anti-inflammatory.",
-      "source_refs": ["Robles-Almazan 2018"]
+      "source_refs": [
+        "Robles-Almazan 2018"
+      ]
     },
     {
       "name": "Cysteamine",
       "pubchem_cid": 6058,
       "expected_category": "remission",
       "evidence": "Aminothiol antioxidant; Nrf2-axis modulator; covalent through thiol-disulfide exchange.",
-      "source_refs": ["Besouw 2013"]
+      "source_refs": [
+        "Besouw 2013"
+      ]
+    },
+    {
+      "name": "Desloratadine",
+      "pubchem_cid": 124087,
+      "expected_category": "rescue",
+      "evidence": "Active metabolite of loratadine; second-gen H1 antagonist.",
+      "source_refs": [
+        "Geha 2001"
+      ]
+    },
+    {
+      "name": "Rupatadine",
+      "pubchem_cid": 133987,
+      "expected_category": "rescue",
+      "evidence": "H1 antagonist + PAF antagonist; used in urticaria/allergic rhinitis.",
+      "source_refs": [
+        "Picado 2006"
+      ]
+    },
+    {
+      "name": "Emedastine",
+      "pubchem_cid": 3219,
+      "expected_category": "rescue",
+      "evidence": "Selective H1 antagonist; ophthalmic anti-allergic.",
+      "source_refs": [
+        "Sharif 1994"
+      ]
+    },
+    {
+      "name": "Alcaftadine",
+      "pubchem_cid": 19371515,
+      "expected_category": "rescue",
+      "evidence": "H1 antagonist with mast-cell stabilizer claims; ophthalmic.",
+      "source_refs": [
+        "Boiarski 2011"
+      ]
+    },
+    {
+      "name": "Bepotastine",
+      "pubchem_cid": 164522,
+      "expected_category": "rescue",
+      "evidence": "H1 antagonist + mast-cell stabilizer; ophthalmic/oral in some markets.",
+      "source_refs": [
+        "Kato 2010"
+      ]
+    },
+    {
+      "name": "Epinastine",
+      "pubchem_cid": 3241,
+      "expected_category": "rescue",
+      "evidence": "H1 antagonist with mast-cell stabilizing properties.",
+      "source_refs": [
+        "Schoch 2003"
+      ]
+    },
+    {
+      "name": "Chlorpheniramine",
+      "pubchem_cid": 2725,
+      "expected_category": "rescue",
+      "evidence": "Classic first-gen H1 antagonist; still used in allergic disease.",
+      "source_refs": [
+        "Simons 2004"
+      ]
+    },
+    {
+      "name": "Promethazine",
+      "pubchem_cid": 4927,
+      "expected_category": "rescue",
+      "evidence": "First-gen H1 antagonist with strong antihistamine effect.",
+      "source_refs": [
+        "Simons 2004"
+      ]
+    },
+    {
+      "name": "Cyproheptadine",
+      "pubchem_cid": 2913,
+      "expected_category": "rescue",
+      "evidence": "H1 + 5-HT2 antagonist; used for allergic and serotonergic symptoms.",
+      "source_refs": [
+        "Kapur 2011"
+      ]
+    },
+    {
+      "name": "Triprolidine",
+      "pubchem_cid": 5282443,
+      "expected_category": "rescue",
+      "evidence": "First-gen H1 antagonist.",
+      "source_refs": [
+        "Simons 2004"
+      ]
+    },
+    {
+      "name": "Zafirlukast",
+      "pubchem_cid": 5717,
+      "expected_category": "maintenance",
+      "evidence": "CysLT1 receptor antagonist; asthma / allergic disease.",
+      "source_refs": [
+        "Adkins 1998"
+      ]
+    },
+    {
+      "name": "Pranlukast",
+      "pubchem_cid": 4895,
+      "expected_category": "maintenance",
+      "evidence": "CysLT1 antagonist used in Japan for asthma/allergic rhinitis.",
+      "source_refs": [
+        "Keam 2003"
+      ]
+    },
+    {
+      "name": "Zileuton",
+      "pubchem_cid": 60490,
+      "expected_category": "maintenance",
+      "evidence": "5-LOX inhibitor; reduces leukotriene synthesis in asthma.",
+      "source_refs": [
+        "McGill 1996"
+      ]
+    },
+    {
+      "name": "Ibrutinib",
+      "pubchem_cid": 24821094,
+      "expected_category": "maintenance",
+      "evidence": "BTK inhibitor; Fc\u03b5RI pathway; mast-cell relevance.",
+      "source_refs": [
+        "Byrd 2013"
+      ]
+    },
+    {
+      "name": "Ruxolitinib",
+      "pubchem_cid": 25126798,
+      "expected_category": "maintenance",
+      "evidence": "JAK1/2 inhibitor; downstream cytokine/mast-cell-adjacent signaling.",
+      "source_refs": [
+        "Verstovsek 2012"
+      ]
+    },
+    {
+      "name": "Cyclosporine",
+      "pubchem_cid": 5284373,
+      "expected_category": "maintenance",
+      "evidence": "Calcineurin inhibitor; suppresses mast-cell mediator release.",
+      "source_refs": [
+        "Stellato 1992"
+      ]
+    },
+    {
+      "name": "Sirolimus",
+      "pubchem_cid": 5284616,
+      "expected_category": "maintenance",
+      "evidence": "mTOR inhibitor; immunomodulator used in some mast-cell disorders.",
+      "source_refs": [
+        "Parikh 2016"
+      ]
+    },
+    {
+      "name": "Dimethyl fumarate",
+      "pubchem_cid": 637568,
+      "expected_category": "remission",
+      "evidence": "Electrophilic Nrf2 activator (Tecfidera); KEAP1 covalent mechanism.",
+      "source_refs": [
+        "Linker 2011"
+      ]
+    },
+    {
+      "name": "Bardoxolone methyl",
+      "pubchem_cid": 400769,
+      "expected_category": "remission",
+      "evidence": "Potent KEAP1/Nrf2 electrophilic activator (clinical CDDO-Me).",
+      "source_refs": [
+        "Pergola 2011"
+      ]
+    },
+    {
+      "name": "Omaveloxolone",
+      "pubchem_cid": 71811910,
+      "expected_category": "remission",
+      "evidence": "KEAP1/Nrf2 activator approved for FA; covalent electrophilic mechanism.",
+      "source_refs": [
+        "Lynch 2021"
+      ]
+    },
+    {
+      "name": "Dasatinib",
+      "pubchem_cid": 3062316,
+      "expected_category": "remission",
+      "evidence": "Multi-kinase / KIT-family TKI; mastocytosis literature.",
+      "source_refs": [
+        "Verstovsek 2008"
+      ]
+    },
+    {
+      "name": "Nilotinib",
+      "pubchem_cid": 644241,
+      "expected_category": "remission",
+      "evidence": "KIT/ABL TKI; systemic mastocytosis trials.",
+      "source_refs": [
+        "Hochhaus 2015"
+      ]
+    },
+    {
+      "name": "Ripretinib",
+      "pubchem_cid": 71584930,
+      "expected_category": "remission",
+      "evidence": "Switch-control KIT/PDGFRA inhibitor; advanced SM / GIST.",
+      "source_refs": [
+        "Smith 2019"
+      ]
+    },
+    {
+      "name": "Bezuclastinib",
+      "pubchem_cid": 75593308,
+      "expected_category": "remission",
+      "evidence": "Selective KIT D816V inhibitor in SM development.",
+      "source_refs": [
+        "DeAngelo 2022"
+      ]
+    },
+    {
+      "name": "Oltipraz",
+      "pubchem_cid": 4642,
+      "expected_category": "remission",
+      "evidence": "Classical Nrf2 inducer / chemopreventive dithiolethione.",
+      "source_refs": [
+        "Kensler 2005"
+      ]
+    },
+    {
+      "name": "Tert-butylhydroquinone",
+      "pubchem_cid": 16043,
+      "expected_category": "remission",
+      "evidence": "Canonical Nrf2 inducer used in experimental models.",
+      "source_refs": [
+        "Li 2005"
+      ]
+    },
+    {
+      "name": "SFN-NAC",
+      "pubchem_cid": 45040443,
+      "expected_category": "remission",
+      "evidence": "Major SFN mercapturic metabolite; Nrf2-axis marker compound.",
+      "source_refs": [
+        "Fahey 2012"
+      ]
+    },
+    {
+      "name": "Acrivastine",
+      "pubchem_cid": 5281004,
+      "expected_category": "rescue",
+      "evidence": "Second-generation H1 antagonist.",
+      "source_refs": [
+        "Brogden 1991"
+      ]
+    },
+    {
+      "name": "Mequitazine",
+      "pubchem_cid": 4066,
+      "expected_category": "rescue",
+      "evidence": "H1 antagonist used in allergic rhinitis.",
+      "source_refs": [
+        "Pukander 1990"
+      ]
+    },
+    {
+      "name": "Astemizole",
+      "pubchem_cid": 2247,
+      "expected_category": "rescue",
+      "evidence": "Withdrawn H1 antagonist; strong historical mast-cell allergy drug.",
+      "source_refs": [
+        "Richards 1984"
+      ]
+    },
+    {
+      "name": "Terfenadine",
+      "pubchem_cid": 5405,
+      "expected_category": "rescue",
+      "evidence": "Withdrawn prodrug H1 antagonist (fexofenadine parent).",
+      "source_refs": [
+        "Sorkin 1985"
+      ]
     }
   ]
 }

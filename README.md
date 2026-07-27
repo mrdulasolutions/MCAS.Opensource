@@ -5,14 +5,14 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Validate SMILES](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/validate.yml/badge.svg)](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/validate.yml)
 [![Sync HF Space](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/sync-hf-space.yml/badge.svg)](https://github.com/mrdulasolutions/MCAS.Opensource/actions/workflows/sync-hf-space.yml)
-[![Experiments](https://img.shields.io/badge/experiments-21-blue)](experiments/)
+[![Experiments](https://img.shields.io/badge/experiments-25-blue)](experiments/)
 [![Mast-cell predictor AUC](https://img.shields.io/badge/mast--cell%20predictor%20AUC-0.916-brightgreen)](experiments/EXP-016-mast-cell-predictor.md)
 [![ChEMBL records](https://img.shields.io/badge/ChEMBL%20records-67k-blue)](experiments/EXP-011-chembl-bioassay-predictor.md)
 [![Compounds](https://img.shields.io/badge/compounds-118-green)](data/compounds/MCAS_Compound_Library_v1.csv)
 [![Generated analogs](https://img.shields.io/badge/SFN--class%20analogs-176-purple)](outputs/reinvent_generated.csv)
-[![Recovery@20](https://img.shields.io/badge/known--actives%20recovery%40_20-95.2%25-brightgreen)](experiments/EXP-006-known-actives-recovery.md)
-[![Recovery@10](https://img.shields.io/badge/known--actives%20recovery%40_10-9.5%25-yellow)](experiments/EXP-006-known-actives-recovery.md)
-[![Negative precision@10](https://img.shields.io/badge/neg--control%20precision%40_10-100%25-brightgreen)](experiments/EXP-007-negative-control-benchmark.md)
+[![Recovery@20](https://img.shields.io/badge/known--actives%20recovery%40_20-84.6%25-brightgreen)](experiments/EXP-024-expanded-benchmarks-self-debias.md)
+[![Recovery@10](https://img.shields.io/badge/known--actives%20recovery%40_10-25%25-yellow)](experiments/EXP-024-expanded-benchmarks-self-debias.md)
+[![Negative precision@10](https://img.shields.io/badge/neg--control%20precision%40_10-100%25-brightgreen)](experiments/EXP-024-expanded-benchmarks-self-debias.md)
 [![Audit gates](https://img.shields.io/badge/CI-audit%20gates-blue)](scripts/check_audit_gates.py)
 [![Min Spearman ρ](https://img.shields.io/badge/sensitivity%20min%20%CF%81-0.93-brightgreen)](experiments/EXP-008-sensitivity-analysis.md)
 [![KEAP1 Vina](https://img.shields.io/badge/KEAP1%20Vina-49%2F50%20docked-brightgreen)](experiments/EXP-009-keap1-vina-docking.md)
@@ -34,12 +34,12 @@ categories.
 
 The ranking has been audited in four independent ways:
 
-1. **It finds what it should (coarse).** 21 held-out clinical mast-cell drugs blind-scored → **95.2% recovery@20** (20/21). Strict cutoffs are weaker (**~9.5% @10**, **~4.8% @5**) — partly reference self-similarity caps top ranks ([EXP-006](experiments/EXP-006-known-actives-recovery.md)). Read the full curve, not only @20.
-2. **It rejects what it shouldn't.** 20 unrelated drugs (statins / antihypertensives / anticonvulsants / etc.) blind-scored → **100% precision@10** — all correctly ranked outside every top-10 ([EXP-007](experiments/EXP-007-negative-control-benchmark.md)).
+1. **It finds what it should (coarse).** **52** held-out clinical mast-cell drugs blind-scored (EXP-024 expansion) → **84.6% recovery@20**, **25% recovery@10**, **7.7% recovery@5**. Self-similarity de-bias improved strict recovery@10 vs the pre-debias ~9.5% on the old 21-set. Read the full curve ([EXP-024](experiments/EXP-024-expanded-benchmarks-self-debias.md)).
+2. **It rejects what it shouldn't.** **117** unrelated drugs → **100% precision@10** — none enter any category top-10 ([EXP-024](experiments/EXP-024-expanded-benchmarks-self-debias.md)).
 3. **It doesn't depend on weight-cherry-picking.** ±50% single-weight sweeps + 200-sample LHS → **min Spearman ρ ≈ 0.93–0.95** vs. baseline; SFN-class holds remission #1 under joint perturbation ([EXP-008](experiments/EXP-008-sensitivity-analysis.md), [EXP-022](experiments/EXP-022-sensitivity-lhs-rerun.md)).
-4. **Real physics agrees with the chemistry.** AutoDock Vina docking against KEAP1 Kelch domain (PDB 4L7B) for the top-50 remission candidates → **every top-15 by ligand efficiency carries the isothiocyanate warhead** ([EXP-009](experiments/EXP-009-keap1-vina-docking.md)).
+4. **Physics agrees with the chemistry.** Kelch Vina ([EXP-009](experiments/EXP-009-keap1-vina-docking.md)) + **BTB Cys-151 encounter docking** fused with covalent adduct energy ([EXP-023](experiments/EXP-023-keap1-btb-c151-docking.md)).
 
-CI enforces floor gates on recovery@20, recovery@10, negative precision@10, and library size via [`scripts/check_audit_gates.py`](scripts/check_audit_gates.py).
+CI enforces floor gates via [`scripts/check_audit_gates.py`](scripts/check_audit_gates.py).
 
 ## Try it in your browser (no clone, no install)
 
@@ -86,20 +86,20 @@ falsify, or extend it. No paywalls, no IP capture, no pharma gatekeeping.
 ### 🔴 Rescue top 5
 | # | Compound | Class | Composite |
 |---|---|---|---|
-| 1 | Cetirizine | H1 antagonist (2nd-gen) | 0.612 |
-| 2 | Fexofenadine | H1 antagonist (2nd-gen) | 0.611 |
-| 3 | Hydroxyzine | H1 antagonist (1st-gen) | 0.606 |
-| 4 | Loratadine | H1 antagonist (2nd-gen) | 0.592 |
-| 5 | Diphenhydramine | H1 antagonist (1st-gen) | 0.585 |
+| 1 | Cetirizine | H1 antagonist (2nd-gen) | 0.576 |
+| 2 | Hydroxyzine | H1 antagonist (1st-gen) | 0.570 |
+| 3 | Fexofenadine | H1 antagonist (2nd-gen) | 0.522 |
+| 4 | Loratadine | H1 antagonist (2nd-gen) | 0.516 |
+| 5 | Famotidine | H2 antagonist | 0.513 |
 
 [Full ranking →](hypotheses/rescue.md#top-ai-ranked-candidates)
 
 ### 🟡 Maintenance top 5
 | # | Compound | Class | Composite |
 |---|---|---|---|
-| 1 | Curcumin | Polyphenol / Michael acceptor / Nrf2 | 0.700 |
-| 2 | Luteolin | Flavonoid (BBB-crossing) | 0.625 |
-| 3 | Rosmarinic acid | Polyphenol | 0.616 |
+| 1 | Curcumin | Polyphenol / Michael acceptor / Nrf2 | 0.644 |
+| 2 | Rosmarinic acid | Polyphenol | 0.616 |
+| 3 | Luteolin | Flavonoid (BBB-crossing) | 0.616 |
 | 4 | Thymoquinone | Quinone (Nigella) | 0.598 |
 | 5 | Baicalein | Flavone (Scutellaria) | 0.594 |
 
@@ -108,13 +108,13 @@ falsify, or extend it. No paywalls, no IP capture, no pharma gatekeeping.
 ### 🟢 Remission top 5
 | # | Compound | Class | Composite |
 |---|---|---|---|
-| 1 | **Erucin** | Sulfide ITC (arugula) — longer plasma t½ vs SFN | **0.730** |
-| 2 | **Sulforaphane** | Natural ITC / KEAP1 covalent / Nrf2 | 0.726 |
-| 3 | Phenethyl-ITC | Natural ITC (watercress) / KEAP1 / HDAC | 0.687 |
-| 4 | Iberin | Sulfoxide ITC (cabbage / broccoli) | 0.618 |
-| 5 | Benzyl-ITC | Natural ITC (papaya / cress) | 0.583 |
+| 1 | **Sulforaphane** | Natural ITC / KEAP1 covalent / Nrf2 | **0.725** |
+| 2 | **Erucin** | Sulfide ITC (arugula) | 0.688 |
+| 3 | Phenethyl-ITC | Natural ITC (watercress) / KEAP1 / HDAC | 0.665 |
+| 4 | Iberin | Sulfoxide ITC (cabbage / broccoli) | 0.619 |
+| 5 | Midostaurin | Multi-kinase (KIT/FLT3) | 0.572 |
 
-> 🔄 Erucin ≈ Sulforaphane; the pair is chemically interchangeable under LHS joint weight perturbation ([EXP-022](experiments/EXP-022-sensitivity-lhs-rerun.md)). CID corrections from [EXP-009](experiments/EXP-009-keap1-vina-docking.md) still apply.
+> 🔄 Post EXP-023/024/025 (BTB docking + self-debias + novelty filter): SFN reclaims #1; near-duplicate `GEN_*` drop out of the top-5.
 
 [Full ranking →](hypotheses/remission.md#top-ai-ranked-candidates)
 

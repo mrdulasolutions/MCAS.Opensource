@@ -41,9 +41,10 @@ This Space is a read-only browser for the [**OpenMCAS** open hypothesis engine](
 ## Current headline numbers (committed artifacts)
 
 - Library anchors: **118**
-- Known-actives recovery@20: **~95.2%** (20/21) · recovery@10: **~9.5%** · recovery@5: **~4.8%**
-- Negative-control precision@10: **100%**
-- Remission leaders: **Erucin ≈ Sulforaphane** (SFN-class isothiocyanates)
+- Known-actives set: **52** → recovery@20 **84.6%** · @10 **25%** · @5 **7.7%** (EXP-024)
+- Negative controls: **117** → precision@10 **100%**
+- Remission leaders: **Sulforaphane ≈ Erucin** (SFN-class isothiocyanates)
+- Also: BTB Cys-151 docking (EXP-023), novelty/Enamine tags (EXP-025)
 
 ## What this Space is NOT
 

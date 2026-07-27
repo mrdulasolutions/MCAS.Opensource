@@ -42,9 +42,11 @@ OUT_PATH = REPO_ROOT / "outputs" / "benchmark_negative_controls.csv"
 
 # Mirror the per-category target weights from rank_hypotheses.py
 CATEGORY_TARGETS = {
-    "rescue":      {"HRH1": 0.4, "HRH2": 0.2, "CYSLTR1": 0.2, "MRGPRX2": 0.2},
-    "maintenance": {"CYSLTR1": 0.3, "HRH1": 0.15, "BTK": 0.15, "MRGPRX2": 0.2, "KEAP1": 0.2},
-    "remission":   {"MRGPRX2": 0.3, "KIT": 0.3, "KEAP1": 0.3, "GLP1R": 0.1},
+    "rescue":      {"HRH1": 0.40, "HRH2": 0.20, "CYSLTR1": 0.20, "MRGPRX2": 0.20},
+    "maintenance": {"CYSLTR1": 0.20, "HRH1": 0.12, "BTK": 0.12, "MRGPRX2": 0.12,
+                    "KEAP1": 0.12, "CNR2": 0.12, "SYK": 0.10, "PTGS2": 0.10},
+    "remission":   {"MRGPRX2": 0.22, "KIT": 0.22, "KEAP1": 0.28,
+                    "GLP1R": 0.08, "CNR2": 0.10, "SYK": 0.10},
 }
 
 
@@ -73,7 +75,17 @@ def load_qsar_models():
     """Train the same three RF models as scripts/run_qsar.py (used for safety bonus)."""
     from sklearn.ensemble import RandomForestClassifier
     from sklearn.metrics import roc_auc_score
-    from tdc.single_pred import Tox, ADME
+
+    class _Neutral:
+        def predict_proba(self, X):
+            n = len(X)
+            return np.tile([0.5, 0.5], (n, 1))
+
+    try:
+        from tdc.single_pred import Tox, ADME
+    except Exception as e:
+        print(f"  [warn] PyTDC unavailable ({e}); using neutral QSAR=0.5")
+        return {"hERG": _Neutral(), "AMES": _Neutral(), "BBB_Martins": _Neutral()}
 
     tasks = {
         "hERG":        (Tox,  "hERG"),
@@ -83,21 +95,25 @@ def load_qsar_models():
     models = {}
     for name, (cls, ds_name) in tasks.items():
         print(f"  training {name} ...", end="", flush=True)
-        task = cls(name=ds_name)
-        split = task.get_split()
-        train_df = split["train"]
-        Xtr, mtr = featurize_df(train_df["Drug"].tolist())
-        ytr = np.array(train_df["Y"].tolist())[mtr]
-        Xtr = Xtr[mtr]
-        model = RandomForestClassifier(n_estimators=200, n_jobs=-1, random_state=0)
-        model.fit(Xtr, ytr.astype(int))
-        valid_df = split["valid"]
-        Xva, mva = featurize_df(valid_df["Drug"].tolist())
-        yva = np.array(valid_df["Y"].tolist())[mva]
-        Xva = Xva[mva]
-        auc = roc_auc_score(yva, model.predict_proba(Xva)[:, 1])
-        models[name] = model
-        print(f" AUC {auc:.3f}")
+        try:
+            task = cls(name=ds_name)
+            split = task.get_split()
+            train_df = split["train"]
+            Xtr, mtr = featurize_df(train_df["Drug"].tolist())
+            ytr = np.array(train_df["Y"].tolist())[mtr]
+            Xtr = Xtr[mtr]
+            model = RandomForestClassifier(n_estimators=200, n_jobs=-1, random_state=0)
+            model.fit(Xtr, ytr.astype(int))
+            valid_df = split["valid"]
+            Xva, mva = featurize_df(valid_df["Drug"].tolist())
+            yva = np.array(valid_df["Y"].tolist())[mva]
+            Xva = Xva[mva]
+            auc = roc_auc_score(yva, model.predict_proba(Xva)[:, 1])
+            models[name] = model
+            print(f" AUC {auc:.3f}")
+        except Exception as e:
+            print(f" FAIL ({e}); neutral 0.5")
+            models[name] = _Neutral()
     return models
 
 

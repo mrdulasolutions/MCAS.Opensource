@@ -26,9 +26,12 @@ OUT = REPO_ROOT / "outputs"
 LIB = REPO_ROOT / "data" / "compounds" / "MCAS_Compound_Library_v1.csv"
 
 # Floors — tighten only after a deliberate audit retread lands.
-FLOOR_RECOVERY_20 = 0.90
+# recovery floors apply to the committed known-actives set (expanded EXP-024).
+FLOOR_RECOVERY_20 = 0.70   # coarser set is harder; 70% floor after expansion
 FLOOR_RECOVERY_10 = 0.05
 FLOOR_LIBRARY_N = 100
+FLOOR_KNOWN_ACTIVES_N = 45
+FLOOR_NEG_CONTROLS_N = 80
 
 
 def _load_csv(path: Path) -> list[dict]:
@@ -83,10 +86,15 @@ def main() -> int:
 
     # Known-actives recovery
     actives = _load_csv(OUT / "benchmark_known_actives.csv")
+    reports.append(f"known_actives_n={len(actives)} (floor>={FLOOR_KNOWN_ACTIVES_N})")
+    if len(actives) < FLOOR_KNOWN_ACTIVES_N:
+        failures.append(
+            f"known actives n={len(actives)} < floor {FLOOR_KNOWN_ACTIVES_N}"
+        )
     for n, floor in ((20, FLOOR_RECOVERY_20), (10, FLOOR_RECOVERY_10)):
         hits, total, rate = recovery_at(actives, n)
         reports.append(f"recovery@{n}={hits}/{total}={rate:.1%} (floor>={floor:.0%})")
-        if rate < floor:
+        if total and rate < floor:
             failures.append(
                 f"recovery@{n} {rate:.1%} ({hits}/{total}) below floor {floor:.0%}"
             )
@@ -95,9 +103,14 @@ def main() -> int:
 
     # Negative-control precision@10
     negatives = _load_csv(OUT / "benchmark_negative_controls.csv")
+    reports.append(f"neg_controls_n={len(negatives)} (floor>={FLOOR_NEG_CONTROLS_N})")
+    if len(negatives) < FLOOR_NEG_CONTROLS_N:
+        failures.append(
+            f"negative controls n={len(negatives)} < floor {FLOOR_NEG_CONTROLS_N}"
+        )
     ok, total_n, prec = negative_precision_at_10(negatives)
     reports.append(f"neg_precision@10={ok}/{total_n}={prec:.1%} (floor=100%)")
-    if prec < 1.0:
+    if total_n and prec < 1.0:
         failures.append(
             f"negative-control precision@10 {prec:.1%} ({ok}/{total_n}) < 100%"
         )

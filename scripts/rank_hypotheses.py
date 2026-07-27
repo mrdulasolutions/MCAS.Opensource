@@ -25,11 +25,24 @@ GEN_CSV = REPO_ROOT / "outputs" / "reinvent_generated.csv"
 WARHEAD_CSV = REPO_ROOT / "outputs" / "warhead_scores.csv"
 QSAR_CSV = REPO_ROOT / "outputs" / "qsar_predictions.csv"
 VINA_CSV = REPO_ROOT / "outputs" / "docking_KEAP1_vina.csv"
+BTB_CSV = REPO_ROOT / "outputs" / "docking_KEAP1_btb_c151.csv"
 C151_CSV = REPO_ROOT / "outputs" / "c151_adduct_energies.csv"
 CHEMBL_PRED_CSV = REPO_ROOT / "outputs" / "chembl_predictions.csv"
 MAST_CELL_PRED_CSV = REPO_ROOT / "outputs" / "mast_cell_predictions.csv"
+ENAMINE_CSV = REPO_ROOT / "outputs" / "exp_017" / "enamine_lookup.csv"
 OUT_DIR = REPO_ROOT / "outputs"
 HYP_DIR = REPO_ROOT / "hypotheses"
+
+# SFN-class seed SMILES for novelty tagging (canonical forms used in generation).
+SFN_CLASS_SEEDS = {
+    "CS(=O)CCCCN=C=S",   # Sulforaphane
+    "CS(=O)CCCN=C=S",    # Iberin
+    "CSCCCCN=C=S",       # Erucin
+    "CS(=O)/C=C/CCN=C=S",  # Sulforaphene
+    "C=CCN=C=S",         # AITC
+    "S=C=NCc1ccccc1",    # BITC
+    "S=C=NCCc1ccccc1",   # PEITC
+}
 
 
 # Per-category target weights for docking-style score aggregation.
@@ -161,6 +174,78 @@ def load_c151_adducts() -> dict[str, dict]:
     return out
 
 
+def load_btb_covalent() -> dict[str, dict]:
+    """BTB Cys-151 encounter docking fused with adduct energy (EXP-023)."""
+    out: dict[str, dict] = {}
+    if not BTB_CSV.exists():
+        return out
+    with BTB_CSV.open() as fh:
+        for row in csv.DictReader(fh):
+            smi = row.get("smiles", "")
+            if not smi or row.get("status") != "ok":
+                continue
+            try:
+                out[smi] = {
+                    "score_btb_covalent": float(row.get("score_btb_covalent") or 0.0),
+                    "vina_dG_btb": float(row.get("vina_dG") or 0.0),
+                }
+            except (ValueError, TypeError):
+                continue
+    return out
+
+
+def load_enamine() -> dict[str, dict]:
+    """Map SMILES / InChIKey → REAL-space flags from EXP-017 lookup."""
+    out: dict[str, dict] = {}
+    if not ENAMINE_CSV.exists():
+        return out
+    with ENAMINE_CSV.open() as fh:
+        for row in csv.DictReader(fh):
+            smi = row.get("canonical_smiles") or row.get("smiles") or ""
+            info = {
+                "real_space_plausible": str(row.get("real_space_plausible", "")).lower() in ("true", "1", "yes"),
+                "enamine_real_search": row.get("enamine_real_search", ""),
+                "inchikey": row.get("inchikey", ""),
+            }
+            if smi:
+                out[smi] = info
+            if row.get("inchikey"):
+                out[row["inchikey"]] = info
+    return out
+
+
+def novelty_features(smiles: str, library_fps: list, seed_fps: list) -> dict:
+    """Tanimoto-to-library / to-SFN-class novelty tags (EXP-025). No RDKit required if fps prebuilt."""
+    from rdkit import Chem, DataStructs
+    from rdkit.Chem import AllChem
+
+    mol = Chem.MolFromSmiles(smiles) if smiles else None
+    if mol is None:
+        return {
+            "max_tanimoto_to_library": "",
+            "tanimoto_to_sfn_class": "",
+            "novelty_score": "",
+            "near_duplicate_of_seed": False,
+            "near_duplicate_of_library": False,
+        }
+    fp = AllChem.GetMorganFingerprintAsBitVect(mol, 2, nBits=2048)
+    max_lib = 0.0
+    for rfp in library_fps:
+        max_lib = max(max_lib, float(DataStructs.TanimotoSimilarity(fp, rfp)))
+    max_seed = 0.0
+    for rfp in seed_fps:
+        max_seed = max(max_seed, float(DataStructs.TanimotoSimilarity(fp, rfp)))
+    # Identity to self in library: treat as library member, not generated novelty issue
+    novelty = round(1.0 - max(max_lib, max_seed), 4)
+    return {
+        "max_tanimoto_to_library": round(max_lib, 4),
+        "tanimoto_to_sfn_class": round(max_seed, 4),
+        "novelty_score": novelty,
+        "near_duplicate_of_seed": max_seed >= 0.90,
+        "near_duplicate_of_library": max_lib >= 0.90,
+    }
+
+
 def load_vina_keap1() -> dict[str, dict]:
     """Return {smiles: {vina_kcal_per_mol, vina_ligand_efficiency, heavy_atoms}}
     from outputs/docking_KEAP1_vina.csv. Empty dict if missing.
@@ -258,19 +343,29 @@ def pic50_potency_norm(pic50: float) -> float:
     return 1.0 / (1.0 + math.exp(-(pic50 - 6.0)))
 
 
-def composite(record: dict, target_scores: dict, warhead: dict, qsar: dict, vina: dict | None = None, c151: dict | None = None, chembl: dict | None = None, mast_cell: float | None = None) -> float:
+def composite(
+    record: dict,
+    target_scores: dict,
+    warhead: dict,
+    qsar: dict,
+    vina: dict | None = None,
+    c151: dict | None = None,
+    chembl: dict | None = None,
+    mast_cell: float | None = None,
+    btb: dict | None = None,
+) -> float:
     """Weighted composite per record.
 
     Components:
       - 0.30 * evidence_level
-      - 0.35 * weighted target similarity (per-category target mix)
+      - 0.35 * weighted target similarity (per-category target mix; self-debiased)
       - 0.10 * QED (generated analogs only — library evidence already covers it)
       - 0.10 * warhead score (KEAP1 axis only)
       - 0.15 * safety bonus = 0.5*(1 - hERG) + 0.5*(1 - AMES)
-              + small contextual BBB bonus (high BBB for maintenance/remission
-                with neuro/mast-cell-stabilizer story; low BBB tolerated for
-                rescue if HRH1 score is high).
+              + small contextual BBB bonus
       - explicit penalty: KEAP1-targeting Tanimoto >0.4 without a warhead = -0.08
+      - BTB covalent encounter score (EXP-023) up to +0.05 on KEAP1 axis
+      - near-duplicate generated penalty (EXP-025): -0.04 if tanimoto_to_sfn_class ≥ 0.90
     """
     s = 0.0
     cat = record.get("category", "")
@@ -293,6 +388,16 @@ def composite(record: dict, target_scores: dict, warhead: dict, qsar: dict, vina
             s += float(record.get("qed") or 0.0) * 0.10
         except ValueError:
             pass
+        # Novelty: penalize near-exact SFN-class copies so GEN_* doesn't
+        # dominate remission purely by warhead + self-similarity (EXP-025).
+        try:
+            t_seed = float(record.get("tanimoto_to_sfn_class") or 0.0)
+            if t_seed >= 0.95:
+                s -= 0.06
+            elif t_seed >= 0.90:
+                s -= 0.04
+        except (TypeError, ValueError):
+            pass
 
     # KEAP1-axis warhead boost / penalty
     if "KEAP1" in weights:
@@ -302,33 +407,22 @@ def composite(record: dict, target_scores: dict, warhead: dict, qsar: dict, vina
         if keap1_sim > 0.4 and not (warhead and warhead.get("has_warhead")):
             s -= 0.08
         # Vina ligand efficiency contribution (EXP-009).
-        # LE < 0 means favorable binding; -0.5 is a strong per-atom score.
-        # We add a small bonus (≤0.05) capped at LE ≤ -0.5.
         if vina:
             le = vina.get("vina_ligand_efficiency", 0.0)
             if le < 0:
                 s += min(-le, 0.5) * 0.10  # max bonus 0.05 at LE = -0.5
         # Covalent C151 adduct thermodynamic proxy (EXP-012).
-        # score_c151 ∈ [0, 1]; only ITC-class compounds get a non-zero score.
-        # We add a small bonus (max +0.05) so the actual covalent mechanism
-        # informs the ranking alongside non-covalent Kelch docking.
         if c151:
             s += c151.get("score_c151", 0.0) * 0.05
+        # BTB Cys-151 encounter + adduct fusion (EXP-023).
+        if btb:
+            s += btb.get("score_btb_covalent", 0.0) * 0.05
 
     # Mast-cell-stabilizer-class predictor (EXP-016).
-    # Universal across all three categories: a compound that the ChEMBL
-    # mast-cell-assay predictor flags as a stabilizer earns a small bonus
-    # regardless of which category it lives in. Cap +0.05.
     if mast_cell is not None:
         s += min(max(mast_cell, 0.0), 1.0) * 0.05
 
     # ChEMBL-trained predicted potency bonus (EXP-011).
-    # For each per-category target with a trained predictor, add a small
-    # bonus weighted by potency-normalized pIC50 × that target's category
-    # weight. Cap total ChEMBL contribution at +0.10. This is independent
-    # of the structural similarity signal in `weighted_target_similarity`
-    # (an analog of a known inhibitor scores high on similarity; a
-    # well-validated bioactive scores high on ChEMBL pIC50). Both informative.
     if chembl:
         chembl_total = 0.0
         weight_total = 0.0
@@ -348,11 +442,9 @@ def composite(record: dict, target_scores: dict, warhead: dict, qsar: dict, vina
         safety = 0.5 * (1.0 - herg) + 0.5 * (1.0 - ames)
         s += safety * 0.15
 
-        # contextual BBB bonus
         if cat in ("maintenance", "remission"):
-            s += (bbb - 0.5) * 0.05    # neuro / systemic candidates: high BBB good
+            s += (bbb - 0.5) * 0.05
         elif cat == "rescue":
-            # rescue prefers peripheral unless HRH1 is hit (then BBB is ok)
             hrh1_sim = target_scores.get("HRH1", {}).get("score", 0.0)
             if hrh1_sim < 0.5:
                 s -= (bbb - 0.5) * 0.03
@@ -457,6 +549,9 @@ def update_hypothesis_doc(category: str, top: list[dict]) -> None:
 
 
 def main() -> int:
+    from rdkit import Chem
+    from rdkit.Chem import AllChem
+
     library = load_library()
     generated = load_generated()
     target_scores = load_target_scores()
@@ -464,9 +559,31 @@ def main() -> int:
     qsar_scores = load_qsar()
     vina_scores = load_vina_keap1()
     c151_scores = load_c151_adducts()
+    btb_scores = load_btb_covalent()
     chembl_preds = load_chembl_predictions()
     mast_cell_preds = load_mast_cell_predictions()
-    print(f"library: {len(library)}, generated: {len(generated)}, target-scored: {len(target_scores)}, warhead: {len(warhead_scores)}, qsar: {len(qsar_scores)}, vina_keap1: {len(vina_scores)}, c151_adduct: {len(c151_scores)}, chembl: {len(chembl_preds)}, mast_cell: {len(mast_cell_preds)}")
+    enamine = load_enamine()
+
+    # Fingerprints for novelty (library + SFN-class seeds)
+    lib_fps = []
+    for rec in library:
+        m = Chem.MolFromSmiles(rec.get("smiles") or "")
+        if m is not None:
+            lib_fps.append(AllChem.GetMorganFingerprintAsBitVect(m, 2, nBits=2048))
+    seed_fps = []
+    for smi in SFN_CLASS_SEEDS:
+        m = Chem.MolFromSmiles(smi)
+        if m is not None:
+            seed_fps.append(AllChem.GetMorganFingerprintAsBitVect(m, 2, nBits=2048))
+
+    print(
+        f"library: {len(library)}, generated: {len(generated)}, "
+        f"target-scored: {len(target_scores)}, warhead: {len(warhead_scores)}, "
+        f"qsar: {len(qsar_scores)}, vina_keap1: {len(vina_scores)}, "
+        f"c151_adduct: {len(c151_scores)}, btb_covalent: {len(btb_scores)}, "
+        f"chembl: {len(chembl_preds)}, mast_cell: {len(mast_cell_preds)}, "
+        f"enamine: {len(enamine)}"
+    )
 
     by_category: dict[str, list[dict]] = {"rescue": [], "maintenance": [], "remission": []}
 
@@ -490,12 +607,23 @@ def main() -> int:
         c151 = c151_scores.get(smi, {})
         rec["c151_dE_kcal_per_mol"] = c151.get("dE_kcal_per_mol", "")
         rec["c151_score"] = c151.get("score_c151", "")
+        btb = btb_scores.get(smi, {})
+        rec["vina_dG_btb"] = btb.get("vina_dG_btb", "")
+        rec["score_btb_covalent"] = btb.get("score_btb_covalent", "")
         cb = chembl_preds.get(smi, {})
         for tgt_name, val in cb.items():
             rec[f"chembl_pIC50_{tgt_name}"] = round(val, 3)
         mc = mast_cell_preds.get(smi)
         rec["mast_cell_stabilizer_prob"] = round(mc, 3) if mc is not None else ""
-        rec["composite_score"] = composite(rec, ts, wh, qs, vn, c151, cb, mc)
+
+        # Novelty + Enamine (EXP-025 / EXP-017)
+        nov = novelty_features(smi, lib_fps, seed_fps)
+        rec.update(nov)
+        en = enamine.get(smi, {})
+        rec["real_space_plausible"] = en.get("real_space_plausible", "")
+        rec["enamine_real_search"] = en.get("enamine_real_search", "")
+
+        rec["composite_score"] = composite(rec, ts, wh, qs, vn, c151, cb, mc, btb)
 
         if rec["category"] in by_category:
             by_category[rec["category"]].append(rec)

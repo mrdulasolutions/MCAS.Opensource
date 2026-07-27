@@ -1,0 +1,29 @@
+name,smiles,source,status,vina_dG,score_btb_vina,score_c151,score_btb_covalent
+GEN_0050,O=S(CCCN=C=S)CCc1cccc(CCN=C=S)c1,reinvent_generated,ok,-5.117,0.3117,0.85,0.5539
+Benzyl isothiocyanate,S=C=NCc1ccccc1,library_anchor,ok,-4.851,0.2851,0.381,0.3283
+Phenethyl isothiocyanate,S=C=NCCc1ccccc1,library_anchor,ok,-5.044,0.3044,0.324,0.3132
+Midostaurin,CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4,library,ok,-7.617,0.5617,0.0,0.3089
+GEN_0037,CCS(=O)(=O)CCCCN=C=S,reinvent_generated,ok,-3.729,0.1729,0.395,0.2728
+GEN_0042,CS(=O)(=O)CCCN=C=S,reinvent_generated,ok,-3.426,0.1426,0.418,0.2665
+Masitinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nc(-c2cccnc2)cs1,library,ok,-6.783,0.4783,0.0,0.2631
+Iberin,CS(=O)CCCN=C=S,library_anchor,ok,-3.338,0.1338,0.407,0.2567
+GEN_0043,CS(=O)(=O)CCCCCN=C=S,reinvent_generated,ok,-3.638,0.1638,0.354,0.2494
+GEN_0019,CCS(=O)CCCCCN=C=S,reinvent_generated,ok,-3.679,0.1679,0.348,0.2489
+GEN_0006,CSCCCCCN=C=S,reinvent_generated,ok,-3.497,0.1497,0.354,0.2416
+Allyl isothiocyanate,C=CCN=C=S,library_anchor,ok,-2.985,0.0985,0.411,0.2391
+Carnosic acid,CC(C)c1cc2c(c(O)c1O)[C@@]1(C(=O)O)CCCC(C)(C)[C@@H]1CC2,library_anchor,ok,-6.238,0.4238,0.0,0.2331
+Sulforaphane,CS(=O)CCCCN=C=S,library_anchor,ok,-3.394,0.1394,0.337,0.2283
+GEN_0038,CS(=O)(=O)CCCCN=C=S,reinvent_generated,ok,-3.426,0.1426,0.328,0.226
+GEN_0030,CS(=O)CCc1ccc(N=C=S)cc1,reinvent_generated,ok,-5.066,0.3066,0.124,0.2244
+GEN_0012,CCS(=O)CCCCN=C=S,reinvent_generated,ok,-3.698,0.1698,0.285,0.2216
+Sulforaphene,CS(=O)/C=C/CCN=C=S,library_anchor,ok,-3.549,0.1549,0.3,0.2202
+GEN_0016,CCS(=O)CCCN=C=S,reinvent_generated,ok,-3.458,0.1458,0.309,0.2192
+GEN_0014,CCSCCCCN=C=S,reinvent_generated,ok,-3.444,0.1444,0.299,0.214
+Erucin,CSCCCCN=C=S,library_anchor,ok,-3.19,0.119,0.327,0.2126
+GEN_0008,CS(=O)CCCCCN=C=S,reinvent_generated,ok,-3.753,0.1753,0.236,0.2026
+GEN_0009,CSCCCN=C=S,reinvent_generated,ok,-3.105,0.1105,0.315,0.2025
+Glucoraphanin,CS(=O)CCCC/C(=N\OS(=O)(=O)O)S[C@@H]1O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O,library_anchor,ok,-3.971,0.1971,0.0,0.1084
+GEN_0031,CS(=O)CCCCCSC#N,reinvent_generated,ok,-3.597,0.1597,0.0,0.0878
+GEN_0029,CS(=O)CCCCSC#N,reinvent_generated,ok,-3.556,0.1556,0.0,0.0856
+GEN_0020,CSCCCCSC#N,reinvent_generated,ok,-3.306,0.1306,0.0,0.0718
+GEN_0036,CS(=O)CCCSC#N,reinvent_generated,ok,-3.279,0.1279,0.0,0.0703

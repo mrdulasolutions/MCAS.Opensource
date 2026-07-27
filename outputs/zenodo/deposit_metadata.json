@@ -1,0 +1,37 @@
+{
+  "title": "OpenMCAS: open MCAS/MCAD compound hypothesis pipeline (0.2.0)",
+  "upload_type": "software",
+  "description": "OpenMCAS is an MIT-licensed, CPU-reproducible cheminformatics pipeline that ranks pharma drugs, herbs, supplements, and AI-generated analogs for mast cell activation syndrome (MCAS/MCAD) across rescue, maintenance, and remission categories. This snapshot freezes code, curated data, ranked outputs, and experiment reports at git commit 0b75955883a4.",
+  "creators": [
+    {
+      "name": "Dula, M. R.",
+      "affiliation": "MR Dula Medical (DBA of MR Dula Enterprise, LLC), Raleigh, NC, USA"
+    }
+  ],
+  "keywords": [
+    "MCAS",
+    "MCAD",
+    "mast cell",
+    "drug discovery",
+    "cheminformatics",
+    "open science",
+    "KEAP1",
+    "sulforaphane"
+  ],
+  "license": "mit",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/mrdulasolutions/MCAS.Opensource",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://huggingface.co/spaces/MRDula/openmcas-browser",
+      "relation": "isSupplementTo",
+      "resource_type": "other"
+    }
+  ],
+  "version": "0.2.0",
+  "notes": "Git commit: 0b75955883a44b9b2f779ef613bef172a99d4848"
+}
