@@ -13,8 +13,8 @@ GEN_0116,CCSCCCCN=C=S,candidate,reinvent_generated,KEAP1,0.6296,0.6296,False,Eru
 Benzyl isothiocyanate,S=C=NCc1ccccc1,remission,library,KEAP1,0.6154,1.0,True,Phenethyl isothiocyanate (CID 16741),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 Phenethyl isothiocyanate,S=C=NCCc1ccccc1,remission,library,KEAP1,0.6154,1.0,True,Benzyl isothiocyanate (CID 2346),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0126,CCSCCCN=C=S,candidate,reinvent_generated,KEAP1,0.5357,0.5357,False,Erucin (CID 7373),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0255,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2cc(OC)c(O)cc2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,KEAP1,0.5167,0.5167,False,Curcumin (CID 969516),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0247,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,KEAP1,0.5082,0.5082,False,Curcumin (CID 969516),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0243,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2cc(OC)c(O)cc2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,KEAP1,0.5167,0.5167,False,Curcumin (CID 969516),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0225,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2CCS(=O)CCCN=C=S)ccc1O,candidate,reinvent_generated,KEAP1,0.5082,0.5082,False,Curcumin (CID 969516),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0152,O=S(CCCN=C=S)CCc1cccc(CCN=C=S)c1,candidate,reinvent_generated,KEAP1,0.5,0.5,False,Phenethyl isothiocyanate (CID 16741),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0141,CS(=O)(=O)CCCCN=C=S,candidate,reinvent_generated,KEAP1,0.4839,0.4839,False,Sulforaphane (CID 5350),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 Sulforaphene,CS(=O)/C=C/CCN=C=S,remission,library,KEAP1,0.4688,0.4688,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
@@ -70,27 +70,27 @@ GEN_0184,CN(C)c1ccc(N=Nc2ccccc2C(=O)O)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_ge
 GEN_0185,CN(C)c1ccc(N=Nc2ccccc2C(=O)O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KEAP1,0.3051,0.3051,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0205,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccccc2)oc2cc(O)c(O)c(O)c12,candidate,reinvent_generated,KEAP1,0.3051,0.3051,False,Phenethyl isothiocyanate (CID 16741),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0210,O=c1c(O)c(-c2cc(O)c(O)cc2CCS(=O)CCCN=C=S)oc2cc(O)ccc12,candidate,reinvent_generated,KEAP1,0.3051,0.3051,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0230,C=CCc1ccc(O)c(-c2cc(CC=C)c(CCS(=O)CCCN=C=S)cc2O)c1,candidate,reinvent_generated,KEAP1,0.3036,0.3036,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0249,C=CCc1cc(-c2cc(CC=C)c(CCS(=O)CCCN=C=S)cc2O)ccc1O,candidate,reinvent_generated,KEAP1,0.3036,0.3036,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0275,C=CCc1cc(-c2cc(CC=C)c(CCS(=O)CCCN=C=S)cc2O)ccc1O,candidate,reinvent_generated,KEAP1,0.3036,0.3036,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0276,C=CCc1ccc(O)c(-c2cc(CC=C)c(CCS(=O)CCCN=C=S)cc2O)c1,candidate,reinvent_generated,KEAP1,0.3036,0.3036,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0212,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,KEAP1,0.3,0.3,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0237,Nc1ccc(N=Nc2cccc(N=Nc3cc(CCS(=O)CCCN=C=S)c(N)cc3N)c2)c(N)c1,candidate,reinvent_generated,KEAP1,0.2982,0.2982,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0242,C=CCc1ccc(O)c(-c2cc(CC=C)cc(CCS(=O)CCCN=C=S)c2O)c1,candidate,reinvent_generated,KEAP1,0.2982,0.2982,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0257,O=c1oc2c(O)c(O)c(CCS(=O)CCCN=C=S)c3c(=O)oc4c(O)c(O)cc1c4c23,candidate,reinvent_generated,KEAP1,0.2982,0.2982,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0254,COc1cc(CCS(=O)CCCN=C=S)c(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1OC,candidate,reinvent_generated,KEAP1,0.2951,0.2951,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0230,Nc1ccc(N=Nc2cccc(N=Nc3cc(CCS(=O)CCCN=C=S)c(N)cc3N)c2)c(N)c1,candidate,reinvent_generated,KEAP1,0.2982,0.2982,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0247,C=CCc1ccc(O)c(-c2cc(CC=C)cc(CCS(=O)CCCN=C=S)c2O)c1,candidate,reinvent_generated,KEAP1,0.2982,0.2982,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0251,O=c1oc2c(O)c(O)c(CCS(=O)CCCN=C=S)c3c(=O)oc4c(O)c(O)cc1c4c23,candidate,reinvent_generated,KEAP1,0.2982,0.2982,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0266,COc1cc(CCS(=O)CCCN=C=S)c(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1OC,candidate,reinvent_generated,KEAP1,0.2951,0.2951,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0150,CCS(=O)CCc1ccc(N=C=S)cc1,candidate,reinvent_generated,KEAP1,0.2927,0.2927,False,Phenethyl isothiocyanate (CID 16741),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0265,COc1cc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc(CCS(=O)CCCN=C=S)c1OC,candidate,reinvent_generated,KEAP1,0.2903,0.2903,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0274,COc1cc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc(CCS(=O)CCCN=C=S)c1OC,candidate,reinvent_generated,KEAP1,0.2903,0.2903,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0192,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,KEAP1,0.2881,0.2881,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0258,Nc1ccc(N=Nc2cccc(N=Nc3c(N)cc(N)cc3CCS(=O)CCCN=C=S)c2)c(N)c1,candidate,reinvent_generated,KEAP1,0.2881,0.2881,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0250,Nc1ccc(N=Nc2cccc(N=Nc3c(N)cc(N)cc3CCS(=O)CCCN=C=S)c2)c(N)c1,candidate,reinvent_generated,KEAP1,0.2881,0.2881,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 Silibinin,COc1cc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)ccc1O,maintenance,library,KEAP1,0.2879,0.2879,False,Curcumin (CID 969516),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 Allyl isothiocyanate,C=CCN=C=S,remission,library,KEAP1,0.2857,1.0,True,Benzyl isothiocyanate (CID 2346),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0151,CSCc1ccc(N=C=S)cc1,candidate,reinvent_generated,KEAP1,0.2857,0.2857,False,Benzyl isothiocyanate (CID 2346),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0229,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KEAP1,0.2857,0.2857,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0251,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,KEAP1,0.2857,0.2857,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0266,CCCCCc1cc(O)c(C/C=C(\C)CCC=C(C)C)c(O)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KEAP1,0.2857,0.2857,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0240,CCCCCc1cc(O)c(C/C=C(\C)CCC=C(C)C)c(O)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KEAP1,0.2857,0.2857,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0262,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,KEAP1,0.2857,0.2857,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0179,O=c1c(CCS(=O)CCCN=C=S)c(-c2ccccc2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,KEAP1,0.2833,0.2833,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0220,O=c1c(O)c(-c2cc(O)c(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,KEAP1,0.2833,0.2833,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0223,C=CCc1cc(CCS(=O)CCCN=C=S)c(O)c(-c2ccc(O)c(CC=C)c2)c1,candidate,reinvent_generated,KEAP1,0.2833,0.2833,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0240,O=c1c(O)c(-c2cc(O)c(O)c(O)c2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,KEAP1,0.2833,0.2833,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0234,O=c1c(O)c(-c2cc(O)c(O)c(O)c2CCS(=O)CCCN=C=S)oc2cc(O)cc(O)c12,candidate,reinvent_generated,KEAP1,0.2833,0.2833,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0271,C=CCc1cc(CCS(=O)CCCN=C=S)c(O)c(-c2ccc(O)c(CC=C)c2)c1,candidate,reinvent_generated,KEAP1,0.2833,0.2833,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 Curcumin,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2)ccc1O,maintenance,library,KEAP1,0.2821,1.0,True,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 Resveratrol,Oc1ccc(/C=C/c2cc(O)cc(O)c2)cc1,maintenance,library,KEAP1,0.2821,1.0,True,Curcumin (CID 969516),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0188,COc1c(O)cc(O)c2c(=O)c(CCS(=O)CCCN=C=S)c(-c3ccccc3)oc12,candidate,reinvent_generated,KEAP1,0.2812,0.2812,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
@@ -104,11 +104,11 @@ GEN_0208,O=c1cc(-c2ccccc2CCS(=O)CCCN=C=S)oc2cc(O)c(O)c(O)c12,candidate,reinvent_
 Phloretin,O=C(CCc1ccc(O)cc1)c1c(O)cc(O)cc1O,maintenance,library,KEAP1,0.2778,0.2778,False,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0218,CN(C)c1cc(CCS(=O)CCCN=C=S)c2nc3ccc(=[N+](C)C)cc-3sc2c1.[Cl-],candidate,reinvent_generated,KEAP1,0.2769,0.2769,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0219,CN(C)c1cc2sc3cc(=[N+](C)C)ccc-3nc2cc1CCS(=O)CCCN=C=S.[Cl-],candidate,reinvent_generated,KEAP1,0.2769,0.2769,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0234,O=C(/C=C/c1cc(O)c(O)cc1CCS(=O)CCCN=C=S)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,KEAP1,0.2769,0.2769,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0261,O=C(/C=C/c1cc(O)c(O)cc1CCS(=O)CCCN=C=S)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,KEAP1,0.2769,0.2769,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0153,CS(=O)CCc1ccc(SC#N)cc1,candidate,reinvent_generated,KEAP1,0.275,0.275,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0190,O=C1CC(c2ccc(O)c(CCS(=O)CCCN=C=S)c2)Oc2cc(O)cc(O)c21,candidate,reinvent_generated,KEAP1,0.2742,0.2742,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0207,O=c1c(O)c(-c2ccc(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,candidate,reinvent_generated,KEAP1,0.2742,0.2742,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0217,O=c1c(O)c(-c2cc(O)c(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)ccc12,candidate,reinvent_generated,KEAP1,0.2742,0.2742,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0216,O=c1c(O)c(-c2cc(O)c(O)c(CCS(=O)CCCN=C=S)c2)oc2cc(O)ccc12,candidate,reinvent_generated,KEAP1,0.2742,0.2742,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0221,NC(=O)c1cc(CCS(=O)CCCN=C=S)c[n+]([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)c1,candidate,reinvent_generated,KEAP1,0.2742,0.2742,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0195,COc1ccc(-c2cc(=O)c3c(O)cc(O)cc3o2)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KEAP1,0.2727,0.2727,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0196,COc1ccc(-c2cc(=O)c3c(O)cc(O)cc3o2)c(CCS(=O)CCCN=C=S)c1,candidate,reinvent_generated,KEAP1,0.2727,0.2727,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
@@ -120,53 +120,53 @@ GEN_0191,O=c1c(O)c(-c2cccc(CCS(=O)CCCN=C=S)c2)oc2cc(O)cc(O)c12,candidate,reinven
 GEN_0222,NC(=O)c1c[n+]([C@@H]2O[C@H](CO)[C@@H](O)[C@H]2O)ccc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KEAP1,0.2698,0.2698,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0186,CN1CCC(=C2c3cc(CCS(=O)CCCN=C=S)ccc3CC(=O)c3sccc32)CC1,candidate,reinvent_generated,KEAP1,0.2687,0.2687,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0200,COc1c(O)cc([C@@H]2CC(=O)c3c(O)cc(O)cc3O2)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KEAP1,0.2687,0.2687,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0231,COc1c(CCS(=O)CCCN=C=S)c(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1,candidate,reinvent_generated,KEAP1,0.2687,0.2687,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0244,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)-c1cc(C)ccc1C(C)(C)O2,candidate,reinvent_generated,KEAP1,0.2687,0.2687,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0276,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCC)c(CCS(=O)CCCN=C=S)c1O,candidate,reinvent_generated,KEAP1,0.2687,0.2687,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0224,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCC)c(CCS(=O)CCCN=C=S)c1O,candidate,reinvent_generated,KEAP1,0.2687,0.2687,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0253,COc1c(CCS(=O)CCCN=C=S)c(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1,candidate,reinvent_generated,KEAP1,0.2687,0.2687,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0259,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)-c1cc(C)ccc1C(C)(C)O2,candidate,reinvent_generated,KEAP1,0.2687,0.2687,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0194,O=C1CC(c2ccc(O)cc2CCS(=O)CCCN=C=S)Oc2cc(O)cc(O)c21,candidate,reinvent_generated,KEAP1,0.2656,0.2656,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0187,CN1CCC(=C2c3ccsc3C(=O)Cc3cccc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,KEAP1,0.2647,0.2647,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0203,COc1cc(CCS(=O)CCCN=C=S)c([C@@H]2CC(=O)c3c(O)cc(O)cc3O2)cc1O,candidate,reinvent_generated,KEAP1,0.2647,0.2647,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0238,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)c1ccc(C)cc1-2,candidate,reinvent_generated,KEAP1,0.2647,0.2647,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0248,O=C(/C=C/c1cc(O)c(O)c(CCS(=O)CCCN=C=S)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,KEAP1,0.2647,0.2647,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0236,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)c1ccc(C)cc1-2,candidate,reinvent_generated,KEAP1,0.2647,0.2647,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0264,O=C(/C=C/c1cc(O)c(O)c(CCS(=O)CCCN=C=S)c1)O[C@H](Cc1ccc(O)c(O)c1)C(=O)O,candidate,reinvent_generated,KEAP1,0.2647,0.2647,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0124,CS(=O)CCc1ccc(C#N)cc1,candidate,reinvent_generated,KEAP1,0.2632,0.2632,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0165,CCS(=O)CCCCSC#N,candidate,reinvent_generated,KEAP1,0.2632,0.2632,False,Sulforaphane (CID 5350),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0227,CC(C)c1c(O)c(O)c2c(c1CCS(=O)CCCN=C=S)CC[C@H]1C(C)(C)CCC[C@]21C(=O)O,candidate,reinvent_generated,KEAP1,0.2609,0.2609,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0233,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(CCC=C(C)C)C=C2,candidate,reinvent_generated,KEAP1,0.2609,0.2609,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0256,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCCCC)c(CCS(=O)CCCN=C=S)c1O,candidate,reinvent_generated,KEAP1,0.2609,0.2609,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0263,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)c(CCS(=O)CCCN=C=S)c(CCCCC)c(C(=O)O)c1O,candidate,reinvent_generated,KEAP1,0.2609,0.2609,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0275,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)C=CC(C)(CCC=C(C)C)O2,candidate,reinvent_generated,KEAP1,0.2609,0.2609,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0225,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)c(CCS(=O)CCCN=C=S)s1,candidate,reinvent_generated,KEAP1,0.2576,0.2576,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0250,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2cccc(CCS(=O)CCCN=C=S)c2)CC1,candidate,reinvent_generated,KEAP1,0.2571,0.2571,False,Phenethyl isothiocyanate (CID 16741),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0267,CCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,candidate,reinvent_generated,KEAP1,0.2571,0.2571,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0273,CCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,KEAP1,0.2571,0.2571,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0226,CC(C)c1c(O)c(O)c2c(c1CCS(=O)CCCN=C=S)CC[C@H]1C(C)(C)CCC[C@]21C(=O)O,candidate,reinvent_generated,KEAP1,0.2609,0.2609,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0227,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(CCC=C(C)C)C=C2,candidate,reinvent_generated,KEAP1,0.2609,0.2609,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0241,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)C=CC(C)(CCC=C(C)C)O2,candidate,reinvent_generated,KEAP1,0.2609,0.2609,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0252,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)c(CCS(=O)CCCN=C=S)c(CCCCC)c(C(=O)O)c1O,candidate,reinvent_generated,KEAP1,0.2609,0.2609,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0258,C=C(C)[C@@H]1CCC(C)=C[C@H]1c1c(O)cc(CCCCC)c(CCS(=O)CCCN=C=S)c1O,candidate,reinvent_generated,KEAP1,0.2609,0.2609,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0228,NC(N)=Nc1nc(CSCCC(N)=NS(N)(=O)=O)c(CCS(=O)CCCN=C=S)s1,candidate,reinvent_generated,KEAP1,0.2576,0.2576,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0248,CCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,candidate,reinvent_generated,KEAP1,0.2571,0.2571,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0267,CCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,KEAP1,0.2571,0.2571,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0273,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2cccc(CCS(=O)CCCN=C=S)c2)CC1,candidate,reinvent_generated,KEAP1,0.2571,0.2571,False,Phenethyl isothiocyanate (CID 16741),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0154,CCS(=O)Cc1ccc(N=C=S)cc1,candidate,reinvent_generated,KEAP1,0.2564,0.2564,False,Benzyl isothiocyanate (CID 2346),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0246,CC(C)c1c(O)c(O)c2c(c1CCS(=O)CCCN=C=S)[C@@H]1C[C@H]3C(C)(C)CCC[C@]23C(=O)O1,candidate,reinvent_generated,KEAP1,0.2535,0.2535,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 Apigenin,O=c1cc(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,maintenance,library,KEAP1,0.25,0.25,False,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0149,CCS(=O)CCCCC#N,candidate,reinvent_generated,KEAP1,0.25,0.25,False,Sulforaphane (CID 5350),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0224,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)C1CCC(C)=CC21,candidate,reinvent_generated,KEAP1,0.25,0.25,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0239,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,KEAP1,0.25,0.25,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0260,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,candidate,reinvent_generated,KEAP1,0.25,0.25,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0269,COc1cc(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KEAP1,0.25,0.25,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0272,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)C1C=C(C)CCC1C(C)(C)O2,candidate,reinvent_generated,KEAP1,0.25,0.25,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0231,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)C1C=C(C)CCC1C(C)(C)O2,candidate,reinvent_generated,KEAP1,0.25,0.25,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0235,CCCCCc1cc2c(c(O)c1CCS(=O)CCCN=C=S)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,KEAP1,0.25,0.25,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0257,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)[C@@H]1CCC(C)=C[C@@H]21,candidate,reinvent_generated,KEAP1,0.25,0.25,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0260,COc1cc(O)c(CC=C(C)C)c(O)c1C(=O)/C=C/c1ccc(O)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KEAP1,0.25,0.25,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0272,CCCCCc1cc(O)c2c(c1CCS(=O)CCCN=C=S)OC(C)(C)C1CCC(C)=CC21,candidate,reinvent_generated,KEAP1,0.25,0.25,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0214,CN/C(=C\[N+](=O)[O-])NCCSCc1cc(CCS(=O)CCCN=C=S)c(CN(C)C)o1,candidate,reinvent_generated,KEAP1,0.2466,0.2466,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0216,CN/C(=C\[N+](=O)[O-])NCCSCc1oc(CN(C)C)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KEAP1,0.2466,0.2466,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0232,O=S(CCCN=C=S)CCc1ccccc1C(c1ccc(Cl)cc1)N1CCN(CCOCCO)CC1,candidate,reinvent_generated,KEAP1,0.2464,0.2464,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0262,O=C(O[C@@H]1Cc2c(cc(O)c(CCS(=O)CCCN=C=S)c2O)O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,KEAP1,0.2464,0.2464,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0264,O=C(O[C@@H]1Cc2c(O)cc(O)c(CCS(=O)CCCN=C=S)c2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,KEAP1,0.2464,0.2464,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0217,CN/C(=C\[N+](=O)[O-])NCCSCc1oc(CN(C)C)cc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KEAP1,0.2466,0.2466,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0244,O=S(CCCN=C=S)CCc1ccccc1C(c1ccc(Cl)cc1)N1CCN(CCOCCO)CC1,candidate,reinvent_generated,KEAP1,0.2464,0.2464,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0255,O=C(O[C@@H]1Cc2c(cc(O)c(CCS(=O)CCCN=C=S)c2O)O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,KEAP1,0.2464,0.2464,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0256,O=C(O[C@@H]1Cc2c(O)cc(O)c(CCS(=O)CCCN=C=S)c2O[C@@H]1c1cc(O)c(O)c(O)c1)c1cc(O)c(O)c(O)c1,candidate,reinvent_generated,KEAP1,0.2464,0.2464,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 Kaempferol,O=c1c(O)c(-c2ccc(O)cc2)oc2cc(O)cc(O)c12,maintenance,library,KEAP1,0.2439,0.2439,False,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0169,CCS(=O)CCCSC#N,candidate,reinvent_generated,KEAP1,0.2432,0.2432,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0228,CCCCCc1c(CCS(=O)CCCN=C=S)c2c(c(O)c1C(=O)O)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,KEAP1,0.2432,0.2432,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0243,CC1(C)SC2C(NC(=O)C(C(=O)O)c3cscc3CCS(=O)CCCN=C=S)C(=O)N2C1C(=O)O,candidate,reinvent_generated,KEAP1,0.2432,0.2432,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0253,O=S(CCCN=C=S)CCc1cccc(C(c2ccc(Cl)cc2)N2CCN(CCOCCO)CC2)c1,candidate,reinvent_generated,KEAP1,0.2429,0.2429,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0259,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)cc(=O)c4c3CCS(=O)CCCN=C=S)cccc2o1,candidate,reinvent_generated,KEAP1,0.2429,0.2429,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0268,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2ccccc2CCS(=O)CCCN=C=S)CC1,candidate,reinvent_generated,KEAP1,0.2429,0.2429,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0261,CC1(C)SC2C(NC(=O)C(C(=O)O)c3csc(CCS(=O)CCCN=C=S)c3)C(=O)N2C1C(=O)O,candidate,reinvent_generated,KEAP1,0.24,0.24,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0265,CCCCCc1c(CCS(=O)CCCN=C=S)c2c(c(O)c1C(=O)O)[C@@H]1C=C(C)CC[C@H]1C(C)(C)O2,candidate,reinvent_generated,KEAP1,0.2432,0.2432,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0277,CC1(C)SC2C(NC(=O)C(C(=O)O)c3cscc3CCS(=O)CCCN=C=S)C(=O)N2C1C(=O)O,candidate,reinvent_generated,KEAP1,0.2432,0.2432,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0223,O=C(O)COCCN1CCN(C(c2ccc(Cl)cc2)c2ccccc2CCS(=O)CCCN=C=S)CC1,candidate,reinvent_generated,KEAP1,0.2429,0.2429,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0233,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)cc(=O)c4c3CCS(=O)CCCN=C=S)cccc2o1,candidate,reinvent_generated,KEAP1,0.2429,0.2429,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0254,O=S(CCCN=C=S)CCc1cccc(C(c2ccc(Cl)cc2)N2CCN(CCOCCO)CC2)c1,candidate,reinvent_generated,KEAP1,0.2429,0.2429,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0245,CC1(C)SC2C(NC(=O)C(C(=O)O)c3csc(CCS(=O)CCCN=C=S)c3)C(=O)N2C1C(=O)O,candidate,reinvent_generated,KEAP1,0.24,0.24,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0270,CCOC(=O)N1CCC(=C2c3ncccc3CCc3cc(Cl)cc(CCS(=O)CCCN=C=S)c32)CC1,candidate,reinvent_generated,KEAP1,0.24,0.24,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0277,NC(=O)c1cc(CCS(=O)CCCN=C=S)c[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)c1,candidate,reinvent_generated,KEAP1,0.2394,0.2394,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0263,NC(=O)c1cc(CCS(=O)CCCN=C=S)c[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)c1,candidate,reinvent_generated,KEAP1,0.2394,0.2394,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 Hesperetin,COc1ccc([C@@H]2CC(=O)c3c(O)cc(O)cc3O2)cc1O,maintenance,library,KEAP1,0.2373,0.2373,False,Curcumin (CID 969516),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0245,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3CCS(=O)CCCN=C=S)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O,candidate,reinvent_generated,KEAP1,0.2368,0.2368,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0274,NC(=O)c1c[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)ccc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KEAP1,0.2361,0.2361,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0236,CCOC(=O)N1CCC(=C2c3cc(CCS(=O)CCCN=C=S)c(Cl)cc3CCc3cccnc32)CC1,candidate,reinvent_generated,KEAP1,0.2338,0.2338,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0238,C[C@@H]1O[C@@H](Oc2c(-c3cc(O)c(O)c(O)c3CCS(=O)CCCN=C=S)oc3cc(O)cc(O)c3c2=O)[C@H](O)[C@H](O)[C@H]1O,candidate,reinvent_generated,KEAP1,0.2368,0.2368,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0237,NC(=O)c1c[n+]([C@@H]2O[C@H](COP(=O)([O-])O)[C@@H](O)[C@H]2O)ccc1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KEAP1,0.2361,0.2361,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0268,CCOC(=O)N1CCC(=C2c3cc(CCS(=O)CCCN=C=S)c(Cl)cc3CCc3cccnc32)CC1,candidate,reinvent_generated,KEAP1,0.2338,0.2338,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 Naringenin,O=C1CC(c2ccc(O)cc2)Oc2cc(O)cc(O)c21,maintenance,library,KEAP1,0.2326,0.2326,False,Resveratrol (CID 445154),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0172,C=CCSC#N,candidate,reinvent_generated,KEAP1,0.2308,0.2308,False,Allyl isothiocyanate (CID 5971),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0157,CCS(=O)CCCC#N,candidate,reinvent_generated,KEAP1,0.2286,0.2286,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
@@ -174,15 +174,15 @@ Magnolol,C=CCc1ccc(O)c(-c2cc(CC=C)ccc2O)c1,maintenance,library,KEAP1,0.2273,0.22
 GEN_0163,CS(=O)Cc1ccc(SC#N)cc1,candidate,reinvent_generated,KEAP1,0.225,0.225,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 Glucoraphanin,CS(=O)CCCC/C(=N\OS(=O)(=O)O)S[C@@H]1O[C@H](CO)[C@@H](O)[C@H](O)[C@H]1O,remission,library,KEAP1,0.2241,0.2241,False,Sulforaphane (CID 5350),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0162,CS(=O)(=O)CCCCSC#N,candidate,reinvent_generated,KEAP1,0.2222,0.2222,False,Erucin (CID 7373),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0241,COc1c(O)ccc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KEAP1,0.2195,0.2195,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0239,COc1c(O)ccc([C@H]2Oc3cc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)ccc3O[C@@H]2CO)c1CCS(=O)CCCN=C=S,candidate,reinvent_generated,KEAP1,0.2195,0.2195,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 Wogonin,COc1c(O)cc(O)c2c(=O)cc(-c3ccccc3)oc12,maintenance,library,KEAP1,0.2143,0.2143,False,Curcumin (CID 969516),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 Acacetin,COc1ccc(-c2cc(=O)c3c(O)cc(O)cc3o2)cc1,maintenance,library,KEAP1,0.2143,0.2143,False,Curcumin (CID 969516),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0226,COc1cc([C@H]2Oc3c(ccc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)c3CCS(=O)CCCN=C=S)O[C@@H]2CO)ccc1O,candidate,reinvent_generated,KEAP1,0.2143,0.2143,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0242,COc1cc([C@H]2Oc3c(ccc([C@H]4Oc5cc(O)cc(O)c5C(=O)[C@@H]4O)c3CCS(=O)CCCN=C=S)O[C@@H]2CO)ccc1O,candidate,reinvent_generated,KEAP1,0.2143,0.2143,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 Testosterone,C[C@]12CC[C@H]3[C@@H](CCC4=CC(=O)CC[C@@]43C)[C@@H]1CC[C@@H]2O,maintenance,library,KEAP1,0.2135,0.2135,False,Omaveloxolone (RTA408) (CID 49787059 (approx)),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0235,O=C1CC[C@@]2(O)[C@H]3Cc4c(CCS(=O)CCCN=C=S)cc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,KEAP1,0.2125,0.2125,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0252,O=C1CC[C@@]2(O)[C@H]3Cc4cc(CCS(=O)CCCN=C=S)c(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,KEAP1,0.2125,0.2125,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0232,O=C1CC[C@@]2(O)[C@H]3Cc4c(CCS(=O)CCCN=C=S)cc(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,KEAP1,0.2125,0.2125,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0269,O=C1CC[C@@]2(O)[C@H]3Cc4cc(CCS(=O)CCCN=C=S)c(O)c5c4[C@@]2(CCN3CC2CC2)[C@H]1O5,candidate,reinvent_generated,KEAP1,0.2125,0.2125,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0146,CS(=O)Cc1ccc(C#N)cc1,candidate,reinvent_generated,KEAP1,0.2105,0.2105,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
-GEN_0271,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)c(CCS(=O)CCCN=C=S)c(=O)c4c3)cccc2o1,candidate,reinvent_generated,KEAP1,0.2099,0.2099,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
+GEN_0249,O=C(O)c1cc(=O)c2c(OCC(O)COc3ccc4oc(C(=O)O)c(CCS(=O)CCCN=C=S)c(=O)c4c3)cccc2o1,candidate,reinvent_generated,KEAP1,0.2099,0.2099,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 GEN_0123,CS(=O)/C=C/CCSC#N,candidate,reinvent_generated,KEAP1,0.2051,0.2051,False,Iberin (CID 3032358),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 Hesperidin,COc1ccc([C@@H]2CC(=O)c3c(O)cc(O[C@@H]4O[C@H](CO[C@@H]5O[C@@H](C)[C@H](O)[C@@H](O)[C@H]5O)[C@@H](O)[C@H](O)[C@H]4O)cc3O2)cc1O,maintenance,library,KEAP1,0.1975,0.1975,False,Curcumin (CID 969516),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
 Nobiletin,COc1ccc(-c2cc(=O)c3c(OC)c(OC)c(OC)c(OC)c3o2)cc1OC,maintenance,library,KEAP1,0.1964,0.1964,False,Curcumin (CID 969516),ligand_based_similarity_tanimoto_morgan2_2048_self_debias
