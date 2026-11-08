@@ -95,7 +95,7 @@ risk.
 
 ## Top AI-ranked candidates
 
-> 🤖 **Auto-generated artifact.** Produced by `scripts/rank_hypotheses.py` on 2026-11-01 09:00 UTC from commit `2788c87`. Inputs: `data/compounds/MCAS_Compound_Library_v1.csv`, `outputs/reinvent_generated.csv`, `outputs/docking_*.csv`, `outputs/warhead_scores.csv`, `outputs/qsar_predictions.csv`. Composite formula and weights documented in [EXP-005](../experiments/EXP-005-multi-objective-ranking.md). Recovery benchmark: [EXP-006](../experiments/EXP-006-known-actives-recovery.md).
+> 🤖 **Auto-generated artifact.** Produced by `scripts/rank_hypotheses.py` on 2026-11-08 08:49 UTC from commit `6dd6de2`. Inputs: `data/compounds/MCAS_Compound_Library_v1.csv`, `outputs/reinvent_generated.csv`, `outputs/docking_*.csv`, `outputs/warhead_scores.csv`, `outputs/qsar_predictions.csv`. Composite formula and weights documented in [EXP-005](../experiments/EXP-005-multi-objective-ranking.md). Recovery benchmark: [EXP-006](../experiments/EXP-006-known-actives-recovery.md).
 
 _Higher composite = better hypothesis. Edit `scripts/rank_hypotheses.py` to change weights or category target mix; the next run will overwrite this table._
 
